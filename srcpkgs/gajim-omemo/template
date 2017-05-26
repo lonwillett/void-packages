@@ -1,0 +1,48 @@
+# Template file for 'gajim-omemo'
+pkgname=gajim-omemo
+version=1.2.1
+revision=1
+noarch=yes
+wrksrc="omemo"
+#build_style=python
+pycompile_dirs="usr/share/gajim/plugins/omemo"
+hostmakedepends="wget unzip"
+depends="python-axolotl python-cryptography python-qrcode"
+short_desc="OMEMO Plugin for Gajim"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-3"
+homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
+#distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
+checksum="cc10d3dbc6624e94b504561b691e645d90eae077670d56319c95692aaf02039e"
+
+do_fetch() {
+	# Source archives seem to be regenerated frequently, with
+	# indeterminate file order or some other such innocuous
+	# changes.  Work around this by repacking the files in
+	# a deterministic way, and then checksumming.
+	# xxx I'm not clear if everything I'm using here is guaranteed
+	# to be available, or if I should add some more to hostdepends.
+	plug="omemo"
+	wget "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
+	mkdir "$plug.tmp"
+	unzip -o -q "$plug.zip" -d "$plug.tmp"
+	x="$( (cd "$plug.tmp"; export LC_ALL="C"; find "$plug" ! -type d -print | sort |
+	tar -cf - --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
+	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
+	mv "$plug.tmp/$plug" "$wrksrc"
+	rm -f "$plug.zip"
+	rmdir "$plug.tmp"
+	if [ -e "$plug.zip" -o -d "$plug.tmp" ]; then
+		echo "Unexpected garbage left around"
+		return 1
+	fi
+	if [ "$checksum" != "$x" ]; then
+		echo "$x"
+		return 1
+	fi
+}
+
+do_install() {
+	vmkdir usr/share/gajim/plugins/omemo
+	vcopy * usr/share/gajim/plugins/omemo
+}

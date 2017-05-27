@@ -12,7 +12,7 @@ homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OffTheRecordPlugin"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-3"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/gotr.zip"
-checksum="882c6647c8e7ea198128cfb3b68d2707baf9a06148d1d7d307d1119c36f7f709"
+checksum="c80f7dca53cc9e1c7ba0cfa955721217a7dd27220f0f07b99a79f6ad478dfc05"
 
 do_fetch() {
 	# Source archives seem to be regenerated frequently, with
@@ -22,11 +22,11 @@ do_fetch() {
 	# xxx I'm not clear if everything I'm using here is guaranteed
 	# to be available, or if I should add some more to hostdepends.
 	plug="gotr"
-	wget "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
+	$XBPS_FETCH_CMD "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
 	mkdir "$plug.tmp"
 	unzip -o -q "$plug.zip" -d "$plug.tmp"
 	x="$( (cd "$plug.tmp"; export LC_ALL="C"; find "$plug" ! -type d -print | sort |
-	tar -cf - --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
+	tar -cf - --owner=root:0 --group=root:0 --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
 	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
 	mv "$plug.tmp/$plug" "$wrksrc"
 	rm -f "$plug.zip"

@@ -4,16 +4,16 @@ version=1.2.1
 revision=1
 noarch=yes
 wrksrc="omemo"
-#build_style=python
+build_style="fetch"
 pycompile_dirs="usr/share/gajim/plugins/omemo"
-hostmakedepends="wget unzip"
-depends="python-axolotl python-cryptography python-qrcode"
+hostmakedepends="unzip"
+depends="python-axolotl python-cryptography python-qrcode gajim"
 short_desc="OMEMO Plugin for Gajim"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
-checksum="cc10d3dbc6624e94b504561b691e645d90eae077670d56319c95692aaf02039e"
+checksum="30eb05261465bdda8a14e2f893d26227fa212412bf357e3c30d179bd74c7d6e0"
 
 do_fetch() {
 	# Source archives seem to be regenerated frequently, with
@@ -23,11 +23,11 @@ do_fetch() {
 	# xxx I'm not clear if everything I'm using here is guaranteed
 	# to be available, or if I should add some more to hostdepends.
 	plug="omemo"
-	wget "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
+	$XBPS_FETCH_CMD "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
 	mkdir "$plug.tmp"
 	unzip -o -q "$plug.zip" -d "$plug.tmp"
 	x="$( (cd "$plug.tmp"; export LC_ALL="C"; find "$plug" ! -type d -print | sort |
-	tar -cf - --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
+	tar -cf - --owner=root:0 --group=root:0 --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
 	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
 	mv "$plug.tmp/$plug" "$wrksrc"
 	rm -f "$plug.zip"

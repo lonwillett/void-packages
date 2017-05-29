@@ -1,0 +1,16 @@
+# Template file for 'purple-hangouts'
+pkgname=purple-hangouts
+version=0.342
+hg_commit=0dc12134b605729a54cd6d657cf90ed198c39712
+revision=1
+wrksrc="EionRobb-purple-hangouts-${hg_commit:0:12}"
+build_style=gnu-makefile
+hostmakedepends="protobuf-c pkg-config"
+makedepends="libpurple-devel json-glib-devel libglib-devel protobuf-c-devel"
+depends="libpurple json-glib protobuf-c"
+short_desc="Hangouts plugin for libpurple"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-3"
+homepage="https://bitbucket.org/EionRobb/purple-hangouts"
+distfiles="https://bitbucket.org/EionRobb/purple-hangouts/get/${hg_commit}.tar.gz>${wrksrc}.tar.gz"
+checksum=089955b6b30ee4f52fff284a1a2309b1043b08b23fdc1d60b09f753126276982

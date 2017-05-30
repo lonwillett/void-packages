@@ -2373,7 +2373,7 @@ libspotify.so.12 libspotify-12.1.51_1
 libwiredtiger_lz4.so wiredtiger-2.9.0_1
 libwiredtiger_snappy.so wiredtiger-2.9.0_1
 libwiredtiger_zlib.so wiredtiger-2.9.0_1
-libwiredtiger-2.9.1.so wiredtiger-2.9.1_1
+libwiredtiger-2.9.2.so wiredtiger-2.9.2_1
 libvidstab.so.0.9 libvidstab-0.98b_1
 libxdo.so.3 xdotool-3.20150503.1_1
 libabigail.so.0 libabigail-1.0.rc3_1
@@ -2717,11 +2717,11 @@ libbcunit.so.1 bcunit-3.0_1
 libzbar.so.0 libzbar-0.10_1
 libzbargtk.so.0 libzbar-0.10_1
 libzbarqt.so.0 libzbar-0.10_1
-libomxil-bellagio.so.0 libomxil-bellagio-0.9.3_1 
-libomxdynamicloader.so.0 libomxil-bellagio-0.9.3_1 
-libomxaudio_effects.so.0 libomxil-bellagio-0.9.3_1 
-libomxclocksrc.so.0 libomxil-bellagio-0.9.3_1 
-libomxvideosched.so.0 libomxil-bellagio-0.9.3_1 
+libomxil-bellagio.so.0 libomxil-bellagio-0.9.3_1
+libomxdynamicloader.so.0 libomxil-bellagio-0.9.3_1
+libomxaudio_effects.so.0 libomxil-bellagio-0.9.3_1
+libomxclocksrc.so.0 libomxil-bellagio-0.9.3_1
+libomxvideosched.so.0 libomxil-bellagio-0.9.3_1
 libnss_libvirt_guest.so.2 libvirt-3.1.0_1
 libvirt-admin.so.0 libvirt-3.1.0_1
 libnss_libvirt.so.2 libvirt-3.1.0_1

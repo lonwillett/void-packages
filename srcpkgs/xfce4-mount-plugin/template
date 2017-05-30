@@ -1,0 +1,20 @@
+# Template file for 'xfce4-mount-plugin'
+pkgname=xfce4-mount-plugin
+version=1.1.2
+git_commit=995ad89705114cbec535576dcbc76a30f86877f3
+revision=1
+wrksrc="xfce4-mount-plugin-${git_commit}"
+build_style=gnu-configure
+hostmakedepends="git xfce4-dev-tools autoconf gettext"
+makedepends="xfce4-panel-devel glib-devel gettext-devel"
+depends="xfce4-panel glib gettext-libs"
+short_desc="Mount disk plug for Xfce4 panel"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-2"
+homepage="http://git.xfce.org/panel-plugins/xfce4-mount-plugin"
+distfiles="https://git.xfce.org/panel-plugins/xfce4-mount-plugin/snapshot/xfce4-mount-plugin-${git_commit}.tar.bz2"
+checksum="66ef485e4cb63400739d6da83a517d1371e72b2251659f506fead4ecb6cd03a1"
+
+pre_configure() {
+	NOCONFIGURE=1 xdt-autogen
+}

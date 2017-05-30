@@ -1,0 +1,25 @@
+# Template file for 'lesspipe'
+pkgname=lesspipe
+version="1.83.20160929"
+revision=1
+wrksrc=lesspipe
+#create_wrksrc=yes
+noarch=yes
+build_style=configure
+configure_args="--fixed --prefix=/usr"
+patch_args="-Np1"
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="git perl"
+#makedepends=""
+depends="less"
+short_desc="lesspipe.sh, a preprocessor for less"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-2"
+homepage="https://github.com/wofr06/lesspipe"
+
+do_fetch() {
+    git clone https://github.com/wofr06/lesspipe.git
+}

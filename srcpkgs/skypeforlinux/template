@@ -1,7 +1,7 @@
 # Template file for 'skypeforlinux'
 # This just repackages the debian package.
 pkgname=skypeforlinux
-version=5.2.0.1
+version=5.3.0.1
 revision=1
 only_for_archs="x86_64"
 repository="nonfree"
@@ -12,12 +12,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="skype"
 homepage="https://www.skype.com"
 distfiles="https://repo.skype.com/deb/pool/main/${pkgname:0:1}/${pkgname}/${pkgname}_${version}_amd64.deb"
-checksum=06448297eda5f183ed529a5853dfc32b1faa0d9e5af76f97f6b32a5179919eb7
-
-# NB: gnome-keyring doesn't seem to be necessary, but it will probably
-# remember your passwords for you (I haven't actually tried it out).
-# Other than that, the automatically generated dependencies should work fine.
-#depends="gnome-keyring"
+checksum=3fdb61292cfdeef42ddb473d019884a4a8c5798f871793086f5edb6fb14d4e23
 
 do_extract() {
 	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${pkgname}_${version}_amd64.deb data.tar.xz | tar xJpf - ./usr

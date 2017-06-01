@@ -1,0 +1,18 @@
+# Template file for 'OpenCPN'
+pkgname=OpenCPN
+version=4.6.1
+revision=1
+build_style=cmake
+#configure_args=""
+hostmakedepends="unzip pkg-config"
+makedepends="glu-devel wxWidgets-devel curlpp-devel portaudio-cpp-devel tinyxml-devel"
+# Can select GTK+ 2 or 3
+makedepends+=" gtkmm2-devel"
+#makedepends+=" gtkmm-devel"
+short_desc="Open Source Chartplotter and Marine GPS Navigation Software"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-2"
+homepage="https://opencpn.org/"
+distfiles="https://github.com/OpenCPN/OpenCPN/archive/v${version}.zip>${pkgname}-${version}.zip"
+checksum="fe47d4593624d2cba5f52ef11d818ee91cbec878ccee821c0d34124d725a4be4"
+wrksrc="${pkgname}-${version}"

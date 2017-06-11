@@ -139,7 +139,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.378.13 nvidia-libs-378.13_1 ignore
+libnvidia-fatbinaryloader.so.381.22 nvidia-libs-381.22_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -502,9 +502,9 @@ libmysqlclient.so.18 libmysqlclient-5.5.27_1
 libgssapi_krb5.so.2 mit-krb5-libs-1.8_1
 libgssrpc.so.4 mit-krb5-libs-1.8_1
 libk5crypto.so.3 mit-krb5-libs-1.8_1
-libkadm5clnt_mit.so.10 mit-krb5-libs-1.14_1
+libkadm5clnt_mit.so.11 mit-krb5-libs-1.15.1_1
 libkadm5clnt.so mit-krb5-libs-1.8_1
-libkadm5srv_mit.so.10 mit-krb5-libs-1.14_1
+libkadm5srv_mit.so.11 mit-krb5-libs-1.15.1_1
 libkadm5srv.so mit-krb5-libs-1.8_1
 libkdb5.so.8 mit-krb5-libs-1.13.1_1
 libkrb5.so.3 mit-krb5-libs-1.8_1
@@ -2357,6 +2357,7 @@ libOpenCOLLADAStreamWriter.so opencollada-0.0.20160223_1
 libUTF.so opencollada-0.0.20160223_1
 libbuffer.so opencollada-0.0.20160223_1
 libftoa.so opencollada-0.0.20160223_1
+libzlib.so opencollada-1.6.51_1
 libfbclient.so.2 libfbclient-2.5.5.26952_1
 libfbembed.so.2 libfbclient-2.5.5.26952_1
 libfbembed.so.2.5 libfbclient-2.5.5.26952_1
@@ -2730,7 +2731,7 @@ libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
-libqalculate.so.7 libqalculate-0.9.11_1
+libqalculate.so.9 libqalculate-0.9.12_1
 libweston-2.so.0 weston-2.0.0_1
 libmutter-0.so.0 mutter-3.24.0_1
 libmutter-clutter-0.so mutter-3.24.0_1
@@ -2768,3 +2769,4 @@ libgcab-1.0.so.0 gcab-0.7_1
 libappstream-glib.so.8 appstream-glib-0.6.13_1
 libappstream-builder.so.8 appstream-glib-0.6.13_1
 libflatpak.so.0 flatpak-0.9.3_2
+libnanomsg.so.5.0.0 nanomsg-1.0.0_2

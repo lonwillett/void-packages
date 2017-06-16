@@ -7,18 +7,18 @@ short_desc="Console client for Yandex.Disk"
 build_style="fetch"
 nostrip="yes"
 maintainer="Alexander Mamay <alexander@mamay.su>"
-license="Propietary"
+license="Proprietary"
 homepage="https://disk.yandex.com/"
 repository="nonfree"
 restricted=yes
 
 if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
 	debpkgid="${pkgname}_${version}_amd64.deb"
-	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/${pkgname:0:1}/${pkgname}/${debpkgid}"
+	distfiles="https://repo.yandex.ru/yandex-disk/deb/pool/main/${pkgname:0:1}/${pkgname}/${debpkgid}"
 	checksum="163b977068018d2fe824ddec85e6e198af56c35a3dc64ccc2ee83e771f1ce73e"
 else
 	debpkgid="${pkgname}_${version}_i386.deb"
-	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/${pkgname:0:1}/${pkgname}/${debpkgid}"
+	distfiles="https://repo.yandex.ru/yandex-disk/deb/pool/main/${pkgname:0:1}/${pkgname}/${debpkgid}"
 	checksum="11f865c2e347639cf679ab32f906f033947e4e164680a9e974a1255961dee0ed"
 fi
 

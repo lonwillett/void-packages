@@ -1,0 +1,35 @@
+# Template file for 'bbk-cli'
+pkgname=bbk-cli
+version=0.3.8
+revision=1
+if [ "$XBPS_MACHINE" = "x86_64" ]; then
+	_debarch="amd64"
+	checksum=9f205447da6c5c0f114e94e45a88a3e35febc63b8b9002e692414348ee4ce6fb
+elif [ "$XBPS_MACHINE" = "armv7l" ]; then
+	_debarch="armhf"
+	checksum=1cb2c8cb62787f00defca0667c646c8833045de09c0de8ee5e0a301ba40c0ee8
+else
+	exit 1
+fi
+only_for_archs="x86_64 armv7l"
+build_style="fetch"
+nostrip="yes"
+short_desc="Bredbandskollen's command line tool"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="Proprietary"
+repository="nonfree"
+homepage="https://www.bredbandskollen.se/"
+distfiles="http://beta1.bredbandskollen.se/download/${pkgname}_${version}_${_debarch}.deb"
+
+do_extract() {
+	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${pkgname}_${version}_${_debarch}.deb data.tar.gz | tar xzpf - ./usr
+	gunzip usr/share/doc/${pkgname}/changelog.gz
+}
+
+do_install() {
+	vbin usr/bin/bbk_cli
+	vlicense usr/share/doc/bbk-cli/copyright
+	vmkdir usr/share/doc/bbk-cli
+	vinstall usr/share/doc/bbk-cli/README 644 usr/share/doc/bbk-cli
+	vinstall usr/share/doc/bbk-cli/changelog 644 usr/share/doc/bbk-cli
+}

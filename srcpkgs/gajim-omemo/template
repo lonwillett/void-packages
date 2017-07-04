@@ -13,7 +13,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
-checksum="30eb05261465bdda8a14e2f893d26227fa212412bf357e3c30d179bd74c7d6e0"
+checksum="ee68672cdbd42106628c46acef80b8e5cac289b8319b32e6efc73ea7e7cbe45e"
 
 do_fetch() {
 	# Source archives seem to be regenerated frequently, with

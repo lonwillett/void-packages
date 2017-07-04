@@ -43,6 +43,6 @@ do_fetch() {
 }
 
 do_install() {
-	vmkdir usr/share/gajim/plugins/omemo
-	vcopy * usr/share/gajim/plugins/omemo
+	vmkdir usr/share/gajim/plugins/anti_spam
+	vcopy * usr/share/gajim/plugins/anti_spam
 }

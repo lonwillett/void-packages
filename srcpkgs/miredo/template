@@ -1,0 +1,31 @@
+# Template file for 'miredo'
+pkgname=miredo
+version=1.2.6
+revision=1
+build_style=gnu-configure
+configure_args="--enable-miredo-user"
+conf_files="/etc/miredo/miredo.conf"
+# /etc/miredo/miredo-server.conf
+make_dirs="/var/chroot/miredo 0755 root root"
+system_accounts="miredo:707"
+#hostmakedepends=""
+makedepends="judy-devel libcap-devel"
+depends="iproute2"
+short_desc="Teredo IPv6 tunneling"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-2"
+homepage="https://www.remlab.net/miredo/"
+distfiles="https://www.remlab.net/files/miredo/miredo-${version}.tar.xz"
+checksum=fa26d2f4a405415833669e2e2e22677b225d8f83600844645d5683535ea43149
+
+post_install() {
+	vmkdir var/chroot/miredo 755
+	touch ${DESTDIR}/var/chroot/miredo/.empty
+	rm -rf ${DESTDIR}/usr/lib/systemd
+	vsv miredo
+	vdoc README
+	vdoc ${FILESDIR}/README.Void
+	# Move the example configurations to the appropriate Void location
+	vmkdir /usr/share/examples
+	mv ${DESTDIR}/usr/share/doc/${pkgname}/examples ${DESTDIR}/usr/share/examples/${pkgname}
+}

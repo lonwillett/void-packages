@@ -3,7 +3,10 @@ pkgname=judy
 version=1.0.5
 revision=1
 build_style=gnu-configure
+# NB: I haven't got cross compiling working yet, so restrict archs
+only_for_archs="x86_64 i686"
 patch_args="-Np1"
+disable_parallel_build="yes"
 hostmakedepends="libtool"
 short_desc="C library for creating and accessing dynamic arrays"
 maintainer="Lon Willett <xgit@lonw.net>"

@@ -5,12 +5,12 @@ IP="/sbin/ip"
 TABLE="teredo"
 RTTABLES="/etc/iproute2/rt_tables"
 
-# Default to chroot for miredo relays, but not for clients.
 if egrep -qi '^[ 	]*RelayType[ 	][ 	]*(cone|relay|restricted)[ 	]*$' "$CONFFILE"; then
+    # Teredo relay: chroot the process
     CHROOTOPT="-t /var/chroot/miredo"
 elif [ -f "$RTTABLES" ] ; then
+    # Teredo client: add entry to rt_tables if missing
     if ! "$IP" route show table "$TABLE" >/dev/null 2>&1; then
-	# Add "teredo" entry to rt_tables, if not already there
 	i=0
 	while [ $i -lt 252 ]; do
 	    i=$((i+1))

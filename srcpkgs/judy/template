@@ -4,6 +4,7 @@ version=1.0.5
 revision=1
 build_style=gnu-configure
 patch_args="-Np1"
+disable_parallel_build="yes"
 hostmakedepends="libtool"
 short_desc="C library for creating and accessing dynamic arrays"
 maintainer="Lon Willett <xgit@lonw.net>"

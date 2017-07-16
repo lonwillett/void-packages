@@ -1,6 +1,6 @@
 # Template file for 'gajim-omemo'
 pkgname=gajim-omemo
-version=1.2.1
+version=1.2.3
 revision=1
 noarch=yes
 wrksrc="omemo"
@@ -13,29 +13,21 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
-checksum="ee68672cdbd42106628c46acef80b8e5cac289b8319b32e6efc73ea7e7cbe45e"
+checksum=a2165933f26a0e2edba20d9b0fb0e4b762ed494b7f26b382df8d341ce2d625fe
 
 do_fetch() {
 	# Source archives seem to be regenerated frequently, with
 	# indeterminate file order or some other such innocuous
-	# changes.  Work around this by repacking the files in
-	# a deterministic way, and then checksumming.
-	# xxx I'm not clear if everything I'm using here is guaranteed
-	# to be available, or if I should add some more to hostdepends.
+	# changes.
 	plug="omemo"
 	$XBPS_FETCH_CMD "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
 	mkdir "$plug.tmp"
 	unzip -o -q "$plug.zip" -d "$plug.tmp"
-	x="$( (cd "$plug.tmp"; export LC_ALL="C"; find "$plug" ! -type d -print | sort |
-	tar -cf - --owner=root:0 --group=root:0 --verbatim-files-from -T -) | sha256sum | sed -n -e '1 s/[     ].*$//p' )"
+	. $FILESDIR/checksum-dir.sh
+	x="$(checksum_dir "$plug.tmp")"
 	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
 	mv "$plug.tmp/$plug" "$wrksrc"
-	rm -f "$plug.zip"
-	rmdir "$plug.tmp"
-	if [ -e "$plug.zip" -o -d "$plug.tmp" ]; then
-		echo "Unexpected garbage left around"
-		return 1
-	fi
+	rm -rf "$plug.zip" "$plug.tmp"
 	if [ "$checksum" != "$x" ]; then
 		echo "$x"
 		return 1

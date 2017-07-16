@@ -1,0 +1,11 @@
+--- a/arch/x86/power/hibernate_64.c	2017-05-20 14:38:27.000000000 +0200
++++ b/arch/x86/power/hibernate_64.c	2017-06-11 19:30:27.998960052 +0200
+@@ -193,7 +193,7 @@
+ 
+ #define RESTORE_MAGIC	0x23456789ABCDEF01UL
+ 
+-#if IS_BUILTIN(CONFIG_CRYPTO_MD5)
++#if 0 && IS_BUILTIN(CONFIG_CRYPTO_MD5)
+ /**
+  * get_e820_md5 - calculate md5 according to given e820 map
+  *

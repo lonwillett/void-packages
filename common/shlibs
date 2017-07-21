@@ -456,6 +456,8 @@ libvhd.so.1.0 xen-libs-4.2.2_2
 libxenstat.so.0 xen-libs-4.2.2_2
 libblktapctl.so.1.0 xen-libs-4.2.2_2
 libfsimage.so.1.0 xen-libs-4.2.2_2
+libfam.so.0 gamin-0.1.10_1
+libgamin-1.so.0 gamin-0.1.10_1
 libKF5SyntaxHighlighting.so.5 syntax-highlighting-5.29.0_1
 libbabl-0.1.so.0 babl-0.1.10_1
 libbamf3.so.2 bamf-0.5.1_1
@@ -645,6 +647,7 @@ libassuan.so.0 libassuan-2.0.1_1
 libgpgme.so.11 gpgme-1.3.0_1
 libgpgme-pthread.so.11 gpgme-1.3.0_1
 libgpgmepp.so.6 gpgmepp-1.7.0_3
+libqgpgme.so.7 gpgmeqt-1.7.0_3
 libgarcon-1.so.0 garcon-0.1.12_1
 libgarcon-gtk2-1.so.0 garcon-0.4.0_1
 libxfce4ui-1.so.0 libxfce4ui-4.9.2_1
@@ -764,7 +767,7 @@ libgiblib.so.1 giblib-1.2.4_1
 libgc.so.1 gc-7.1_1
 libcord.so.1 gc-7.4_1
 libgslcblas.so.0 gsl-1.15_1
-libgsl.so.19 gsl-2.1_1
+libgsl.so.23 gsl-2.4_1
 liblua5.1.so.5.1 lua51-5.1.5_1
 liblua5.2.so.5.2 lua52-5.2.4_2
 liblua5.3.so.5.3 lua-5.3.1_2
@@ -1180,7 +1183,7 @@ libunwind-arm.so.8 libunwind-1.1_4
 libunwind-mips.so.8 libunwind-1.1_4
 libunwind-aarch64.so.8 libunwind-1.2rc1_1
 libmicrohttpd.so.12 libmicrohttpd-0.9.48_1
-libgit2.so.25 libgit2-0.25.1_1
+libgit2.so.26 libgit2-0.26.0_1
 libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
 libagg.so.2 agg-2.5_1
 libzzip-0.so.13 zziplib-0.13.62_1
@@ -2591,11 +2594,14 @@ libKF5JobWidgets.so.5 kjobwidgets-5.26.0_1
 libKF5Notifications.so.5 knotifications-5.26.0_1
 libKF5TextWidgets.so.5 ktextwidgets-5.26.0_1
 libKF5Wallet.so.5 kwallet-5.26.0_1
+libkwalletbackend5.so.5 kwallet-5.36.0_1
 libKF5XmlGui.so.5 kxmlgui-5.26.0_1
 libKF5Bookmarks.so.5 kbookmarks-5.26.0_1
 libKF5KIOWidgets.so.5 kio-5.26.0_1
 libKF5KIOCore.so.5 kio-5.26.0_1
 libKF5KIOFileWidgets.so.5 kio-5.26.0_1
+libKF5KIOGui.so.5 kio-5.36.0_1
+libKF5KIONTLM.so.5 kio-5.36.0_1
 libKF5Declarative.so.5 kdeclarative-5.26.0_1
 libKF5QuickAddons.so.5 kdeclarative-5.26.0_1
 libKF5CalendarEvents.so.5 kdeclarative-5.26.0_1
@@ -2603,6 +2609,7 @@ libKF5KCMUtils.so.5 kcmutils-5.26.0_1
 libKF5Style.so.5 frameworkintegration-5.26.0_1
 libkdeinit5_klauncher.so kinit-5.26.0_1
 libKF5NewStuff.so.5 knewstuff-5.26.0_1
+libKF5NewStuffCore.so.5 knewstuff-5.36.0_1
 libKF5NotifyConfig.so.5 knotifyconfig-5.26.0_1
 libKF5Parts.so.5 kparts-5.26.0_1
 libKF5Activities.so.5 kactivities5-5.26.0_1
@@ -2613,6 +2620,8 @@ libKF5Plasma.so.5 plasma-framework-5.26.0_1
 libKF5PlasmaQuick.so.5 plasma-framework-5.26.0_1
 libKF5ModemManagerQt.so.6 modemmanager-qt5-5.26.0_1
 libKF5People.so.5 kpeople-5.26.0_1
+libKF5PeopleBackend.so.5 kpeople-5.36.0_1
+libKF5PeopleWidgets.so.5 kpeople-5.36.0_1
 libKF5XmlRpcClient.so.5 kxmlrpcclient-5.26.0_1
 libKF5BluezQt.so.6 bluez-qt5-5.26.0_1
 libKF5FileMetaData.so.3 kfilemetadata5-5.26.0_1
@@ -2621,10 +2630,12 @@ libKF5BalooEngine.so.5 baloo5-5.26.0_1
 libKF5ActivitiesStats.so.1 kactivities5-stats-5.26.0_1
 libKF5Runner.so.5 krunner-5.26.0_1
 libKF5JS.so.5 kjs-5.26.0_1
+libKF5JSApi.so.5 kjs-5.36.0_1
 libKF5KDELibs4Support.so.5 kdelibs4support-5.26.0_1
 libKF5KHtml.so.5 khtml-5.26.0_1
 libKF5JsEmbed.so.5 kjsembed-5.26.0_1
 libKF5KrossCore.so.5 kross-5.26.0_1
+libKF5KrossUi.so.5 kross-5.36.0_1
 liblmdb.so.0 lmdb-0.9.18_2
 libisns.so.0 libisns-0.96_1
 libz80ex.so.1 z80ex-1.1.21_1
@@ -2705,8 +2716,8 @@ libuim.so.8 uim-1.8.6_1
 libuim-scm.so.0 uim-1.8.6_1
 libuim-custom.so.2 uim-1.8.6_1
 libgcroots.so.0 uim-1.8.6_1
-libdecoration.so.0 compiz-core-0.8.12.3_1
-libcompizconfig.so.0 libcompizconfig-0.8.12.1_1
+libdecoration.so.0 compiz-core-0.8.14_1
+libcompizconfig.so.0 libcompizconfig-0.8.14_1
 libemeraldengine.so.0 emerald-0.8.12.4_1
 libhangul.so.1 libhangul-0.1.0_1
 libmutter-clutter-1.0.so mutter-3.22.0_1
@@ -2728,7 +2739,7 @@ libomxvideosched.so.0 libomxil-bellagio-0.9.3_1
 libnss_libvirt_guest.so.2 libvirt-3.1.0_1
 libvirt-admin.so.0 libvirt-3.1.0_1
 libnss_libvirt.so.2 libvirt-3.1.0_1
-libassimp.so.3 libassimp-3.3.1_1
+libassimp.so.4 libassimp-4.0.0_1
 libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
@@ -2740,7 +2751,7 @@ libmutter-clutter-0.so mutter-3.24.0_1
 libmutter-cogl-path-0.so mutter-3.24.0_1
 libmutter-cogl-0.so mutter-3.24.0_1
 libmutter-cogl-pango-0.so mutter-3.24.0_1
-libmozjs-.so mozjs38-38.8.0_1
+libmozjs-38.so mozjs38-38.8.0_4
 libostree-1.so.1 libostree-2017.3_1
 librhash.so.0 rhash-1.3.4_1
 libserialport.so.0 libserialport-0.1.1_1
@@ -2808,3 +2819,5 @@ libchipcard.so.6 libchipcard-5.0.4_1
 libraqm.so.0 libraqm-0.2.0_1
 libJudy.so.1 judy-1.0.5_1
 libxqilla.so.3 XQilla-2.3.3_1
+libKF5DocTools.so.5 kdoctools-5.36.0_1
+libKF5MediaPlayer.so.5 kmediaplayer-5.36.0_1

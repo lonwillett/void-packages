@@ -1,15 +1,15 @@
 # Template file for 'csound'
 pkgname=csound
 version=6.09.1
-revision=1
+revision=2
 build_style=cmake
 configure_args="
--DJAVA_MODULE_INSTALL_DIR=/usr/lib/csound/java
--DPYTHON_MODULE_INSTALL_DIR=/usr/lib/python2.7/site-packages
--DLUA_MODULE_INSTALL_DIR=/usr/lib/lua/5.1
--DDPD_MODULE_INSTALL_DIR=/usr/lib/pd/extra"
+ -DLUA_MODULE_INSTALL_DIR=/usr/lib/lua/5.1
+ -DDPD_MODULE_INSTALL_DIR=/usr/lib/pd/extra"
 hostmakedepends="python flex"
-makedepends="pd-devel fltk-devel fluidsynth-devel liblo-devel portaudio-devel portmidi-devel tk-devel libcurl-devel LuaJIT-devel boost-devel libgomp-devel libsndfile-devel"
+makedepends="pd-devel fltk-devel fluidsynth-devel liblo-devel portaudio-devel
+ portmidi-devel tk-devel libcurl-devel LuaJIT-devel boost-devel libgomp-devel
+ libsndfile-devel"
 depends="pd"
 short_desc="A programming language for sound rendering and signal processing"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"
@@ -19,16 +19,9 @@ distfiles="https://github.com/$pkgname/$pkgname/archive/$version.tar.gz"
 checksum=d49735b4ed50f2818b577abcface45fe7f9b7fb49ccd898db030893cbcdfc738
 nocross=yes
 
-_xreplace() {
-  sed -i "s/$(echo $1 | sed -e 's/\([[\/.*]\|\]\)/\\&/g')/$(echo $2 | sed -e 's/[\/&]/\\&/g')/g" $3
-}
-
-pre_configure() {
-	_xreplace '#if defined(LINUX) && !defined(ANDROID)' '#if defined(__GLIBC__)' \
-		Top/csound.c
-}
-
 post_install() {
 	rm -r $DESTDIR/tmp
 	vinstall ${FILESDIR}/csound.sh 755 etc/profile.d
+	# Avoid conflict with libextractor
+	mv ${DESTDIR}/usr/bin/extract  ${DESTDIR}/usr/bin/csextract
 }

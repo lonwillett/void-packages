@@ -1,0 +1,25 @@
+--- libteredo/debug.h.orig	2009-02-28 21:17:14.000000000 +0100
++++ libteredo/debug.h	2017-08-06 13:06:07.986933507 +0200
+@@ -40,7 +40,9 @@
+ 	va_end (ap);
+ }
+ 
+-#  ifdef __linux__
++/* NB: This stuff isn't portable, or necessary. So don't include it for non glibc builds. */
++/* xxx Could possibly come up with a musl compatible version, but I can't be bothered. */
++#  if defined(__linux__) && defined(PTHREAD_ERRORCHECK_MUTEX_INITIALIZER_NP) && defined(PTHREAD_MUTEX_ERRORCHECK_NP)
+ #   include <errno.h>
+ #   include <assert.h>
+ #   undef PTHREAD_MUTEX_INITIALIZER
+--- libtun6/tun6.c.orig	2012-09-12 15:03:59.000000000 +0200
++++ libtun6/tun6.c	2017-08-06 14:11:02.830106176 +0200
+@@ -65,7 +65,9 @@
+ };
+ 
+ # include <net/route.h> // struct in6_rtmsg
++#ifndef ETH_P_IPV6	/* musl headers don't need, and can't handle, this */
+ # include <netinet/if_ether.h> // ETH_P_IPV6
++#endif
+ 
+ typedef struct
+ {

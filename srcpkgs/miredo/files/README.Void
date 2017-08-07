@@ -1,0 +1,28 @@
+You should probably read the upstream README too.
+
+The Void miredo package does not contain any OS specific support for
+running a miredo server ("miredo-server", as opposed to the
+client/relay: "miredo"). But you probably don't want to run a miredo
+server anyway. Running a miredo relay on your gateway can be useful,
+and there are uses for miredo clients on other machines, but it is
+rare that one wants to run one's own server. If you really want to run
+your own server, then you will need to create an appropriate service
+entry in /etc/sv, and an appropriate config file in
+/etc/miredo/miredo-service.conf (you can use
+/usr/share/examples/miredo/miredo-service.conf as a starting point for
+this).
+
+The default service file tries to detect if you are running a relay,
+and puts it in a chroot environment if it is. It does not chroot the
+miredo process if it appears to be running as a client (the default),
+because a client will probably need to do a host name lookup, so this
+introduces complications. If you're feeling paranoid, then you can
+edit the service file and fix the chroot environment as needed.
+
+The default service file also adds a table named "teredo" to the
+iproute routing tables (/etc/iproute2/rt_tables), if one doesn't
+already exist, and miredo appears to be running as a client (i.e. not
+as a relay). I highly recommend that you leave this in place, or add
+your own "teredo" entry, if for some reason the installed script
+doesn't meet your needs. See the installed client hook script
+(/etc/miredo/client-hook) if you want to understand what is going on.

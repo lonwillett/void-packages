@@ -1,6 +1,6 @@
 # Template file for 'gajim-omemo'
 pkgname=gajim-omemo
-version=1.2.4
+version=1.2.5
 revision=1
 noarch=yes
 wrksrc="omemo"
@@ -13,7 +13,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
-checksum=ef11435603c977a724a55a9698a327b10997822832a821d32f614a1375ed2914
+checksum=e1ce1392ee7400b8bf20c2067783f5f2d89f2f790e31c632d0edd193318ae0c8
 
 
 do_fetch() {

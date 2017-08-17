@@ -139,7 +139,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.381.22 nvidia-libs-381.22_1 ignore
+libnvidia-fatbinaryloader.so.384.59 nvidia-libs-384.59_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -1423,7 +1423,7 @@ libgoffice-0.8.so.8 goffice0.8-0.8.13_1
 libgoffice-0.10.so.10 goffice-0.10.9_1
 libc++.so.1 libcxx-3.4_1
 libopenobex.so.2 openobex-1.7.1_1
-libnotmuch.so.4 libnotmuch-0.19_1
+libnotmuch.so.5 libnotmuch-0.25_1
 libdri2.so.1 libdri2-0.1_1
 libUMP.so.3 libump-1.0_1
 libatomic_ops_gpl.so.1 libatomic_ops-7.4.2_1
@@ -2557,6 +2557,7 @@ libmono-profiler-log.so.0 mono-4.0.1.44_2
 libikvm-native.so mono-4.0.1.44_2
 libMonoPosixHelper.so mono-4.0.1.44_2
 libMonoSupportW.so mono-4.0.1.44_2
+libmono-btls-shared.so mono-5.2.0.215_1
 libxcb-xrm.so.0 xcb-util-xrm-1.0_1
 libinchi.so.0 openbabel-2.3.2_1
 libopenbabel.so.4 openbabel-2.3.2_1
@@ -2823,5 +2824,11 @@ libbrotlidec.so.0.6.0 brotli-0.6.0_1
 libbrotlienc.so.0.6.0 brotli-0.6.0_1
 libfilteraudio.so filter_audio-0.0.1_1
 libarmadillo.so.7 armadillo-7.800.2_1
+libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
 libduktape.so.201 duktape-2.1.1_1
 libJudy.so.1 judy-1.0.5_1
+libccgnu2-1.8.so.0 commoncpp2-1.8.1_1
+libccext2-1.8.so.0 commoncpp2-1.8.1_1
+libucommon.so.8 ucommon-7.0.0_1
+libusecure.so.8 ucommon-7.0.0_1
+libcommoncpp.so.8 ucommon-7.0.0_1

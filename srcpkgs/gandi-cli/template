@@ -1,0 +1,21 @@
+# Template file for 'gandi-cli'
+pkgname=gandi-cli
+version=0.20
+revision=1
+_commit=2332d10798d1688295d07682ac421a1ca856ded6
+#zzzwrksrc=gandi.cli-${version}
+wrksrc=gandi.cli-${_commit}
+noarch=yes
+build_style=python3-module
+# xxx Should convert to python_module; but can't be arsed
+hostmakedepends="python3-setuptools python3-docutils"
+depends="python3 python3-requests python3-click python3-yaml python3-IPy"
+pycompile_module="gandi/cli"
+short_desc="Command line interface to Gandi.net"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="GPL-3"
+homepage="http://cli.gandi.net"
+#zzzdistfiles="https://github.com/Gandi/gandi.cli/archive/${version}.tar.gz>${wrksrc}.tar.gz"
+#zzzchecksum=5750678fa6aef349cded1a8f3ce27e99b33e75628e91e9de6faf3bb469a46114
+distfiles="https://github.com/Gandi/gandi.cli/archive/${_commit}.tar.gz>${wrksrc}.tar.gz"
+checksum=5636a54a27e6592ca34384811c8853dbccc21ac57cbf94c1874baf4646e94f35

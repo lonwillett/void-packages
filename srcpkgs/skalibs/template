@@ -1,6 +1,6 @@
 # Template file for 'skalibs'
 pkgname=skalibs
-version=2.5.1.1
+version=2.6.0.0
 revision=1
 _sysdepspkg=skaware-void-sysdeps
 build_style=gnu-configure
@@ -11,13 +11,13 @@ maintainer="bougyman <bougyman@voidlinux.eu>"
 license="ISC"
 homepage="http://skarnet.org/software/skalibs/"
 distfiles="http://skarnet.org/software/${pkgname}/${pkgname}-${version}.tar.gz"
-checksum=aa387f11a01751b37fd32603fdf9328a979f74f97f0172def1b0ad73b7e8d51d
+checksum=3572cb8c7d2ae9d16da5a0f3d23b48e013e0c957f1329d100f04dd5accb054c3
 
 CFLAGS="-D_DEFAULT_SOURCE"
 
 if [ "$CROSS_BUILD" ]; then
 	distfiles+=" https://github.com/CMB/${_sysdepspkg}/archive/${version}.tar.gz"
-	checksum+=" a0c132972d2342d4ad2e6fde218173e7340d5c1d143b48d5a6c0c238e737ca1e"
+	checksum+=" babcf24b8b5afe0719718eccf17ac57a13a7cf5a9191331bff22213b716f2dca"
 	configure_args+=" --with-sysdeps=../${_sysdepspkg}-${version}/${XBPS_CROSS_TRIPLET}"
 fi
 

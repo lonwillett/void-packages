@@ -2742,7 +2742,7 @@ libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
-libqalculate.so.10 libqalculate-1.0.0_1
+libqalculate.so.11 libqalculate-2.0.0_1
 libweston-2.so.0 weston-2.0.0_1
 libmutter-0.so.0 mutter-3.24.0_1
 libmutter-clutter-0.so mutter-3.24.0_1
@@ -2825,6 +2825,7 @@ libbrotlienc.so.0.6.0 brotli-0.6.0_1
 libfilteraudio.so filter_audio-0.0.1_1
 libarmadillo.so.7 armadillo-7.800.2_1
 libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
+libmovit.so.7 movit-1.5.3_1
 libduktape.so.201 duktape-2.1.1_1
 libJudy.so.1 judy-1.0.5_1
 libccgnu2-1.8.so.0 commoncpp2-1.8.1_1
@@ -2832,3 +2833,6 @@ libccext2-1.8.so.0 commoncpp2-1.8.1_1
 libucommon.so.8 ucommon-7.0.0_1
 libusecure.so.8 ucommon-7.0.0_1
 libcommoncpp.so.8 ucommon-7.0.0_1
+libmupdf.so.1.11 libmupdf-1.11_4
+libmupdfthird.so.1.11 libmupdf-1.11_4
+libmuthreads.so.1.11 libmupdf-1.11_4

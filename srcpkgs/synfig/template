@@ -1,13 +1,13 @@
 # Template file for 'synfig'
 pkgname=synfig
 version=1.2.0
-revision=2
+revision=3
 build_style=gnu-configure
 hostmakedepends="boost-build ImageMagick pkg-config"
 makedepends="ETL gettext-devel libxml++-devel mlt-devel
  libmng-devel boost-build boost-devel libopenexr-devel ffmpeg-devel"
 depends="ImageMagick"
-short_desc="Open Source 2D vector and timeline-based animation software"
+short_desc="Open Source 2D vector and timeline-based animation software (command line renderer)"
 maintainer="Diogo Leal <diogo@diogoleal.com>"
 license="GPL-3"
 homepage="http://www.synfig.org/"
@@ -16,6 +16,8 @@ checksum=611ea9f156188c9ecbb99a21116b5330e5070c51a0ffa721c7791c46ec231dbf
 nocross=yes
 
 CXXFLAGS="-std=c++11"
+
+broken="https://build.voidlinux.eu/builders/x86_64_builder/builds/4543/steps/shell_3/logs/stdio"
 
 synfig-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

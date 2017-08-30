@@ -322,7 +322,6 @@ reconfigure_bootstrap_pkgs() {
     touch -f $statefile
 }
 
-
 bootstrap_update() {
     if [ -z "$CHROOT_READY" ]; then
         return
@@ -415,7 +414,7 @@ readonly XBPS_GCC_VERSION=${XBPS_GCC_VERSION_MAJOR}.${XBPS_GCC_VERSION_MINOR}.${
 # main()
 #
 XBPS_OPTIONS=
-XBPS_OPTSTRING="a:CEfgGhH:Ij:Lm:No:qr:tV"
+XBPS_OPTSTRING="a:CEfgGhH:iIj:Lm:No:qQr:tV"
 
 # Preprocess arguments in order to allow options before and after XBPS_TARGET.
 eval set -- $(getopt "$XBPS_OPTSTRING" "$@");
@@ -430,13 +429,15 @@ while getopts "$XBPS_OPTSTRING" opt; do
         g) readonly XBPS_DEBUG_PKGS=1; XBPS_OPTIONS+=" -g";;
         H) readonly XBPS_HOSTDIR="$(readlink -f $OPTARG 2>/dev/null)"; XBPS_OPTIONS+=" -H $XBPS_HOSTDIR";;
         h) usage && exit 0;;
+        i) export XBPS_INFORMATIVE_RUN=1; XBPS_OPTIONS+=" -i";;
         I) readonly XBPS_SKIP_DEPS=1; XBPS_OPTIONS+=" -I";;
         j) export XBPS_MAKEJOBS="$OPTARG"; XBPS_OPTIONS+=" -j $OPTARG";;
         L) export NOCOLORS=1; XBPS_OPTIONS+=" -L";;
         m) readonly XBPS_MASTERDIR=$(readlink -f $OPTARG 2>/dev/null); XBPS_OPTIONS+=" -m $XBPS_MASTERDIR";;
         N) readonly XBPS_SKIP_REMOTEREPOS=1; XBPS_OPTIONS+=" -N";;
         o) readonly XBPS_PKG_OPTIONS="$OPTARG"; XBPS_OPTIONS+=" -o $OPTARG";;
-        q) export XBPS_CHECK_PKGS=0; XBPS_OPTIONS+=" -q";;
+        q) export XBPS_QUIET=1; XBPS_OPTIONS+=" -q";;
+        Q) export XBPS_CHECK_PKGS=0; XBPS_OPTIONS+=" -Q";;
         r) readonly XBPS_ALT_REPOSITORY="$OPTARG"; XBPS_OPTIONS+=" -r $OPTARG";;
         t) export XBPS_TEMP_MASTERDIR=1; XBPS_OPTIONS+=" -t -C";;
         V) echo $XBPS_SRC_VERSION && exit 0;;
@@ -549,7 +550,7 @@ if [ -f $XBPS_MASTERDIR/.xbps_chroot_init ]; then
 fi
 
 if [ -z "$XBPS_REINIT" -a -s $XBPS_MASTERDIR/.xbps_chroot_init ]; then
-    export XBPS_ARCH=$(cat $XBPS_MASTERDIR/.xbps_chroot_init)
+    export XBPS_ARCH=${XBPS_ARCH:-$(cat $XBPS_MASTERDIR/.xbps_chroot_init)}
     if [[ $XBPS_MACHINE == x86_64* ]] && [[ $XBPS_ARCH == i686* ]]; then
         # reconfigure pkgs via linux32
         linux32 xbps-reconfigure -r ${XBPS_MASTERDIR} -a &>/dev/null
@@ -722,35 +723,64 @@ case "$XBPS_TARGET" in
         purge_distfiles
         ;;
     show)
-        read_pkg ignore-broken
+        read_pkg ignore-problems
         show_pkg
         ;;
     show-avail)
-        read_pkg
+        read_pkg ignore-problems
         show_avail
         ;;
     show-files)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_files
         ;;
     show-deps)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_deps
         ;;
     show-build-deps)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_build_deps
         ;;
+    show-pkg-var)
+        read_pkg ignore-problems
+        for sub_name in $subpackages; do
+            if [ $sub_name = $XBPS_TARGET_PKG ]; then
+                ${sub_name}_package
+            fi
+        done
+	while IFS= read -r pkg_var; do
+		print_var=
+		case "${pkg_var}" in
+		    bootstrap) print_var="$bootstrap ";;
+		    broken) print_var="$broken ";;
+		    depends) print_var="$depends ";;
+		    hostmakedepends) print_var="$hostmakedepends ";;
+		    makedepends) print_var="$makedepends ";;
+		    noarch) print_var="$noarch ";;
+		    nocross) print_var="$nocross ";;
+		    only_for_archs) print_var="$only_for_archs ";;
+		    pkgname) print_var="$pkgname ";;
+		    restricted) print_var="$restricted ";;
+		    revision) print_var="$revision ";;
+		    subpackages) print_var="$subpackages ";;
+		    version) print_var="$version ";;
+		esac # the space at the end of each is essential for unset vars
+		if [ -n "$print_var" ]; then
+			printf "%s\n" "$(printf "${print_var% }" | tr -t '\n\r' ' ')"
+		fi # The trailing space gets stripped before printing anyway
+	done
+        ;;
     show-options)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_build_options
         ;;
     show-shlib-provides)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_shlib_provides
         ;;
     show-shlib-requires)
-        read_pkg
+        read_pkg ignore-problems
         show_pkg_shlib_requires
         ;;
     show-var)
@@ -777,7 +807,7 @@ case "$XBPS_TARGET" in
         bulk_update -i
         ;;
     update-check)
-        read_pkg ignore-broken
+        read_pkg ignore-problems
         update_check
         ;;
     update-hash-cache)

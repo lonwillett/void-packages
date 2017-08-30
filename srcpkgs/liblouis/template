@@ -1,7 +1,7 @@
 # Template file for 'liblouis'
 pkgname=liblouis
 version=3.2.0
-revision=1
+revision=2
 build_style=gnu-configure
 hostmakedepends="pkg-config help2man python3-devel"
 makedepends="python3-devel"
@@ -15,6 +15,11 @@ homepage="http://liblouis.org/"
 distfiles="https://github.com/$pkgname/$pkgname/releases/download/v$version/$pkgname-$version.tar.gz"
 checksum=c07d8232959bbe4f4a1bdc597a6aa228753526b47f2064bd119754da6cfd6f85
 pycompile_module='louis'
+
+case "$XBPS_TARGET_MACHINE" in
+	*-musl) ;;
+	*) configure_args+=" gl_cv_func_getopt_gnu=yes";;
+esac
 
 # See my commentary in patches/crosspython.patch
 # for justification of pre_build:

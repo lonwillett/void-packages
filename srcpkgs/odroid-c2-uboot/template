@@ -2,7 +2,7 @@
 pkgname=odroid-c2-uboot
 version=v2015.01
 revision=2
-_githash=f416a769454b89c39d5b217d28bd3c9f5d1594df
+_githash=cff3edb675933ea2e2ecd659eab127a42f3777df
 wrksrc="u-boot-${_githash}"
 only_for_archs="aarch64 aarch64-musl"
 conf_files="/boot/boot.ini"
@@ -12,7 +12,7 @@ maintainer="Christian Neukirchen <chneukirchen@gmail.com>"
 license="GPL-2"
 homepage="https://github.com/hardkernel/u-boot"
 distfiles="https://github.com/hardkernel/u-boot/archive/${_githash}.tar.gz"
-checksum=da7ca9e6abdfedaa65ac4e0bd378155002bf5d0ccea663ddf03fa839dceb3724
+checksum=0ebf132ea6fc54c951e8e1b8a1f4676f107b25e1628c8a594c051a624e67f61e
 
 case "$XBPS_MACHINE" in
 	x86_64) ;;

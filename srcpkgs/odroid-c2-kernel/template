@@ -1,15 +1,16 @@
 # Template file for 'odroid-c2-kernel'
 pkgname=odroid-c2-kernel
 version=3.14.79
-revision=1
-_githash=558eb86c1abe7dc321b8457c5edf80bfe72492ec
+revision=2
+_githash=d07325078d7626730d593ac7a1cc333f451850d9
 wrksrc="linux-${_githash}"
+patch_args="-Np1"
 maintainer="Christian Neukirchen <chneukirchen@gmail.com>"
 homepage="https://github.com/hardkernel/linux/tree/odroidc2-3.14.y"
 license="GPL-2"
 short_desc="The Linux kernel for ODROID-C2 (${version%.*} series)"
 distfiles="https://github.com/hardkernel/linux/archive/${_githash}.tar.gz"
-checksum=13e1833f930c246f05bac50bbf29dc142eb6c70520eeb60c1ab148a800798782
+checksum=e0a958779d1f3d10fde90dd40f74a9fd722c0516aaf1cd2abe0afb4d3e5945c4
 
 _kernver="${version}_${revision}"
 

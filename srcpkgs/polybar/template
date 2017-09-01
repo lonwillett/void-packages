@@ -1,7 +1,7 @@
 # Template file for 'polybar'
 pkgname=polybar
 version=3.0.5
-revision=1
+revision=2
 _i3ipcpp_version=0.6.2
 _xpp_version=1.3.6
 build_style=cmake
@@ -39,6 +39,8 @@ desc_option_curl="Enable support for cURL"
 desc_option_i3="Enable support for i3"
 desc_option_mpd="Enable support for MPD"
 desc_option_network="Enable support for network"
+
+CXXFLAGS="-Wno-error=deprecated-declarations"
 
 if [ "$build_option_network" ]; then
 	case "$XBPS_TARGET_MACHINE" in

@@ -1,0 +1,18 @@
+--- sd_fuse/sd_fusing.sh.orig	2017-09-02 00:23:29.567371141 +0200
++++ sd_fuse/sd_fusing.sh	2017-09-02 00:26:25.789764642 +0200
+@@ -24,11 +24,10 @@
+         exit 1
+ fi
+ 
+-sudo dd if=$BL1 of=$1 conv=fsync,notrunc bs=1 count=442
+-sudo dd if=$BL1 of=$1 conv=fsync,notrunc bs=512 skip=1 seek=1
+-sudo dd if=$UBOOT of=$1 conv=fsync,notrunc bs=512 seek=97
++dd if=$BL1 of=$1 conv=fsync,notrunc bs=1 count=442
++dd if=$BL1 of=$1 conv=fsync,notrunc bs=512 skip=1 seek=1
++dd if=$UBOOT of=$1 conv=fsync,notrunc bs=512 seek=97
+ 
+ sync
+ 
+-sudo eject $1
+-echo Finished.
++echo "Successfully wrote U-Boot to $1"

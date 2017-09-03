@@ -1,0 +1,57 @@
+--- include/linux/compiler-gcc.h.orig	2017-08-01 08:58:15.000000000 +0200
++++ include/linux/compiler-gcc.h	2017-09-02 00:50:44.110990918 +0200
+@@ -110,7 +110,12 @@
+ 
+ #define __gcc_header(x) #x
+ #define _gcc_header(x) __gcc_header(linux/compiler-gcc##x.h)
++#if __GNUC__ > 5
++/* Assume it's still compatible with v5 */
++#define gcc_header(x) _gcc_header(5)
++#else
+ #define gcc_header(x) _gcc_header(x)
++#endif
+ #include gcc_header(__GNUC__)
+ 
+ #if !defined(__noclone)
+--- arch/arm/cpu/armv8/gxb/bl31_apis.c.orig	2017-08-01 08:58:15.000000000 +0200
++++ arch/arm/cpu/armv8/gxb/bl31_apis.c	2017-09-02 01:01:28.185225252 +0200
+@@ -62,7 +62,7 @@
+ 	if (arg->cmd == EFUSE_HAL_API_WRITE)
+ 		memcpy((void *)sharemem_input_base,
+ 		       (const void *)arg->buffer_phy, size);
+-		asm __volatile__("" : : : "memory");
++	asm __volatile__("" : : : "memory");
+ 
+ 	register uint64_t x0 asm("x0") = cmd;
+ 	register uint64_t x1 asm("x1") = offset;
+@@ -318,4 +318,4 @@
+ 			"smc	#0\n"
+ 		: "+r" (x0)
+ 		: "r" (x1));
+-}
+\ No newline at end of file
++}
+--- drivers/mmc/aml_sd_emmc.c.orig	2017-08-01 08:58:15.000000000 +0200
++++ drivers/mmc/aml_sd_emmc.c	2017-09-02 01:05:06.284098281 +0200
+@@ -240,8 +240,8 @@
+ #endif
+     }
+     if (!sdio->inited_flag)
+-        sdio->inited_flag = 1;
+-	return SD_NO_ERROR;
++	sdio->inited_flag = 1;
++    return SD_NO_ERROR;
+ }
+ 
+ 
+--- drivers/usb/gadget/s3c_udc_otg.c.orig	2017-08-01 08:58:15.000000000 +0200
++++ drivers/usb/gadget/s3c_udc_otg.c	2017-09-02 01:07:37.873974351 +0200
+@@ -68,7 +68,7 @@
+ struct s3c_udc	*the_controller;
+ 
+ static const char driver_name[] = "s3c-udc";
+-static const char driver_desc[] = DRIVER_DESC;
++/* Unused: static const char driver_desc[] = DRIVER_DESC; */
+ static const char ep0name[] = "ep0-control";
+ 
+ /* Max packet size*/

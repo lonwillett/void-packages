@@ -881,9 +881,6 @@ libopenal.so.1 libopenal-1.13_1
 libalut.so.0 freealut-1.1.0_1
 liblilv-0.so.0 liblilv-0.14.4_1
 libsuil-0.so.0 suil-0.6.4_1
-libprotoc.so.13 protobuf-3.3.0_1
-libprotobuf.so.13 protobuf-3.3.0_1
-libprotobuf-lite.so.13 protobuf-lite-3.3.0_1
 libmcpp.so.0 libmcpp-2.7.2_1
 libGlacier2.so.35 libIce-3.5.0_1
 libIce.so.35 libIce-3.5.0_1
@@ -2769,7 +2766,7 @@ libPocoFoundation.so.48 poco-1.7.8p2_1
 libPocoXML.so.48 poco-1.7.8p2_1
 libPocoUtil.so.48 poco-1.7.8p2_1
 libopenblas.so.0 openblas-0.2.19_1
-librtmidi.so.3 rtmidi-2.1.1_1
+librtmidi.so.4 rtmidi-3.0.0_1
 libbac-7.4.7.so bacula-common-7.4.7_1
 libbaccfg-7.4.7.so bacula-common-7.4.7_1
 libbacfind-7.4.7.so bacula-common-7.4.7_1
@@ -2838,3 +2835,6 @@ libcommoncpp.so.8 ucommon-7.0.0_1
 libmupdf.so.1.11 libmupdf-1.11_4
 libmupdfthird.so.1.11 libmupdf-1.11_4
 libmuthreads.so.1.11 libmupdf-1.11_4
+libprotobuf-lite.so.14 protobuf-lite-3.4.0_1
+libprotoc.so.14 protobuf-3.4.0_1
+libprotobuf.so.14 protobuf-3.4.0_1

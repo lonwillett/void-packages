@@ -1,0 +1,12 @@
+This patch is needed with gcc 6.3, and maybe others.
+
+--- a/arch/arm64/Makefile	2017-07-10 16:53:07.000000000 +0200
++++ b/arch/arm64/Makefile	2017-09-04 22:30:49.658510440 +0200
+@@ -21,6 +21,7 @@
+ 
+ KBUILD_CFLAGS	+= -mgeneral-regs-only
+ KBUILD_CFLAGS	+= -fno-pic
++KBUILD_CFLAGS	+= $(call cc-option, -mpc-relative-literal-loads)
+ ifeq ($(CONFIG_CPU_BIG_ENDIAN), y)
+ KBUILD_CPPFLAGS	+= -mbig-endian
+ AS		+= -EB

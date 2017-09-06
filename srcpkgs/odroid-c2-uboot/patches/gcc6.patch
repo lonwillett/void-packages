@@ -51,7 +51,7 @@
  
  static const char driver_name[] = "s3c-udc";
 -static const char driver_desc[] = DRIVER_DESC;
-+/* Unused: static const char driver_desc[] = DRIVER_DESC; */
++static __maybe_unused const char driver_desc[] = DRIVER_DESC;
  static const char ep0name[] = "ep0-control";
  
  /* Max packet size*/

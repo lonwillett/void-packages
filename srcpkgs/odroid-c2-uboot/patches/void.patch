@@ -1,6 +1,15 @@
 --- common/cmd_cfgload.c
 +++ common/cmd_cfgload.c
-@@ -52,7 +52,7 @@ static char* read_cfgload(void)
+@@ -38,7 +38,7 @@
+ 	return !(p == q);
+ }
+ 
+-/* Read boot.ini from FAT partition
++/* Read boot.ini from the first partition
+  */
+ static char* read_cfgload(void)
+ {
+@@ -52,10 +52,17 @@
  
  	setenv("filesize", "0");
  
@@ -9,14 +18,26 @@
  	run_command(cmd, 0);
  
  	filesize = getenv_ulong("filesize", 16, 0);
++
++	if (0 == filesize) {
++		sprintf(cmd, "load mmc 0:1 0x%p /boot.ini", (void *)p);
++		run_command(cmd, 0);
++		filesize = getenv_ulong("filesize", 16, 0);
++	}
++
+ 	if (0 == filesize) {
+ 		printf("cfgload: no boot.ini or empty file\n");
+ 		return NULL;
 --- include/configs/odroidc2.h
 +++ include/configs/odroidc2.h
-@@ -75,6 +75,13 @@
+@@ -75,6 +75,15 @@
  #define CONFIG_BOOTDELAY		1	// Seconds
  #define CONFIG_ABORTBOOT_WITH_ENTERKEY
  
 +/* Void */
 +#define CONFIG_CMD_FS_GENERIC
++#define CONFIG_CMD_FS_EXT2
++#define CONFIG_CMD_FS_EXT4
 +#define CONFIG_SUPPORT_RAW_INITRD
 +#define CONFIG_IDENT_STRING		" Void Linux"
 +#define CONFIG_CMD_PART
@@ -25,6 +46,3 @@
  /* args/envs */
  #define CONFIG_SYS_MAXARGS		64
  
--- 
-2.7.1
-

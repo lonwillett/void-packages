@@ -2,7 +2,7 @@
 pkgname=rng-tools
 version=6
 revision=1
-wrksrc=${pkgname}-${pkgname}-${version}
+wrksrc=rng-tools-${pkgname}-${version}
 build_style=gnu-configure
 makedepends="libgcrypt-devel libsysfs-devel"
 hostmakedepends="automake"
@@ -10,7 +10,7 @@ short_desc="Random number generator related utilities"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="GPL-3"
 homepage="https://github.com/nhorman/rng-tools/releases"
-distfiles="https://github.com/nhorman/rng-tools/archive/rng-tools-6.tar.gz"
+distfiles="https://github.com/nhorman/rng-tools/archive/${pkgname}-${version}.tar.gz"
 checksum=6d9c3f72824d1ea15dd2a80bfcf71f6a73c8843c6344f7f774a97a4ca7641b4c
 configure_args="--sbindir=/usr/bin"
 
@@ -20,7 +20,7 @@ case "$XBPS_TARGET_MACHINE" in
 esac
 
 pre_configure() {
-        sh autogen.sh
+	sh autogen.sh
 }
 
 do_build() {

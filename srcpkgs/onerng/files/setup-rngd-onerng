@@ -1,0 +1,113 @@
+#!/bin/sh
+
+HAVEDRNG=0
+if ! grep -q rdrand /proc/cpuinfo; then
+    echo
+    echo "*** DRNG appears to be unavailable: will not attempt to use it."
+else
+    # We appear to have DRNG; check that it works
+    echo
+    rngd -v -f -n 1 -r /none &
+    pid=$!
+    sleep 3
+    if kill $pid 2>/dev/null; then
+	# Seems to work
+	wait $pid
+	status=$?
+	if [ $status -eq 143 ]; then
+	    HAVEDRNG=1
+	    echo
+	    echo "*** DRNG seems to be available: will use it."
+	fi
+    else
+	wait $pid
+    fi
+    if [ $HAVEDRNG -eq 0 ]; then
+	cat <<-EOF
+
+	*** The test for DRNG availability gave unexpected results, so the
+	*** generated configuration will not attempt to use it. You may want
+	*** to investigate further, since this script does not seem to be
+	*** working correctly.
+	EOF
+    fi
+fi
+
+HAVETPM=0
+if [ ! -e /dev/tpm0 ]; then
+    echo
+    echo "*** TPM appears to be unavailable: will not attempt to use it."
+else
+    echo
+    rngd -v -f -d 1 -r /none &
+    pid=$!
+    sleep 3
+    if kill $pid 2>/dev/null; then
+	wait $pid
+	status=$?
+	if [ $status -eq 143 ]; then
+	    HAVETPM=1
+	    cat <<-EOF
+
+	*** The TPM RNG seems to work, but there are a lot of dodgy TPM
+	*** implementations, so you may want to manually disable it.
+	EOF
+	fi
+    else
+	wait $pid
+    fi
+    if [ $HAVETPM -eq 0 ]; then
+	cat <<-EOF
+
+	*** TPM is available, but its RNG does not seem to functional, so the
+	*** generated configuration will not attempt to use it. This is not
+	*** unusual, but you may wish to investigate further.
+	EOF
+    fi
+fi
+
+echo
+
+OPTS="-r /run/hwrng"
+if [ $HAVEDRNG -eq 0 ]; then
+    OPTS="-d 1 $OPTS"
+fi
+if [ $HAVETPM -eq 0 ]; then
+    OPTS="-n 1 $OPTS"
+fi
+
+echo
+echo "*** Using the following options for rngd: $OPTS"
+cat <<EOF > /etc/sv/rngd/conf
+RNGD_OPTS="$OPTS"
+EOF
+
+if [ $HAVEDRNG -eq 0 -a $HAVETPM -eq 0 ]; then
+    echo "*** Only running rngd when the OneRNG device is available"
+    touch /etc/sv/rngd/down
+else
+    echo "*** Will always run rngd, whether or not the OneRNG device is available"
+    rm -f /etc/sv/rngd/down
+fi
+
+echo "*** Enabling the rngd service"
+ln -s /etc/sv/rngd /var/service
+echo "*** Enabling the onerng service"
+ln -s /etc/sv/onerng /var/service
+
+if [ -L /dev/onerng ]; then
+    echo "*** Starting the onerng service"
+    echo sv up onerng
+elif [ -e /dev/ttyACM0 ]; then
+    cat <<EOF
+
+You need to unplug your OneRNG device, and then plug it back in to get
+things started. If this is inconvenient, then the following commands
+will probably simulate this adequately:
+
+	modprobe -r cdc-acm
+	modprobe cdc-acm
+
+In the worst case, a reboot of your machine should do the trick.
+EOF
+fi

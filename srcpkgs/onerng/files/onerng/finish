@@ -1,0 +1,22 @@
+#!/bin/sh
+
+RUNLINK="/run/hwrng"
+RNGDSVC="rngd"
+
+# Clean-up UUCP style lockfile
+if [ -L "$RUNLINK" ]; then
+    TTYNAME="$(readlink "$RUNLINK")"
+    TTYNAME="${TTYNAME#/dev/}"
+    rm -f "/var/lock/LCK..$TTYNAME"
+fi
+
+# Remove the symbolic link we made
+rm -f "$RUNLINK"
+
+# Restart or stop rngd
+if [ -e "/var/service/$RNGDSVC/down" ]; then
+    sv down "$RNGDSVC"
+else
+    sv stop "$RNGDSVC"
+    sv up "$RNGDSVC"
+fi

@@ -49,7 +49,7 @@ if [ -e "$LOCKFILE" ]; then
     touch -d 'now - 3 minutes' "$TEMPFILE"
     if [ "$LOCKFILE" -ot "$TEMPFILE" ] && [ ! -e /proc/"$(head -1 "$LOCKFILE")" ]
     then
-	# Quietly clean up old lockfile.
+	# Quietly clean up stale lockfile.
 	# (Only do this if lockfile doesn't contain a valid PID, and
 	# is older than 3 minutes).
 	# xxx Race condition here!
@@ -88,7 +88,7 @@ TEMPFILE="$(mktemp)"
 while [ ! -s "$TEMPFILE" ]; do
     i=$((i+1))
     if [ $i -gt 200 ]; then
-	# something's broken
+	# something is broken
 	echo "onerng: device not responding: $RNGDEV" >&2
 	exit 2
     fi
@@ -138,7 +138,7 @@ fi
 rm -f "$TEMPFILE"
 TEMPFILE=""
 
-###### HANDOVER TO RNGD
+###### HANDOVER TO USER (rngd)
 
 # waste some entropy
 dd if="$RNGDEV" of=/dev/null bs=10k count=1 >/dev/null &

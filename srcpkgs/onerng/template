@@ -15,16 +15,15 @@ distfiles="https://github.com/OneRNG/onerng.github.io/blob/master/sw/onerng_${ve
 checksum=afd6d0b64ad8e5557d10b497a9afb4ddeaf5e8d967069921941927f49b93fb16
 
 do_extract() {
-	tar -C .. -xzf ${XBPS_SRCDISTDIR}/${pkgname}-${version}/onerng_${version}.tar.gz onerng_${version}
+	tar -C .. -xzf ${XBPS_SRCDISTDIR}/${pkgname}-${version}/onerng_${version}.tar.gz
 }
 
 do_install() {
 	vmkdir usr/share/onerng
-	vinstall files/onerng_verify.py 644 usr/share/onerng
 	vinstall ${FILESDIR}/onerng-init.sh 644 usr/share/onerng
-	vinstall ${FILESDIR}/setup-rngd-onerng 755 usr/share/onerng
-	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
+	vinstall files/onerng_verify.py 644 usr/share/onerng
 	vsv onerng
+	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
 	vdoc README
 	vdoc ${FILESDIR}/README.Void
 }

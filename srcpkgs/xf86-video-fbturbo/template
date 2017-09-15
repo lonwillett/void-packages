@@ -9,13 +9,31 @@ license="MIT, GPL"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 distfiles="https://github.com/ssvb/xf86-video-fbturbo/archive/${version}.tar.gz"
 checksum=10411686de0a9d8b2cde300b0d68e9f1d22e3611470d357ef3afc337f123ca0f
-
-only_for_archs="armv6l armv6l-musl armv7l armv7l-musl"
+only_for_archs="armv6l armv6l-musl armv7l armv7l-musl aarch64 aarch64-musl"
 hostmakedepends="pkg-config xorg-server-devel"
 makedepends="libXrandr-devel xorg-server-devel"
 depends="virtual?xserver-abi-video-23_1"
 
 LDFLAGS="-Wl,-z,lazy"
+
+case "$XBPS_TARGET_MACHINE" in
+    aarch64*)
+	_commit=815280196e8929feb09e72f4325c180259a309ac
+	wrksrc="${pkgname}-${_commit}"
+	hostmakedepends+=" automake libtool xorg-util-macros"
+	distfiles="https://github.com/tnmeyer/xf86-video-fbturbo/archive/${_commit}.tar.gz"
+	checksum=e7b63bb58079506cca4b97cca64ecbb8bc04f7fd7f8345fb9c2150a82ee1ae81
+	;;
+esac
+
+
+pre_configure() {
+	case "$XBPS_TARGET_MACHINE" in
+	    aarch64*)
+		./autogen.sh
+		;;
+	esac
+}
 
 post_install() {
 	vinstall xorg.conf 644 usr/share/X11/xorg.conf.d 99-fbturbo.conf

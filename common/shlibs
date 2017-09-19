@@ -496,7 +496,7 @@ libgimpconfig-2.0.so.0 libgimp-2.8.10_3
 libgimpmath-2.0.so.0 libgimp-2.8.10_3
 libgimpcolor-2.0.so.0 libgimp-2.8.10_3
 libgimpmodule-2.0.so.0 libgimp-2.8.10_3
-libexiv2.so.14 exiv2-0.25_1
+libexiv2.so.26 exiv2-0.26_1
 libKF5Holidays.so.5 kholidays-16.12.0_1
 libsearchclient.so.0 strigi-0.7.2_1
 libstreamanalyzer.so.0 strigi-0.7.2_1
@@ -2296,7 +2296,7 @@ libfirm.so.1.22 libfirm-1.22.0_1
 libaudiofile.so.1 audiofile-0.3.6_1
 libbs2b.so.0 libbs2b-3.1.0_1
 libmunge.so.2 munge-libs-0.5.11_1
-libmgba.so.0.5 libmgba-0.5.0_1
+libmgba.so.0.6 libmgba-0.6.0_1
 libglabels-3.0.so.8 libglabels30-3.2.1_1
 libglbarcode-3.0.so.0 libglabels30-3.2.1_1
 libjim.so.0.77 jimtcl-0.77_1
@@ -2844,6 +2844,7 @@ libmuthreads.so.1.11 libmupdf-1.11_4
 libprotobuf-lite.so.14 protobuf-lite-3.4.0_1
 libprotoc.so.14 protobuf-3.4.0_1
 libprotobuf.so.14 protobuf-3.4.0_1
+libsombok.so.3 sombok-2.4.0_1
 libite.so.3 libite-1.8.2_1
 libykclient.so.3 ykclient-2.15_1
 libbooster.so.0 cppcms-1.0.5_1
@@ -2853,4 +2854,5 @@ libtracker-control-2.0.so.0 libtracker-2.0.0_1
 libtracker-sparql-2.0.so.0 libtracker-2.0.0_1
 libdockapp.so.3 libdockapp-0.7.2_1
 libkrdccore.so.5 krdc-17.04.3_1
+libkrfbprivate.so.5.0 krfb-17.08.1_1 
 libJudy.so.1 judy-1.0.5_1

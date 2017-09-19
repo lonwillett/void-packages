@@ -2820,7 +2820,6 @@ libnlopt.so.0 nlopt-2.4.2_1
 libeb.so.16 libeb-4.3.3_1
 libchipcard.so.6 libchipcard-5.0.4_1
 libraqm.so.0 libraqm-0.2.0_1
-libJudy.so.1 judy-1.0.5_1
 liboggz.so.2 liboggz-1.1.1_1
 libfishsound.so.1 libfishsound-1.0.0_1
 libxqilla.so.3 XQilla-2.3.3_1
@@ -2834,7 +2833,6 @@ libarmadillo.so.7 armadillo-7.800.2_1
 libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
 libmovit.so.7 movit-1.5.3_1
 libduktape.so.201 duktape-2.1.1_1
-libJudy.so.1 judy-1.0.5_1
 libccgnu2-1.8.so.0 commoncpp2-1.8.1_1
 libccext2-1.8.so.0 commoncpp2-1.8.1_1
 libucommon.so.8 ucommon-7.0.0_1
@@ -2857,3 +2855,4 @@ libtracker-sparql-2.0.so.0 libtracker-2.0.0_1
 libdockapp.so.3 libdockapp-0.7.2_1
 libkrdccore.so.5 krdc-17.04.3_1
 libkrfbprivate.so.5.0 krfb-17.08.1_1 
+libJudy.so.1 judy-1.0.5_1

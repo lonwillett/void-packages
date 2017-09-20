@@ -1,7 +1,7 @@
 # Template file for 'opencv'
 pkgname=opencv
 version=3.3.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DENABLE_PRECOMPILED_HEADERS=OFF -DWITH_OPENMP=ON
  -DWITH_OPENCL=ON -DENABLE_CXX11=ON"
@@ -11,7 +11,7 @@ makedepends="ffmpeg-devel libpng-devel libjpeg-turbo-devel tiff-devel
  libgphoto2-devel gst-plugins-base1-devel openblas-devel"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://opencv.org"
-license="BSD"
+license="3-clause-BSD"
 short_desc="Computer vision and machine learning software library"
 distfiles="https://github.com/opencv/${pkgname}/archive/${version}.tar.gz"
 checksum=95029eb5578af3b20b8c7f8f6f59db1b827c2d5aaaa74b6becb1de647cbdda5a
@@ -40,23 +40,22 @@ libopencv-devel_package() {
 
 if [ -z "$CROSS_BUILD" ]; then
 	# because python-numpy cannot be cross compiled
-
 	hostmakedepends+=" python-devel python3-devel"
 	makedepends+=" python-numpy python3-numpy"
 
 	libopencv-python_package() {
-		short_desc+=" - Python bindings"
+		short_desc+=" - Python2 bindings"
+		depends="python-numpy"
 		pkg_install() {
-			mkdir -p ${DESTDIR}/usr/lib/python2.7
 			vmove usr/lib/python2.7
 		}
 	}
 
 	libopencv-python3_package() {
 		short_desc+=" - Python3 bindings"
+		depends="python3-numpy"
 		pkg_install() {
-			mkdir -p ${DESTDIR}/usr/lib/python3.6
-			vmove usr/lib/python3.6
+			vmove usr/lib/python3*
 		}
 	}
 fi

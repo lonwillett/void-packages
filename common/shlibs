@@ -671,8 +671,8 @@ libasyncns.so.0 libasyncns-0.8_1
 libpulse.so.0 libpulseaudio-1.0_1
 libpulse-mainloop-glib.so.0 libpulseaudio-1.0_1
 libpulse-simple.so.0 libpulseaudio-1.0_1
-libpulsecommon-11.0.so libpulseaudio-11.0_1
-libpulsecore-11.0.so libpulseaudio-11.0_1
+libpulsecommon-11.1.so libpulseaudio-11.1_1
+libpulsecore-11.1.so libpulseaudio-11.1_1
 liborc-0.4.so.0 orc-0.4.11_1
 liborc-test-0.4.so.0 orc-0.4.11_1
 libgmime-2.6.so.0 gmime-2.6.4_1
@@ -2068,6 +2068,7 @@ libgegl-npd-0.3.so gegl3-0.3.0_1
 libgegl-sc-0.3.so gegl3-0.3.0_1
 libprocps.so.6 procps-ng-3.3.12_1
 libskarnet.so.2.6 skalibs-2.6.0.0_1
+libKF5BalooWidgets.so.5 baloo-widgets5-17.04.3_1
 libtidy.so.5 libtidy5-5.1.25_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
 libQupZilla.so.2 qupzilla-2.0.0_1

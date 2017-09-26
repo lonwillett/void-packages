@@ -12,7 +12,6 @@
 #
 # User parameters (settable in /etc/sv/onerng/conf):
 #
-#   $ONERNG_VERIFY_FIRMWARE
 #   $ONERNG_MODE_COMMAND
 #
 # The usual setup is:
@@ -44,10 +43,10 @@ if [ $? -ne 0 ] || ! flock -n -x 0; then
 fi
 
 # Create a UUCP style lockfile for the tty node
-TEMPFILE="$LOCKFILE.tmp$$"
+LOCKTEMP="$LOCKFILE.tmp$$"
 if [ -e "$LOCKFILE" ]; then
-    touch -d 'now - 3 minutes' "$TEMPFILE"
-    if [ "$LOCKFILE" -ot "$TEMPFILE" ] && [ ! -e /proc/"$(head -1 "$LOCKFILE")" ]
+    touch -d 'now - 3 minutes' "$LOCKTEMP"
+    if [ "$LOCKFILE" -ot "$LOCKTEMP" ] && [ ! -e /proc/"$(head -1 "$LOCKFILE")" ]
     then
 	# Quietly clean up stale lockfile.
 	# (Only do this if lockfile doesn't contain a valid PID, and
@@ -56,17 +55,17 @@ if [ -e "$LOCKFILE" ]; then
 	rm -f "$LOCKFILE"
     fi
 fi
-echo $$ > "$TEMPFILE"
-chmod 644 "$TEMPFILE"
-if ! mv "$TEMPFILE" "$LOCKFILE"; then
-    rm -f "$TEMPFILE"
+echo $$ > "$LOCKTEMP"
+chmod 644 "$LOCKTEMP"
+if ! mv "$LOCKTEMP" "$LOCKFILE"; then
+    rm -f "$LOCKTEMP"
     flock -u 0
     exec </dev/null
     echo "onerng: Couldn't lock tty: $LOCKFILE" >&2
     exit 1
 fi
-TEMPFILE=""
 
+TEMPFILE=""
 cleanup()
 {
     if [ -n "$TEMPFILE" ]; then rm -f "$TEMPFILE"; TEMPFILE=""; fi
@@ -79,7 +78,7 @@ trap 'cleanup' EXIT
 
 ###### DEVICE INITIALISATION
 
-stty raw -echo clocal -crtscts >&0
+stty -F /proc/self/fd/0 raw -echo clocal -crtscts
 
 # loop waiting for things to come up (i.e. until we get some data)
 # xxx There's probably a better way to do this.
@@ -97,43 +96,16 @@ while [ ! -s "$TEMPFILE" ]; do
     echo "cmdO" >&0		# turn it on
     dd if="$RNGDEV" of=$TEMPFILE bs=1 >/dev/null &
     pid=$!
-    stty raw -echo clocal -crtscts >&0
+    stty -F /proc/self/fd/0 raw -echo clocal -crtscts
     sleep 0.05
 
     echo "cmdo" >&0		# turn it off
     echo "cmd4" >&0		# turn off noise gathering
     echo "cmdw" >&0		# flush entropy pool
+    sleep 0.05
     kill $pid
     wait $pid
 done
-
-###### FIRMWARE VERIFICATION
-
-# Check firmware signature, if required
-if [ "x$ONERNG_VERIFY_FIRMWARE" != "x0" ]; then
-
-    sleep 0.1
-    # read data into temp file
-    truncate --size=0 "$TEMPFILE"
-    dd if="$RNGDEV" iflag=fullblock of=$TEMPFILE bs=4 >/dev/null &
-    pid=$!
-    sleep 0.02
-
-    echo "cmdO" >&0		# start it
-    echo "cmdX" >&0		# extract image
-    # wait a while, should be done, kill it
-    sleep 3.5
-    kill $pid
-    echo "cmdo" >&0		# turn it off
-    wait $pid
-
-    # process the data, verify its signature, log any errors
-    if ! python /usr/share/onerng/onerng_verify.py $TEMPFILE < /dev/null; then
-	# failed: it's a bad or compromised board
-	echo "onerng: firmware verification failed" >&2
-	exit 2
-    fi
-fi
 
 rm -f "$TEMPFILE"
 TEMPFILE=""

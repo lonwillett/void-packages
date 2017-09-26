@@ -13,8 +13,6 @@
 #	cmd6	- RF noise with whitener
 #	cmd7	- Raw RF noise
 #
-#	set ONERNG_VERIFY_FIRMWARE to "0" to disable firmware verification
-#
 #	set ONERNG_URANDOM_RESEED to the rate at which /dev/urandom is
 #	has entropy added to it from the system entropy pool -
 #	measured in seconds - "0" means continually top it up, empty
@@ -25,5 +23,4 @@
 #	make other arrangements for restoring it.
 #
 ONERNG_MODE_COMMAND="cmd0"
-ONERNG_VERIFY_FIRMWARE="1"
 ONERNG_URANDOM_RESEED="10"

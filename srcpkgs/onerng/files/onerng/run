@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# User setable parameters
-ONERNG_VERIFY_FIRMWARE=1
+# User settable parameters
 ONERNG_MODE_COMMAND="cmd0"
 ONERNG_URANDOM_RESEED="2"
 [ -r conf ] && . ./conf
@@ -23,7 +22,7 @@ TTYNAME="$(readlink "$RNGDEV")"
 # xxx should verify that $TTYNAME is free from "/" characters
 
 # Script to do device initialisation
-. /usr/share/onerng/onerng-init.sh
+. /usr/share/onerng/init.sh
 
 # Turn rngd lose now
 if [ -n "$RNGDSVC" ]; then
@@ -44,4 +43,5 @@ if [ -n "$ONERNG_URANDOM_RESEED"  ]; then
 fi
 
 # Now wait
+# NB: stdin is open to the device, and holding a lock on it.
 exec chpst -b onerng pause

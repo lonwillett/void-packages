@@ -1,0 +1,26 @@
+--- files/onerng_verify.py	2017-01-15 03:49:59.000000000 +0100
++++ files/onerng_verify.py	2017-09-25 22:40:10.468500796 +0200
+@@ -6,13 +6,11 @@
+ import sys
+ import tempfile
+ import gnupg
+-import syslog
+ 
+ def failure(why):
+-	syslog.syslog(syslog.LOG_ERR, "firmware verification failed: "+why)
++	print ("firmware verification failed: "+why)
+ 	sys.exit(1)
+ 
+-syslog.openlog("OneRNG");
+ state = 0
+ public_key = """\
+ -----BEGIN PGP PUBLIC KEY BLOCK-----
+@@ -163,7 +161,7 @@
+ 			verified = gpg.verify_data(sig.name, c[0:length-end_off])
+ 			sig.close()
+ 			if verified:
+-				syslog.syslog(syslog.LOG_NOTICE, "firmware verification passed OK - version="+str(version))
++				print ("firmware verification passed OK - version="+str(version))
+ 				sys.exit(0)
+ 			failure("Invalid firmware signature")
+ 		else:

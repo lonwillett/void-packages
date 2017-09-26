@@ -1,13 +1,13 @@
 === Notes and caveats ===
 
-This file is valid as of 2017-09-10.
+This file is valid as of 2017-09-26.
 
 This assumes that you want to use "rngd" (from the "rng-tools"
 package) to feed the entropy from a OneRNG device to the kernel.
 
 If you want to do something else, then this can probably be managed by
-tweaking some parameters in "/etc/sv/onerng/run", but that is not
-something that is explicitly supported.
+tweaking some parameters in the file "/etc/sv/onerng/run", but that is
+not something that is explicitly supported.
 
 
 === Basic configuration ===
@@ -72,3 +72,40 @@ When the "onerng" service stops, it removes "/run/hwrng", and then
 stops and maybe restarts the "rngd" service.
 
 For further details, see the scripts.
+
+
+=== Firmware verification ===
+
+The firmware in the OneRNG devices is signed, so that one can verify
+that it is correct and has not been tampered with. Unfortunately,
+there is a bug in the firmware that causes at least some devices in at
+least some environments (all of my devices, in all the machines that I
+have tried) to misbehave badly after the firmware has been
+downloaded. The only reliable fix for this behaviour that I have found
+is to hard-reset the device, e.g. unplug it and plug it back in.
+
+The chief symptom of this bug is that the device will dump large
+numbers of zeros in the "random data" when it goes from being idle to
+being in-demand. This is clearly something very bad.
+
+So the bottom line is that if you download the firmware in order to
+verify it, then you want to unplug the device before using it
+again.
+
+Between this problem, and the fact that this verification is of
+questionable utility anyway (since it relies on the device to
+correctly dump its firmware in the first place), I have not included
+any option to automatically verify the firmware. But I have included
+the necessary scripts, so that one can do this manually.
+
+If you wish to do this, the process is:
+
+   -- Install the package "python-gnupg".
+
+   -- Plug in the device, and let the "onerng" service initialise it.
+
+   -- Run (as root) the script /usr/share/onerng/verify-firmware. It
+      should report whether or not the firmware the device dumps is
+      valid or not.
+
+   -- Unplug the device.

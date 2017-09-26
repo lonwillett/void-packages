@@ -2,7 +2,8 @@
 
 # User settable parameters
 ONERNG_MODE_COMMAND="cmd0"
-ONERNG_URANDOM_RESEED="2"
+ONERNG_VERIFY_FIRMWARE="0"
+ONERNG_URANDOM_RESEED="10"
 [ -r conf ] && . ./conf
 
 # Fixed parameters
@@ -23,6 +24,9 @@ TTYNAME="$(readlink "$RNGDEV")"
 
 # Script to do device initialisation
 . /usr/share/onerng/init.sh
+
+# Create symbolic link for rngd (or other client)
+[ -n "$RUNLINK" ] && ln -f -s "/dev/$TTYNAME" "$RUNLINK"
 
 # Turn rngd lose now
 if [ -n "$RNGDSVC" ]; then

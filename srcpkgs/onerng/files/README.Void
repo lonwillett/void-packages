@@ -3,17 +3,20 @@
 This file is valid as of 2017-09-26.
 
 This assumes that you want to use "rngd" (from the "rng-tools"
-package) to feed the entropy from a OneRNG device to the kernel.
+package) to feed the entropy from a OneRNG device to the kernel.  If
+you want to do something else, then this can probably be managed by
+tweaking some parameters in the file "/etc/sv/onerng/run".
 
-If you want to do something else, then this can probably be managed by
-tweaking some parameters in the file "/etc/sv/onerng/run", but that is
-not something that is explicitly supported.
+This package assumes that you only have a single device connected to
+your machine. If you want to support multiple devices on a single
+machine for some reason, then you'll have to do some work.
 
 
 === Basic configuration ===
 
 To use a OneRNG device, it is necessary to configure rngd to work with
 it. This involves the following steps:
+
 
  -- Make sure that the value of RNGD_OPTS set in /etc/sv/rngd/conf
     contains "-r /run/hwrng". e.g. /etc/sv/rngd/conf could be:
@@ -36,13 +39,15 @@ it. This involves the following steps:
     device is ready.
 
 
- -- The "rngd" service needs to be enabled:
+-- The "rngd" service needs to be enabled:
 
 	ln -s /etc/sv/rngd /var/service/
 
- -- The "onerng" service needs to be enabled:
+
+-- The "onerng" service needs to be enabled:
 
 	ln -s /etc/sv/onerng /var/service/
+
 
 Finally, you may need to unplug and plug-in your OneRNG device (or
 take some equivalent action), if it was already plugged in when the
@@ -57,16 +62,17 @@ fit together.
 
 A couple of udev rules are registered (79-onerng.rules), so that when
 a OneRNG device is plugged in, a symlink is created (/dev/onerng), and
-the "onerng" service is started ("sv up onerng"). When the device is
+the "onerng" service is started ("sv once onerng"). When the device is
 unplugged, the "onerng" service is stopped ("sv down onerng").  Note
-that the "onerng" service is not automatically started by runit
-because it has a "down" file.
+that the "onerng" service is not automatically started by runit (it
+has a "down" file).
 
 When the "onerng" service starts up, it does some device
-initialisation and what-not, creates the symbolic link "/run/hwrng"
-pointing to the device, and then stops and restarts (or just starts)
-the "rngd" service, which must be configured to use "/run/hwrng" as a
-source of entropy.
+initialisation and what-not (possibly performing the firmware
+verification), creates the symbolic link "/run/hwrng" pointing to the
+device, and then stops and restarts (or just starts) the "rngd"
+service, which must be configured to use "/run/hwrng" as a source of
+entropy.  Then the service just waits to be shut down.
 
 When the "onerng" service stops, it removes "/run/hwrng", and then
 stops and maybe restarts the "rngd" service.
@@ -77,35 +83,24 @@ For further details, see the scripts.
 === Firmware verification ===
 
 The firmware in the OneRNG devices is signed, so that one can verify
-that it is correct and has not been tampered with. Unfortunately,
-there is a bug in the firmware that causes at least some devices in at
-least some environments (all of my devices, in all the machines that I
-have tried) to misbehave badly after the firmware has been
-downloaded. The only reliable fix for this behaviour that I have found
-is to hard-reset the device, e.g. unplug it and plug it back in.
+(with some important caveats) that it is correct and has not been
+tampered with.  However, firmware verification is not done by default,
+for several reasons, but primarily because I wanted to keep the
+"onerng" dependency list to a minimum.
 
-The chief symptom of this bug is that the device will dump large
-numbers of zeros in the "random data" when it goes from being idle to
-being in-demand. This is clearly something very bad.
+So in order to verify the firmware, you need to take the following
+steps:
 
-So the bottom line is that if you download the firmware in order to
-verify it, then you want to unplug the device before using it
-again.
+ -- Install the python-gnupg package (or python3-gnupg, if python3 is
+    the default python interpreter). This will also pull in python (or
+    python3) and gnupg as dependencies.
 
-Between this problem, and the fact that this verification is of
-questionable utility anyway (since it relies on the device to
-correctly dump its firmware in the first place), I have not included
-any option to automatically verify the firmware. But I have included
-the necessary scripts, so that one can do this manually.
+ -- Change the value assigned to ONERNG_VERIFY_FIRMWARE in
+    /etc/sv/onerng/conf, from "0" to "1".
 
-If you wish to do this, the process is:
+ -- Restart the onerng service, or unplug your device, and plug it in
+    again.
 
-   -- Install the package "python-gnupg".
-
-   -- Plug in the device, and let the "onerng" service initialise it.
-
-   -- Run (as root) the script /usr/share/onerng/verify-firmware. It
-      should report whether or not the firmware the device dumps is
-      valid or not.
-
-   -- Unplug the device.
+You should get a syslog message indicating whether or not the firmware
+verification succeeded. In addition, the onerng service will refuse to
+run if the verification fails.

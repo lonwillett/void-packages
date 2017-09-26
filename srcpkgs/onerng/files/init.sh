@@ -1,18 +1,21 @@
 # sh source file
 
 # Based on the OneRNG 3.5 scripts: https://github.com/OneRNG/onerng.github.io
+# Copyright (c): GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
+# Author (base scripts): Paul Campbell <paul@taniwha.com>
+# See associated files.
 
 # Parameters:
 #
-#   $RNGDEV -- OneRNG device path
-#   $TTYNAME -- Name of tty device for $RNGDEV
+#   RNGDEV -- OneRNG device path
+#   TTYNAME -- Name of tty device for $RNGDEV
 #	NB: "$RNGDEV" and "/dev/$TTYNAME" must be the same device.
 #	NB: "$TTYNAME" must not contain "/" or other special characters.
-#   $RUNLINK -- Name of symlink to device that we should create
 #
 # User parameters (settable in /etc/sv/onerng/conf):
 #
-#   $ONERNG_MODE_COMMAND
+#   ONERNG_MODE_COMMAND
+#   ONERNG_VERIFY_FIRMWARE
 #
 # The usual setup is:
 #
@@ -20,19 +23,24 @@
 #   "/dev/onerng" is a symlink --> "ttyACM0" (created by udev).
 #   RNGDEV="/dev/onerng"
 #   TTYNAME="ttyACM0"
-#   RUNLINK="/run/hwrng"
 #
 # This script will:
 #
-#   Open the OneRNG device as fd 0.
-#   Lock and initalise the OneRNG device.
-#   Create the symlink "/run/hwrng" --> "/dev/ttyACM0".
+#   Open (rw) the OneRNG device as fd 0.
+#   Lock the OneRNG device.
+#   Initialise the OneRNG device.
+#   Verify the firmware signature, if requested.
+#
+# Note that fd 0 (stdin) will be open to the device when this script
+# returns, and there is a lock (flock) held on it.
 
 umask 0177
+
 
 ###### OBTAIN DEVICE LOCKS
 
 LOCKFILE="/var/lock/LCK..$TTYNAME"
+LOCKTEMP="$LOCKFILE.tmp$$"
 
 # Open device as fd 0 (stdin), and flock it
 exec <>"$RNGDEV"
@@ -43,7 +51,6 @@ if [ $? -ne 0 ] || ! flock -n -x 0; then
 fi
 
 # Create a UUCP style lockfile for the tty node
-LOCKTEMP="$LOCKFILE.tmp$$"
 if [ -e "$LOCKFILE" ]; then
     touch -d 'now - 3 minutes' "$LOCKTEMP"
     if [ "$LOCKFILE" -ot "$LOCKTEMP" ] && [ ! -e /proc/"$(head -1 "$LOCKFILE")" ]
@@ -74,7 +81,8 @@ cleanup()
     exec </dev/null
 }
 
-trap 'cleanup' EXIT
+trap 'cleanup' EXIT INT TERM
+
 
 ###### DEVICE INITIALISATION
 
@@ -89,7 +97,7 @@ while [ ! -s "$TEMPFILE" ]; do
     if [ $i -gt 200 ]; then
 	# something is broken
 	echo "onerng: device not responding: $RNGDEV" >&2
-	exit 2
+	exit 3
     fi
     # off, produce nothing, flush
     echo "cmd0" >&0		# standard noise
@@ -107,8 +115,40 @@ while [ ! -s "$TEMPFILE" ]; do
     wait $pid
 done
 
+
+###### FIRMWARE VERIFICATION
+
+# Check firmware signature, if required
+if [ "x$ONERNG_VERIFY_FIRMWARE" = "x0" ]; then
+    rm -f "$TEMPFILE"
+else
+    sleep 0.1
+    # read data into temp file
+    truncate --size=0 "$TEMPFILE"
+    dd if="$RNGDEV" iflag=fullblock of=$TEMPFILE bs=4 >/dev/null &
+    pid=$!
+    sleep 0.02
+
+    echo "cmdO" >&0		# start it
+    echo "cmdX" >&0		# extract image
+    # wait a while, should be done, kill it
+    sleep 3.5
+    kill $pid
+    echo "cmdo" >&0		# turn it off
+    echo "cmdw" >&0		# flush entropy pool
+    wait $pid
+
+    # process the data, verify its signature, log any errors
+    if ! python /usr/share/onerng/onerng_verify.py $TEMPFILE < /dev/null; then
+	# failed: it's a bad or compromised board
+	echo "onerng: firmware verification failed" >&2
+	exit 2
+    fi
+fi
+
 rm -f "$TEMPFILE"
 TEMPFILE=""
+
 
 ###### HANDOVER TO USER (rngd)
 
@@ -121,6 +161,4 @@ echo "$ONERNG_MODE_COMMAND" >&0
 echo "cmdO" >&0
 wait $pid
 
-[ -n "$RUNLINK" ] && ln -f -s "/dev/$TTYNAME" "$RUNLINK"
-
-trap - EXIT
+trap - EXIT INT TERM

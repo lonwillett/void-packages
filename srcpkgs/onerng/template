@@ -21,8 +21,7 @@ do_extract() {
 do_install() {
 	vmkdir usr/share/onerng
 	vinstall ${FILESDIR}/init.sh 644 usr/share/onerng
-	vinstall ${FILESDIR}/verify.sh 755 usr/share/onerng/verify-firmware
-	vinstall files/onerng_verify.py 644 usr/share/onerng/verify.py
+	vinstall files/onerng_verify.py 644 usr/share/onerng
 	vsv onerng
 	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
 	vdoc README

@@ -1,0 +1,106 @@
+=== NOTES AND CAVEATS ===
+
+DATE: 2017-09-28
+
+Based on the OneRNG 3.5 scripts:
+
+  http://onerng.info/onerng
+
+
+AUTHOR (original scripts):
+
+  Paul Campbell <paul@taniwha.com>
+
+
+COPYRIGHTS:
+
+  Copyright (c) 2014, Paul Campbell
+  All rights reserved.
+
+  GNU LESSER GENERAL PUBLIC LICENSE
+  Version 3, 29 June 2007
+
+  See /usr/share/licenses/LGPL-3.
+
+
+NOTES:
+
+This assumes that you want to use "rngd" (from the "rng-tools"
+package) to feed the entropy from a OneRNG device to the kernel, and
+that you only have a single device connected to your machine.
+
+
+=== BASIC CONFIGURATION ===
+
+The "rngd-onerng" service uses the "rngd" program from the "rng-tools"
+package to feed entropy to the kernel. It passes the "-r" option to
+it, so that it will use the OneRNG device, but it may be necessary or
+desirable to pass some other options. This may be done by changing the
+value of RNGD_OPTS set in /etc/sv/rngd-onerng/conf. See the rngd
+documentation for help with the options.
+
+In particular, you may want to force rngd to exclude other sources of
+entropy. I would especially note that there are a lot of dodgy TPM
+implementations, so the TPM RNG may be unusable (if it is present).
+
+Also, I would recommend passing "-e 7" to rngd, if you have the
+current version from the Void Linux repositories. Be aware that this
+option is dependent on the particular version of rng-tools that you
+have installed; not all of them support it.
+
+You may also want to change other parameters in /etc/sv/rngd-onerng/conf,
+but make sure you read the section below before changing the value of
+ONERNG_VERIFY_FIRMWARE.
+
+Otherwise, all you should need to do is enable the OneRNG service,
+i.e. as root:
+
+	ln -s /etc/sv/rngd-onerng /var/service/
+
+Finally, if your OneRNG device was already plugged in when the
+"onerng" package was installed, then you need to unplug it and plug it
+back in (or take some equivalent action, e.g. remove and re-insert the
+cdc-acm module). This is needed to get udev to execute the newly
+installed rule.
+
+
+=== RNGD SERVICE ===
+
+Note that the "rngd" service (from the rng-tools package) does not
+need to be enabled to use a OneRNG device. In fact, it should not be
+run simultaneously with the "rngd-onerng" service.
+
+If your OneRNG device is only intermittently connected to your
+computer, then you may want to enable the "rngd" service as well as
+the "rngd-onerng" service. This should work: the "rngd-onerng" service
+stops the "rngd" service when it starts up, and starts it when it
+shuts down.
+
+Especially note that the value of RNGD_OPTS in "/etc/sv/rngd/conf" is
+distinct from the one in "/etc/sv/rngd-onerng/conf", and does *not*
+affect the options that the onerng service uses with rngd.
+
+
+=== FIRMWARE VERIFICATION ===
+
+The firmware in the OneRNG devices is signed, so that one can verify
+(with some important caveats) that it is correct and has not been
+tampered with.  However, firmware verification is not done by default
+in order to keep the "onerng" dependency list to a minimum.
+
+So in order to verify the firmware, you need to take the following
+steps:
+
+ -- Install the python-gnupg package (or python3-gnupg, if python3 is
+    the default python interpreter). This will also pull in python (or
+    python3) and gnupg as dependencies.
+
+ -- Change the value assigned to ONERNG_VERIFY_FIRMWARE in
+    /etc/sv/rngd-onerng/conf, from "0" to "1".
+
+ -- Restart the rngd-onerng service, or unplug your device, and plug it in
+    again.
+
+You should get a syslog message indicating whether or not the firmware
+verification succeeded. In addition, the rngd-onerng service will
+refuse to run if the verification fails.

@@ -1,0 +1,32 @@
+#
+# OneRNG configuration file
+# See /usr/share/doc/onerng/README.Void
+#
+# Set ONERNG_MODE_COMMAND to choose system mode:
+#
+#	cmd0	- Avalanche noise with whitener (default)
+#	cmd1	- Raw avalanche noise
+#	cmd2	- Avalanche noise and RF noise with whitener
+#	cmd3	- Raw avalanche noise and RF noise
+#	cmd4	- No noise
+#	cmd5	- No noise
+#	cmd6	- RF noise with whitener
+#	cmd7	- Raw RF noise
+#
+# Set ONERNG_VERIFY_FIRMWARE to "1" to enable firmware
+# verification. See the README.Void file before trying this.
+#
+# Set ONERNG_URANDOM_RESEED to the rate at which /dev/urandom has
+# entropy added to it from the system entropy pool - measured in
+# seconds - "0" means continually top it up, empty means don't change.
+# NB: Currently, this rate does not get reset to its original value
+# when the OneRNG service is stopped.  If this is a problem for you,
+# then you may wish to set it to the empty string, or make other
+# arrangements for restoring it.
+#
+# Set RNGD_OPTS to any additional options for "rngd".
+#
+ONERNG_MODE_COMMAND="cmd0"
+ONERNG_VERIFY_FIRMWARE="0"
+ONERNG_URANDOM_RESEED="10"
+RNGD_OPTS=""

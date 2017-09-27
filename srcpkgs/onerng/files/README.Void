@@ -64,7 +64,8 @@ i.e. as root:
 
 Note that the service is not automatically started by runit (it has a
 "down" file), but instead it is activated by a udev rule when the
-device is plugged in.
+device is plugged in. It is also automatically shutdown when the
+device is unplugged.
 
 Finally, if your OneRNG device was already plugged in when the
 "onerng" package was installed, then you need to unplug it and plug it
@@ -77,7 +78,7 @@ installed rule.
 
 Note that the "rngd" service (from the rng-tools package) does not
 need to be enabled to use a OneRNG device. In fact, it should not be
-run simultaneously with "onerng" service.
+run simultaneously with the "onerng" service.
 
 If your OneRNG device is only intermittently connected to your
 computer, then you may want to enable the "rngd" service as well as
@@ -93,9 +94,8 @@ the options that the onerng service uses with rngd.
 
 The firmware in the OneRNG devices is signed, so that one can verify
 (with some important caveats) that it is correct and has not been
-tampered with.  However, firmware verification is not done by default,
-for several reasons, but primarily because I wanted to keep the
-"onerng" dependency list to a minimum.
+tampered with.  However, firmware verification is not done by default
+in order to keep the "onerng" dependency list to a minimum.
 
 So in order to verify the firmware, you need to take the following
 steps:

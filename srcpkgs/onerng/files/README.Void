@@ -60,7 +60,7 @@ ONERNG_VERIFY_FIRMWARE.
 Otherwise, all you should need to do is enable the OneRNG service,
 i.e. as root:
 
-	ln -s /etc/sv/rngd /var/service/
+	ln -s /etc/sv/onerng /var/service/
 
 Note that the service is not automatically started by runit (it has a
 "down" file), but instead it is activated by a udev rule when the

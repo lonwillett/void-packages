@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Clean up files
+if [ -L /run/hwrng ]; then
+    DEV="$(readlink /run/hwrng)"
+    rm -f /run/hwrng "/var/lock/LCK..${DEV#/dev/}"
+fi
+
+# Don't restart when device is missing or broken
+[ ! -c /dev/onerng -o "x$1" = "x2" ] && sv down rngd-onerng
+
+# Start up regular rngd service if it appears to be wanted
+[ -e /var/service/rngd -a ! -e /var/service/rngd/down ] && sv up rngd

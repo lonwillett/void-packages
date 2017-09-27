@@ -20,7 +20,15 @@ if [ ! -L "$RNGDEV" -o ! -c "$RNGDEV" ]; then
 fi
 
 TTYNAME="$(readlink "$RNGDEV")"
-# xxx should verify that $TTYNAME is free from "/" characters
+# Verify that TTYNAME is as expected: should start with "tty" and be
+# free from "/" characters.
+if [ "x${TTYNAME}" != "x${TTYNAME%/*}" -o \
+     "x${TTYNAME}" = "x${TTYNAME#tty}" -o \
+     ! "$RNGDEV" -ef "/dev/${TTYNAME}" ]
+then
+    echo "onerng: Bad device: /dev/${TTYNAME}" >&2
+    exit 1
+fi
 
 # Script to do device initialisation
 . /usr/share/onerng/init.sh
@@ -46,6 +54,6 @@ if [ -n "$ONERNG_URANDOM_RESEED"  ]; then
     fi
 fi
 
-# Now wait
+# Now wait.
 # NB: stdin is open to the device, and holding a lock on it.
 exec chpst -b onerng pause

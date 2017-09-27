@@ -1,18 +1,41 @@
-=== Notes and caveats ===
+=== NOTES AND CAVEATS ===
 
-This file is valid as of 2017-09-26.
+DATE: 2017-09-27
+
+Based on the OneRNG 3.5 scripts:
+
+  http://onerng.info/onerng
+
+
+AUTHOR (original scripts):
+
+  Paul Campbell <paul@taniwha.com>
+
+
+COPYRIGHTS:
+
+  Copyright (c) 2014, Paul Campbell
+  All rights reserved.
+
+  GNU LESSER GENERAL PUBLIC LICENSE
+  Version 3, 29 June 2007
+
+  See /usr/share/licenses/LGPL-3.
+
+
+NOTES:
 
 This assumes that you want to use "rngd" (from the "rng-tools"
 package) to feed the entropy from a OneRNG device to the kernel.  If
 you want to do something else, then this can probably be managed by
-tweaking some parameters in the file "/etc/sv/onerng/run".
+tweaking the parameters in the file "/etc/sv/onerng/run".
 
 This package assumes that you only have a single device connected to
 your machine. If you want to support multiple devices on a single
 machine for some reason, then you'll have to do some work.
 
 
-=== Basic configuration ===
+=== BASIC CONFIGURATION ===
 
 To use a OneRNG device, it is necessary to configure rngd to work with
 it. This involves the following steps:
@@ -49,13 +72,14 @@ it. This involves the following steps:
 	ln -s /etc/sv/onerng /var/service/
 
 
-Finally, you may need to unplug and plug-in your OneRNG device (or
-take some equivalent action), if it was already plugged in when the
-"onerng" package was installed. This is needed to force udev to
-execute the rule installed by the onerng package.
+Finally, if your OneRNG device was already plugged in when the
+"onerng" package was installed, then you need to unplug it and plug it
+back in (or take some equivalent action, e.g. remove and re-insert the
+cdc-acm module). This is needed to get udev to execute the newly
+installed rule.
 
 
-=== Details ===
+=== DETAILS ===
 
 This section gives a quick overview of how the different components
 fit together.
@@ -72,7 +96,7 @@ initialisation and what-not (possibly performing the firmware
 verification), creates the symbolic link "/run/hwrng" pointing to the
 device, and then stops and restarts (or just starts) the "rngd"
 service, which must be configured to use "/run/hwrng" as a source of
-entropy.  Then the service just waits to be shut down.
+entropy.  Then the "onerng" service just waits to be shut down.
 
 When the "onerng" service stops, it removes "/run/hwrng", and then
 stops and maybe restarts the "rngd" service.
@@ -80,7 +104,7 @@ stops and maybe restarts the "rngd" service.
 For further details, see the scripts.
 
 
-=== Firmware verification ===
+=== FIRMWARE VERIFICATION ===
 
 The firmware in the OneRNG devices is signed, so that one can verify
 (with some important caveats) that it is correct and has not been

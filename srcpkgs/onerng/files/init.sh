@@ -1,9 +1,6 @@
 # sh source file
 
-# Based on the OneRNG 3.5 scripts: https://github.com/OneRNG/onerng.github.io
-# Copyright (c): GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
-# Author (base scripts): Paul Campbell <paul@taniwha.com>
-# See associated files.
+# Based on the OneRNG 3.5 scripts: http://onerng.info/onerng
 
 # Parameters:
 #
@@ -119,9 +116,7 @@ done
 ###### FIRMWARE VERIFICATION
 
 # Check firmware signature, if required
-if [ "x$ONERNG_VERIFY_FIRMWARE" = "x0" ]; then
-    rm -f "$TEMPFILE"
-else
+if [ "x$ONERNG_VERIFY_FIRMWARE" != "x0" ]; then
     sleep 0.1
     # read data into temp file
     truncate --size=0 "$TEMPFILE"

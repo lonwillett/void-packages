@@ -11,6 +11,9 @@ fi
 
 # Start up rngd if it appears to be wanted when the onerng service
 # isn't running...
-if [ -n "$RNGD_SVC" -a -d "/var/service/$RNGD_SVC" -a ! -e "/var/service/$RNGD_SVC/down" ]; then
+if [ -n "$RNGD_SVC" -a \
+	-d "/var/service/$RNGD_SVC" -a \
+	! -e "/var/service/$RNGD_SVC/down" ]
+then
     sv up "$RNGD_SVC"
 fi

@@ -4,14 +4,14 @@
 ONERNG_MODE_COMMAND="cmd0"
 ONERNG_VERIFY_FIRMWARE="0"
 ONERNG_URANDOM_RESEED="10"
-RNGD_OPTS="-x 1 -x 2 -e 7"
+RNGD_OPTS=""
 [ -r conf ] && . ./conf
 
 # Fixed parameters
 UDEVLINK="/dev/onerng"		# Link created by udev
 RUNLINK="/run/hwrng"		# Link created by us
 RNGD_SVC="rngd"			# Name of rngd service
-RNGD_EXE="rngd"			# Path to rngd program
+RNGD_EXE="rngd"			# Path of rngd program
 
 # wait for udev to finish
 sleep 1

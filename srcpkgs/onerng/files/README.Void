@@ -42,9 +42,7 @@ package to feed entropy to the kernel. It passes the "-r" option to
 it, so that it will use the OneRNG device, but it may be necessary or
 desirable to pass some other options. This may be done by changing the
 value of RNGD_OPTS set in /etc/sv/onerng/conf. See the rngd
-documentation for help with the options. Note that the value of
-RNGD_OPTS set in /etc/sv/rngd/conf is distinct, and does *not* affect
-the options that the onerng service uses with rngd.
+documentation for help with the options.
 
 In particular, you may want to force rngd to exclude other sources of
 entropy. I would especially note that there are a lot of dodgy TPM
@@ -73,6 +71,22 @@ Finally, if your OneRNG device was already plugged in when the
 back in (or take some equivalent action, e.g. remove and re-insert the
 cdc-acm module). This is needed to get udev to execute the newly
 installed rule.
+
+
+=== RNGD SERVICE ===
+
+Note that the "rngd" service (from the rng-tools package) does not
+need to be enabled to use a OneRNG device. In fact, it should not be
+run simultaneously with "onerng" service.
+
+If your OneRNG device is only intermittently connected to your
+computer, then you may want to enable the "rngd" service as well as
+the "onerng" service. This should work: the "onerng" service stops the
+"rngd" service when it starts up, and starts it when it shuts down.
+
+Especially note that the value of RNGD_OPTS in "/etc/sv/rngd/conf" is
+distinct from the one in "/etc/sv/onerng/conf", and does *not* affect
+the options that the onerng service uses with rngd.
 
 
 === FIRMWARE VERIFICATION ===

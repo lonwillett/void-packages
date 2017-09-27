@@ -1,7 +1,7 @@
 #!/bin/sh
 
 RUNLINK="/run/hwrng"
-RNGDSVC="rngd"
+RNGD_SVC="rngd"
 
 # Remove the symbolic link we made, and clean-up UUCP style lockfile
 if [ -L "$RUNLINK" ]; then
@@ -9,10 +9,8 @@ if [ -L "$RUNLINK" ]; then
     rm -f "$RUNLINK" "/var/lock/LCK..${TTYNAME#/dev/}"
 fi
 
-# Restart or stop rngd
-if [ -e "/var/service/$RNGDSVC/down" ]; then
-    sv down "$RNGDSVC"
-else
-    sv stop "$RNGDSVC"
-    sv up "$RNGDSVC"
+# Start up rngd if it appears to be wanted when the onerng service
+# isn't running...
+if [ -n "$RNGD_SVC" -a -d "/var/service/$RNGD_SVC" -a ! -e "/var/service/$RNGD_SVC/down" ]; then
+    sv up "$RNGD_SVC"
 fi

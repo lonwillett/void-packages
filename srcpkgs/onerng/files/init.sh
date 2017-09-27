@@ -4,22 +4,14 @@
 
 # Parameters:
 #
-#   RNGDEV -- OneRNG device path
-#   TTYNAME -- Name of tty device for $RNGDEV
-#	NB: "$RNGDEV" and "/dev/$TTYNAME" must be the same device.
-#	NB: "$TTYNAME" must not contain "/" or other special characters.
+#   ONERNGDEV -- Path of tty device (usually "/dev/ttyACM0")
+#	NB: "${ONERNGDEV#/dev/}" should be free of any "/" characters, or
+#	other special characters (it is used in the lockfile name).
 #
 # User parameters (settable in /etc/sv/onerng/conf):
 #
 #   ONERNG_MODE_COMMAND
 #   ONERNG_VERIFY_FIRMWARE
-#
-# The usual setup is:
-#
-#   "/dev/ttyACM0" is the device node for the OneRNG device.
-#   "/dev/onerng" is a symlink --> "ttyACM0" (created by udev).
-#   RNGDEV="/dev/onerng"
-#   TTYNAME="ttyACM0"
 #
 # This script will:
 #
@@ -36,14 +28,14 @@ umask 0177
 
 ###### OBTAIN DEVICE LOCKS
 
-LOCKFILE="/var/lock/LCK..$TTYNAME"
+LOCKFILE="/var/lock/LCK..${ONERNGDEV#/dev/}"
 LOCKTEMP="$LOCKFILE.tmp$$"
 
 # Open device as fd 0 (stdin), and flock it
-exec <>"$RNGDEV"
+exec <>"$ONERNGDEV"
 if [ $? -ne 0 ] || ! flock -n -x 0; then
     exec </dev/null
-    echo "onerng: Can't lock $RNGDEV" >&2
+    echo "onerng: Can't lock $ONERNGDEV" >&2
     exit 1
 fi
 
@@ -93,13 +85,13 @@ while [ ! -s "$TEMPFILE" ]; do
     i=$((i+1))
     if [ $i -gt 200 ]; then
 	# something is broken
-	echo "onerng: device not responding: $RNGDEV" >&2
+	echo "onerng: device not responding: $ONERNGDEV" >&2
 	exit 3
     fi
     # off, produce nothing, flush
     echo "cmd0" >&0		# standard noise
     echo "cmdO" >&0		# turn it on
-    dd if="$RNGDEV" of=$TEMPFILE bs=1 >/dev/null &
+    dd if="$ONERNGDEV" of=$TEMPFILE bs=1 >/dev/null &
     pid=$!
     stty -F /proc/self/fd/0 raw -echo clocal -crtscts
     sleep 0.05
@@ -120,7 +112,7 @@ if [ "x$ONERNG_VERIFY_FIRMWARE" != "x0" ]; then
     sleep 0.1
     # read data into temp file
     truncate --size=0 "$TEMPFILE"
-    dd if="$RNGDEV" iflag=fullblock of=$TEMPFILE bs=4 >/dev/null &
+    dd if="$ONERNGDEV" iflag=fullblock of=$TEMPFILE bs=4 >/dev/null &
     pid=$!
     sleep 0.02
 
@@ -148,7 +140,7 @@ TEMPFILE=""
 ###### HANDOVER TO USER (rngd)
 
 # waste some entropy
-dd if="$RNGDEV" of=/dev/null bs=10k count=1 >/dev/null &
+dd if="$ONERNGDEV" of=/dev/null bs=10k count=1 >/dev/null &
 pid=$!
 
 # start the device

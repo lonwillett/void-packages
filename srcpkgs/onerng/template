@@ -23,6 +23,7 @@ do_install() {
 	vinstall ${FILESDIR}/init.sh 644 usr/share/onerng
 	vinstall files/onerng_verify.py 644 usr/share/onerng
 	vsv onerng
+	vmkdir usr/lib/udev/rules.d
 	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
 	vdoc README
 	vdoc ${FILESDIR}/README.Void

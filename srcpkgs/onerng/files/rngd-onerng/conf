@@ -1,0 +1,23 @@
+#
+# OneRNG configuration file
+# See /usr/share/doc/onerng/README.Void
+#
+# Set ONERNG_MODE_COMMAND to choose system mode:
+#
+#	cmd0	- Avalanche noise with whitener (default)
+#	cmd1	- Raw avalanche noise
+#	cmd2	- Avalanche noise and RF noise with whitener
+#	cmd3	- Raw avalanche noise and RF noise
+#	cmd4	- No noise
+#	cmd5	- No noise
+#	cmd6	- RF noise with whitener
+#	cmd7	- Raw RF noise
+#
+# Set ONERNG_VERIFY_FIRMWARE to "1" to enable firmware
+# verification. See the README.Void file before trying this.
+#
+# Set RNGD_OPTS to any additional options for "rngd".
+#
+ONERNG_MODE_COMMAND="cmd0"
+ONERNG_VERIFY_FIRMWARE="0"
+RNGD_OPTS=""

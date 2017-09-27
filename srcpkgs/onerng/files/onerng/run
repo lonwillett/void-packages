@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# User settable parameters
+ONERNG_MODE_COMMAND="cmd0"
+ONERNG_VERIFY_FIRMWARE="0"
+ONERNG_URANDOM_RESEED="10"
+[ -r conf ] && . ./conf
+
+# Fixed parameters
+RNGDEV="/dev/onerng"
+RUNLINK="/run/hwrng"
+RNGDSVC="rngd"
+
+# wait for udev to finish
+sleep 1
+
+if [ ! -L "$RNGDEV" -o ! -c "$RNGDEV" ]; then
+    echo "onerng: Symbolic link to device missing or incorrect: $RNGDEV" >&2
+    exit 1
+fi
+
+TTYNAME="$(readlink "$RNGDEV")"
+# Verify that TTYNAME is as expected: should start with "tty" and be
+# free from "/" characters.
+if [ "x${TTYNAME}" != "x${TTYNAME%/*}" -o \
+     "x${TTYNAME}" = "x${TTYNAME#tty}" -o \
+     ! "$RNGDEV" -ef "/dev/${TTYNAME}" ]
+then
+    echo "onerng: Bad device: /dev/${TTYNAME}" >&2
+    exit 1
+fi
+
+# Script to do device initialisation
+. /usr/share/onerng/init.sh
+
+# Create symbolic link for rngd (or other client)
+[ -n "$RUNLINK" ] && ln -f -s "/dev/$TTYNAME" "$RUNLINK"
+
+# Turn rngd lose now
+if [ -n "$RNGDSVC" ]; then
+    sv stop "$RNGDSVC"
+    sv up "$RNGDSVC"
+fi
+
+#
+# if the urandom_min_reseed_secs parameter exists then allow
+# us to override it - it's there to stop /dev/urandom from sucking
+# up all the system entropy, but with onerng we have lots. So lowering
+# this from the default 60s is fine; even 0 is a reasonable choice.
+#
+if [ -n "$ONERNG_URANDOM_RESEED"  ]; then
+    if [ -e /proc/sys/kernel/random/urandom_min_reseed_secs ]; then
+	echo "$ONERNG_URANDOM_RESEED" >/proc/sys/kernel/random/urandom_min_reseed_secs
+    fi
+fi
+
+# Now wait.
+# NB: stdin is open to the device, and holding a lock on it.
+exec chpst -b onerng pause

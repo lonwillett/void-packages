@@ -1,0 +1,30 @@
+# Template file for 'onerng'
+pkgname=onerng
+version=3.5
+revision=1
+wrksrc=onerng_${version}
+build_style=fetch
+noarch=yes
+conf_files="/etc/sv/onerng/conf"
+depends="rng-tools"
+short_desc="Support for OneRNG hardware RNG devices"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="LGPL-3"
+homepage="http://onerng.info/onerng/"
+distfiles="https://github.com/OneRNG/onerng.github.io/blob/master/sw/onerng_${version}.orig.tar.gz?raw=true>onerng_${version}.tar.gz"
+checksum=afd6d0b64ad8e5557d10b497a9afb4ddeaf5e8d967069921941927f49b93fb16
+
+do_extract() {
+	tar -C .. -xzf ${XBPS_SRCDISTDIR}/${pkgname}-${version}/onerng_${version}.tar.gz
+}
+
+do_install() {
+	vmkdir usr/share/onerng
+	vinstall ${FILESDIR}/init.sh 644 usr/share/onerng
+	vinstall files/onerng_verify.py 644 usr/share/onerng
+	vsv onerng
+	vmkdir usr/lib/udev/rules.d
+	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
+	vdoc README
+	vdoc ${FILESDIR}/README.Void
+}

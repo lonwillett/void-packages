@@ -30,7 +30,7 @@ package) to feed the entropy from a OneRNG device to the kernel.  If
 you want to do something else, then this can probably be managed by
 tweaking the parameters in the file "/etc/sv/onerng/run".
 
-This package assumes that you only have a single device connected to
+This also assumes that you only have a single device connected to
 your machine. If you want to support multiple devices on a single
 machine for some reason, then you'll have to do some work.
 
@@ -62,14 +62,18 @@ it. This involves the following steps:
     device is ready.
 
 
--- The "rngd" service needs to be enabled:
+ -- The "rngd" service needs to be enabled:
 
 	ln -s /etc/sv/rngd /var/service/
 
 
--- The "onerng" service needs to be enabled:
+ -- The "onerng" service needs to be enabled:
 
 	ln -s /etc/sv/onerng /var/service/
+
+    You may want to edit the parameters in /etc/sv/onerng/conf, but
+    make sure you read the section below before changing the value of
+    ONERNG_VERIFY_FIRMWARE.
 
 
 Finally, if your OneRNG device was already plugged in when the
@@ -83,6 +87,11 @@ installed rule.
 
 This section gives a quick overview of how the different components
 fit together.
+
+The basic idea is that the consumers of the entropy (i.e. "rngd")
+access the device via a symbolic link ("/run/hwrng") that the onerng
+service creates. This assures that they will not try accessing a
+device that has not been properly initialised.
 
 A couple of udev rules are registered (79-onerng.rules), so that when
 a OneRNG device is plugged in, a symlink is created (/dev/onerng), and

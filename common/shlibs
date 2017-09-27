@@ -139,7 +139,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.384.69 nvidia-libs-384.69_1 ignore
+libnvidia-fatbinaryloader.so.384.90 nvidia-libs-384.90_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -638,12 +638,13 @@ libapr-1.so.0 apr-1.4.2_1
 libaprutil-1.so.0 apr-util-1.3.9_1
 libnetpgp.so.0 libnetpgp-20100313_1
 libmj.so.0 libmj-20140211_1
-libmca_common_sm.so.20 libopenmpi-2.0.1_1
-libmpi.so.20 libopenmpi-2.0.1_1
-libompitrace.so.20 libopenmpi-2.0.1_1
-libopen-pal.so.20 libopenmpi-2.0.1_1
-libopen-rte.so.20 libopenmpi-2.0.1_1
-liboshmem.so.20 libopenmpi-2.0.1_1
+libmca_common_sm.so.40 libopenmpi-3.0.1_1
+libmca_common_ompio.so.40 libopenmpi-3.0.1_1
+libmpi.so.40 libopenmpi-3.0.1_1
+libompitrace.so.40 libopenmpi-3.0.1_1
+libopen-pal.so.40 libopenmpi-3.0.1_1
+libopen-rte.so.40 libopenmpi-3.0.1_1
+liboshmem.so.40 libopenmpi-3.0.1_1
 libmtp.so.9 libmtp-1.1.4_1
 libelf.so.1 libelf-0.155_1
 libdw.so.1 libelf-0.155_1
@@ -2861,3 +2862,4 @@ libkrdccore.so.5 krdc-17.04.3_1
 libkrfbprivate.so.5.0 krfb-17.08.1_1 
 libJudy.so.1 judy-1.0.5_1
 libArcus.so.3 libArcus-2.7.0_1
+libgutenprint.so.2 gutenprint-5.2.12_1

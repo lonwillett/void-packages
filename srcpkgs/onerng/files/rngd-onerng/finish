@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Clean up files
+if [ -L /run/hwrng ]; then
+    DEV="$(readlink /run/hwrng)"
+    rm -f /run/hwrng "/var/lock/LCK..${DEV#/dev/}"
+fi
+
+# Start up rngd if it appears to be wanted
+if [ -e /var/service/rngd -a ! -e /var/service/rngd/down ]; then
+    sv up rngd
+fi

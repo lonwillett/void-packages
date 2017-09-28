@@ -8,7 +8,7 @@
 #	NB: "${ONERNGDEV#/dev/}" should be free of any "/" characters, or
 #	other special characters (it is used in the lockfile name).
 #
-# User parameters (settable in /etc/sv/onerng/conf):
+# User parameters (settable in /etc/sv/rngd-onerng/conf):
 #
 #   ONERNG_MODE_COMMAND
 #   ONERNG_VERIFY_FIRMWARE
@@ -108,7 +108,7 @@ done
 ###### FIRMWARE VERIFICATION
 
 # Check firmware signature, if required
-if [ "x$ONERNG_VERIFY_FIRMWARE" != "x0" ]; then
+if [ "x$ONERNG_VERIFY_FIRMWARE" = "x1" ]; then
     sleep 0.1
     # read data into temp file
     truncate --size=0 "$TEMPFILE"
@@ -144,7 +144,7 @@ dd if="$ONERNGDEV" of=/dev/null bs=10k count=1 >/dev/null &
 pid=$!
 
 # start the device
-echo "$ONERNG_MODE_COMMAND" >&0
+echo "${ONERNG_MODE_COMMAND:-cmd0}" >&0
 echo "cmdO" >&0
 wait $pid
 

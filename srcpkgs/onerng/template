@@ -5,7 +5,7 @@ revision=1
 wrksrc=onerng_${version}
 build_style=fetch
 noarch=yes
-conf_files="/etc/sv/onerng/conf"
+conf_files="/etc/sv/rngd-onerng/conf"
 depends="rng-tools"
 short_desc="Support for OneRNG hardware RNG devices"
 maintainer="Lon Willett <xgit@lonw.net>"
@@ -22,7 +22,7 @@ do_install() {
 	vmkdir usr/share/onerng
 	vinstall ${FILESDIR}/init.sh 644 usr/share/onerng
 	vinstall files/onerng_verify.py 644 usr/share/onerng
-	vsv onerng
+	vsv rngd-onerng
 	vmkdir usr/lib/udev/rules.d
 	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
 	vdoc README

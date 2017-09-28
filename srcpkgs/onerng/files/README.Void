@@ -1,6 +1,6 @@
 === NOTES AND CAVEATS ===
 
-DATE: 2017-09-27
+DATE: 2017-09-28
 
 Based on the OneRNG 3.5 scripts:
 
@@ -26,22 +26,17 @@ COPYRIGHTS:
 NOTES:
 
 This assumes that you want to use "rngd" (from the "rng-tools"
-package) to feed the entropy from a OneRNG device to the kernel.  If
-you want to do something else, then this can probably be managed by
-tweaking the service files (i.e. those in /etc/sv/onerng/).
-
-This also assumes that you only have a single device connected to your
-machine. If you want to support multiple devices on a single machine
-for some reason, then you'll have to do some work.
+package) to feed the entropy from a OneRNG device to the kernel, and
+that you only have a single device connected to your machine.
 
 
 === BASIC CONFIGURATION ===
 
-The "onerng" service uses the "rngd" program from the "rng-tools"
+The "rngd-onerng" service uses the "rngd" program from the "rng-tools"
 package to feed entropy to the kernel. It passes the "-r" option to
 it, so that it will use the OneRNG device, but it may be necessary or
 desirable to pass some other options. This may be done by changing the
-value of RNGD_OPTS set in /etc/sv/onerng/conf. See the rngd
+value of RNGD_OPTS set in /etc/sv/rngd-onerng/conf. See the rngd
 documentation for help with the options.
 
 In particular, you may want to force rngd to exclude other sources of
@@ -53,14 +48,14 @@ current version from the Void Linux repositories. Be aware that this
 option is dependent on the particular version of rng-tools that you
 have installed; not all of them support it.
 
-You may also want to change other parameters in /etc/sv/onerng/conf,
+You may also want to change other parameters in /etc/sv/rngd-onerng/conf,
 but make sure you read the section below before changing the value of
 ONERNG_VERIFY_FIRMWARE.
 
 Otherwise, all you should need to do is enable the OneRNG service,
 i.e. as root:
 
-	ln -s /etc/sv/onerng /var/service/
+	ln -s /etc/sv/rngd-onerng /var/service/
 
 Note that the service is not automatically started by runit (it has a
 "down" file), but instead it is activated by a udev rule when the
@@ -78,16 +73,17 @@ installed rule.
 
 Note that the "rngd" service (from the rng-tools package) does not
 need to be enabled to use a OneRNG device. In fact, it should not be
-run simultaneously with the "onerng" service.
+run simultaneously with the "rngd-onerng" service.
 
 If your OneRNG device is only intermittently connected to your
 computer, then you may want to enable the "rngd" service as well as
-the "onerng" service. This should work: the "onerng" service stops the
-"rngd" service when it starts up, and starts it when it shuts down.
+the "rngd-onerng" service. This should work: the "rngd-onerng" service
+stops the "rngd" service when it starts up, and starts it when it
+shuts down.
 
 Especially note that the value of RNGD_OPTS in "/etc/sv/rngd/conf" is
-distinct from the one in "/etc/sv/onerng/conf", and does *not* affect
-the options that the onerng service uses with rngd.
+distinct from the one in "/etc/sv/rngd-onerng/conf", and does *not*
+affect the options that the onerng service uses with rngd.
 
 
 === FIRMWARE VERIFICATION ===
@@ -105,11 +101,11 @@ steps:
     python3) and gnupg as dependencies.
 
  -- Change the value assigned to ONERNG_VERIFY_FIRMWARE in
-    /etc/sv/onerng/conf, from "0" to "1".
+    /etc/sv/rngd-onerng/conf, from "0" to "1".
 
- -- Restart the onerng service, or unplug your device, and plug it in
+ -- Restart the rngd-onerng service, or unplug your device, and plug it in
     again.
 
 You should get a syslog message indicating whether or not the firmware
-verification succeeded. In addition, the onerng service will refuse to
-run if the verification fails.
+verification succeeded. In addition, the rngd-onerng service will
+refuse to run if the verification fails.

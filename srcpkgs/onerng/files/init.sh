@@ -86,7 +86,7 @@ while [ ! -s "$TEMPFILE" ]; do
     if [ $i -gt 200 ]; then
 	# something is broken
 	echo "onerng: device not responding: $ONERNGDEV" >&2
-	exit 3
+	exit 2
     fi
     # off, produce nothing, flush
     echo "cmd0" >&0		# standard noise

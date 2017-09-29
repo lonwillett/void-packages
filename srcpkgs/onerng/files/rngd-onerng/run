@@ -3,6 +3,7 @@
 [ -r conf ] && . ./conf
 
 sleep 1		# wait for udev to finish
+[ -c /dev/onerng ] || exit 2			# Need device
 ONERNGDEV="/dev/$(readlink /dev/onerng)"	# Use canonical name
 . /usr/share/onerng/init.sh			# Init device
 ln -f -s "$ONERNGDEV" /run/hwrng		# Use private link

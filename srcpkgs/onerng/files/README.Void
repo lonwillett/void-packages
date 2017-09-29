@@ -57,11 +57,6 @@ i.e. as root:
 
 	ln -s /etc/sv/rngd-onerng /var/service/
 
-Note that the service is not automatically started by runit (it has a
-"down" file), but instead it is activated by a udev rule when the
-device is plugged in. It is also automatically shutdown when the
-device is unplugged.
-
 Finally, if your OneRNG device was already plugged in when the
 "onerng" package was installed, then you need to unplug it and plug it
 back in (or take some equivalent action, e.g. remove and re-insert the

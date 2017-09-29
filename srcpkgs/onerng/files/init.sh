@@ -25,6 +25,10 @@
 
 umask 0177
 
+if [ -z "$ONERNGDEV" -o ! -c "${ONERNGDEV}" ]; then
+    echo "Bad device: $ONERNGDEV" 2>&1
+    exit 1
+fi
 
 ###### OBTAIN DEVICE LOCKS
 

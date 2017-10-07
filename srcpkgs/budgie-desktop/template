@@ -1,7 +1,7 @@
 # Template file for 'budgie-desktop'
 pkgname=budgie-desktop
 version=10.4
-revision=1
+revision=2
 hostmakedepends="meson gtk-doc pkg-config intltool libtool gobject-introspection sassc"
 makedepends="libglib-devel gtk+3-devel libpeas-devel pulseaudio-devel gnome-desktop-devel
  mutter-devel gnome-menus-devel libwnck-devel libupower-glib1 vala
@@ -17,6 +17,8 @@ license="GPL-2, LGPL-2.1"
 homepage="https://github.com/budgie-desktop/budgie-desktop"
 distfiles="https://github.com/budgie-desktop/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.xz"
 checksum=17da8efe56a73426117f89eed8f2a1236c592042acb8d3fec063b24ebe124245
+
+broken="https://build.voidlinux.eu/builders/x86_64-musl_builder/builds/5182"
 
 pre_install() {
 	export LD=$CC

@@ -1,6 +1,6 @@
 # sh source file
 
-# Based on the OneRNG 3.5 scripts: http://onerng.info/onerng
+# Based on the OneRNG 3.6 scripts: http://onerng.info/onerng
 
 # Parameters:
 #

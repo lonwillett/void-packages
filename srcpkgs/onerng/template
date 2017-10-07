@@ -1,6 +1,6 @@
 # Template file for 'onerng'
 pkgname=onerng
-version=3.5
+version=3.6
 revision=1
 wrksrc=onerng_${version}
 build_style=fetch
@@ -12,7 +12,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="LGPL-3"
 homepage="http://onerng.info/onerng/"
 distfiles="https://github.com/OneRNG/onerng.github.io/blob/master/sw/onerng_${version}.orig.tar.gz?raw=true>onerng_${version}.tar.gz"
-checksum=afd6d0b64ad8e5557d10b497a9afb4ddeaf5e8d967069921941927f49b93fb16
+checksum=66a6d4be9725642488c33effa04b389bf24e4dd66b45f7316f3403142c1d80a3
 
 do_extract() {
 	tar -C .. -xzf ${XBPS_SRCDISTDIR}/${pkgname}-${version}/onerng_${version}.tar.gz

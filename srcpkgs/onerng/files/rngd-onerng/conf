@@ -1,6 +1,6 @@
 #
-# Version 3.6
 # OneRNG configuration file
+# See /usr/share/doc/onerng/README.Void
 #
 # Set ONERNG_MODE_COMMAND to choose system mode:
 #

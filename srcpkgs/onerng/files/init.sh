@@ -1,6 +1,7 @@
 # sh source file
 
-# Based on the OneRNG 3.6 scripts: http://onerng.info/onerng
+# Based on the OneRNG scripts: http://onerng.info/onerng
+# See /usr/share/doc/onerng/README.Void
 
 # Parameters:
 #

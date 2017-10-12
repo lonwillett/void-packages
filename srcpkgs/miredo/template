@@ -3,21 +3,12 @@ pkgname=miredo
 version=1.2.6
 revision=1
 build_style=gnu-configure
-configure_args="--enable-miredo-user"
+configure_args="--enable-miredo-user --enable-binreloc $(vopt_with Judy)"
+# NB: --enable-binreloc needed for cross-compile (can be omitted for native)
 conf_files="/etc/miredo/miredo.conf"
 make_dirs="/var/chroot/miredo 0755 root root"
 system_accounts="miredo:707"
-makedepends="libcap-devel"
-if [ -z "$CROSS_BUILD" ]; then
-	configure_args+=" --with-Judy"
-	makedepends+=" judy-devel"
-else
-	# "configure" won't check /proc when cross-compiling,
-	# so it errors out on the binreloc test.
-	# Also, libJudy doesn't build when cross compiling.
-	# xxx But it could theoretically still be available!
-	configure_args+=" --enable-binreloc=yes --without-Judy"
-fi
+makedepends="libcap-devel $(vopt_if Judy judy-devel)"
 depends="iproute2"
 short_desc="Teredo IPv6 tunneling"
 maintainer="Lon Willett <xgit@lonw.net>"
@@ -25,6 +16,12 @@ license="GPL-2"
 homepage="https://www.remlab.net/miredo/"
 distfiles="https://www.remlab.net/files/miredo/miredo-${version}.tar.xz"
 checksum=fa26d2f4a405415833669e2e2e22677b225d8f83600844645d5683535ea43149
+
+build_options="Judy"
+# libJudy doesn't build when cross compiling; so only default for native builds
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="Judy"
+fi
 
 post_install() {
 	vmkdir var/chroot/miredo 755

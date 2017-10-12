@@ -6,8 +6,8 @@ build_style=gnu-configure
 nocross="Makefiles need to be modified to handle the program-writing programs when cross-compiling."
 patch_args="-Np1"
 disable_parallel_build="yes"
-# NB: "--enable-{32,64}-bit" passes the "-m32"/"-m64" to cc, so only works on x86,
-# so just don't set either of them in configure_args.
+# NB: "--enable-{32,64}-bit" passes the "-m32"/"-m64" to cc, so only works on x86.
+# Just don't set them in configure_args (use autodetect).
 hostmakedepends="libtool"
 short_desc="C library for creating and accessing dynamic arrays"
 maintainer="Lon Willett <xgit@lonw.net>"

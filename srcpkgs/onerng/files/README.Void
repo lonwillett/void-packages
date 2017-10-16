@@ -104,3 +104,15 @@ steps:
 You should get a syslog message indicating whether or not the firmware
 verification succeeded. In addition, the rngd-onerng service will
 refuse to run if the verification fails.
+
+
+=== URANDOM control ===
+
+The kernel parameter urandom_min_reseed_secs controls the rate at
+which /dev/urandom has entropy added to it from the system entropy
+pool - measured in seconds - "0" means continually top it up. The
+default value for this is 60, so that urandom doesn't deplete the
+entropy pool. Since entropy is plentiful with a hw rng, you may wish
+to change this, e.g.
+
+    echo 0 > /proc/sys/kernel/random/urandom_min_reseed_secs

@@ -8,13 +8,6 @@ ONERNGDEV="/dev/$(readlink /dev/onerng)"	# Use canonical name
 . /usr/share/onerng/init.sh			# Init device
 ln -f -s "$ONERNGDEV" /run/hwrng		# Use private link
 
-# set urandom_min_reseed_secs, if so configured
-if [ -n "$ONERNG_URANDOM_RESEED" -a \
-	-e /proc/sys/kernel/random/urandom_min_reseed_secs ]
-then
-    echo "$ONERNG_URANDOM_RESEED" >/proc/sys/kernel/random/urandom_min_reseed_secs
-fi
-
 # Stop the default rngd service, and run our own
 [ -d /var/service/rngd ] && sv force-shutdown rngd
 exec chpst -b rngd-onerng rngd $RNGD_OPTS -r /run/hwrng -f

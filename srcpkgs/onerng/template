@@ -13,6 +13,9 @@ license="LGPL-3"
 homepage="http://onerng.info/onerng/"
 distfiles="https://github.com/OneRNG/onerng.github.io/blob/master/sw/onerng_${version}.orig.tar.gz?raw=true>onerng_${version}.tar.gz"
 checksum=66a6d4be9725642488c33effa04b389bf24e4dd66b45f7316f3403142c1d80a3
+# NOTE: DO NOT BLINDLY UPDATE. You must check that files/init.sh is
+# correctly updated for new upstream versions (it is derived from
+# files/onerng.sh in the upstream source).
 
 do_extract() {
 	tar -C .. -xzf ${XBPS_SRCDISTDIR}/${pkgname}-${version}/onerng_${version}.tar.gz
@@ -24,7 +27,7 @@ do_install() {
 	vinstall files/onerng_verify.py 644 usr/share/onerng
 	vsv rngd-onerng
 	vmkdir usr/lib/udev/rules.d
-	vinstall ${FILESDIR}/79-onerng.rules 644 usr/lib/udev/rules.d
+	vinstall files/79-onerng.rules 644 usr/lib/udev/rules.d
 	vdoc README
 	vdoc ${FILESDIR}/README.Void
 }

@@ -1021,7 +1021,7 @@ libsbc.so.1 sbc-1.0_1
 libecryptfs.so.1 libecryptfs-104_1
 libnuma.so.1 libnuma-2.0.7_1
 libxar.so.1 xar-1.5.2_1
-libqpdf.so.17 libqpdf-6.0.0_1
+libqpdf.so.18 libqpdf-7.0.0_1
 libpolkit-qt-core-1.so.1 polkit-qt-0.103.0_1
 libpolkit-qt-gui-1.so.1 polkit-qt-0.112_3
 libpolkit-qt-agent-1.so.1 polkit-qt-0.103.0_1
@@ -2881,6 +2881,7 @@ libvaladoc-0.38.so.0 libvala-0.38.1_1
 libphodav-2.0.so.0 phodav-2.2_1
 libgfshare.so.2 libgfshare-2.0.0_1
 libJudy.so.1 judy-1.0.5_1
+libtracker-miner-2.0.so.0 libtracker-2.0.1_1
 libtacacs.so.1 tacacs-4.0.4.28_1
 libffms2.so.4 libffms2-2.23.1_1
 libduktape.so.201 duktape-2.1.1_1

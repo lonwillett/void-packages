@@ -1135,7 +1135,7 @@ libprotobuf-vala.so.0 libprotobuf-vala-0.1.0_1
 librlog.so.5 librlog-1.4_1
 libtinyxml.so.0 tinyxml-2.6.2_1
 libbluray.so.2 libbluray-1.0.0_1
-libnfs.so.8 libnfs-1.9.7_1
+libnfs.so.11 libnfs-2.0.0_1
 libzip.so.5 libzip-1.2_1
 libapp.so.0 libapp-20110513_1
 libluajit-5.1.so.2 LuaJIT-2.0.0_1
@@ -2311,7 +2311,7 @@ libmill.so.18 libmill-1.14_1
 libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
 libopenshot-audio.so.5 libopenshot-audio-0.1.4_1
-libopenshot.so.12 libopenshot-0.1.7_1
+libopenshot.so.13 libopenshot-0.1.8_1
 libpqxx-4.0.so libpqxx-4.0.1_1
 libndpi.so.1 ndpi-1.6_1
 liblog4cxx.so.10 log4cxx-0.10.0_1

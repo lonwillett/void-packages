@@ -1698,7 +1698,7 @@ libbalooqueryparser.so.4 baloo-4.14.2_1
 libbaloowidgets.so.4 baloo-widgets-4.13.3_1
 libkdcraw.so.23 libkdcraw-4.13.3_1
 libchm.so.0 libchmlib-0.40_1
-libokularcore.so.5 libokular-4.14.2_1
+libOkular5Core.so.7 libokular-17.08.1_1
 libmnl.so.0 libmnl-1.0.3_1
 libnftnl.so.7 libnftnl-1.0.8_1
 libfcgi.so.0 fcgi-2.4.0_2
@@ -2749,7 +2749,7 @@ libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
-libqalculate.so.11 libqalculate-2.0.0_1
+libqalculate.so.12 libqalculate-2.1.0_1
 libweston-3.so.0 weston-3.0.0_1
 libweston-desktop-3.so.0 weston-3.0.0_1
 libmutter-0.so.0 mutter-3.24.0_1
@@ -2757,7 +2757,6 @@ libmutter-clutter-0.so mutter-3.24.0_1
 libmutter-cogl-path-0.so mutter-3.24.0_1
 libmutter-cogl-0.so mutter-3.24.0_1
 libmutter-cogl-pango-0.so mutter-3.24.0_1
-libmozjs-38.so mozjs38-38.8.0_4
 libostree-1.so.1 libostree-2017.3_1
 librhash.so.0 rhash-1.3.4_1
 libserialport.so.0 libserialport-0.1.1_1

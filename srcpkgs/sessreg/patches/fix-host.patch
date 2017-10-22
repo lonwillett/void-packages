@@ -1,0 +1,27 @@
+--- sessreg.c~	2017-02-28 03:24:47.000000000 +0100
++++ sessreg.c	2017-10-22 12:33:53.657095267 +0200
+@@ -510,18 +510,22 @@
+ 	memset (u, 0, sizeof (*u));
+ 	if (line)
+ 	{
++#if 0 /* If you want "console" instead of ":0", then use "-l console" instead of "-l :0" */
+ 		if(strcmp(line, ":0") == 0)
+ 			(void) strcpy(u->ut_line, "console");
+ 		else
++#endif
+ 			(void) strncpy (u->ut_line, line, sizeof (u->ut_line));
+-
+-		strncpy(u->ut_host, line, sizeof(u->ut_host));
+ #ifdef HAVE_STRUCT_UTMPX_UT_SYSLEN
+ 		u->ut_syslen = strlen(line);
+ #endif
+ 	}
+ 	else
+ 		memset (u->ut_line, 0, sizeof (u->ut_line));
++	if (host)
++		strncpy(u->ut_host, host, sizeof(u->ut_host));
++	else
++		memset (u->ut_host, 0, sizeof(u->ut_host));
+ 	if (addp && user)
+ 		(void) strncpy (u->ut_user, user, sizeof (u->ut_user));
+ 	else

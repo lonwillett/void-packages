@@ -1856,8 +1856,8 @@ libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
 libQt5TextToSpeech.so.5 qt5-speech-5.8.0_1
 libx265.so.116 x265-2.4_1
-libQt5Xdg.so.2 libqtxdg-2.0.0_1
-libQt5XdgIconLoader.so.2 libqtxdg-2.0.0_1
+libQt5Xdg.so.3 libqtxdg-3.1.0_1
+libQt5XdgIconLoader.so.3 libqtxdg-3.1.0_1
 liblxqt-qt5.so.0 liblxqt-0.8.0_1
 liblxqt-globalkeys-qt5.so.0 lxqt-globalkeys-0.8.0_1
 liblxqt-globalkeys-ui-qt5.so.0 lxqt-globalkeys-0.8.0_1
@@ -2434,8 +2434,9 @@ liburcu-qsbr.so.6 liburcu-0.10.0_1
 liburcu-signal.so.6 liburcu-0.10.0_1
 liburcu.so.6 liburcu-0.10.0_1
 liblttng-ust.so.0 lttng-ust-2.7.2_1
-liblttng-ust-ctl.so.2 lttng-ust-2.7.2_1
+liblttng-ust-ctl.so.4 lttng-ust-2.10.0_1
 liblttng-ust-fork.so.0 lttng-ust-2.7.2_1
+liblttng-ust-fd.so.0 lttng-ust-2.10.0_1
 liblttng-ust-libc-wrapper.so.0 lttng-ust-2.7.2_1
 liblttng-ust-pthread-wrapper.so.0 lttng-ust-2.7.2_1
 liblttng-ust-cyg-profile.so.0 lttng-ust-2.7.2_1
@@ -2793,7 +2794,7 @@ libgcab-1.0.so.0 gcab-0.7_1
 libappstream-glib.so.8 appstream-glib-0.6.13_1
 libappstream-builder.so.8 appstream-glib-0.6.13_1
 libflatpak.so.0 flatpak-0.9.3_2
-libnanomsg.so.5.0.0 nanomsg-1.0.0_2
+libnanomsg.so.5.1.0 nanomsg-1.1.0_2
 libindicator3.so.7 libindicator-12.10.1_1
 libappindicator3.so.1 libappindicator-12.10.0_1
 librados.so.2 ceph-11.2.0_1

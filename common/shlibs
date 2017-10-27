@@ -1965,9 +1965,10 @@ libdmtx.so.0 libdmtx-0.7.4_1
 libdbus-c++-1.so.0 libdbus-c++-0.9.0_1
 libdbus-c++-glib-1.so.0 libdbus-c++-0.9.0_1
 libpagemaker-0.0.so.0 libpagemaker-0.0.2_1
-libkcddb.so.4 libkcddb-14.12.3_1
-libk3bdevice.so.6 k3b-2.0.3a_1
-libk3blib.so.6 k3b-2.0.3a_1
+libKF5CddbWidgets.so.5 libkcddb-17.08.2_1
+libKF5Cddb.so.5 libkcddb-17.08.2_1
+libk3bdevice.so.7 k3b-17.08.2_1
+libk3blib.so.7 k3b-17.08.2_1
 libsndio.so.6.1 sndio-1.1.0_1
 libopenconnect.so.5 openconnect-7.05_1
 libusbredirparser.so.1 usbredir-0.7_1
@@ -2097,7 +2098,7 @@ libgtkimageview.so.0 gtkimageview-1.6.4_1
 libgoocanvas.so.3 goocanvas1-1.0.0_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2 p8-platform-2.1.0.1_1
-libfacter.so.3.6.2 facter-3.6.2_1
+libfacter.so.3.6.7 facter-3.6.7_1
 libOIS-1.3.0.so ois-1.3_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
@@ -2860,7 +2861,6 @@ libguile-srfi-srfi-60-v-2.so.2 guile1.8-1.8.8_1
 libguile.so.17 guile1.8-1.8.8_1
 libguilereadline-v-17.so.17 guile1.8-1.8.8_1
 libguile-srfi-srfi-13-14-v-3.so.3 guile1.8-1.8.8_1
-libite.so.3 libite-1.8.2_1
 libykclient.so.3 ykclient-2.15_1
 libbooster.so.0 cppcms-1.0.5_1
 libcppcms.so.1 cppcms-1.0.5_1
@@ -2893,3 +2893,4 @@ libffms2.so.4 libffms2-2.23.1_1
 libduktape.so.201 duktape-2.1.1_1
 liblsmash.so.2 liblsmash-2.9.1_1
 libgnustep-base.so.1.25 gnustep-base-1.25.0_1
+libtermbox.so.1 termbox-1.1.0_1

@@ -1,7 +1,7 @@
 # Template file for 'julia'
 pkgname=julia
 version=0.6.0
-revision=3
+revision=4
 nocross=yes
 build_style=gnu-makefile
 make_build_args="prefix=/usr sysconfdir=/etc USE_SYSTEM_LLVM=1
@@ -36,6 +36,8 @@ elif [[ $XBPS_MACHINE == 'x86_64' ]]; then
 	export CXXFLAGS="-march=core2"
 	make_build_args+=" MARCH=core2"
 fi
+
+CXXFLAGS+=" -D_GLIBCXX_USE_C99_STDIO=1"
 
 post_install() {
 	vlicense LICENSE.md

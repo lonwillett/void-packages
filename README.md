@@ -18,7 +18,7 @@ multiple utilities to accomplish this task:
 
  - `xbps-uunshare(1)` - XBPS utility that uses `user_namespaces(7)` (part of xbps, default).
  - `xbps-uchroot(1)` - XBPS utility that uses `namespaces` and must be `setgid` (part of xbps).
- - `proot(1)` - utility that implements chroot/bind mounts in user space, see http://proot.me.
+ - `proot(1)` - utility that implements chroot/bind mounts in user space, see https://proot-me.github.io/.
 
 > NOTE: you don't need to be `root` to use `xbps-src`, use your preferred chroot style as explained
 below.
@@ -66,7 +66,7 @@ proper permissions and owner/group as explained above.
 #### proot(1)
 
 The `proot(1)` utility implements chroot and bind mounts support completely in user space,
-and can be used if your Linux kernel does not have support for namespaces. See http://proot.me
+and can be used if your Linux kernel does not have support for namespaces. See https://proot-me.github.io/.
 for more information.
 
 To enable it:

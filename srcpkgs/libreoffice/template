@@ -1,10 +1,9 @@
 # Template file for 'libreoffice'
 pkgname=libreoffice
 version=5.4.2.2
-revision=1
+revision=2
 build_style=gnu-configure
 configure_args="--disable-werror"
-nopie=yes
 nocross=yes
 
 #
@@ -83,7 +82,7 @@ fi
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*)	# Broken unit tests
-		CXXFLAGS="-DDISABLE_CVE_TESTS=1"
+		CXXFLAGS+=" -DDISABLE_CVE_TESTS=1"
 		makedepends+=" clucene-devel"
 		;;
 	*-musl)	# use shipped clucene, because CLucene/analysis/cjk/CJKAnalyzer.h

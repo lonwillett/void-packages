@@ -1,11 +1,7 @@
 ### System
 
 * xuname:  
-  *output of ``sudo xuname`` (part of xtools)*
-* architecture:  
-  *choose: x64_64, i686, armv6, armv7, aarch64*
-* libc:  
-  *choose: glibc, musl*
+  *output of ``xuname`` (part of xtools)*
 * package:  
   *affected package(s) including the version*
 

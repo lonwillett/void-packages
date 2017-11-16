@@ -139,7 +139,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.384.90 nvidia-libs-384.90_1 ignore
+libnvidia-fatbinaryloader.so.384.98 nvidia-libs-384.98_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -2041,7 +2041,6 @@ librom1394.so.0 libavc1394-0.5.4_1
 libavc1394.so.0 libavc1394-0.5.4_1
 libiec61883.so.0 libiec61883-1.2.0_1
 libffado.so.2 libffado-2.2.1_1
-libossp-uuid.so.16 libossp-1.6.2_1
 libplayerctl-1.0.so.0 playerctl-0.4.2_1
 libkomparediff2.so.5 libkomparediff2-17.08.2_1
 libkompareinterface.so.5 kompare-17.08.2_1
@@ -2310,8 +2309,8 @@ libax25io.so.0 libax25-0.0.12rc4_1
 libmill.so.18 libmill-1.14_1
 libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
-libopenshot-audio.so.5 libopenshot-audio-0.1.4_1
-libopenshot.so.13 libopenshot-0.1.8_1
+libopenshot-audio.so.6 libopenshot-audio-0.1.5_1
+libopenshot.so.14 libopenshot-0.1.9_1
 libpqxx-4.0.so libpqxx-4.0.1_1
 libndpi.so.1 ndpi-1.6_1
 liblog4cxx.so.10 log4cxx-0.10.0_1
@@ -2425,7 +2424,7 @@ libR.so R-3.3.0_2
 libmarkdown.so.2 discount-2.2.0_3
 libkeystone.so.0 keystone-0.9_1
 libmate-slab.so.0 libmate-control-center-1.14.0_2
-libuev.so.1 libuev-1.4.2_1
+libuev.so.2 libuev-2.0.0_1
 liburcu-bp.so.6 liburcu-0.10.0_1
 liburcu-cds.so.6 liburcu-0.10.0_1
 liburcu-common.so.6 liburcu-0.10.0_1

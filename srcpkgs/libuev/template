@@ -1,6 +1,6 @@
 # Template file for 'libuev'
 pkgname=libuev
-version=1.6.0
+version=2.1.0
 revision=1
 build_style=gnu-configure
 hostmakedepends="automake libtool"
@@ -9,12 +9,14 @@ maintainer="Duncaen <duncaen@voidlinux.eu>"
 license="MIT"
 homepage="https://github.com/troglobit/libuev"
 distfiles="https://github.com/troglobit/libuev/archive/v${version}.tar.gz"
-checksum=aaa080f8285b72b806a321d4d24e749aeb983e5224cc54d236248d9e81d1c30c
+checksum=96ae497074cf3b5d6a78b0b6c626080e711a9b8f908feac4037e197cbec0d51f
 
 pre_configure() {
 	./autogen.sh
 }
-
+do_check() {
+	make check
+}
 post_install() {
 	vlicense LICENSE
 	rm -f ${DESTDIR}/usr/share/doc/libuev/LICENSE

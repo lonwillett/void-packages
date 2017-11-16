@@ -1,8 +1,8 @@
 # Template file for 'rtl8812au-dkms'
 pkgname=rtl8812au-dkms
-version=5.2.9
+version=5.2.9.3
 revision=1
-_commit=79a404324a6ef0f66839402687355b6db2bbd4b2
+_commit=601ccd117168c37ff93daecab75ed9581d412371
 patch_args="-Np1"
 wrksrc=rtl8812au-${_commit}
 short_desc="Realtek 8812AU driver"
@@ -10,7 +10,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2"
 homepage="https://github.com/gordboy/rtl8812au"
 distfiles="$homepage/archive/$_commit.tar.gz"
-checksum=c1a7e00e9723139e6bb1385a59e936226c44bba0983369d52c08c7932e9a976a
+checksum=fe969529176e8ec69a2ce1b0ea56ca974936228ad92aefc4b67ea7d2f5c7f6ea
 
 triggers="dkms"
 dkms_modules="rtl8812au ${version}"

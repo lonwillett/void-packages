@@ -638,13 +638,13 @@ libapr-1.so.0 apr-1.4.2_1
 libaprutil-1.so.0 apr-util-1.3.9_1
 libnetpgp.so.0 libnetpgp-20100313_1
 libmj.so.0 libmj-20140211_1
-libmca_common_sm.so.40 libopenmpi-3.0.1_1
-libmca_common_ompio.so.40 libopenmpi-3.0.1_1
-libmpi.so.40 libopenmpi-3.0.1_1
-libompitrace.so.40 libopenmpi-3.0.1_1
-libopen-pal.so.40 libopenmpi-3.0.1_1
-libopen-rte.so.40 libopenmpi-3.0.1_1
-liboshmem.so.40 libopenmpi-3.0.1_1
+libmca_common_sm.so.40 libopenmpi-3.0.0_1
+libmca_common_ompio.so.40 libopenmpi-3.0.0_1
+libmpi.so.40 libopenmpi-3.0.0_1
+libompitrace.so.40 libopenmpi-3.0.0_1
+libopen-pal.so.40 libopenmpi-3.0.0_1
+libopen-rte.so.40 libopenmpi-3.0.0_1
+liboshmem.so.40 libopenmpi-3.0.0_1
 libmtp.so.9 libmtp-1.1.4_1
 libelf.so.1 libelf-0.155_1
 libdw.so.1 libelf-0.155_1
@@ -1926,8 +1926,9 @@ libdruntime-ldc-debug.so.75 ldc-runtime-1.5.0_1
 libdruntime-ldc.so.75 ldc-runtime-1.5.0_1
 libphobos2-ldc.so.75 ldc-runtime-1.5.0_1
 libphobos2-ldc-debug.so.75 ldc-runtime-1.5.0_1
-libmarblewidget.so.19 marble-4.14.3_2
-libastro.so.1 marble-4.14.3_2
+libmarblewidget-qt5.so.28 marble-17.08.3_1
+libastro.so.1 marble-17.08.3_1
+libmarbledeclarative.so marble-17.08.3_1
 libparrot.so.6.9.0 parrot-6.9.0_1
 libkipi.so.11 libkipi-4.14.3_1
 libasr.so.0 libasr-1.0.0_1
@@ -2897,3 +2898,4 @@ libgnustep-base.so.1.25 gnustep-base-1.25.0_1
 libtermbox.so.1 termbox-1.1.0_1
 libmysofa.so.0 libmysofa-0.6_1
 libzinnia.so.0 libzinnia-0.06_1
+libmega.so.30207 libmega-3.2.7_1

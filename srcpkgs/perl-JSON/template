@@ -1,12 +1,13 @@
 # Template file for 'perl-JSON'
 pkgname=perl-JSON
-version=2.94
+version=2.97000
 revision=1
 distfiles="${CPAN_SITE}/JSON/JSON-${version}.tar.gz"
-checksum=12271b5cee49943bbdde430eef58f1fe64ba6561980b22c69585e08fc977dc6d
+checksum=8aada69c2b2fc6b28419f69fdde1f26cb25ea8e55ac9b36e219a3e9dfb673f8c
 build_style="perl-module"
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
+checkdepends="perl-Test-Pod"
 depends="perl"
 maintainer="Steven R <dev@styez.com>"
 homepage="http://search.cpan.org/dist/JSON/"

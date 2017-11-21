@@ -1,6 +1,6 @@
 # Template file for 'python-chess'
 pkgname=python-chess
-version=0.21.0
+version=0.22.0
 revision=1
 noarch=yes
 build_style=python-module
@@ -12,7 +12,7 @@ maintainer="cipr3s <cipr3s@gmx.com>"
 license="GPL-3"
 homepage="https://github.com/niklasf/python-chess"
 distfiles="${PYPI_SITE}/p/${pkgname}/${pkgname}-${version}.tar.gz"
-checksum=1878dfd8b34e4ec112f96169f315b6ac6c119dee6855c84dcd7ef1b2bd33c37c
+checksum=3bb329de42881cc764ae13a99773eaf0cb808c4183e80fa990dde301143a4f52
 
 python3-chess_package() {
 	noarch=yes

@@ -1,5 +1,5 @@
 #
-# This helper is for templates using GNU configure scripts.
+# This helper is for templates using meson.
 #
 do_configure() {
 	: ${meson_cmd:=meson}
@@ -10,7 +10,7 @@ do_configure() {
 		_MESON_TARGET_ENDIAN=little
 		_MESON_TARGET_CPU=${XBPS_TARGET_MACHINE}
 		case "$XBPS_TARGET_MACHINE" in
-			mips|mips-musl)
+			mips|mips-musl|mipshf-musl)
 				_MESON_TARGET_ENDIAN=big
 				;;
 		esac

@@ -124,6 +124,7 @@ libGLESv2.so.2 libGLES-1.0_1
 libEGL.so rpi-userland-0.0.0.0.20150907_1
 libGLES.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so rpi-userland-0.0.0.0.20150907_1
+libGLESv2.so opera-49.0.2725.39_1
 libwayland-egl.so.1 libwayland-egl-9.0.1_4
 libGL.so.1 libGL-7.11_1
 libGL.so.1 catalyst-libs-14.2_1
@@ -2903,3 +2904,4 @@ libmysofa.so.0 libmysofa-0.6_1
 libzinnia.so.0 libzinnia-0.06_1
 libmega.so.30207 libmega-3.2.7_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
+libgpod.so.4 libgpod-0.8.3_1

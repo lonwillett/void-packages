@@ -275,6 +275,8 @@ libXxf86vm.so.1 libXxf86vm-1.0.2_1
 libXi.so.6 libXi-1.2.1_1
 libdmx.so.1 libdmx-1.0.2_1
 libXRes.so.1 libXres-1.0.3_1
+libxreaderdocument.so.3 libxreader-1.6.1_1
+libxreaderview.so.3 libxreader-1.6.1_1
 libpciaccess.so.0 libpciaccess-0.10.5_1
 libpixman-1.so.0 pixman-0.14.0_1
 libXaw.so.6 libXaw-1.0.5_1 ignore
@@ -355,6 +357,7 @@ libnssdbm3.so nss-3.12.4_1
 libnssckbi.so nss-3.12.4_1
 libnss3.so nss-3.12.4_1
 libcurl.so.4 libcurl-7.19_1
+libcurl-gnutls.so.4 libcurl-7.19_1
 libdaemon.so.0 libdaemon-0.14_1
 libavahi-common.so.3 avahi-libs-0.6.25_1
 libavahi-core.so.7 avahi-libs-0.6.25_1
@@ -2402,6 +2405,7 @@ libts.so.0 tslib-1.6_1
 libobs.so.0 obs-0.14.1_2
 libobsglad.so.0 obs-0.14.1_2
 libobs-opengl.so.0 obs-0.14.1_2
+libobs-frontend-api.so.0 obs-20.1.3_1
 libzimg.so.2 zimg-2.0.4_1
 libvapoursynth.so vapoursynth-R32_2
 libvapoursynth-script.so.0 vapoursynth-R32_1
@@ -2767,15 +2771,16 @@ libsigrok.so.4 libsigrok-0.5.0_1
 libsigrokcxx.so.4 libsigrok-0.5.0_1
 libsigrokdecode.so.4 libsigrokdecode-0.5.0_2
 libglyr.so.1 glyr-1.0.8_1
-libPocoJSON.so.48 poco-1.7.8p2_1
-libPocoMongoDB.so.48 poco-1.7.8p2_1
-libPocoZip.so.48 poco-1.7.8p2_1
-libPocoData.so.48 poco-1.7.8p2_1
-libPocoNet.so.48 poco-1.7.8p2_1
-libPocoDataSQLite.so.48 poco-1.7.8p2_1
-libPocoFoundation.so.48 poco-1.7.8p2_1
-libPocoXML.so.48 poco-1.7.8p2_1
-libPocoUtil.so.48 poco-1.7.8p2_1
+libPocoJSON.so.50 poco-1.8.0.1_1
+libPocoMongoDB.so.50 poco-1.8.0.1_1
+libPocoZip.so.50 poco-1.8.0.1_1
+libPocoData.so.50 poco-1.8.0.1_1
+libPocoNet.so.50 poco-1.8.0.1_1
+libPocoDataSQLite.so.50 poco-1.8.0.1_1
+libPocoFoundation.so.50 poco-1.8.0.1_1
+libPocoXML.so.50 poco-1.8.0.1_1
+libPocoUtil.so.50 poco-1.8.0.1_1
+libPocoRedis.so.50 poco-1.8.0.1_1
 libopenblas.so.0 openblas-0.2.19_1
 librtmidi.so.4 rtmidi-3.0.0_1
 libbac-9.0.4.so bacula-common-9.0.4_1
@@ -2842,7 +2847,7 @@ libbrotlicommon.so.1.0.1 brotli-1.0.1_1
 libbrotlidec.so.1.0.1 brotli-1.0.1_1
 libbrotlienc.so.1.0.1 brotli-1.0.1_1
 libfilteraudio.so filter_audio-0.0.1_1
-libarmadillo.so.7 armadillo-7.800.2_1
+libarmadillo.so.8 armadillo-8.300.0_1
 libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
 libmovit.so.7 movit-1.5.3_1
 libduktape.so.202 duktape-2.2.0_1
@@ -2905,3 +2910,4 @@ libzinnia.so.0 libzinnia-0.06_1
 libmega.so.30207 libmega-3.2.7_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
+libi2c.so.0 i2c-tools-4.0_1

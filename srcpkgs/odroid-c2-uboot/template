@@ -16,7 +16,7 @@ checksum=0ebf132ea6fc54c951e8e1b8a1f4676f107b25e1628c8a594c051a624e67f61e
 
 case "$XBPS_MACHINE" in
 	x86_64) ;;
-	*) msg_error "Can only be built from x86_64: https://github.com/hardkernel/u-boot/issues/23\n" ;;
+	*) broken="Can only be built from x86_64: https://github.com/hardkernel/u-boot/issues/23" ;;
 esac
 
 make_build_args="ARCH=arm"

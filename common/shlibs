@@ -2287,10 +2287,10 @@ libpjsip-ua.so.2 pjproject-2.4.5_1
 libpjsip.so.2 pjproject-2.4.5_1
 libpjsua.so.2 pjproject-2.4.5_1
 libpjsua2.so.2 pjproject-2.4.5_1
-libhdf5_hl.so.10 hdf5-1.8.19_1
-libhdf5.so.10 hdf5-1.8.19_1
-libhdf5_hl_cpp.so.11 hdf5-1.8.19_1
-libhdf5_cpp.so.14 hdf5-1.8.19_1
+libhdf5_hl.so.10 hdf5-1.8.20_1
+libhdf5.so.10 hdf5-1.8.20_1
+libhdf5_hl_cpp.so.11 hdf5-1.8.20_1
+libhdf5_cpp.so.15 hdf5-1.8.20_1
 libcryptmount.so.0 libpam-mount-2.15_1
 libglob.so.0 libglob-1.0_1
 libepub.so.0 ebook-tools-0.2.2_1
@@ -2318,6 +2318,9 @@ libopenshot.so.14 libopenshot-0.1.9_1
 libpqxx-4.0.so libpqxx-4.0.1_1
 libndpi.so.1 ndpi-1.6_1
 liblog4cxx.so.10 log4cxx-0.10.0_1
+liblog.so android-studio-3.0.1_1
+libm.so android-studio-3.0.1_1
+libdl.so android-studio-3.0.1_1
 libKF5WidgetsAddons.so.5 kwidgetsaddons-5.26.0_1
 libsearpc.so.1 libsearpc-3.0.7_1
 libccnet.so.0 ccnet-5.0.4_1
@@ -2912,3 +2915,12 @@ libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1
 libairspy.so.0 libairspy-1.0.9_1
+libKF5KDcraw.so.5 libkdcraw5-17.04.3_1
+libKF5Kipi.so.32.0.0 libkipi5-17.04.3_1
+libevolution-mail.so evolution-ews-3.26.2_1
+libevolution-shell.so evolution-ews-3.26.2_1
+libevolution-util.so evolution-ews-3.26.2_1
+libemail-engine.so evolution-ews-3.26.2_1
+libevolution-calendar.so evolution-ews-3.26.2_1
+libfswatch.so.9 fswatch-1.11.2_1
+libhackrf.so.0 libhackrf-2017.02.1_1

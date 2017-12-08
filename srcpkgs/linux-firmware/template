@@ -1,8 +1,8 @@
 # Template file for 'linux-firmware'
 pkgname=linux-firmware
-version=20170622
+version=20171204
 revision=1
-_githash=7d2c913dcd1be083350d97a8cb1eba24cfacbc8a
+_githash=30946b9b1787f086e8a1a3cb60658447212979c9
 noarch=yes
 short_desc="Binary firmware blobs for the Linux kernel"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
@@ -10,7 +10,7 @@ homepage="https://www.kernel.org/"
 license="See /usr/share/licenses/${pkgname}"
 depends="${pkgname}-amd-${version}_${revision} ${pkgname}-network-${version}_${revision}"
 distfiles="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/${pkgname}-${_githash}.tar.gz"
-checksum=03d220c1747ed71b54b53ce04bfb178fe937ba585309b4a0b32eb351d709fcb0
+checksum=b1ea12259ca91b1a397783989b3378242d1bb4c33b36edfdfda2739f957a7c85
 wrksrc="${pkgname}-${_githash}"
 
 do_install() {

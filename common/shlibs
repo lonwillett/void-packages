@@ -2449,6 +2449,13 @@ liblttng-ust-cyg-profile.so.0 lttng-ust-2.7.2_1
 liblttng-ust-cyg-profile-fast.so.0 lttng-ust-2.7.2_1
 liblttng-ust-dl.so.0 lttng-ust-2.7.2_1
 liblttng-ust-tracepoint.so.0 lttng-ust-2.7.2_1
+libbabeltrace.so.1 babeltrace-1.5.3_1
+libbabeltrace-ctf.so.1 babeltrace-1.5.3_1
+libbabeltrace-ctf-text.so.1 babeltrace-1.5.3_1
+libbabeltrace-ctf-metadata.so.1 babeltrace-1.5.3_1
+libbabeltrace-dummy.so.1 babeltrace-1.5.3_1
+libbabeltrace-lttng-live.so.1 babeltrace-1.5.3_1
+liblttng-ctl.so.0 lttng-tools-2.10.1_1
 libKF5DNSSD.so.5 kdnssd-5.26.0_1
 libtwaindsm.so.2 twaindsm-2.3.0_1
 libspnav.so.0 libspnav-0.2.3_1
@@ -2861,6 +2868,12 @@ libcommoncpp.so.8 ucommon-7.0.0_1
 libmupdf.so.1.11 libmupdf-1.11_4
 libmupdfthird.so.1.11 libmupdf-1.11_4
 libmuthreads.so.1.11 libmupdf-1.11_4
+libdatrie.so.1 libdatrie-0.2.10_1
+libthai.so.0 libthai-0.1.26_1
+libm17n-flt.so.0 m17n-lib-1.7.0_1
+libm17n-gui.so.0 m17n-lib-1.7.0_1
+libm17n-core.so.0 m17n-lib-1.7.0_1
+libm17n.so.0 m17n-lib-1.7.0_1
 libprotobuf-lite.so.14 protobuf-lite-3.4.0_1
 libprotoc.so.14 protobuf-3.4.0_1
 libprotobuf.so.14 protobuf-3.4.0_1
@@ -2909,6 +2922,7 @@ libgnustep-base.so.1.25 gnustep-base-1.25.0_1
 libtermbox.so.1 termbox-1.1.0_1
 libmysofa.so.0 libmysofa-0.6_1
 libzinnia.so.0 libzinnia-0.06_1
+libdnet.so.1 libdnet-1.12_1
 libmega.so.30207 libmega-3.2.7_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1

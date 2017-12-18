@@ -2837,6 +2837,8 @@ librgw.so.2 ceph-11.2.0_1
 libec_isa.so.2 ceph-11.2.0_1
 libceph_snappy.so.2 ceph-11.2.0_1
 libceph_zlib.so.2 ceph-11.2.0_1
+libsctp.so.1 lksctp-tools-1.0.17_1
+libwithsctp.so.1 lksctp-tools-1.0.17_1
 libnss_ldap.so.2 nss-pam-ldapd-0.9.7_4
 libunshield.so.0 libunshield-0.6_1
 libMyGUIEngine.so.3 libmygui-3.2.2_1
@@ -2898,6 +2900,8 @@ libArcus.so.3 libArcus-2.7.0_1
 libArcus.so.3 libArcus-3.0.3_1
 libgutenprint.so.2 gutenprint-5.2.12_1
 libunbound.so.2 unbound-1.6.6_1
+libmirage.so.11 libmirage-3.1.0_1
+libwkhtmltox.so.0 wkhtmltopdf-0.12.4_1
 libixml.so.10 libupnp1.8-1.8.2_1
 libupnp.so.10 libupnp1.8-1.8.2_1
 libevent_extra-2.1.so.6 libevent-2.1.8_3
@@ -2924,6 +2928,11 @@ libmysofa.so.0 libmysofa-0.6_1
 libzinnia.so.0 libzinnia-0.06_1
 libdnet.so.1 libdnet-1.12_1
 libmega.so.30207 libmega-3.2.7_1
+libgtkd-3.so.0 gtkd-3.7.0_1
+libgtkdsv-3.so.0 gtkd-3.7.0_1
+libvted-3.so.0 gtkd-3.7.0_1
+libpeasd-3.so.0 gtkd-3.7.0_1
+libgstreamerd-3.so.0 gtkd-3.7.0_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1

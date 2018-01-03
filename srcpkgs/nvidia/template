@@ -4,7 +4,7 @@ _desc="NVIDIA drivers for linux (long-lived series)"
 
 pkgname=nvidia
 version=384.98
-revision=2
+revision=3
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="Proprietary NVIDIA license"
 homepage="http://www.nvidia.com"
@@ -38,6 +38,12 @@ do_extract() {
 	cd ${wrksrc}
 	./${_pkg}.run --extract-only
 	rm -f ${_pkg}.run
+	#
+	if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
+		cp ${FILESDIR}/nvidia-x86_64-uvm8_va_block-linux_4_14_9.patch \
+			nvidia-uvm8_va_block-linux_4_14_9.patch
+		patch -p0 < nvidia-uvm8_va_block-linux_4_14_9.patch
+	fi
 }
 
 pre_install() {

@@ -1686,7 +1686,7 @@ libtelepathy-farstream.so.3 telepathy-farstream-0.6.0_6
 libnetpbm.so.11 libnetpbm-10.66.03_2
 libid3.so id3lib-3.8.3_1
 libid3-3.8.so.3 id3lib-3.8.3_1
-libgirara-gtk3.so.2 girara-0.2.4_1
+libgirara-gtk3.so.3 girara-0.2.8_1
 libjq.so.1 jq-devel-1.4_1
 libcrypto.so.37 libcrypto37-2.3.3_1
 libcrypto.so.38 libcrypto38-2.4.2_1
@@ -1722,7 +1722,7 @@ libbalooqueryparser.so.4 baloo-4.14.2_1
 libbaloowidgets.so.4 baloo-widgets-4.13.3_1
 libkdcraw.so.23 libkdcraw-4.13.3_1
 libchm.so.0 libchmlib-0.40_1
-libOkular5Core.so.7 libokular-17.08.1_1
+libOkular5Core.so.8 libokular-17.12.0_1
 libmnl.so.0 libmnl-1.0.3_1
 libnftnl.so.7 libnftnl-1.0.8_1
 libfcgi.so.0 fcgi-2.4.0_2
@@ -2998,6 +2998,8 @@ librpm.so.7 rpm-4.13.0.2_1
 librpmsign.so.7 rpm-4.13.0.2_1
 librpmbuild.so.7 rpm-4.13.0.2_1
 librpmio.so.7 rpm-4.13.0.2_1
+libsquirrel.so.0 squirrel-libs-3.1_1
+libsqstdlib.so.0 squirrel-libs-3.1_1
 libexecinfo.so.1 libexecinfo-1.1_1
 libkdeconnectpluginkcm.so.1 kdeconnect-1.2_1
 libkdeconnectinterfaces.so.1 kdeconnect-1.2_1
@@ -3027,3 +3029,7 @@ libr_crypto.so radare2-2.2.0_1
 libr_fs.so radare2-2.2.0_1
 libr_magic.so radare2-2.2.0_1
 libr_reg.so radare2-2.2.0_1
+libykpiv.so.1 libykpiv-1.5.0_1
+libykcs11.so.1 libykcs11-1.5.0_1
+libKF5KExiv2.so.15.0.0 libkexiv25-17.04.3_1
+libqmobipocket.so.2 libqmobipocket-17.04.3_1

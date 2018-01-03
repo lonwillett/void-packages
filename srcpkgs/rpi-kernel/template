@@ -1,18 +1,18 @@
 # Template file for 'rpi-kernel'
 #
-_githash="a5de96867a1d9a5087129ac61608446919a922ac"
+_githash="fbcbd7e7494c6b04cf9e2b2c955ce7d3a9335bb1"
 _gitshort="${_githash:0:7}"
 
 pkgname=rpi-kernel
-version=4.9.70
-revision=1
+version=4.9.73
+revision=2
 wrksrc="linux-${_githash}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.kernel.org"
 license="GPL-2"
 short_desc="The Linux kernel for Raspberry Pi (${version%.*} series [git ${_gitshort}])"
 distfiles="https://github.com/raspberrypi/linux/archive/${_githash}.tar.gz"
-checksum=94d6eb6a62ca6f70b9731c7c555f4660469aa6b2d1dfd171d54f12cd779c788b
+checksum=1cffbc2e8f9accd43b580cf9708e7e0e17cb0229e251b0427cfd8c6d9b553823
 
 _kernver="${version}_${revision}"
 
@@ -53,6 +53,7 @@ do_configure() {
 		echo "CONFIG_CONNECTOR=y" >> arch/arm/configs/bcm2709_defconfig
 		echo "CONFIG_PROC_EVENTS=y" >> arch/arm/configs/bcm2709_defconfig
 		echo "CONFIG_F2FS_FS_SECURITY=y" >> arch/arm/configs/bcm2709_defconfig
+		echo "CONFIG_CGROUP_PIDS=y" >> arch/arm/configs/bcm2709_defconfig
 		make ${makejobs} ${_args} ARCH=arm bcm2709_defconfig
 		;;
 	armv6l*)
@@ -60,6 +61,7 @@ do_configure() {
 		echo "CONFIG_CONNECTOR=y" >> arch/arm/configs/bcmrpi_defconfig
 		echo "CONFIG_PROC_EVENTS=y" >> arch/arm/configs/bcmrpi_defconfig
 		echo "CONFIG_F2FS_FS_SECURITY=y" >> arch/arm/configs/bcmrpi_defconfig
+		echo "CONFIG_CGROUP_PIDS=y" >> arch/arm/configs/bcmrpi_defconfig
 		make ${makejobs} ${_args} ARCH=arm bcmrpi_defconfig
 		;;
 	esac

@@ -776,7 +776,7 @@ libospgrove.so.0 openjade-1.3.2_1
 libostyle.so.0 openjade-1.3.2_1
 libtorrent.so.19 libtorrent-0.13.6_1
 libgiblib.so.1 giblib-1.2.4_1
-libgc.so.1 gc-7.1_1
+libgc.so.2 gc-7.6.2_1
 libcord.so.1 gc-7.4_1
 libgslcblas.so.0 gsl-1.15_1
 libgsl.so.23 gsl-2.4_1
@@ -2621,7 +2621,7 @@ libMonoSupportW.so mono-4.0.1.44_2
 libmono-btls-shared.so mono-5.2.0.215_1
 libxcb-xrm.so.0 xcb-util-xrm-1.0_1
 libinchi.so.0 openbabel-2.3.2_1
-libopenbabel.so.4 openbabel-2.3.2_1
+libopenbabel.so.5 openbabel-2.4.1_1
 libavogadro.so.1 avogadro-1.2.0_1
 libavogadro_OpenQube.so.0 avogadro-1.2.0_1
 libcourier-unicode.so.4 courier-unicode-2.0_1
@@ -3029,6 +3029,8 @@ libr_crypto.so radare2-2.2.0_1
 libr_fs.so radare2-2.2.0_1
 libr_magic.so radare2-2.2.0_1
 libr_reg.so radare2-2.2.0_1
+libcalc.so.2.12.6.0 libcalc-2.12.6.0_1
+libcustcalc.so.2.12.6.0 libcalc-2.12.6.0_1
 libykpiv.so.1 libykpiv-1.5.0_1
 libykcs11.so.1 libykcs11-1.5.0_1
 libKF5KExiv2.so.15.0.0 libkexiv25-17.04.3_1

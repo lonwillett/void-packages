@@ -1,11 +1,12 @@
 # Template file for 'libvirt'
 pkgname=libvirt
 version=3.10.0
-revision=1
+revision=3
 build_style=gnu-configure
 patch_args="-Np1"
-configure_args="--without-hal --with-storage-lvm --with-qemu-user=libvirt
- --with-qemu-group=libvirt --without-netcf --with-interface --disable-static"
+configure_args="--without-hal --with-storage-lvm
+ --with-qemu-user=libvirt --with-qemu-group=libvirt --without-netcf
+ --with-interface --disable-static"
 short_desc="The virtualization API for controlling virtualization engines"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="https://libvirt.org"

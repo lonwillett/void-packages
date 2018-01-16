@@ -500,6 +500,8 @@ libgimpconfig-2.0.so.0 libgimp-2.8.10_3
 libgimpmath-2.0.so.0 libgimp-2.8.10_3
 libgimpcolor-2.0.so.0 libgimp-2.8.10_3
 libgimpmodule-2.0.so.0 libgimp-2.8.10_3
+libgmic.so.2 gmic-2.1.8_1
+libcgmic.so.2 gmic-2.1.8_1
 libexiv2.so.26 exiv2-0.26_1
 libKF5Holidays.so.5 kholidays-16.12.0_1
 libsearchclient.so.0 strigi-0.7.2_1
@@ -1516,6 +1518,10 @@ libwiretap.so.7 libwireshark-2.4.1_1
 libwireshark.so.10 libwireshark-2.4.1_1
 libwsutil.so.8 libwireshark-2.4.1_1
 libtaskmanager.so.6 plasma-workspace-5.8.4_1
+libfreerdp-client2.so.2 libfreerdp-2.0.0rc1_1
+libfreerdp2.so.2 libfreerdp-2.0.0rc1_1
+libwinpr2.so.2 libfreerdp-2.0.0rc1_1
+libwinpr-tools2.so.2 libfreerdp-2.0.0rc1_1
 libfreerdp-core.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-channels.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-rail.so.1.0 libfreerdp-1.0.2_2
@@ -2613,6 +2619,7 @@ liballegro_physfs.so.5.2 allegro5-5.2.1_1
 liballegro_video.so.5.2 allegro5-5.2.1_1
 liballegro_main.so.5.2 allegro5-5.2.1_1
 libKF5DBusAddons.so.5 kdbusaddons-5.26.0_1
+libsystemsettingsview.so.3 systemsettings-5.11.5_2
 libmono-profiler-cov.so.0 mono-4.0.1.44_2
 libmono-profiler-aot.so.0 mono-4.0.1.44_2
 libmono-profiler-iomap.so.0 mono-4.0.1.44_2
@@ -2713,7 +2720,7 @@ libkmm_mymoney.so.4 kmymoney-4.8.0_1
 libpayeeidentifier_nationalAccount.so.4 kmymoney-4.8.0_1
 libpayeeidentifier_iban_bic.so.4 kmymoney-4.8.0_1
 libkmm_payeeidentifier.so kmymoney-4.8.0_1
-libbotan-2.so.3 botan-2.3.0_1
+libbotan-2.so.4 botan-2.4.0_1
 libswipl.so.7.6 swi-prolog-7.6.0_1
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
@@ -2912,9 +2919,9 @@ libccext2-1.8.so.0 commoncpp2-1.8.1_1
 libucommon.so.8 ucommon-7.0.0_1
 libusecure.so.8 ucommon-7.0.0_1
 libcommoncpp.so.8 ucommon-7.0.0_1
-libmupdf.so.1.11 libmupdf-1.11_4
-libmupdfthird.so.1.11 libmupdf-1.11_4
-libmuthreads.so.1.11 libmupdf-1.11_4
+libmupdf.so.1.12.0 libmupdf-1.12.0_1
+libmupdfthird.so.1.12.0 libmupdf-1.12.0_1
+libmuthreads.so.1.12.0 libmupdf-1.12.0_1
 libdatrie.so.1 libdatrie-0.2.10_1
 libthai.so.0 libthai-0.1.26_1
 libm17n-flt.so.0 m17n-lib-1.7.0_1
@@ -2965,7 +2972,6 @@ libJudy.so.1 judy-1.0.5_1
 libtracker-miner-2.0.so.0 libtracker-2.0.1_1
 libtacacs.so.1 tacacs-4.0.4.28_1
 libffms2.so.4 libffms2-2.23.1_1
-libduktape.so.201 duktape-2.1.1_1
 libddcutil.so.0 ddcutil-0.8.5_1
 liblsmash.so.2 liblsmash-2.9.1_1
 libgiac.so.0 libgiac-1.4.9r17_1
@@ -3041,6 +3047,7 @@ libqmobipocket.so.2 libqmobipocket-17.04.3_1
 libgloox.so.17 gloox-1.0.20_1
 libgsmsd.so.8 gammu-smsd-1.39.0_1
 libGammu.so.8 gammu-1.39.0_1
+libz3.so z3-4.6.0_2
 libvulkan.so.1 vulkan-loader-1.0.57.0_1
 libVkLayer_core_validation.so vulkan-validation-layers-1.0.57.0_1
 libVkLayer_device_profile_api.so vulkan-validation-layers-1.0.57.0_1
@@ -3056,3 +3063,13 @@ libembb_base_cpp.so embb-devel-1.0.0_1
 libembb_base_c.so embb-devel-1.0.0_1
 libmatio.so.4 matio-1.5.11_1
 libhpdf.so Haru-devel-2.3.0_1
+libKF5Contacts.so.5 kcontacts-17.12.0_1
+libKF5AkonadiPrivate.so.5 akonadi5-17.12.0_1
+libKF5AkonadiCore.so.5 akonadi5-17.12.0_1
+libKF5AkonadiAgentBase.so.5 akonadi5-17.12.0_1
+libKF5AkonadiWidgets.so.5 akonadi5-17.12.0_1
+libKF5AkonadiXml.so.5 akonadi5-17.12.0_1
+libKF5PimTextEdit.so.5 kpimtextedit-17.12.0_1
+libKF5IdentityManagement.so.5 kidentitymanagement-17.12.0_1
+libKChart.so.2 kdiagram-2.6.0_1
+libKGantt.so.2 kdiagram-2.6.0_1

@@ -1,8 +1,13 @@
 # Template file for 'scudcloud'
 pkgname=scudcloud
 version=1.63
-revision=1
-makedepends="python3 python3-setuptools python-PyQt5 python-dbus python3-PyQt5-dbus"
+revision=3
+build_style=python3-module
+pycompile_module="scudcloud"
+hostmakedepends="python3-setuptools"
+makedepends="python3-setuptools python-PyQt5 python-dbus python3-PyQt5-dbus"
+depends="python3-setuptools python-PyQt5 python3-PyQt5-dbus
+ python-PyQt5-webkit xdg-utils"
 short_desc="Non official desktop client app for Slack"
 noarch=yes
 maintainer="Gurpreet Singh <gurpreet@mailfence.com>"
@@ -11,7 +16,6 @@ homepage="https://launchpad.net/~rael-gc/+archive/ubuntu/scudcloud"
 distfiles="https://github.com/raelgc/${pkgname}/archive/v${version}.tar.gz"
 checksum=e0d1cb72115d0fda17db92d28be51558ad8fe250972683fac3086dbe8d350d22
 
-do_install() {
-	python3 setup.py install --prefix=/usr --root="/"
+post_install() {
 	vlicense LICENSE
 }

@@ -1,11 +1,13 @@
 # Template file for 'ReText'
 pkgname=ReText
 version=7.0.1
-revision=2
+revision=3
 noarch=yes
 build_style=python3-module
 pycompile_module="ReText"
-makedepends="python3 qt5-tools ImageMagick"
+wrksrc="${pkgname,,}-${version}"
+hostmakedepends="python3 qt5-tools qt5-host-tools ImageMagick"
+makedepends="qt5-tools python3-PyQt5-webkit python3-Markups python3-Markdown"
 depends="python3-PyQt5-webkit python3-Markups python3-Markdown
  desktop-file-utils shared-mime-info"
 short_desc="Simple editor for Markdown and reStructuredText"

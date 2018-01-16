@@ -12,6 +12,7 @@ homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OffTheRecordPlugin"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-3"
 #distfiles="https://ftp.gajim.org/plugins_0.16_zip/gotr.zip"
+#checksum=9bb82465c6faae335491310896a8cda99c7ffed91e90b0283ea98f4aa13e2fa1
 checksum=0914a969ce930e85718eea7de6b229165d249d5bf869731bc6f14274862976ca
 
 do_fetch() {

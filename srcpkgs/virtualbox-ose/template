@@ -23,6 +23,8 @@ makedepends="libressl-devel libcurl-devel libpng-devel libvpx-devel
 
 if [ "$XBPS_MACHINE" = "x86_64" ]; then
 	makedepends+=" gcc-multilib"
+else
+	broken="https://build.voidlinux.eu/builders/i686_builder/builds/7205/steps/shell_3/logs/stdio"
 fi
 
 depends="virtualbox-ose-dkms-${version}_${revision} hicolor-icon-theme desktop-file-utils dbus"

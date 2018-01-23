@@ -65,7 +65,7 @@ libmpxwrappers.so.2 libmpx-6.2.1_1
 libperl.so.5.26 perl-5.26.0_1
 libgmp.so.10 gmp-5.0.1_1
 libgmpxx.so.4 gmpxx-6.0.0_2
-libmpfr.so.4 mpfr-3.0.0_1
+libmpfr.so.6 mpfr-4.0.0_1
 libppl.so.14 ppl-1.2_1
 libppl_c.so.4 ppl-0.11_1
 libstdc++.so.6 libstdc++-4.4.0_1
@@ -387,7 +387,7 @@ libavutil.so.55 libavutil-3.1.3_1
 libavfilter.so.6 libavfilter-3.1.3_1
 libSDL-1.2.so.0 SDL-1.2.14_1
 libSDL_image-1.2.so.0 SDL_image-1.2.10_1
-libx264.so.142 x264-20140928.2245_1
+libx264.so.152 x264-20140928.2245_1
 libxvidcore.so.4 xvidcore-1.2.2_1
 libtag.so.1 taglib-1.6.1_1
 libtag-extras.so.1 taglib-extras-1.0.1_1
@@ -1954,10 +1954,11 @@ libFcitxQt5WidgetsAddons.so.1 fcitx-qt5-1.2.1_1
 liblastfm.so.1 liblastfm-1.0.9_1
 liblastfm_fingerprint.so.1 liblastfm-1.0.9_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
-libdruntime-ldc-debug.so.75 ldc-runtime-1.5.0_1
-libdruntime-ldc.so.75 ldc-runtime-1.5.0_1
-libphobos2-ldc.so.75 ldc-runtime-1.5.0_1
-libphobos2-ldc-debug.so.75 ldc-runtime-1.5.0_1
+libdruntime-ldc-debug.so.77 ldc-runtime-1.7.0_1
+libdruntime-ldc.so.77 ldc-runtime-1.7.0_1
+libphobos2-ldc.so.77 ldc-runtime-1.7.0_1
+libphobos2-ldc-debug.so.77 ldc-runtime-1.7.0_1
+libldc-jit.so.77 ldc-runtime-1.7.0_1
 libmarblewidget.so.19 marble-4.14.3_2
 libastro.so.1 marble-4.14.3_2
 libparrot.so.6.9.0 parrot-6.9.0_1
@@ -3048,6 +3049,7 @@ libgloox.so.17 gloox-1.0.20_1
 libgsmsd.so.8 gammu-smsd-1.39.0_1
 libGammu.so.8 gammu-1.39.0_1
 libz3.so z3-4.6.0_2
+libngspice.so.0 ngspice-27_2
 libvulkan.so.1 vulkan-loader-1.0.57.0_1
 libVkLayer_core_validation.so vulkan-validation-layers-1.0.57.0_1
 libVkLayer_device_profile_api.so vulkan-validation-layers-1.0.57.0_1
@@ -3073,3 +3075,8 @@ libKF5PimTextEdit.so.5 kpimtextedit-17.12.0_1
 libKF5IdentityManagement.so.5 kidentitymanagement-17.12.0_1
 libKChart.so.2 kdiagram-2.6.0_1
 libKGantt.so.2 kdiagram-2.6.0_1
+libscrypt.so.0 libscrypt-1.21_1
+libzuluplay.so.1.1 zuluplay-1.1_1
+libzuluCryptPluginManager.so.1.0.0 zulucrypt-5.2.0_1
+libzuluCrypt-exe.so.1.2.0 zulucrypt-5.2.0_1
+libzuluCrypt.so.1.2.0 zulucrypt-5.2.0_1

@@ -1495,7 +1495,7 @@ libwx_gtk2u_media-3.0.so.0 wxWidgets-3.0.1_1
 libwx_gtk2u_webview-3.0.so.0 wxWidgets-3.0.2_3
 libmspack.so.0 libmspack-0.4alpha_1
 libslim.so.1.3.6 slim-1.3.6_1
-libmozjs-24.so mozjs24-24.2.0_1
+libmozjs-38.so mozjs38-38.8.0_1
 libmediaart-2.0.so.0 libmediaart-1.9.1_1
 libinput.so.10 libinput-1.2.0_1
 libvaladoc.so.0 valadoc-0.36.0_1
@@ -3080,3 +3080,5 @@ libzuluplay.so.1.1 zuluplay-1.1_1
 libzuluCryptPluginManager.so.1.0.0 zulucrypt-5.2.0_1
 libzuluCrypt-exe.so.1.2.0 zulucrypt-5.2.0_1
 libzuluCrypt.so.1.2.0 zulucrypt-5.2.0_1
+libnfdump-1.6.15.so nfdump-1.6.15_1
+libttfautohint.so.1 ttfautohint-1.8.1_1

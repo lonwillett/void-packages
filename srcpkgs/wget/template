@@ -1,6 +1,6 @@
 # Template file for 'wget'
 pkgname=wget
-version=1.19.2
+version=1.19.4
 revision=1
 build_style=gnu-configure
 configure_args="$(vopt_if ssl '--with-ssl=openssl') $(vopt_if gnutls '--with-ssl=gnutls')"
@@ -14,8 +14,8 @@ short_desc="The GNU wget download utility"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnu.org/software/wget/wget.html"
 license="GPL-3"
-distfiles="${GNU_SITE}/wget/wget-$version.tar.gz"
-checksum=4f4a673b6d466efa50fbfba796bd84a46ae24e370fa562ede5b21ab53c11a920
+distfiles="${GNU_SITE}/wget/wget-${version}.tar.gz"
+checksum=93fb96b0f48a20ff5be0d9d9d3c4a986b469cb853131f9d5fe4cc9cecbc8b5b5
 
 build_options="gnutls ssl"
 build_options_default="ssl"

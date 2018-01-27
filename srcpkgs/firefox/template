@@ -30,8 +30,6 @@ build_options_default="alsa dbus pulseaudio startup_notification xscreensaver"
 post_extract() {
 	case "$XBPS_TARGET_MACHINE" in
 	*-musl)
-		# fix musl rust triplet
-		sed -i "s/\(x86_64-unknown-linux\)-gnu/\1-musl/" build/moz.configure/rust.configure
 		cp "${FILESDIR}/stab.h" toolkit/crashreporter/google-breakpad/src/
 		;;
 	esac
@@ -51,6 +49,13 @@ do_build() {
 	*-musl)
 		echo "ac_add_options --disable-jemalloc" >>.mozconfig
 		echo "ac_add_options --disable-gold" >>.mozconfig
+		;;
+	esac
+
+	case "$XBPS_TARGET_MACHINE" in
+	x86_64-musl)
+		echo "ac_add_options --host=x86_64-unknown-linux-musl" >>.mozconfig
+		echo "ac_add_options --target=x86_64-unknown-linux-musl" >>.mozconfig
 		;;
 	esac
 

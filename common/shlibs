@@ -387,7 +387,7 @@ libavutil.so.55 libavutil-3.1.3_1
 libavfilter.so.6 libavfilter-3.1.3_1
 libSDL-1.2.so.0 SDL-1.2.14_1
 libSDL_image-1.2.so.0 SDL_image-1.2.10_1
-libx264.so.152 x264-20140928.2245_1
+libx264.so.152 x264-20180119.2245_1
 libxvidcore.so.4 xvidcore-1.2.2_1
 libtag.so.1 taglib-1.6.1_1
 libtag-extras.so.1 taglib-extras-1.0.1_1
@@ -2002,7 +2002,7 @@ libKF5CddbWidgets.so.5 libkcddb-17.08.2_1
 libKF5Cddb.so.5 libkcddb-17.08.2_1
 libk3bdevice.so.7 k3b-17.08.2_1
 libk3blib.so.7 k3b-17.08.2_1
-libsndio.so.6.1 libsndio-1.2.0_2
+libsndio.so.7.0 libsndio-1.4.0_1
 libopenconnect.so.5 openconnect-7.05_1
 libusbredirparser.so.1 usbredir-0.7_1
 libusbredirhost.so.1 usbredir-0.7_1
@@ -2913,7 +2913,7 @@ libbrotlienc.so.1 brotli-1.0.2_1
 libfilteraudio.so filter_audio-0.0.1_1
 libarmadillo.so.8 armadillo-8.300.0_1
 libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
-libmovit.so.7 movit-1.5.3_1
+libmovit.so.8 movit-1.6.0_1
 libduktape.so.202 duktape-2.2.0_1
 libccgnu2-1.8.so.0 commoncpp2-1.8.1_1
 libccext2-1.8.so.0 commoncpp2-1.8.1_1
@@ -3082,3 +3082,9 @@ libzuluCrypt-exe.so.1.2.0 zulucrypt-5.2.0_1
 libzuluCrypt.so.1.2.0 zulucrypt-5.2.0_1
 libnfdump-1.6.15.so nfdump-1.6.15_1
 libttfautohint.so.1 ttfautohint-1.8.1_1
+libcob.so.4 gnucobol-libs-2.2_1
+libkrfbprivate.so.5.0 krfb-17.08.1_1
+libarcan_shmif.so.0.11 arcan-0.5.4.3_1
+libarcan_shmif_ext.so.0.11 arcan-0.5.4.3_1
+libarcan_shmif_server.so.0.11 arcan-0.5.4.3_1
+libarcan_tui.so.0.11 arcan-0.5.4.3_1

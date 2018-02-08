@@ -1,0 +1,10 @@
+--- a/drivers/tty/sysrq.c	2013-09-02 22:46:10.000000000 +0200
++++ b/drivers/tty/sysrq.c	2013-09-10 17:09:48.696247000 +0200
+@@ -731,6 +731,7 @@
+ 		break;
+ 
+ 	case KEY_SYSRQ:
++	case KEY_F10:
+ 		if (value == 1 && sysrq->alt != KEY_RESERVED) {
+ 			sysrq->active = true;
+ 			sysrq->alt_use = sysrq->alt;

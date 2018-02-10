@@ -2,7 +2,7 @@
 pkgname=go
 _bootstrap_version=1.4.2
 version=1.9.4
-revision=1
+revision=2
 wrksrc=go
 hostmakedepends="git ca-certificates"
 short_desc="The Go Programming Language"
@@ -40,6 +40,7 @@ _go_targetarch() {
 }
 
 do_extract() {
+	rm -rf "${XBPS_BUILDDIR}/go_bootstrap"
 	mkdir "${XBPS_BUILDDIR}/go_bootstrap"
 	tar -xf "${XBPS_SRCDISTDIR}/${pkgname}-${version}/go${_bootstrap_version}.src.tar.gz" \
 		-C "${XBPS_BUILDDIR}/go_bootstrap" --strip-components=1
@@ -82,20 +83,15 @@ do_build() {
 
 	GOOS=linux
 	GOARCH=arm
-	msg_normal "Bootstrap for $GOOS/$GOARCH ...\n"
-	CGO_ENABLED=0 bash make.bash --no-clean
-
+	bash make.bash --no-clean
 	GOOS=linux
 	GOARCH=arm64
-	msg_normal "Bootstrap for $GOOS/$GOARCH ...\n"
-	CGO_ENABLED=0 bash make.bash --no-clean
-
+	bash make.bash --no-clean
 	for os in darwin freebsd linux windows; do
 		for arch in 386 amd64; do
 			GOARCH=$arch
 			GOOS=$os
-			msg_normal "Bootstrap for $GOOS/$GOARCH ...\n"
-			CGO_ENABLED=0 bash make.bash --no-clean
+			bash make.bash --no-clean
 		done
 	done
 
@@ -151,6 +147,7 @@ do_install() {
 
 	rm -f ${DESTDIR}/usr/share/go/doc/articles/wiki/get.bin
 	rm -f ${DESTDIR}/usr/lib/go/pkg/tool/*/api
+	rm -rf "${XBPS_BUILDDIR}/go_bootstrap"
 }
 
 go-cross-linux_package() {

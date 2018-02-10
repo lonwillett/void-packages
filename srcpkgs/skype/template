@@ -12,7 +12,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="skype"
 homepage="https://www.skype.com"
 distfiles="https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_${version}_amd64.deb"
-checksum=b44d8f323f8243359c919dd917dfbde63e37fdf58f3c9a9d7c498c80e8e303ee
+checksum=b661dc3ad47aeaa16f428eefd761b74cb3153c07d55a4c118c95a4b1d1c0469c
 
 do_extract() {
 	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/skypeforlinux_${version}_amd64.deb data.tar.xz | tar xJpf - ./usr

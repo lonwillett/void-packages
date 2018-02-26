@@ -1544,8 +1544,8 @@ libgncmod-engine.so libgnucash-2.6.3_1
 libgncmod-gnome-utils.so libgnucash-2.6.3_1
 libcppunit-1.12.so.1 libcppunit-1.12.1_1
 libcppunit-1.14.so.0 libcppunit-1.14.0_1
-libcalc.so.2.12.6.0 libcalc-2.12.6.0_1
-libcustcalc.so.2.12.6.0 libcalc-2.12.6.0_1
+libcalc.so.2.12.6.5 libcalc-2.12.6.5_1
+libcustcalc.so.2.12.6.5 libcalc-2.12.6.5_1
 libOgreMain.so.1.9.0 libogre-1.9.0_1
 libOgrePaging.so.1.9.0 libogre-1.9.0_1
 libOgreProperty.so.1.9.0 libogre-1.9.0_1
@@ -1698,12 +1698,15 @@ libjq.so.1 jq-devel-1.4_1
 libcrypto.so.37 libcrypto37-2.3.3_1
 libcrypto.so.38 libcrypto38-2.4.2_1
 libcrypto.so.41 libcrypto41-2.5.3_1
+libcrypto.so.42 libcrypto42-2.6.4_1
 libssl.so.38 libssl38-2.3.3_1
 libssl.so.39 libssl39-2.4.2_1
 libssl.so.43 libssl43-2.5.3_1
+libssl.so.44 libssl44-2.6.4_1
 libtls.so.10 libtls10-2.3.3_1
 libtls.so.11 libtls11-2.4.2_1
 libtls.so.15 libtls15-2.5.3_1
+libtls.so.16 libtls16-2.6.4_1
 libvamp-hostsdk.so.3 libvamp-plugin-sdk-2.2_6
 libportmidi.so portmidi-217_1
 libsox.so.3 sox-14.4.2_1
@@ -3051,8 +3054,6 @@ libr_crypto.so radare2-2.2.0_1
 libr_fs.so radare2-2.2.0_1
 libr_magic.so radare2-2.2.0_1
 libr_reg.so radare2-2.2.0_1
-libcalc.so.2.12.6.0 libcalc-2.12.6.0_1
-libcustcalc.so.2.12.6.0 libcalc-2.12.6.0_1
 libykpiv.so.1 libykpiv-1.5.0_1
 libykcs11.so.1 libykcs11-1.5.0_1
 libKF5KExiv2.so.15.0.0 libkexiv25-17.04.3_1

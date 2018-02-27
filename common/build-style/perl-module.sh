@@ -16,7 +16,7 @@ do_configure() {
 
 	local perlprefix=${XBPS_STATEDIR}/perlprefix-${XBPS_TARGET_MACHINE}
 	mkdir -p $perlprefix
-	if [ -d "XBPS_CROSS_BASE/usr/lib/perl5/core_perl" ]; then
+	if [ -d "$XBPS_CROSS_BASE/usr/lib/perl5/core_perl" ]; then
 		cp "$XBPS_CROSS_BASE/usr/lib/perl5/core_perl/Config"*.p? $perlprefix
 		cp "$XBPS_CROSS_BASE/usr/lib/perl5/core_perl/Errno.pm" $perlprefix
 	else

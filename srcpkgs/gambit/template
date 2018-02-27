@@ -1,7 +1,7 @@
 # Template file for 'gambit'
 pkgname=gambit
-version=4.8.8
-revision=2
+version=4.8.9
+revision=1
 build_style=gnu-configure
 configure_args="
  --libdir=/usr/lib/gambit --docdir=/usr/share/doc/gambit
@@ -14,7 +14,7 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="LGPL-2.1,Apache-2.0"
 homepage="http://gambitscheme.org/"
 distfiles="https://github.com/gambit/gambit/archive/v${version}.tar.gz"
-checksum=daf7154fc76efd0ff9b861cdcc770136b07c44241ab60b791339962e43453648
+checksum=b6310fc7c91e222e6dda2a511bc25dcec9acf769f6dc3b32630dad4d305e7900
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) CFLAGS="-DNETDB_INTERNAL=-1 -DNETDB_SUCCESS=0";;

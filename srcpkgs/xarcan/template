@@ -1,6 +1,6 @@
 pkgname=xarcan
 version=0.5.4
-revision=2
+revision=3
 build_style=gnu-configure
 short_desc="Patched Xserver that bridges connections to Arcan"
 maintainer="Piraty <piraty1@inbox.ru>"
@@ -18,10 +18,8 @@ configure_args="--enable-kdrive --enable-xarcan --disable-xorg
 
 hostmakedepends="pkg-config autoconf automake libtool xorg-util-macros font-util xtrans"
 makedepends="
- pixman-devel libdrm-devel libX11-devel glproto MesaLib-devel libressl-devel
- randrproto videoproto compositeproto scrnsaverproto xf86driproto renderproto
- xineramaproto resourceproto libXfont2-devel libxkbfile-devel
- recordproto libepoxy-devel arcan-devel"
+ pixman-devel libdrm-devel libX11-devel MesaLib-devel libressl-devel
+ libXfont2-devel libxkbfile-devel libepoxy-devel arcan-devel xorgproto"
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh

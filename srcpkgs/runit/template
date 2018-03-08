@@ -1,7 +1,7 @@
 # Template file for 'runit'
 pkgname=runit
 version=2.1.2
-revision=8
+revision=9
 wrksrc="admin"
 short_desc="A UNIX init scheme with service supervision"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
@@ -53,4 +53,5 @@ do_install() {
 	done
 
 	vinstall ${FILESDIR}/_sv 644 usr/share/zsh/site-functions
+	vinstall ${FILESDIR}/sv  644 usr/share/bash-completion/completions
 }

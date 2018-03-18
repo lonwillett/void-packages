@@ -2021,10 +2021,7 @@ libusbredirhost.so.1 usbredir-0.7_1
 libprotobuf-c.so.1 protobuf-c-1.1.0_1
 libutf8proc.so.1 libutf8proc-1.1.6_1
 libnsutils.so.0 libnsutils-0.0.1_1
-libtoxcore.so.1 toxcore-0.1.5_1
-libtoxdns.so.1 toxcore-0.1.5_1
-libtoxencryptsave.so.1 toxcore-0.1.5_1
-libtoxav.so.1 toxcore-0.1.5_1
+libtoxcore.so.2 toxcore-0.2.0_1
 libgom-1.0.so.0 gom-0.3.0_1
 libetpan.so.20 libetpan-1.7.2_1
 libxmp.so.4 libxmp-4.3.7_1
@@ -2314,7 +2311,7 @@ libfann.so.2 fann-2.2.0_1
 libdoublefann.so.2 fann-2.2.0_1
 libxerces-c-3.1.so XQilla-2.3.3_2
 libxerces-c-3.2.so libxerces-c-3.2.0_1
-libunibreak.so.1 libunibreak-1.0_1
+libunibreak.so.3 libunibreak-4.0_1
 libgconfmm-2.6.so.1 gconfmm-2.28.3_1
 libiperf.so.0 iperf3-3.1.1_1
 libkqueue.so.0 libkqueue-2.0.3_1
@@ -3129,3 +3126,4 @@ libwayland-egl++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-client++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-cursor++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-client-extra++.so.0.2 libwaylandpp-2.2.0_1
+libfwup.so.1 fwupdate-10_1

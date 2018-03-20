@@ -1,38 +1,21 @@
 # Template file for 'gajim-antispam'
 pkgname=gajim-antispam
-version=0.4.3
+version=1.4.4
 revision=1
 noarch=yes
 wrksrc="anti_spam"
 build_style="fetch"
+# xxx Need python3 in hostmakedepends to use py3_ver
+pycompile_version=$py3_ver
 pycompile_dirs="usr/share/gajim/plugins/anti_spam"
-hostmakedepends="unzip"
+hostmakedepends="unzip python3"
 depends="gajim"
 short_desc="Anti-spam plugin for Gajim"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/AntiSpamPlugin"
-#distfiles="https://ftp.gajim.org/plugins_0.16_zip/anti_spam.zip"
-checksum=8a99989ec2bc22755fbb84e7d3f365477b86797cf3bccf0097acd18225094dbd
-
-do_fetch() {
-	# Source archives seem to be regenerated frequently, with
-	# indeterminate file order or some other such innocuous
-	# changes.
-	plug="anti_spam"
-	$XBPS_FETCH_CMD "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
-	mkdir "$plug.tmp"
-	unzip -o -q "$plug.zip" -d "$plug.tmp"
-	. $FILESDIR/checksum-dir.sh
-	x="$(checksum_dir "$plug.tmp")"
-	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
-	mv "$plug.tmp/$plug" "$wrksrc"
-	rm -rf "$plug.zip" "$plug.tmp"
-	if [ "$checksum" != "$x" ]; then
-		echo "$x"
-		return 1
-	fi
-}
+distfiles="https://ftp.gajim.org/plugins_1/anti_spam.zip"
+checksum=58085cad9b92717a036bc0c47196368e121e69dd9837a677e1fafef696f5c348
 
 do_install() {
 	vmkdir usr/share/gajim/plugins/anti_spam

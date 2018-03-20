@@ -4,17 +4,18 @@ version=3.28.0
 revision=1
 build_style=cmake
 configure_args="-DENABLE_GOOGLE_AUTH=OFF -DENABLE_UOA=OFF"
-hostmakedepends="pkg-config intltool flex glib-devel gperf $(vopt_if gir gobject-introspection)"
+hostmakedepends="pkg-config intltool flex glib-devel gperf $(vopt_if gir gobject-introspection) python3"
 makedepends="db-devel sqlite-devel mit-krb5-devel nss-devel libical-devel
  libsecret-devel libsoup-gnome-devel gcr-devel libldap-devel
- libgdata-devel $(vopt_if gir vala-devel) libgweather-devel icu-devel"
+ libgdata-devel $(vopt_if gir vala-devel) libgweather-devel icu-devel
+ webkit2gtk-devel"
 depends="libsoup-gnome>=2.46 libgweather>=3.12"
 short_desc="Centralized access to appointments and contacts"
 maintainer="Enno Boland <gottox@voidlinux.eu>"
 license="LGPL-2.1-only"
 homepage="https://wiki.gnome.org/Apps/Evolution"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
-checksum=e43aa1847ddc02965f560261ef88d18fb8704eddaa55555bf96b884a33e510ec
+checksum=fb9546d5fedbb00de6c6cec3850f2cdfea234af221e645d15721686a8df77ef9
 
 build_options="gir"
 if [ -z "$CROSS_BUILD" ]; then

@@ -337,10 +337,9 @@ libMagickCore-6.Q16.so.5 libmagick-6.9.9.0_1
 libMagickWand-6.Q16.so.5 libmagick-6.9.9.0_1
 libMagick++-6.Q16.so.8 libmagick-6.9.9.0_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.72 poppler-0.61.1_1
+libpoppler.so.74 poppler-0.63.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
-libpoppler-qt4.so.4 poppler-qt4-0.22.3_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
 libtcl8.6.so tcl-8.6.0_1
 libtk8.6.so tk-8.6.1_3
@@ -1076,7 +1075,7 @@ libgstsignalprocessor-1.0.so.0 gst-plugins-bad1-1.0.0_1
 libgstbasevideo-1.0.so.0 gst-plugins-bad1-1.0.0_1
 libgstbasecamerabinsrc-1.0.so.0 gst-plugins-bad1-1.0.0_1
 libgstcodecparsers-1.0.so.0 gst-plugins-bad1-1.0.0_1
-libgstgl-1.0.so.0 gst-plugins-bad1-1.6.1_1
+libgstgl-1.0.so.0 gst-plugins-base1-1.14.0_1
 libgnome-desktop-3.so.17 gnome-desktop-3.28.0_1
 libsecret-1.so.0 libsecret-0.10_1
 libgweather-3.so.15 libgweather-3.28.0_1
@@ -2151,6 +2150,7 @@ libtbbmalloc_debug.so.2 tbb-4.3_1
 libembree.so.2 embree-2.5.1_1
 libgtkimageview.so.0 gtkimageview-1.6.4_1
 libgoocanvas.so.3 goocanvas1-1.0.0_1
+libgoocanvas-2.0.so.9 goocanvas-2.0.4_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2 p8-platform-2.1.0.1_1
 libfacter.so.3.10.0 facter-3.10.0_1

@@ -1,39 +1,21 @@
 # Template file for 'gajim-omemo'
 pkgname=gajim-omemo
-version=1.2.8
+version=2.5.7
 revision=1
 noarch=yes
 wrksrc="omemo"
 build_style="fetch"
+# xxx Need python3 in hostmakedepends to use py3_ver
+pycompile_version=$py3_ver
 pycompile_dirs="usr/share/gajim/plugins/omemo"
-hostmakedepends="unzip"
-depends="python-axolotl python-cryptography python-qrcode gajim"
+hostmakedepends="unzip python3"
+depends="python3-axolotl python3-cryptography python3-qrcode gajim"
 short_desc="OMEMO Plugin for Gajim"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
-#distfiles="https://ftp.gajim.org/plugins_0.16_zip/omemo.zip"
-checksum=90a0028eb9254a3b27c090107235846a7e5912d6decd4ff4dbfb5f6c64e236ca
-
-
-do_fetch() {
-	# Source archives seem to be regenerated frequently, with
-	# indeterminate file order or some other such innocuous
-	# changes.
-	plug="omemo"
-	$XBPS_FETCH_CMD "https://ftp.gajim.org/plugins_0.16_zip/$plug.zip"
-	mkdir "$plug.tmp"
-	unzip -o -q "$plug.zip" -d "$plug.tmp"
-	. $FILESDIR/checksum-dir.sh
-	x="$(checksum_dir "$plug.tmp")"
-	if [ -e "$wrksrc" ]; then rm -rf "$wrksrc"; fi
-	mv "$plug.tmp/$plug" "$wrksrc"
-	rm -rf "$plug.zip" "$plug.tmp"
-	if [ "$checksum" != "$x" ]; then
-		echo "$x"
-		return 1
-	fi
-}
+distfiles="https://ftp.gajim.org/plugins_1/omemo.zip"
+checksum=aba0ac06f84519bf77ddfd9759f17b734ae8f76128d6add9dc3cb213da7f6812
 
 do_install() {
 	vmkdir usr/share/gajim/plugins/omemo

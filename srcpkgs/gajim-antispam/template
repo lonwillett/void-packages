@@ -17,6 +17,10 @@ homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/AntiSpamPlugin"
 distfiles="https://ftp.gajim.org/plugins_1/anti_spam.zip"
 checksum=58085cad9b92717a036bc0c47196368e121e69dd9837a677e1fafef696f5c348
 
+do_extract() {
+	unzip -o -q ${XBPS_SRCDISTDIR}/${pkgname}-${version}/anti_spam.zip -d ..
+}
+
 do_install() {
 	vmkdir usr/share/gajim/plugins/anti_spam
 	vcopy * usr/share/gajim/plugins/anti_spam

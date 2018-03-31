@@ -1,8 +1,8 @@
 # Template file for 'docker2aci'
 pkgname=docker2aci
 version=0.17.1
-revision=4
-hostmakedepends="git git-perl"
+revision=5
+hostmakedepends="git"
 build_style=go
 short_desc="Library and CLI tool to convert Docker images to ACIs"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"

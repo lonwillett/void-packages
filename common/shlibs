@@ -1189,7 +1189,7 @@ libdotconf.so.0 dotconf-1.3_1
 libspeechd.so.2 speech-dispatcher-0.8_1
 libre2.so.0 re2-2015.07.01_1
 libminizip.so.1 minizip-1.2.7_1
-libsrtp.so.1 libsrtp-1.5.4_1
+libsrtp2.so.1 libsrtp-2.1.0_1
 libjsoncpp.so.19 jsoncpp-1.8.3_1
 libesmtp.so.6 libesmtp-1.0.6_4
 libcaca.so.0 libcaca-0.99.beta18_3
@@ -2014,7 +2014,7 @@ libmosquitto.so.1 libmosquitto-1.4_1
 libmosquittopp.so.1 libmosquittopp-1.4_1
 libmpv.so.1 mpv-0.8.0_2
 libmbedtls.so.10 mbedtls-2.0.0_1
-libmbedcrypto.so.2 mbedtls-2.7.1_1
+libmbedcrypto.so.1 mbedtls-2.8.0_1
 libmbedx509.so.0 mbedtls-2.0.0_1
 libdmtx.so.0 libdmtx-0.7.4_1
 libdbus-c++-1.so.0 libdbus-c++-0.9.0_1
@@ -2840,7 +2840,7 @@ libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
-libqalculate.so.14 libqalculate-2.2.1_1
+libqalculate.so.15 libqalculate-2.3.0_1
 libweston-3.so.0 weston-3.0.0_1
 libweston-desktop-3.so.0 weston-3.0.0_1
 libostree-1.so.1 libostree-2017.3_1
@@ -3110,7 +3110,7 @@ libldm.so.1 linux-driver-management-1.0.1_1
 liblwipv6.so.2 lwipv6-1.5a_1
 libpipewire-0.1.so.0 pipewire-0.1.7_1
 libspa-lib.so.0 pipewire-0.1.7_1
-libvolk.so.1.3 volk-1.3_1
+libvolk.so.1.4 volk-1.4_1
 libgnuradio-runtime-3.7.12git.so.0.0.0 gnuradio-3.7.12git_1
 libgnuradio-pmt-3.7.12git.so.0.0.0 gnuradio-3.7.12git_1
 libgnuradio-blocks-3.7.12git.so.0.0.0 gnuradio-3.7.12git_1

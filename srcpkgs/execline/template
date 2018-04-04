@@ -1,7 +1,7 @@
 # Template file for 'execline'
 pkgname=execline
-version=2.3.0.4
-revision=1
+version=2.5.0.0
+revision=2
 build_style=gnu-configure
 makedepends="skalibs-devel"
 configure_args="--libdir=/usr/lib --with-sysdeps=${XBPS_CROSS_BASE}/usr/lib/skalibs/sysdeps --with-lib=${XBPS_CROSS_BASE}/usr/lib"
@@ -10,8 +10,7 @@ maintainer="bougyman <bougyman@voidlinux.eu>"
 license="ISC"
 homepage="http://skarnet.org/software/execline/"
 distfiles="http://skarnet.org/software/${pkgname}/${pkgname}-${version}.tar.gz"
-checksum=e4bb8fc8f20cca96f4bac9f0f74ebce5081b4b687bb11c79c843faf12507a64b
-conflicts="ImageMagick" # /usr/bin/import
+checksum=f6993094766652041c21fde9c07ef53a3cd4b93a64123d9578fb4997a2cefca1
 
 CFLAGS="-fPIC"
 

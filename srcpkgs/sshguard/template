@@ -1,10 +1,11 @@
 # Template file for 'sshguard'
 pkgname=sshguard
 version=2.1.0
-revision=1
+revision=2
 build_style=gnu-configure
 make_dirs="/var/db/sshguard 0755 root root"
 depends="iptables"
+hostmakedepends="flex"
 short_desc="Protects networked hosts from brute force attacks"
 maintainer="Lodvær <lodvaer@gmail.com>"
 license="3-clause-BSD"

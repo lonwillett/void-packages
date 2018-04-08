@@ -181,7 +181,7 @@ libxfconf-0.so.2 xfconf-4.9.1_1
 libxfce4util.so.7 libxfce4util-4.12.1_1
 libxfce4panel-1.0.so.4 xfce4-panel-4.9.2_1
 libxfce4panel-2.0.so.4 xfce4-panel-4.12.0_1
-libgdbm.so.4 gdbm-1.10_1_1
+libgdbm.so.5 gdbm-1.14_1_1
 libgdbm_compat.so.4 gdbm-1.10_1_1
 libintl.so.8 gettext-libs-0.19.2_1
 libgnuintl.so.8 gettext-libs-0.19.2_1
@@ -192,6 +192,10 @@ libattr.so.1 attr-2.4.43_1
 libacl.so.1 acl-2.2.47_1
 libpython2.7.so.1.0 python-2.7_1
 libffi.so.6 libffi-3.1_1
+libffcall.so.0 ffcall-2.1_1
+libavcall.so.1 ffcall-2.1_1
+libtrampoline.so.1 ffcall-2.1_1
+libcallback.so.1 ffcall-2.1_1
 libcrack.so.2 libcracklib-2.8.22_2
 libpam.so.0 pam-libs-1.1.6_3
 libpamc.so.0 pam-libs-1.1.6_3
@@ -893,6 +897,7 @@ libabiword-3.0.so libabiword-3.0.0_1
 libmpg123.so.0 libmpg123-1.13.4_2_1
 libout123.so.0 libmpg123-1.23.0_1
 libopenal.so.1 libopenal-1.13_1
+libalure.so.1 alure-1.2_1
 libalut.so.0 freealut-1.1.0_1
 liblilv-0.so.0 liblilv-0.14.4_1
 libsuil-0.so.0 suil-0.6.4_1
@@ -1506,7 +1511,6 @@ libmozjs-24.so mozjs24-24.2.0_1
 libmozjs-38.so mozjs38-38.8.0_1
 libmediaart-2.0.so.0 libmediaart-1.9.1_1
 libinput.so.10 libinput-1.2.0_1
-libvaladoc.so.0 valadoc-0.36.0_1
 libuhttpmock-0.0.so.0 uhttpmock-0.2.0_1
 libgfbgraph-0.2.so.0 gfbgraph-0.2.2_1
 libgtkhex-3.so.0 libgtkhex-3.10.0_1
@@ -1724,6 +1728,8 @@ libportmidi.so portmidi-217_1
 libsox.so.3 sox-14.4.2_1
 libsoxr.so.0 libsoxr-0.1.2_1
 libsoxr-lsr.so.0 libsoxr-0.1.2_1
+libdumb.so.2 dumb-2.0.3_1
+libaldmb.so.2 dumb-2.0.3_1
 libframe.so.6 frame-2.5.0_1
 libgrail.so.6 grail-3.1.0_1
 libgeis.so.1 geis-2.2.16_1
@@ -2197,6 +2203,7 @@ libqtelegram-ae.so.1 libqtelegram-ae-5.0_1
 libtelegramqml.so.1 TelegramQML-0.8.0_1
 libglog.so.0 glog-0.3.4_1
 libzita-convolver.so.3 zita-convolver-3.1.0_1
+libzita-alsa-pcmi.so.0 zita-alsa-pcmi-0.2.0_1
 libpugixml.so.1 pugixml-1.6_1
 libnewt.so.0.52 newt-0.52.18_1
 libgeany.so.0 geany-1.25_1
@@ -2250,6 +2257,7 @@ libkookularGenerator_odt.so.16 calligra-extras-3.1.0_1
 libkookularGenerator_odp.so.16 calligra-extras-3.1.0_1
 libgemini.so.16 calligra-gemini-3.1.0_1
 libfts.so.0 musl-fts-1.2_2
+libucontext.so.0 libucontext-0.1.1_1
 libgavl.so.1 gavl-1.40_1
 libmxml.so.1 mxml-2.9_1
 libKF5Pty.so.5 kpty-5.26.0_1
@@ -2645,7 +2653,7 @@ libopenbabel.so.5 openbabel-2.4.1_1
 libavogadro.so.1 avogadro-1.2.0_1
 libavogadro_OpenQube.so.0 avogadro-1.2.0_1
 libcourier-unicode.so.4 courier-unicode-2.0_1
-libzstd.so.1 zstd-1.0.0_1
+libzstd.so.1 libzstd-1.0.0_1
 libudis86.so.0 udis86-devel-1.7.2_3
 libsass.so.1 libsass-3.5.0_1
 libjbig.so.0 jbigkit-libs-2.1_2
@@ -2827,6 +2835,7 @@ libbcunit.so.1 bcunit-3.0_1
 libzbar.so.0 libzbar-0.10_1
 libzbargtk.so.0 libzbar-0.10_1
 libzbarqt.so.0 libzbar-0.10_1
+libargtable2.so.0 argtable-2.13_1
 libomxil-bellagio.so.0 libomxil-bellagio-0.9.3_1
 libomxdynamicloader.so.0 libomxil-bellagio-0.9.3_1
 libomxaudio_effects.so.0 libomxil-bellagio-0.9.3_1
@@ -2915,7 +2924,7 @@ libunshield.so.0 libunshield-0.6_1
 libMyGUIEngine.so.3 libmygui-3.2.2_1
 libEditorFramework.so libmygui-devel-3.2.2_3
 Plugin_StrangeButton.so libmygui-devel-3.2.2_3
-libproj.so.12 proj-4.9.3_1
+libproj.so.13 proj-5.0.0_1
 libnlopt.so.0 nlopt-2.4.2_1
 libeb.so.16 libeb-4.3.3_1
 libchipcard.so.6 libchipcard-5.0.4_1
@@ -2984,8 +2993,8 @@ libsysprof-2.so sysprof-3.24.1_1
 libsysprof-ui-2.so sysprof-3.24.1_1
 libmozjs-52.so mozjs52-52.3.0_1
 libmozjs-52.so.0 mozjs52-52.3.0_1
-libvala-0.38.so.0 libvala-0.38.1_1
-libvaladoc-0.38.so.0 libvala-0.38.1_1
+libvala-0.40.so.0 libvala-0.40.2_1
+libvaladoc-0.40.so.0 libvala-0.40.2_1
 libphodav-2.0.so.0 phodav-2.2_1
 libgfshare.so.2 libgfshare-2.0.0_1
 libJudy.so.1 judy-1.0.5_1
@@ -3239,7 +3248,10 @@ libspatialindex_c.so.4 libspatialindex-1.8.5_1
 liboctave.so.4 octave-4.2.1_8
 liboctinterp.so.4 octave-4.2.1_8
 liboctgui.so.2 octave-4.2.1_8
+libpapi.so.5 papi-5.6.0_1
+libpfm.so.4 papi-5.6.0_1
 libfifechan.so.0.1.4 fifechan-0.1.4_1
 libfifechan_sdl.so.0.1.4 fifechan-0.1.4_1
 libfifechan_opengl.so.0.1.4 fifechan-0.1.4_1
 libpolyclipping.so.22 clipper-6.4.2_1
+libSoapySDR.so.0.6 SoapySDR-0.6.1_1

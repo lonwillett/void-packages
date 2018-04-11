@@ -1,7 +1,7 @@
 # Template file for 'debootstrap'
 pkgname=debootstrap
-version=1.0.95
-revision=1
+version=1.0.96
+revision=2
 build_style=fetch
 depends="binutils bzip2 gnupg gzip tar wget xz"
 short_desc="Bootstrap a basic Debian system"
@@ -10,14 +10,13 @@ license="MIT"
 homepage="http://packages.qa.debian.org/d/debootstrap.html"
 distfiles="${DEBIAN_SITE}/main/d/${pkgname}/${pkgname}_${version}_all.deb
  ${DEBIAN_SITE}/main/d/debian-archive-keyring/debian-archive-keyring_2014.3_all.deb"
-checksum="7c1d8300280f08dcc10c6cded79eee61b539ba857ab3847bf210361d44adf185
+checksum="12ffc7d26021eefef8b9e667e78088c6a655439768e505e2c6d83999f3fed03c
  017a2fba215cd64612891f5aa02546be5c0e30923a66672f889867cc6dd8d3a0"
 
 do_install() {
 	ar p ${pkgname}_${version}_all.deb data.tar.gz | tar xvzf - -C ${DESTDIR}
 	ar p debian-archive-keyring_2014.3_all.deb data.tar.xz | tar xvJf - -C ${DESTDIR} ./usr/share/keyrings/debian-archive-keyring.gpg
 	mv ${DESTDIR}/usr/sbin ${DESTDIR}/usr/bin
-	patch --no-backup-if-mismatch -d ${DESTDIR} -Np0 <${FILESDIR}/bug-668001.patch
 	sed -i 's|export PATH|export PATH="/usr/sbin:/sbin:/usr/bin:/bin"|' ${DESTDIR}/usr/bin/debootstrap
 	vlicense ${DESTDIR}/usr/share/doc/debootstrap/copyright LICENSE
 	rm ${DESTDIR}/usr/share/doc/debootstrap/copyright

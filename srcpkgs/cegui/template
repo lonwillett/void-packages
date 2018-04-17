@@ -1,7 +1,7 @@
 # Template file for 'cegui'
 pkgname=cegui
 version=0.8.7
-revision=6
+revision=7
 build_style=cmake
 hostmakedepends="graphviz doxygen dejavu-fonts-ttf gd glm perl pkg-config"
 makedepends="libxml2-devel boost-devel glu-devel glew-devel glfw-devel
@@ -23,7 +23,7 @@ build_options="gtk irrlicht ogre python"
 desc_option_gtk="Enable support for GTK2"
 desc_option_irrlicht="Enable support for Irrlicht"
 desc_option_ogre="Enable support for Ogre"
-build_options_default="gtk irrlicht ogre"
+build_options_default="gtk irrlicht"
 
 if [ -z "$CROSS_BUILD" ]; then
 	# XXX: boost-python is not available when cross building

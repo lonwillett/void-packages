@@ -1,6 +1,6 @@
 # Template file for 'linux4.15'
 pkgname=linux4.15
-version=4.15.17
+version=4.15.18
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="http://www.kernel.org"
 license="GPL-2"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=2fd5f2322018c6d4d318629abb0ea17f046a308271a8514cc31bb29c858040b8
+checksum=3f89cd717e0d497ba4818e145a33002f4c15032e355c1ad6d3d7f31f122caf41
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes

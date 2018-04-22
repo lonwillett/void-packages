@@ -123,10 +123,8 @@ libEGL.so.1 nvidia-libs-346.72_2
 libGLESv1_CM.so.1 libGLES-1.0_1
 libGLESv2.so.2 libGLES-1.0_1
 libEGL.so rpi-userland-0.0.0.0.20150907_1
-libGLES.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so rpi-userland-0.0.0.0.20150907_1
 libbrcmEGL.so rpi-userland-20180103_2
-libbrcmGLES.so rpi-userland-20180103_2
 libbrcmGLESv2.so rpi-userland-20180103_2
 libbrcmOpenVG.so rpi-userland-20180103_2
 libGLESv2.so opera-49.0.2725.39_1
@@ -1229,6 +1227,9 @@ libmmal_vc_client.so rpi-userland-20170427_1
 libmmal_components.so rpi-userland-20170427_1
 libvcsm.so rpi-userland-20170427_1
 libcontainers.so rpi-userland-20170427_1
+libbrcmWFC.so rpi-userland-20180103_1
+libdebug_sym.so rpi-userland-20180103_1
+libdtovl.s rpi-userland-20180103_1
 liblockdev.so.1 lockdev-1.0.3_1
 libcec.so.4 libcec-4.0.2_1
 librump.so.0 netbsd-rumpkernel-20130321_1
@@ -2190,7 +2191,7 @@ libgoocanvas.so.3 goocanvas1-1.0.0_1
 libgoocanvas-2.0.so.9 goocanvas-2.0.4_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2 p8-platform-2.1.0.1_1
-libfacter.so.3.11.0 facter-3.11.0_1
+libfacter.so.3.11.1 facter-3.11.1_1
 libOIS-1.3.0.so ois-1.3_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
@@ -2370,6 +2371,10 @@ libhdf5_hl.so.100 hdf5-1.10.1_1
 libhdf5.so.101 hdf5-1.10.1_1
 libhdf5_hl_cpp.so.100 hdf5-1.10.1_1
 libhdf5_cpp.so.101 hdf5-1.10.1_1
+libhdf5.so.10 hdf5-18-1.8.20_1
+libhdf5_hl.so.10 hdf5-18-1.8.20_1
+libhdf5_hl_cpp.so.11 hdf5-18-1.8.20_1
+libhdf5_cpp.so.15 hdf5-18-1.8.20_1
 libcryptmount.so.0 libpam-mount-2.15_1
 libglob.so.0 libglob-1.0_1
 libepub.so.0 ebook-tools-0.2.2_1
@@ -2821,6 +2826,8 @@ libpisync.so.1 pilot-link-0.12.5_1
 libpitcl.so.0 pilot-link-0.12.5_1
 libiscsi.so.8 libiscsi-1.18.0_1
 libgme.so.0 libgme-0.6.1_1
+libsidplayfp.so.4 libsidplayfp-1.8.7_1
+libstilview.so.0 libsidplayfp-1.8.7_1
 libczmq.so.4 czmq-4.0.1_1
 liblz.so.1 lzlib-1.8_1
 libelogind.so.0 elogind-219.12_1
@@ -2973,9 +2980,10 @@ libccext2-1.8.so.0 commoncpp2-1.8.1_1
 libucommon.so.8 ucommon-7.0.0_1
 libusecure.so.8 ucommon-7.0.0_1
 libcommoncpp.so.8 ucommon-7.0.0_1
-libmupdf.so.1.12.0 libmupdf-1.12.0_1
-libmupdfthird.so.1.12.0 libmupdf-1.12.0_1
-libmuthreads.so.1.12.0 libmupdf-1.12.0_1
+libmupdf.so.1.13.0 libmupdf-1.13.0_1
+libmupdfthird.so.1.13.0 libmupdf-1.13.0_1
+libmuthreads.so.1.13.0 libmupdf-1.13.0_1
+libmupkcs7.so.1.13.0 libmupdf-1.13.0_1
 libdatrie.so.1 libdatrie-0.2.10_1
 libthai.so.0 libthai-0.1.26_1
 libm17n-flt.so.0 m17n-lib-1.7.0_1
@@ -3341,3 +3349,5 @@ libfifechan_opengl.so.0.1.4 fifechan-0.1.4_1
 libpolyclipping.so.22 clipper-6.4.2_1
 libSoapySDR.so.0.6 SoapySDR-0.6.1_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
+libkid3-core.so.3.6.0 kid3-3.6.0_1
+libkid3-gui.so.3.6.0 kid3-3.6.0_1

@@ -1,6 +1,6 @@
 # Template file for 'Signal-Desktop'
 pkgname=Signal-Desktop
-version=1.7.1
+version=1.10.1
 revision=1
 hostmakedepends="git python nodejs-lts"
 depends="libnotify libappindicator"
@@ -9,13 +9,14 @@ maintainer="Julio Galvan <juliogalvan@protonmail.com>"
 license="GPL-3"
 homepage="https://github.com/signalapp/Signal-Desktop"
 distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-checksum=188fe8c17ccf49609467ab59ea6321beb7ee71e00da7b419249d205ebf80d13d
+checksum=19a3f2dbf48911d4ff0dda97fe34b6dca7d3cc4ad641ddadc17ea0215dea35e0
 # Due to electron
 only_for_archs="x86_64 i686"
 nostrip_files="signal-desktop"
 
 post_extract() {
-	sed -i "s/'sass', 'date'/'sass'/g" Gruntfile.js
+	# The "date" task only works when building from a git repository
+	sed -i "/grunt.registerTask('default', \[/,/\]/ s/'date',//" Gruntfile.js
 }
 
 do_build() {

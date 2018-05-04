@@ -2008,11 +2008,11 @@ libFcitxQt5WidgetsAddons.so.1 libfcitx-qt5-1.2.1_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
 liblastfm.so.1 liblastfm-1.0.9_1
 liblastfm_fingerprint.so.1 liblastfm-1.0.9_1
-libdruntime-ldc-debug-shared.so.78 ldc-runtime-1.8.0_1
-libdruntime-ldc-shared.so.78 ldc-runtime-1.8.0_1
-libphobos2-ldc-shared.so.78 ldc-runtime-1.8.0_1
-libphobos2-ldc-debug-shared.so.78 ldc-runtime-1.8.0_1
-libldc-jit.so.78 ldc-runtime-1.8.0_1
+libdruntime-ldc-debug-shared.so.79 ldc-runtime-1.9.0_1
+libdruntime-ldc-shared.so.79 ldc-runtime-1.9.0_1
+libphobos2-ldc-shared.so.79 ldc-runtime-1.9.0_1
+libphobos2-ldc-debug-shared.so.79 ldc-runtime-1.9.0_1
+libldc-jit.so.79 ldc-runtime-1.9.0_1
 libmarblewidget.so.19 marble-4.14.3_2
 libastro.so.1 marble-4.14.3_2
 libmarblewidget-qt5.so.28 marble5-17.12.2_1
@@ -2908,6 +2908,7 @@ libbaccats-sqlite3-9.0.4.so bacula-common-9.0.4_1
 libbaccats-postgresql-9.0.4.so bacula-common-postgresql-9.0.4_1
 libbaccats-mysql-9.0.4.so bacula-common-mariadb-9.0.4_1
 bpipe-fd.so bacula-fd-9.0.4_1
+libnftables.so.0 libnftables-0.8.4_1
 libsuperlu.so.5 superlu-5.2.1_1
 libgosu.so.0 gosu-0.12.0_1
 libyara.so.3 libyara-3.5.0_1

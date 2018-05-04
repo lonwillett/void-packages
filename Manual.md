@@ -579,9 +579,6 @@ Example:
 A list is composed of three components separated by a colon: group, symlink and target.
 i.e `alternatives="vi:/usr/bin/vi:/usr/bin/nvi ex:/usr/bin/ex:/usr/bin/nvi-ex"`.
 
-- `changelog` URL to the changelog of the package, the changelog must be in plaintext.
-i.e `changelog="https://raw.githubusercontent.com/user/package/master/CHANGELOG.md"`
-
 <a id="explain_depends"></a>
 #### About the many types of `depends` variable.
 
@@ -830,10 +827,10 @@ package accordingly. Additionally, the following functions are available:
 
   Emits an error and exits if both options are set at the same time.
 
-- *vopt_onoff()* `vopt_onoff <option> <property>`
+- *vopt_bool()* `vopt_bool <option> <property>`
 
-  Outputs `-D<property>=ON` if the option is set, or
-  `-D<property>=OFF` otherwise.
+  Outputs `-D<property>=true` if the option is set, or
+  `-D<property>=false` otherwise.
 
 The following example shows how to change a source package that uses GNU
 configure to enable a new build option to support PNG images:

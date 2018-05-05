@@ -1,13 +1,13 @@
 - TeXLive is free software see the files:
 
-  /usr/share/licenses/texlive2017-bin/LICENSE.TL
-  /usr/share/licenses/texlive2017-bin/LICENSE.CTAN
+  /usr/share/licenses/texlive2018-bin/LICENSE.TL
+  /usr/share/licenses/texlive2018-bin/LICENSE.CTAN
 
 =====================================================================
 
   To update you TeXLive installation use only the program 
 
-  /opt/texlive/2017/<arch>/tlmgr
+  /opt/texlive/2018/<arch>/tlmgr
 
   where <arch> is:
     - x86_64-linux  ==> x86_64 architecture
@@ -21,12 +21,3 @@
     		 		 
   WARNING: To avoid messing up your TeXLive installation, DON'T use
   the installation scripts in /opt/texlive-installer.
-
-=====================================================================
-
-  As TeXLive 2018 has been released, you may need to change the
-  repository to the historic 2017 repository:
-
-      tlmgr option repository \
-              ftp://ftp.tug.org/texlive/historic/2017/tlnet-final/
-

@@ -1,7 +1,7 @@
 # Template file for 'texlive-bin'
-pkgname=texlive2017-bin
-version=2017
-revision=3
+pkgname=texlive2018-bin
+version=2018
+revision=1
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 homepage="http://tug.org/texlive/"
 license="GPL-2"
@@ -10,7 +10,7 @@ depends="cairo pixman graphite gd poppler libsigsegv
  zziplib libpng libjpeg-turbo freetype icu harfbuzz wget perl
  ghostscript xz"
 distfiles="ftp://ftp.tug.org/texlive/historic/${version}/install-tl-unx.tar.gz>${pkgname}-${version}-${revision}.tar.gz"
-checksum=d4e07ed15dace1ea7fabe6d225ca45ba51f1cb7783e17850bc9fe3b890239d6d
+checksum=82c13110852af162c4c5ef1579fa2f4f51c2040850ec02fb7f97497da45eb446
 create_wrksrc=yes
 
 # Package build options
@@ -21,12 +21,12 @@ desc_option_small="Install TeXLive using scheme-small"
 desc_option_medium="Install TeXLive using scheme-medium"
 desc_option_full="Install TeXLive using scheme-full"
 
-pre_install(){
+pre_install() {
 	rm -rf ${wrksrc}/install-tl*/tlpkg/installer/xz \
 		${wrksrc}/install-tl*/tlpkg/installer/wget
 }
 
-do_install(){
+do_install() {
 	vmkdir opt/texlive${version}-installer
 	vcopy "install-tl-*/*" /opt/texlive${version}-installer
 	vinstall ${FILESDIR}/void.profile 644 opt/texlive${version}-installer

@@ -143,7 +143,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.25 nvidia-libs-390.25_1 ignore
+libnvidia-fatbinaryloader.so.390.48 nvidia-libs-390.48_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -1801,7 +1801,7 @@ libmate-window-settings.so.1 libmate-control-center-1.8.1_1
 libmateweather.so.1 libmateweather-1.8.0_1
 libmate-panel-applet-4.so.1 libmate-panel-1.8.0_1
 libslab.so.0 libmate-control-center-1.8.2_1
-liblz4.so.1 lz4-1.7.3_1
+liblz4.so.1 liblz4-1.8.2_1
 libatrilview.so.3 libatril-1.8.0_1
 libatrildocument.so.3 libatril-1.8.0_1
 libjawt.so openjdk-jre-8u20_2
@@ -2101,11 +2101,11 @@ libfuzzy.so.2 libfuzzy-2.12_1
 libSDL_gfx.so.15 SDL_gfx-2.0.25_2
 libgdkglextmm-x11-1.2.so.0 gtkglextmm-1.2.0_1
 libgtkglextmm-x11-1.2.so.0 gtkglextmm-1.2.0_1
-libsfml-network.so.2.4 SFML-2.4.1_1
-libsfml-system.so.2.4 SFML-2.4.1_1
-libsfml-window.so.2.4 SFML-2.4.1_1
-libsfml-audio.so.2.4 SFML-2.4.1_1
-libsfml-graphics.so.2.4 SFML-2.4.1_1
+libsfml-network.so.2.5 SFML-2.5.0_1
+libsfml-system.so.2.5 SFML-2.5.0_1
+libsfml-window.so.2.5 SFML-2.5.0_1
+libsfml-audio.so.2.5 SFML-2.5.0_1
+libsfml-graphics.so.2.5 SFML-2.5.0_1
 libclamav.so.7 clamav-0.98.6_1
 libclamunrar.so.7 clamav-0.98.6_1
 libclamunrar_iface.so.7 clamav-0.98.6_1

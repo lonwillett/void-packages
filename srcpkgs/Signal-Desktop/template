@@ -1,6 +1,6 @@
 # Template file for 'Signal-Desktop'
 pkgname=Signal-Desktop
-version=1.9.0
+version=1.10.0
 revision=1
 hostmakedepends="git python nodejs-lts"
 depends="libnotify libappindicator"
@@ -9,7 +9,7 @@ maintainer="Julio Galvan <juliogalvan@protonmail.com>"
 license="GPL-3"
 homepage="https://github.com/signalapp/Signal-Desktop"
 distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-checksum=4016d0608f606fb0ffdb65d372923f581a1e4fafe6ae6573ddde146c51efb5f0
+checksum=998816570a58e8df2435109788be9f422fce5f27090141d57edd982d4d6a30b8
 # Due to electron
 only_for_archs="x86_64 i686"
 nostrip_files="signal-desktop"

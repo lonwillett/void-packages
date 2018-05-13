@@ -47,7 +47,7 @@ do_install() {
 	vcopy ${FILESDIR}/signal.desktop usr/share/applications/
 
 	vmkdir usr/share/icons/hicolor
-	for size in 16 24 32 48 64 128 256 512; do
+	for size in 16 24 32 48 64 128 256 512 1024; do
 		vinstall build/icons/png/${size}x${size}.png 644 usr/share/icons/hicolor/${size}x${size}/apps/	signal.png
 	done
 	npm remove -g yarn

@@ -1081,7 +1081,7 @@ librtmp.so.1 librtmp-2.4.20161210_1
 libORBit-2.so.0 libORBit2-2.14.19_1
 libORBit-imodule-2.so.0 libORBit2-2.14.19_1
 libORBitCosNaming-2.so.0 libORBit2-2.14.19_1
-libminiupnpc.so.16 miniupnpc-2.0_1
+libminiupnpc.so.17 miniupnpc-2.1_1
 libxbps.so.2 libxbps-0.25_1
 libxbps.so.2 libxbps-git-0.25_1
 libatf-c.so.1 atf-libs-0.21_1
@@ -1776,7 +1776,7 @@ libopenjp2.so.7 libopenjpeg2-2.1.0_1
 libcln.so.6 cln-1.3.3_1
 libkdcraw.so.23 libkdcraw-4.13.3_1
 libchm.so.0 libchmlib-0.40_1
-libOkular5Core.so.8 libokular-17.12.0_1
+libOkular5Core.so.9 libokular-18.04.1_1
 libmnl.so.0 libmnl-1.0.3_1
 libnftnl.so.7 libnftnl-1.0.8_1
 libfcgi.so.0 fcgi-2.4.0_2
@@ -2094,7 +2094,7 @@ libcvm-v1client.so.1 cvm-0.97_1
 libcvm-v2client.so.1 cvm-0.97_1
 libudns.so.0 udns-0.4_1
 libcriu.so.1 criu-1.5.1_2
-libwebsockets.so.12 libwebsockets-2.4.0_1
+libwebsockets.so.13 libwebsockets-3.0.0_1
 libnfc.so.0 libnfc-1.7.1_1
 libfuzzy.so.2 libfuzzy-2.12_1
 libSDL_gfx.so.15 SDL_gfx-2.0.25_2
@@ -3347,3 +3347,4 @@ libSoapySDR.so.0.6 SoapySDR-0.6.1_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
 libkid3-core.so.3.6.0 kid3-3.6.0_1
 libkid3-gui.so.3.6.0 kid3-3.6.0_1
+libcfitsio.so.3 cfitsio-3.450_1

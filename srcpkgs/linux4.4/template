@@ -1,6 +1,6 @@
 # Template file for 'linux4.4'
 pkgname=linux4.4
-version=4.4.131
+version=4.4.132
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="https://www.kernel.org"
 license="GPL-2"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="${KERNEL_SITE}/kernel/v4.x/linux-${version}.tar.xz"
-checksum=65127add35c45acda866d10860e80bfdcc19b6c21e30e5dc9b92020a44d7c709
+checksum=c415b01c810ad88284f9ffaebe0526efce8b1643d930dac6d8ef6a55cf6e0634
 
 nocross=yes
 nodebug=yes

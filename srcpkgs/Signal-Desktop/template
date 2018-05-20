@@ -8,8 +8,8 @@ short_desc="Signal Private Messenger for Linux"
 maintainer="Julio Galvan <juliogalvan@protonmail.com>"
 license="GPL-3.0-only"
 homepage="https://github.com/signalapp/Signal-Desktop"
-distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-checksum=3fd2ce0dc32da2f660519e7030c5c567b20fd1a9c8432d5d7cc4dd5c9d572c91
+#distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
+#checksum=3fd2ce0dc32da2f660519e7030c5c567b20fd1a9c8432d5d7cc4dd5c9d572c91
 # Due to electron
 only_for_archs="x86_64 i686"
 nostrip_files="signal-desktop"
@@ -19,11 +19,6 @@ do_fetch() {
 	# process expects the directory to be a git repository
 	git clone -b v${version} https://github.com/signalapp/Signal-Desktop.git $wrksrc
 }
-
-#post_extract() {
-#	# The "date" task only works when building from a git repository
-#	sed -i "/grunt.registerTask('default', \[/,/\]/ s/'date',//" Gruntfile.js
-#}
 
 do_build() {
 	npm install -g yarn

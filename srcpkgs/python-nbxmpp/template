@@ -1,19 +1,19 @@
 # Template file for 'python-nbxmpp'
 pkgname=python-nbxmpp
-version=0.6.5
+version=0.6.6
 revision=1
 noarch=yes
 wrksrc="${pkgname#*-}-${version}"
 build_style=python-module
+pycompile_module="nbxmpp"
 hostmakedepends="python-setuptools python3-setuptools"
 depends="python-openssl"
-pycompile_module="nbxmpp"
 short_desc="Non blocking Jabber/XMPP module (Python2)"
 maintainer="Duncaen <duncaen@voidlinux.eu>"
 license="GPL-2.0-or-later"
 homepage="https://python-nbxmpp.gajim.org/"
 distfiles="${PYPI_SITE}/n/nbxmpp/nbxmpp-${version}.tar.gz"
-checksum=9b35587b62348f2d932c8f8ca843179e78de1aef0b9d1baa8a399847b0994d98
+checksum=d0e2830c75c5fa74871995f0be4c5ef2477e696f6ac38b4414170f86bd06e62e
 
 python3-nbxmpp_package() {
 	noarch=yes

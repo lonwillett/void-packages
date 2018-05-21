@@ -1,6 +1,6 @@
 # Template file for 'linux4.9'
 pkgname=linux4.9
-version=4.9.100
+version=4.9.101
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="https://www.kernel.org"
 license="GPL-2"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=c5bb6f3a7113e05cbaf6e48b2b485dea4f7edae5e42b3fe81c963ba63413a77c
+checksum=af95d02b07e900ec4a49670aa2c9d95bf3238748c908cf506ce77aeaa5e7aa00
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes

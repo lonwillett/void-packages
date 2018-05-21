@@ -16,10 +16,6 @@ checksum=7f44ff3ba92431b3b5b679870bc226ca1ad791b06844d221b5ba199a2e50cbb5
 
 do_extract() {
 	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/skypeforlinux_${version}_amd64.deb data.tar.xz | tar xJpf - ./usr
-	# This file doesn't seem to be needed, and depends on a non-existant shared library (libskypert.so),
-	# so prevent it from being used to generate runtime dependencies.
-	# The magic to do this seems to be to clear the owner write bit.
-	chmod u-w usr/share/skypeforlinux/resources/app.asar.unpacked/node_modules/slimcore/bin/libTxNdi.so
 }
 
 do_install() {

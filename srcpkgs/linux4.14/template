@@ -9,7 +9,7 @@ homepage="http://www.kernel.org"
 license="GPL-2"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=80e97950738e6d94db7e281cf31a990fd62fe825f717cb87652bd64cae09cebe
+checksum=2b03106f99e24a79ccf81be56f95129521d4e25f5421a1150ad278ae9a479003
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes

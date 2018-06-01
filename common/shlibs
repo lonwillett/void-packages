@@ -143,7 +143,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.48 nvidia-libs-390.48_1 ignore
+libnvidia-fatbinaryloader.so.390.59 nvidia-libs-390.59_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -829,7 +829,7 @@ libvpx.so.5 libvpx-1.7.0_1
 libXevie.so.1 libXevie-1.0.2_1
 libatspi.so.0 at-spi2-core-1.91.91_1
 libatk-bridge-2.0.so.0 at-spi2-atk-2.6.0_1
-libvte-2.91.so.0 vte3-0.38.1_1
+libvte-2.91.so.0 vte3-0.52.2_1
 libgnome-media-profiles-3.0.so.0 libgnome-media-profiles-3.0.0_1
 libpipeline.so.1 libpipeline-1.2.0_1
 libosp.so.5 opensp-1.5.2_1
@@ -1942,7 +1942,7 @@ libQt5EglFsKmsSupport.so.5 qt5-5.7.1_1
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
 libQt5TextToSpeech.so.5 qt5-speech-5.8.0_1
-libx265.so.151 x265-2.7_1
+libx265.so.160 x265-2.8_1
 libQt5Xdg.so.3 libqtxdg-3.1.0_1
 libQt5XdgIconLoader.so.3 libqtxdg-3.1.0_1
 libqwt.so.6 qwt-6.1.3_1
@@ -3353,3 +3353,5 @@ libeditorconfig.so.0 editorconfig-0.12.2_1
 libkid3-core.so.3.6.0 kid3-3.6.0_1
 libkid3-gui.so.3.6.0 kid3-3.6.0_1
 libcfitsio.so.3 cfitsio-3.450_1
+libapparmor.so.1 libapparmor-2.12.0_1
+libcue.so.2 libcue-2.2.0_1

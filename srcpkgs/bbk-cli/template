@@ -26,7 +26,8 @@ e68c64273bbf15514e4f9015838432d393df7480b94a3c441b191f8dc8710aca
 
 do_extract() {
 	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/bbk-cli_${version}.${_debvers}_amd64.deb data.tar.gz | tar xzpf - ./usr
-	mv ${XBPS_SRCDISTDIR}/${pkgname}-${version}/bbk_cli.${XBPS_MACHINE} usr/bin/bbk_cli
+	rm -f usr/bin/bbk_cli
+	cp -p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/bbk_cli.${XBPS_MACHINE} usr/bin/bbk_cli
 	gunzip usr/share/doc/${pkgname}/README.gz
 	gunzip usr/share/doc/${pkgname}/changelog.gz
 }

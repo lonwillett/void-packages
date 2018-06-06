@@ -1,17 +1,9 @@
 # Template file for 'bbk-cli'
 pkgname=bbk-cli
-version=0.3.8
+version=1.0
+_debvers=0
 revision=1
-if [ "$XBPS_MACHINE" = "x86_64" ]; then
-	_debarch="amd64"
-	checksum=9f205447da6c5c0f114e94e45a88a3e35febc63b8b9002e692414348ee4ce6fb
-elif [ "$XBPS_MACHINE" = "armv7l" ]; then
-	_debarch="armhf"
-	checksum=1cb2c8cb62787f00defca0667c646c8833045de09c0de8ee5e0a301ba40c0ee8
-else
-	exit 1
-fi
-only_for_archs="x86_64 armv7l"
+only_for_archs="x86_64 i686 armv7l aarch64"
 build_style="fetch"
 nostrip="yes"
 short_desc="Bredbandskollen's command line tool"
@@ -19,10 +11,23 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="Proprietary"
 repository="nonfree"
 homepage="https://www.bredbandskollen.se/"
-distfiles="http://beta1.bredbandskollen.se/download/${pkgname}_${version}_${_debarch}.deb"
+distfiles="https://frontend.bredbandskollen.se/download/bbk-cli_${version}.${_debvers}_amd64.deb
+https://frontend.bredbandskollen.se/download/bbk_cli_linux_amd64-${version}>bbk_cli.x86_64
+https://frontend.bredbandskollen.se/download/bbk_cli_linux_i386-${version}>bbk_cli.i686
+https://frontend.bredbandskollen.se/download/bbk_cli_linux_armhf-${version}>bbk_cli.armv7l
+https://frontend.bredbandskollen.se/download/bbk_cli_linux_aarch64-${version}>bbk_cli.aarch64
+https://frontend.bredbandskollen.se/download/bbk_cli_linux_mips-${version}>bbk_cli.mips"
+checksum="8a30b86541cfe825b237ad7a79b69c3da8e34569b3b04303caab1a82c721a378
+7768794f5ce2c2605aa34f38010812548e02703444e90f6912387f2f13a1127e
+4c835a41f1887b3fbd39485b46ce31b8022ccd8de277bf74e54e9938d67cc170
+e68c64273bbf15514e4f9015838432d393df7480b94a3c441b191f8dc8710aca
+667f21ef17d8e04ff4c9b84aafa1b0b285d241e92227dc944a7112ed31a0fb53
+083197f1ba3cff70d704839728038c49f4887f89878553626537c8da0671bb03"
 
 do_extract() {
-	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${pkgname}_${version}_${_debarch}.deb data.tar.gz | tar xzpf - ./usr
+	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/bbk-cli_${version}.${_debvers}_amd64.deb data.tar.gz | tar xzpf - ./usr
+	mv ${XBPS_SRCDISTDIR}/${pkgname}-${version}/bbk_cli.${XBPS_MACHINE} usr/bin/bbk_cli
+	gunzip usr/share/doc/${pkgname}/README.gz
 	gunzip usr/share/doc/${pkgname}/changelog.gz
 }
 

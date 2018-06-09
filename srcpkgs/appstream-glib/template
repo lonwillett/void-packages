@@ -1,7 +1,7 @@
 # Template file for 'appstream-glib'
 pkgname=appstream-glib
 version=0.7.9
-revision=1
+revision=2
 build_style=meson
 configure_args="-Dgtk-doc=false -Drpm=false -Dstemmer=false
  -Dintrospection=$(vopt_if gir true false)"
@@ -28,9 +28,8 @@ post_install() {
 }
 
 appstream-glib-devel_package() {
-	depends="libappstream-glib-${version}_${revision} gcab-devel gdk-pixbuf-devel
-	 libarchive-devel libsoup-devel libyaml-devel
-	 libappstream-builder-${version}_${revision}"
+	depends="${sourcepkg}>=${version}_${revision} gcab-devel gdk-pixbuf-devel
+	 libarchive-devel libsoup-devel libyaml-devel"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
@@ -41,19 +40,5 @@ appstream-glib-devel_package() {
 			vmove usr/lib/girepository-1.0
 			vmove usr/share/gir-1.0
 		fi
-	}
-}
-
-libappstream-glib_package() {
-	short_desc+=" - appstream-glib library"
-	pkg_install() {
-		 vmove "usr/lib/libappstream-glib.so.*"
-	}
-}
-
-libappstream-builder_package() {
-	short_desc+=" - appstream-builder library"
-	pkg_install() {
-		 vmove "usr/lib/libappstream-builder.so.*"
 	}
 }

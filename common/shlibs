@@ -838,7 +838,7 @@ libosp.so.5 opensp-1.5.2_1
 libogrove.so.0 openjade-1.3.2_1
 libospgrove.so.0 openjade-1.3.2_1
 libostyle.so.0 openjade-1.3.2_1
-libtorrent.so.19 libtorrent-0.13.6_1
+libtorrent.so.20 libtorrent-0.13.7_1
 libgiblib.so.1 giblib-1.2.4_1
 libgc.so.1 gc-7.6.4_1
 libcord.so.1 gc-7.4_1
@@ -1409,6 +1409,7 @@ libCHART-1.6.so.0 fox-1.6.49_1
 libchromaprint.so.1 chromaprint-1.3.2_1
 libedit.so.0 libedit-20130712.3.1_1
 libnet.so.1 libnet-1.1.6_1
+libgpaste.so.11 libgpaste-3.28.2_1
 libthreadutil.so.6 libupnp-1.6.18_1
 libixml.so.2 libupnp-1.6.18_1
 libupnp.so.6 libupnp-1.6.18_1
@@ -2192,12 +2193,12 @@ libgoocanvas.so.3 goocanvas1-1.0.0_1
 libgoocanvas-2.0.so.9 goocanvas-2.0.4_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2 p8-platform-2.1.0.1_1
-libfacter.so.3.11.1 facter-3.11.1_1
+libfacter.so.3.11.2 facter-3.11.2_1
 libOIS-1.3.0.so ois-1.3_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
 libbrlapi.so.0.6 brltty-5.2_1
-liblouis.so.14 liblouis-3.2.0_1
+liblouis.so.16 liblouis-3.6.0_1
 libCEGUIBase-0.7.9.so cegui07-0.7.9_1
 libCEGUIFalagardWRBase-0.7.9.so cegui07-0.7.9_1
 libCEGUIDevILImageCodec-0.7.9.so cegui07-0.7.9_1
@@ -2403,7 +2404,6 @@ libopenshot-audio.so.6 libopenshot-audio-0.1.5_1
 libopenshot.so.14 libopenshot-0.1.9_1
 libpqxx-6.2.so libpqxx-6.2.2_1
 libndpi.so.1 ndpi-1.6_1
-liblog4cplus-2.0.so.3 log4cxx-2.0.0_1
 liblog.so android-studio-3.0.1_1
 libm.so android-studio-3.0.1_1
 libdl.so android-studio-3.0.1_1
@@ -2793,6 +2793,7 @@ libgnome-autoar-gtk-0.so.0 gnome-autoar-0.1.1_1
 libxapp.so.1 xapps-1.0.2_1
 libite.so.5 libite-2.0.1_1
 liblog4cplus-1.2.so.5 log4cplus-1.2.0_1
+liblog4cplus-2.0.so.3 log4cplus-2.0.0_1
 libpng12.so.0 libpng12-1.2.56_2
 libpng.so.3 libpng12-1.2.56_2
 libcapnpc-0.6.1.so capnproto-0.6.1_2
@@ -3272,6 +3273,7 @@ libwayland-client++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-cursor++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-client-extra++.so.0.2 libwaylandpp-2.2.0_1
 libfwup.so.1 fwupdate-10_1
+libfwupd.so.2 libfwupd-1.0.8_1
 libTKBin.so.7 occt-7.2.0p1_1
 libTKDraw.so.7 occt-7.2.0p1_1
 libTKSTEP209.so.7 occt-7.2.0p1_1

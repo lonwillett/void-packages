@@ -1,7 +1,7 @@
 # Template file for 'fwupd'
 pkgname=fwupd
 version=1.0.8
-revision=1
+revision=2
 build_style=meson
 # manpages fail to build
 # tests require unpackaged umockdev
@@ -11,7 +11,7 @@ configure_args="-Dbootdir=/boot/EFI -Dconsolekit=false -Dgtkdoc=false
 hostmakedepends="dejavu-fonts-ttf gnutls-tools help2man pkg-config"
 makedepends="appstream-glib-devel cairo-devel colord-devel fwupdate-devel
  gnutls-devel gpgme-devel json-glib-devel libgusb-devel polkit-devel
- python3-Pillow python3-gobject pango-devel"
+ python3-Pillow python3-gobject"
 short_desc="Daemon to allow session software to update firmware"
 maintainer="maxice8 <thinkabit.ukim@gmail.com>"
 license="LGPL-2.1-or-later"
@@ -33,12 +33,5 @@ fwupd-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
-	}
-}
-
-libfwupd_package() {
-	short_desc+=" - fwupd library"
-	pkg_install() {
-		 vmove "usr/lib/libfwupd.so.*"
 	}
 }

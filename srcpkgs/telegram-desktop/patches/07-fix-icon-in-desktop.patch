@@ -1,0 +1,11 @@
+--- lib/xdg/telegramdesktop.desktop~	2018-06-11 22:40:30.000000000 +0200
++++ lib/xdg/telegramdesktop.desktop	2018-06-16 02:31:11.208361211 +0200
+@@ -3,7 +3,7 @@
+ Name=Telegram Desktop
+ Comment=Official desktop version of Telegram messaging app
+ Exec=telegram-desktop -- %u
+-Icon=telegram
++Icon=telegram-desktop
+ Terminal=false
+ StartupWMClass=TelegramDesktop
+ Type=Application

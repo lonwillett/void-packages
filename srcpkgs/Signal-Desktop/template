@@ -9,7 +9,7 @@ maintainer="Julio Galvan <juliogalvan@protonmail.com>"
 license="GPL-3.0-only"
 homepage="https://github.com/signalapp/Signal-Desktop"
 #distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-#checksum=f93d79b8e6097da26aca6c452a17868b2432a805744ff09c324fd961cb9e24e5
+#checksum=82ca68e0b912db19b4bc4d1bfb8b2d2f76e1d4393c4c1fa8ff950502883b18ac
 # Due to electron
 only_for_archs="x86_64 i686"
 nostrip_files="signal-desktop"

@@ -37,7 +37,7 @@ nocross="gyp build script doesn't support cross compiling"
 case $XBPS_TARGET_MACHINE in
 	i686*) nodebug=yes;; # ENOMEM
 	*-musl) makedepends+=" libexecinfo-devel";;
-	mips*) broken="unsuported";;
+	mips*) broken="unsupported";;
 esac
 
 post_extract() {

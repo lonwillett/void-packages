@@ -1,6 +1,6 @@
 # Template file for 'linux4.16'
 pkgname=linux4.16
-version=4.16.17
+version=4.16.18
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="https://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=c93d8d0bab0807469a6720f279eff0a2c8bc02d94f3f1dafadbb5d9ebbbc028c
+checksum=41026d713ba4f7a5e9d514b876ce4ed28a1d993c0c58b42b2a2597d6a0e83021
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes

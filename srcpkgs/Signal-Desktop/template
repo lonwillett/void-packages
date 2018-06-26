@@ -13,6 +13,7 @@ homepage="https://github.com/signalapp/Signal-Desktop"
 # Due to electron
 only_for_archs="x86_64 i686"
 nostrip_files="signal-desktop"
+broken="https://build.voidlinux.eu/builders/x86_64_builder/builds/9800/steps/shell_3/logs/stdio"
 
 do_fetch() {
 	# We must clone it instead of downloading the tarball because the build

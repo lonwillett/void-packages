@@ -11,6 +11,7 @@ license="Proprietary"
 homepage="https://disk.yandex.com/"
 repository="nonfree"
 restricted=yes
+nostrip_files=yandex-disk
 
 if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
 	debpkgid="${pkgname}_${version}_amd64.deb"
@@ -31,19 +32,7 @@ do_extract() {
 do_install() {
 	vbin usr/bin/yandex-disk
 	vlicense usr/share/doc/yandex-disk/copyright
-	find usr/share/man -type f -print | while read f
-	do
-		nmx="${f##*/}"
-		dir="${f%/*}"
-		dir="${dir#usr/share/man/}"
-		lang="${dir%/*}"
-		if [ "x$lang" = "x$dir" ]; then
-			vman "$f" "$nmx"
-		else
-			vman "$f" "${nmx%.*}.${lang}.${nmx##*.}"
-		fi
-	done
-	vmkdir usr/share/locale
+	vman usr/share/man/man1/yandex-disk.1
 	vcopy usr/share/locale usr/share
 	install -m644 -D etc/bash_completion.d/yandex-disk-completion.bash \
 		${DESTDIR}/usr/share/bash-completion/completions/yandex-disk

@@ -1,0 +1,20 @@
+--- rngd.c~	2018-07-08 18:00:29.113929397 +0200
++++ rngd.c	2018-07-08 18:04:00.186611066 +0200
+@@ -215,7 +215,7 @@
+ 		break;
+ 	case 'x':
+ 		idx = strtol(arg, NULL, 10);
+-		if ((idx == LONG_MAX) || (idx > ENT_MAX)) {
++		if ((idx == LONG_MAX) || (idx >= ENT_MAX)) {
+ 			printf("exclude index is out of range: %lu\n", idx);
+ 			return -ERANGE;
+ 		}
+@@ -224,7 +224,7 @@
+ 		break;
+ 	case 'n':
+ 		idx = strtol(arg, NULL, 10);
+-		if ((idx == LONG_MAX) || (idx > ENT_MAX)) {
++		if ((idx == LONG_MAX) || (idx >= ENT_MAX)) {
+ 			printf("enable index is out of range: %lu\n", idx);
+ 			return -ERANGE;
+ 		}

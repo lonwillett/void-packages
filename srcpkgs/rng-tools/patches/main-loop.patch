@@ -1,0 +1,30 @@
+--- rngd.c.orig	2018-07-05 20:56:58.000000000 +0200
++++ rngd.c	2018-07-08 17:49:06.149252370 +0200
+@@ -317,11 +317,16 @@
+ 		bool work_done;
+ 
+ 		work_done = false;
+-		for (;i=(++i % ENT_MAX);)
++		for (;;)
+ 		{
+ 			int rc;
+-			printf("I is %d\n", i);
++			/*printf("I is %d\n", i);*/
+ 			iter = &entropy_sources[i];
++			i = i+1;
++			if (i >= ENT_MAX) {
++				i = 0;
++				break;
++			}
+ 		retry_same:
+ 			if (!server_running)
+ 				return;
+@@ -361,6 +366,8 @@
+ 
+ 		if (!work_done)
+ 			no_work++;
++		else
++			no_work = 0;
+ 	}
+ 
+ 	if (!arguments->quiet)

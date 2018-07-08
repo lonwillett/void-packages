@@ -1,6 +1,32 @@
---- rngd.c.orig	2018-07-05 20:56:58.000000000 +0200
-+++ rngd.c	2018-07-08 17:49:06.149252370 +0200
-@@ -317,11 +317,16 @@
+--- rngd.c.orig	2018-07-08 19:56:00.061915530 +0200
++++ rngd.c	2018-07-08 20:00:53.323641408 +0200
+@@ -215,7 +215,7 @@
+ 		break;
+ 	case 'x':
+ 		idx = strtol(arg, NULL, 10);
+-		if ((idx == LONG_MAX) || (idx > ENT_MAX)) {
++		if ((idx == LONG_MAX) || (idx >= ENT_MAX)) {
+ 			printf("exclude index is out of range: %lu\n", idx);
+ 			return -ERANGE;
+ 		}
+@@ -224,7 +224,7 @@
+ 		break;
+ 	case 'n':
+ 		idx = strtol(arg, NULL, 10);
+-		if ((idx == LONG_MAX) || (idx > ENT_MAX)) {
++		if ((idx == LONG_MAX) || (idx >= ENT_MAX)) {
+ 			printf("enable index is out of range: %lu\n", idx);
+ 			return -ERANGE;
+ 		}
+@@ -310,18 +310,23 @@
+ 	unsigned char buf[FIPS_RNG_BUFFER_SIZE];
+ 	int retval = 0;
+ 	int no_work = 0;
+-	static int i = 0;
++	int i = 0;
+ 
+ 	while (no_work < 100) {
+ 		struct rng *iter;
  		bool work_done;
  
  		work_done = false;
@@ -9,13 +35,13 @@
  		{
  			int rc;
 -			printf("I is %d\n", i);
-+			/*printf("I is %d\n", i);*/
- 			iter = &entropy_sources[i];
-+			i = i+1;
 +			if (i >= ENT_MAX) {
 +				i = 0;
 +				break;
 +			}
++			/*printf("I is %d\n", i);*/
+ 			iter = &entropy_sources[i];
++			++i;
  		retry_same:
  			if (!server_running)
  				return;

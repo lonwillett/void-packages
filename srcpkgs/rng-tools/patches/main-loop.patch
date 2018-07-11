@@ -1,3 +1,6 @@
+This patch is already in the upstream source tree, so should be
+deleted when a new version of rng-tools is released.
+
 --- rngd.c.orig	2018-07-05 20:56:58.000000000 +0200
 +++ rngd.c	2018-07-09 10:22:52.916258584 +0200
 @@ -215,7 +215,7 @@

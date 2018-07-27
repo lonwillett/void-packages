@@ -120,7 +120,6 @@ libXrender.so.1 libXrender-0.9.4_1
 libXrandr.so.2 libXrandr-1.3.0_1
 libGLU.so.1 glu-9.0.0_1
 libEGL.so.1 libEGL-7.11_1
-libEGL.so.1 nvidia-libs-346.72_2
 libGLESv1_CM.so.1 libGLES-1.0_1
 libGLESv2.so.2 libGLES-1.0_1
 libEGL.so rpi-userland-0.0.0.0.20150907_1
@@ -128,13 +127,8 @@ libGLESv2.so rpi-userland-0.0.0.0.20150907_1
 libbrcmEGL.so rpi-userland-20180103_2
 libbrcmGLESv2.so rpi-userland-20180103_2
 libbrcmOpenVG.so rpi-userland-20180103_2
-libGLESv2.so opera-49.0.2725.39_1
-libwayland-egl.so.1 libwayland-egl-9.0.1_4
+libwayland-egl.so.1 wayland-1.15.0_4
 libGL.so.1 libGL-7.11_1
-libGL.so.1 catalyst-libs-14.2_1
-libGL.so.1 nvidia-libs-346.47_1
-libGL.so.1 nvidia304-libs-304.00_1
-libGL.so.1 nvidia340-libs-340.46_1
 libnvidia-ml.so.1 nvidia-libs-346.47_1 ignore
 libnvidia-ml.so.1 nvidia304-libs-304.00_1 ignore
 libnvidia-ml.so.1 nvidia340-libs-340.46_1 ignore
@@ -181,7 +175,7 @@ libxfconf-0.so.2 xfconf-4.9.1_1
 libxfce4util.so.7 libxfce4util-4.12.1_1
 libxfce4panel-1.0.so.4 xfce4-panel-4.9.2_1
 libxfce4panel-2.0.so.4 xfce4-panel-4.12.0_1
-libgdbm.so.5 gdbm-1.14_1_1
+libgdbm.so.6 gdbm-1.16_1
 libgdbm_compat.so.4 gdbm-1.10_1_1
 libintl.so.8 gettext-libs-0.19.2_1
 libgnuintl.so.8 gettext-libs-0.19.2_1
@@ -681,6 +675,7 @@ libatasmart.so.4 libatasmart-0.17_1
 libsgutils2.so.2 libsgutils-1.42_1
 liblvm2app.so.2.2 liblvm2app-2.02.54_1
 libcpufreq.so.0 libcpufreq-007_1
+libcpuid.so.14 libcpuid-0.4.0_1
 libgucharmap_2_90.so.7 gucharmap-3.0.0_1
 libgphoto2.so.6 libgphoto2-2.5.7_1
 libgphoto2_port.so.12 libgphoto2-2.5.7_1
@@ -749,8 +744,8 @@ libasyncns.so.0 libasyncns-0.8_1
 libpulse.so.0 libpulseaudio-1.0_1
 libpulse-mainloop-glib.so.0 libpulseaudio-1.0_1
 libpulse-simple.so.0 libpulseaudio-1.0_1
-libpulsecommon-12.0.so libpulseaudio-12.0_1
-libpulsecore-12.0.so libpulseaudio-12.0_1
+libpulsecommon-12.2.so libpulseaudio-12.2_1
+libpulsecore-12.2.so libpulseaudio-12.2_1
 liborc-0.4.so.0 orc-0.4.11_1
 liborc-test-0.4.so.0 orc-0.4.11_1
 libgmime-2.6.so.0 gmime-2.6.4_1
@@ -986,6 +981,7 @@ libev.so.4 libev-4.04_1
 libgvnc-1.0.so.0 gtk-vnc-0.4.4_1
 libgtk-vnc-2.0.so.0 gtk-vnc-0.4.4_1
 libyaml-0.so.2 libyaml-0.1.4_1
+libuchardet.so.0 uchardet-0.0.6_1
 libgtksourceviewmm-3.0.so.0 gtksourceviewmm-3.2.0_1
 libyajl.so.2 yajl-2.0.1_1
 libconfuse.so.2 confuse-3.2.1_1
@@ -1020,7 +1016,7 @@ libtirpc.so.3 libtirpc-1.0.2_1
 librpcsecgss.so.3 librpcsecgss-0.19_1
 libnfsidmap.so.0 libnfsidmap-0.24_1
 libbind9.so.160 bind-libs-9.11.3_1
-libdns.so.1100 bind-libs-9.11.3_1
+libdns.so.1102 bind-libs-9.11.4_1
 libirs.so.160 bind-libs-9.11.3_1
 libisc.so.169 bind-libs-9.11.3_1
 libisccc.so.160 bind-libs-9.11.3_1
@@ -1293,8 +1289,6 @@ libphononexperimental.so.4 phonon-4.6.0_1
 libdbusmenu-glib.so.4 libdbusmenu-glib-12.10.2_1
 libdbusmenu-gtk3.so.4 libdbusmenu-gtk3-12.10.2_1
 libdbusmenu-qt.so.2 libdbusmenu-qt-0.9.2_1
-libgrantlee_gui.so.0 grantlee-0.3.0_1
-libgrantlee_core.so.0 grantlee-0.3.0_1
 libGrantlee_Templates.so.5 grantlee5-5.0.0_1
 libGrantlee_TextDocument.so.5 grantlee5-5.0.0_1
 libattica.so.0.4 attica-0.4.2_1
@@ -1312,6 +1306,8 @@ libiodbcinst.so.2 libiodbc-3.52.8_1
 libkdeui.so.5 kdelibs-4.10.4_1
 libkio.so.5 kdelibs-4.10.4_1
 libsolid.so.4 kdelibs-4.10.4_1
+libsolarus.so.1 solarus-1.5.3_1
+libsolarus-gui.so solarus-1.5.3_1
 libkidletime.so.4 kdelibs-4.10.4_1
 libkemoticons.so.4 kdelibs-4.10.4_1
 libkparts.so.4 kdelibs-4.10.4_1
@@ -2919,6 +2915,9 @@ libortp.so.13 ortp-1.0.2_1
 libsuperlu.so.5 superlu-5.2.1_1
 libgosu.so.0 gosu-0.12.0_1
 libyara.so.3 libyara-3.5.0_1
+libyaz_icu.so.5 yaz-5.23.1_1
+libyaz.so.5 yaz-5.23.1_1
+libyaz_server.so.5 yaz-5.23.1_1
 libgcab-1.0.so.0 gcab-0.7_1
 libappstream-glib.so.8 appstream-glib-0.6.13_1
 libappstream-builder.so.8 appstream-glib-0.6.13_1
@@ -3154,26 +3153,26 @@ liblwipv6.so.2 lwipv6-1.5a_1
 libpipewire-0.1.so.0 libpipewire-0.1.9_1
 libspa-lib.so.0 libspa-lib-0.1.9_1
 libvolk.so.1.4 volk-1.4_1
-libgnuradio-runtime-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-pmt-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-blocks-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-audio-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-noaa-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-fec-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-fft-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-filter-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-analog-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-digital-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-dtv-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-atsc-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-channels-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-pager-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-trellis-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-video-sdl-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-vocoder-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-fcd-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-wavelet-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
-libgnuradio-wxgui-3.7.13.3.so.0.0.0 gnuradio-3.7.13.3_1
+libgnuradio-runtime-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-pmt-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-blocks-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-audio-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-noaa-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-fec-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-fft-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-filter-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-analog-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-digital-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-dtv-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-atsc-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-channels-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-pager-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-trellis-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-video-sdl-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-vocoder-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-fcd-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-wavelet-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-wxgui-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-osmosdr-0.1.4.so.0.0.0 gnuradio-osmosdr-0.1.4_1
 libflann_cpp.so.1.9 flann-1.9.1_1
 libflann.so.1.9 flann-1.9.1_1
@@ -3366,8 +3365,8 @@ libfifechan_opengl.so.0.1.4 fifechan-0.1.4_1
 libpolyclipping.so.22 clipper-6.4.2_1
 libSoapySDR.so.0.6 SoapySDR-0.6.1_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
-libkid3-core.so.3.6.0 kid3-3.6.0_1
-libkid3-gui.so.3.6.0 kid3-3.6.0_1
+libkid3-core.so.3.6.1 kid3-3.6.1_1
+libkid3-gui.so.3.6.1 kid3-3.6.1_1
 libcfitsio.so.3 cfitsio-3.450_1
 libapparmor.so.1 libapparmor-2.12.0_1
 libgsettings-qt.so.1 gsettings-qt-0.1+17.10.20170824_1
@@ -3389,3 +3388,6 @@ libhtmlcxx.so.3 htmlcxx-0.86_1
 libcss_parser_pp.so.0 htmlcxx-0.86_1
 libcss_parser.so.0 htmlcxx-0.86_1
 libaom.so.0 libaom-1.0.0_1
+libre.so re-0.5.8_1
+libspandsp.so.2 spandsp-0.0.6_1
+librem.so rem-0.5.3_1

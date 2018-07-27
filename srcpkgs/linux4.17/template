@@ -1,6 +1,6 @@
 # Template file for 'linux4.17'
 pkgname=linux4.17
-version=4.17.9
+version=4.17.10
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
@@ -9,7 +9,7 @@ homepage="https://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=fd14dcadd37860bd35e1ffe7380d8ff0fb438135a95771021722914871783abb
+checksum=ea14d2a3e499ec20779709586e5f153f462e5681e1a7b6fca8c2f7c8daff1be8
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes

@@ -1092,8 +1092,7 @@ libORBit-2.so.0 libORBit2-2.14.19_1
 libORBit-imodule-2.so.0 libORBit2-2.14.19_1
 libORBitCosNaming-2.so.0 libORBit2-2.14.19_1
 libminiupnpc.so.17 miniupnpc-2.1_1
-libxbps.so.2 libxbps-0.25_1
-libxbps.so.2 libxbps-git-0.25_1
+libxbps.so.3 libxbps-0.53_1
 libatf-c.so.1 atf-libs-0.21_1
 libatf-c++.so.2 atf-libs-0.21_1
 libvdeplug.so.3 libvde2-2.3.2_1
@@ -2193,7 +2192,7 @@ libgoocanvas.so.3 goocanvas1-1.0.0_1
 libgoocanvas-2.0.so.9 goocanvas-2.0.4_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2 p8-platform-2.1.0.1_1
-libfacter.so.3.11.2 facter-3.11.2_1
+libfacter.so.3.11.3 facter-3.11.3_1
 libOIS-1.3.0.so ois-1.3_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
@@ -2401,7 +2400,6 @@ libmill.so.18 libmill-1.14_1
 libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
 libopenshot-audio.so.6 libopenshot-audio-0.1.5_1
-libopenshot.so.14 libopenshot-0.1.9_1
 libpqxx-6.2.so libpqxx-6.2.2_1
 libndpi.so.1 ndpi-1.6_1
 liblog.so android-studio-3.0.1_1
@@ -2993,9 +2991,9 @@ libm17n-flt.so.0 m17n-lib-1.7.0_1
 libm17n-gui.so.0 m17n-lib-1.7.0_1
 libm17n-core.so.0 m17n-lib-1.7.0_1
 libm17n.so.0 m17n-lib-1.7.0_1
-libprotobuf-lite.so.16 protobuf-lite-3.6.0_1
-libprotoc.so.16 protobuf-3.6.0_1
-libprotobuf.so.16 protobuf-3.6.0_1
+libprotobuf-lite.so.17 protobuf-lite-3.6.1_1
+libprotoc.so.17 protobuf-3.6.1_1
+libprotobuf.so.17 protobuf-3.6.1_1
 libsombok.so.3 sombok-2.4.0_1
 libdeviceclient.so.0 pragha-1.3.3_1
 libguile-srfi-srfi-1-v-3.so.3 guile1.8-1.8.8_1
@@ -3394,3 +3392,13 @@ libaom.so.0 libaom-1.0.0_1
 libre.so re-0.5.8_1
 libspandsp.so.2 spandsp-0.0.6_1
 librem.so rem-0.5.3_1
+libshp.so.1 shapelib-1.4.1_1
+libantlr3c.so libantlr3c-3.4_1
+libbzrtp.so.0 bzrtp-1.0.6_1
+libbellesip.so.0 belle-sip-1.5.0_1
+libmediastreamer_base.so.10 mediastreamer-2.16.1_1
+libmediastreamer_voip.so.10 mediastreamer-2.16.1_1
+liblinphone.so.9 linphone-3.12.0_1
+liblinphone++.so.9 linphone-3.12.0_1
+libbelr.so.1 belr-0.1.3_1
+libbelcard.so.1 belcard-1.0.2_1

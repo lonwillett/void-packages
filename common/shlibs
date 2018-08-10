@@ -1573,6 +1573,7 @@ libKF5AkonadiContact.so.5 akonadi-contacts-17.12.1_1
 libKF5Prison.so.5 prison-5.43.0_1
 libKF5AkonadiMime.so.5 akonadi-mime-17.12.1_1
 libKF5Mime.so.5 kmime-17.12.1_1
+libKF5Kirigami2.so.5 kirigami2-5.47.0_1
 libtaskmanager.so.6 plasma-workspace-5.8.4_1
 libfreerdp-client2.so.2 libfreerdp-2.0.0rc1_1
 libfreerdp2.so.2 libfreerdp-2.0.0rc1_1
@@ -3029,7 +3030,6 @@ libsysprof-ui-2.so sysprof-3.24.1_1
 libmozjs-52.so mozjs52-52.3.0_1
 libmozjs-52.so.0 mozjs52-52.3.0_1
 libvala-0.40.so.0 libvala-0.40.2_1
-libvaladoc-0.40.so.0 libvala-0.40.2_1
 libphodav-2.0.so.0 phodav-2.2_1
 libgfshare.so.2 libgfshare-2.0.0_1
 libJudy.so.1 judy-1.0.5_1
@@ -3396,6 +3396,8 @@ libshp.so.1 shapelib-1.4.1_1
 libantlr3c.so libantlr3c-3.4_1
 libbzrtp.so.0 bzrtp-1.0.6_1
 libbellesip.so.0 belle-sip-1.5.0_1
+libKF5EventViews.so.5 eventviews-18.04.3_1
+libKF5IncidenceEditor.so.5 incidenceeditor-18.04.3_1
 libmediastreamer_base.so.10 mediastreamer-2.16.1_1
 libmediastreamer_voip.so.10 mediastreamer-2.16.1_1
 liblinphone.so.9 linphone-3.12.0_1

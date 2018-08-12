@@ -1,6 +1,6 @@
 # Template file for 'python-hypothesis'
 pkgname=python-hypothesis
-version=3.66.31
+version=3.67.0
 revision=1
 noarch=yes
 wrksrc="hypothesis-hypothesis-python-${version}"
@@ -16,7 +16,7 @@ maintainer="Orphaned <orphan@voidlinux.eu>"
 license="MPL-2.0"
 homepage="https://hypothesis.works/"
 distfiles="https://github.com/HypothesisWorks/hypothesis/archive/hypothesis-python-${version}.tar.gz"
-checksum=1c0fba4bbfdf702822291b7d01b7d1eb3121c8ec2904c6333629a139cbb0d4f3
+checksum=ebe9330934769e67a55e8809bf75ba9ef98ebb9b0bdac1e6adffa029d02ab14a
 
 do_check() {
 	# pytest doesn't recognize -n switch

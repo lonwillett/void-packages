@@ -138,7 +138,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.67 nvidia-libs-390.67_1 ignore
+libnvidia-fatbinaryloader.so.390.77 nvidia-libs-390.77_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -563,6 +563,10 @@ libgmic.so.2 gmic-2.1.8_1
 libcgmic.so.2 gmic-2.1.8_1
 libexiv2.so.26 exiv2-0.26_1
 libKF5Holidays.so.5 kholidays-5.47.0_1
+libPhabricatorHelpers.so.5 purpose-5.48.0_1
+libKF5PurposeWidgets.so.5 purpose-5.48.0_1
+libKF5Purpose.so.5 purpose-5.48.0_1
+libReviewboardHelpers.so.5 purpose-5.48.0_1
 libsearchclient.so.0 strigi-0.7.2_1
 libstreamanalyzer.so.0 strigi-0.7.2_1
 libstrigihtmlgui.so.0 strigi-0.7.2_1
@@ -2165,7 +2169,7 @@ libprocps.so.7 procps-ng-3.3.15_1
 libgegl-0.4.so.0 gegl-0.4.0_1
 libgegl-npd-0.4.so gegl-0.4.0_1
 libgegl-sc-0.4.so gegl-0.4.0_1
-libskarnet.so.2.6 skalibs-2.6.0.0_1
+libskarnet.so.2.7 skalibs-2.7.0.0_1
 libKF5BalooWidgets.so.5 baloo-widgets5-17.04.3_1
 libtidy.so.5 libtidy5-5.1.25_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1

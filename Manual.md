@@ -38,6 +38,7 @@ packages for XBPS, the `Void Linux` native packaging system.
 	* [Python packages](#pkgs_python)
 	* [Go packages](#pkgs_go)
 	* [Haskell packages](#pkgs_haskell)
+	* [Font packages](#pkgs_font)
 	* [Notes](#notes)
 	* [Contributing via git](#contributing)
 * [Help](#help)
@@ -580,6 +581,19 @@ Example:
 A list is composed of three components separated by a colon: group, symlink and target.
 i.e `alternatives="vi:/usr/bin/vi:/usr/bin/nvi ex:/usr/bin/ex:/usr/bin/nvi-ex"`.
 
+- `font_dirs` A white space separated list of directories specified by an absolute path where a
+font package installs its fonts.  
+It is used in the `x11-fonts` xbps-trigger to rebuild the font cache during install/removal
+of the package.  
+i.e `font_dirs="/usr/share/fonts/TTF /usr/share/fonts/X11/misc"`
+
+- `dkms_modules` A white space separated list of Dynamic Kernel Module Support (dkms) modules
+that will be installed and removed by the `dkms` xbps-trigger with the install/removal of the
+package.  
+The format is a white space separated pair of strings that represent the name of the module,
+most of the time `pkgname`, and the version of the module, most of the time `version`.
+i.e `dkms_modules="$pkgname $version zfs 4.14"`
+
 <a id="explain_depends"></a>
 #### About the many types of `depends` variable.
 
@@ -730,6 +744,10 @@ for the configure phase can be passed in via `configure_args`, make build argume
 be passed in via `make_build_args` and install arguments via `make_install_args`. The build
 target can be overridden via `make_build_target` and the install target
 via `make_install_target`.
+
+- `meson` For packages that use the Meson Build system, configuration options can be passed
+via `configure_args`, the meson command can be overriden by `meson_cmd` and the location of
+the out of source build by `meson_builddir`
 
 For packages that use the Python module build method (`setup.py`), you
 can choose one of the following:
@@ -1241,6 +1259,18 @@ The following variables influence how Haskell packages are built:
   - If a `stack.yaml` file is present in the source files, it will be used
 - `make_build_args`: This is passed as-is to `stack build ...`, so
   you can add your `--flag ...` parameters there.
+
+<a id="pkgs_font"></a>
+### Font packages
+
+Font packages are very straightforward to write, they are always set with the
+following variables:
+
+- `noarch=yes`: Font packages don't install arch specific files.
+- `depends="font-util"`: because they are required for regenerating the font
+cache during the install/removal of the package
+- `font_dirs`: which should be set to the directory where the package
+installs its fonts
 
 <a id="notes"></a>
 ### Notes

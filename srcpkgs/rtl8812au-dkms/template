@@ -15,6 +15,7 @@ checksum=684c7e1cdfc4a146bdaa150107b394e5240bc810a18388a5aef6fe60d631ab22
 
 triggers="dkms"
 dkms_modules="rtl8812au ${version}"
+hostmakedepends="git"
 depends="dkms"
 
 do_install() {

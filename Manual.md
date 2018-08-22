@@ -594,13 +594,17 @@ The format is a white space separated pair of strings that represent the name of
 most of the time `pkgname`, and the version of the module, most of the time `version`.
 i.e `dkms_modules="$pkgname $version zfs 4.14"`
 
+- `register_shell` A white space separated list of shells defined by absolute path to be
+registered into the system shells database. It is used by the `register-shell` trigger.
+i.e `register_shell="/bin/tcsh /bin/csh"
+
 <a id="explain_depends"></a>
 #### About the many types of `depends` variable.
 
-So far we have listed three types of `depends`, there are `hostmakedepends`,
-`makedepends`, and plain old `depends`. To understand the difference between
-them, understand this: Void Linux cross compiles for many arches. Sometimes in
-a build process, certain programs must be run, for example `yacc`, or the
+So far we have listed four types of `depends`, there are `hostmakedepends`,
+`makedepends`, `checkdepends` and plain old `depends`.To understand the difference
+between them, understand this: Void Linux cross compiles for many arches.
+Sometimes in a build process, certain programs must be run, for example `yacc`, or the
 compiler itself for a C program. Those programs get put in `hostmakedepends`.
 When the build runs, those will be installed on the host to help the build
 complete.
@@ -610,6 +614,11 @@ includes header files. These are `makedepends`, and regardless of the
 architecture of the build machine, the architecture of the target machine must
 be used. Typically the `makedepends` will be the only one of the three types of
 `depends` to include `-devel` packages, and typically only `-devel` packages.
+
+Then there are those things that are required for a package to run its testsuite
+`dejagnu` or libraries it must link to when building test binaries like `cmocka`.
+These are `checkdepends` and they are installed like they are part of `makedepends`.
+the difference is that they are only installed when `XBPS_CHECK_PKGS` is defined.
 
 The final variable, `depends`, is for those things the package needs at
 runtime and without which is unusable, and that xbps can't auto-detect.
@@ -746,7 +755,7 @@ target can be overridden via `make_build_target` and the install target
 via `make_install_target`.
 
 - `meson` For packages that use the Meson Build system, configuration options can be passed
-via `configure_args`, the meson command can be overriden by `meson_cmd` and the location of
+via `configure_args`, the meson command can be overridden by `meson_cmd` and the location of
 the out of source build by `meson_builddir`
 
 For packages that use the Python module build method (`setup.py`), you

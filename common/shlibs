@@ -1279,7 +1279,7 @@ libunwind-arm.so.8 libunwind-1.1_4
 libunwind-mips.so.8 libunwind-1.1_4
 libunwind-aarch64.so.8 libunwind-1.2rc1_1
 libmicrohttpd.so.12 libmicrohttpd-0.9.48_1
-libgit2.so.26 libgit2-0.26.0_1
+libgit2.so.27 libgit2-0.27.3_1
 libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
 libagg.so.2 agg-2.5_1
 libzzip-0.so.13 zziplib-0.13.62_1
@@ -2452,6 +2452,7 @@ liborcus-parser-0.13.so.0 liborcus-0.13.2_1
 liborcus-mso-0.13.so.0 liborcus-0.13.2_1
 liborcus-0.13.so.0 liborcus-0.13.2_1
 liborcus-spreadsheet-model-0.13.so.0 liborcus-0.13.2_1
+libnumbertext-1.0.so.0 libnumbertext-1.0.4_1
 libGeneratedSaxParser.so opencollada-0.0.20160223_1
 libMathMLSolver.so opencollada-0.0.20160223_1
 libOpenCOLLADABaseUtils.so opencollada-0.0.20160223_1
@@ -3291,6 +3292,7 @@ libwayland-cursor++.so.0.2 libwaylandpp-2.2.0_1
 libwayland-client-extra++.so.0.2 libwaylandpp-2.2.0_1
 libfwupd.so.2 libfwupd-1.0.8_1
 libfwup.so.1 libfwup-11_1
+libcapnp_c.so.0 c-capnproto-0.3_1
 libTKBin.so.7 occt-7.2.0p1_1
 libTKDraw.so.7 occt-7.2.0p1_1
 libTKSTEP209.so.7 occt-7.2.0p1_1
@@ -3410,3 +3412,4 @@ libshaderc_shared.so shaderc-2017.2_1
 libglslang.so glslang-6.2.2596_1
 libSPIRV.so glslang-6.2.2596_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1
+libmysqlpp.so mysql++-3.2.4_1

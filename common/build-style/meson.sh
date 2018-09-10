@@ -65,7 +65,13 @@ EOF
 		# are set to (C|CXX)FLAGS_host
 		export CFLAGS=${CFLAGS_host} CXXFLAGS=${CXXFLAGS_host}
 
-		unset _MESON_TARGET_CPU _MESON_TARGET_ENDIAN
+		# Meson tries to use our wrapped cross-only pkg-config to find
+		# libraries even when 'native: true' (build against the host platform)
+		# is set, so set the PKG_CONFIG variable to tell Meson which pkg-config
+		# it should use when searching for stuff in the build machine
+		export PKG_CONFIG="/usr/bin/pkg-config"
+
+		unset _MESON_CPU_FAMILY _MESON_TARGET_CPU _MESON_TARGET_ENDIAN
 	fi
 
 	${meson_cmd} --prefix=/usr --buildtype=plain ${configure_args} . ${meson_builddir}

@@ -1,13 +1,13 @@
 # Template file for 'python-CherryPy'
 pkgname=python-CherryPy
+reverts="18.0.0_1 18.0.1_1"
 version=17.3.0
 revision=2
-reverts="18.0.0_1 18.0.1_1"
 noarch=yes
 wrksrc="CherryPy-${version}"
 build_style=python2-module
 hostmakedepends="python-setuptools"
-depends="python-setuptools python-six python-Cheroot python-portend"
+depends="python-setuptools python-six python-Cheroot python-portend python-contextlib2 python-zc.lockfile"
 pycompile_module="cherrypy"
 short_desc="Object-oriented HTTP framework (Python2)"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"

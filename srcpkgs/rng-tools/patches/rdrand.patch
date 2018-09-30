@@ -1,0 +1,17 @@
+--- rngd_rdrand.c~	2018-09-25 19:54:05.000000000 +0200
++++ rngd_rdrand.c	2018-09-30 18:50:55.643567499 +0200
+@@ -246,7 +246,13 @@
+ 	if (ent_src->rng_options[DRNG_OPT_AES].int_val)
+ 		return xread_drng_with_aes(buf, size, ent_src);
+ 
+-	x86_rdrand_bytes(buf, size);
++	if (size > 7)
++		x86_rdrand_bytes(buf, size - (size&7));
++	if ((size&7) != 0) {
++		unsigned char tempbuf[8];
++		x86_rdrand_bytes(tempbuf, 8);
++		memcpy(tempbuf, buf+size-(size&7), (size&7));
++	}
+ 	return 0;
+ }
+ 

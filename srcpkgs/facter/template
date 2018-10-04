@@ -1,7 +1,7 @@
 # Template file for 'facter'
 pkgname=facter
 version=3.12.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DRUBY_CONFIG_INCLUDE_DIR=${XBPS_CROSS_BASE}/usr/include"
 hostmakedepends="ruby-devel"
@@ -15,9 +15,12 @@ homepage="http://puppetlabs.com/facter"
 distfiles="http://downloads.puppetlabs.com/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=3b4950e0284154f448a47500905a078117006b48267996ea3795da51ccead198
 
-if [ "$XBPS_GCC_VERSION_MAJOR" -ge 8 ]; then
-	CXXFLAGS+=" -Wno-catch-value -Wno-stringop-truncation"
-fi
+CXXFLAGS="-Wno-catch-value -Wno-stringop-truncation"
+pre_configure() {
+	case "$XBPS_TARGET_MACHINE" in
+	mips*)	sed -i lib/CMakeLists.txt -e'/add_subdirectory(tests)/d' ;;
+	esac
+}
 
 post_install() {
 	vlicense LICENSE

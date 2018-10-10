@@ -1,3 +1,9 @@
+This patch from upstream (https://github.com/nhorman/rng-tools/commit/f12a80185a4bbf65fbc860f2d2e25af67c70ad6b)
+will allow rngd to run. It can safely be deleted as soon as there is another upstream release.
+
+Without this patch, rngd will die with a "smashed stack" on 64-bit machines that support the RDRAND instruction.
+
+
 --- rngd_rdrand.c.orig	2018-09-25 19:54:05.000000000 +0200
 +++ rngd_rdrand.c	2018-10-01 05:42:38.655982555 +0200
 @@ -246,7 +246,14 @@

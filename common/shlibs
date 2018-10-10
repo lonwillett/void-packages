@@ -1221,7 +1221,7 @@ libopusfile.so.0 opusfile-0.2_1
 libopusurl.so.0 opusfile-0.6_1
 libopusenc.so.0 libopusenc-0.2_1
 libgtk-vnc-1.0.so.0 gtk2-vnc-0.4.4_2
-libgranite.so.4 granite-0.5.0_1
+libgranite.so.5 granite-0.5.0_1
 libprotobuf-vala.so.0 libprotobuf-vala-0.1.0_1
 librlog.so.5 librlog-1.4_1
 libtinyxml.so.0 tinyxml-2.6.2_1
@@ -1973,7 +1973,6 @@ libasignify.so.1 asignify-1.0_1
 libvte2_90.so.9 vte290-0.36.3_1
 libd0_blind_id.so.0 xonotic-0.8.0_1
 libechonest.so.2.3 libechonest-2.3.1_1
-libqtkeychain.so.0 qtkeychain-0.4.0_1
 libjreen.so.1 jreen-1.2.1_1
 libuecc.so.0 libuecc-5_1
 libKF5WindowSystem.so.5 kwindowsystem-5.6.0_1
@@ -2334,7 +2333,6 @@ libm.so android-studio-3.0.1_1
 libdl.so android-studio-3.0.1_1
 libKF5WidgetsAddons.so.5 kwidgetsaddons-5.26.0_1
 libsearpc.so.1 libsearpc-3.0.7_1
-libccnet.so.0 ccnet-5.0.4_1
 libseafile.so.0 seafile-libclient-5.0.4_1
 libpodofo.so.0.9.6 libpodofo-0.9.6_1
 libIrcUtil.so.3 libcommuni-3.4.0_1
@@ -3317,3 +3315,4 @@ libdleyna-renderer-1.0.so.1 dleyna-renderer-0.6.0_1
 libdleyna-server-1.0.so.1 dleyna-server-0.6.0_1
 liburiparser.so.1 uriparser-0.8.6_1
 libcpptest.so.0 cpptest-1.1.2_1
+libhandy-0.0.so.0 libhandy-0.0.3_1

@@ -1,7 +1,8 @@
 # Template file for 'x265'
 pkgname=x265
+reverts="2.9_1"
 version=2.8
-revision=2
+revision=3
 build_wrksrc=source
 wrksrc="x265_${version}"
 build_style=cmake

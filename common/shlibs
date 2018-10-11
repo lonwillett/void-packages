@@ -2863,7 +2863,6 @@ libbrotlicommon.so.1 brotli-1.0.2_1
 libbrotlidec.so.1 brotli-1.0.2_1
 libbrotlienc.so.1 brotli-1.0.2_1
 libfilteraudio.so filter_audio-0.0.1_1
-libarmadillo.so.8 armadillo-8.300.0_1
 libgstreamermm-1.0.so.1 gstreamermm-1.8.0_1
 libmovit.so.8 movit-1.6.0_1
 libduktape.so.203 duktape-2.3.0_1
@@ -3316,3 +3315,4 @@ libdleyna-server-1.0.so.1 dleyna-server-0.6.0_1
 liburiparser.so.1 uriparser-0.8.6_1
 libcpptest.so.0 cpptest-1.1.2_1
 libhandy-0.0.so.0 libhandy-0.0.3_1
+libswitchboard-2.0.so.0 switchboard-2.3.2_1

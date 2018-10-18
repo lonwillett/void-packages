@@ -272,12 +272,14 @@ The following functions are defined by `xbps-src` and can be used on any templat
 
 	Installs `file` as a man page. `vman()` parses the name and
 	determines the section as well as localization. Also transparently
-	converts gzipped (.gz) manpages into plaintext. Example mappings:
+	converts gzipped (.gz) and bzipped (.bz2) manpages into plaintext.
+	Example mappings:
 
 	`foo.1` -> `${DESTDIR}/usr/share/man/man1/foo.1`
 	`foo.fr.1` -> `${DESTDIR}/usr/share/man/fr/man1/foo.1`
 	`foo.1p` -> `${DESTDIR}/usr/share/man/man1/foo.1p`
 	`foo.1.gz` -> `${DESTDIR}/usr/share/man/man1/foo.1`
+	`foo.1.bz2` -> `${DESTDIR}/usr/share/man/man1/foo.1`
 
 - *vdoc()* `vdoc <file> [<name>]`
 
@@ -733,6 +735,10 @@ The current list of available `build_style` scripts is the following:
 `do_install()` function and optionally more build phases such as
 `do_configure()`, `do_build()`, etc., and may overwrite default `do_fetch()` and
 `do_extract()` that fetch and extract files defined in `distfiles` variable.
+
+- `cargo` For packages written in rust that use Cargo for building.
+Configuration arguments (such as `--features`) can be defined in the variable
+`configure_args` and are passed to cargo during `do_build`.
 
 - `cmake` For packages that use the CMake build system, configuration arguments
 can be passed in via `configure_args`. The `cmake_builddir` variable may be

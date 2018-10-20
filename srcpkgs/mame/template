@@ -16,16 +16,10 @@ makedepends="SDL2_ttf-devel glm libjpeg-turbo-devel libutf8proc-devel
  $(vopt_if qt 'qt5-devel')"
 depends="liberation-fonts-ttf"
 nocross=yes
+nodebug=yes
 replaces="sdlmame>=0 sdlmess>=0"
 
 CXXFLAGS="-I${XBPS_CROSS_BASE}/usr/include/lua5.3 -I${XBPS_CROSS_BASE}/usr/include/libutf8proc"
-case "$XBPS_TARGET_MACHINE" in
-	i686*)	# Can no longer build separate arcade and mess targets for i686
-		# If the builder can't handle linking for i686 due to memory
-		# constraints, mame will be broken for i686 from now on
-		nodebug=yes
-		;;
-esac
 case "$XBPS_TARGET_MACHINE" in
 	*-musl)	CXXFLAGS+=" -DBX_CRT_MUSL=1" ;;
 esac
@@ -41,6 +35,7 @@ do_build() {
 	opts+=" NOWERROR=1"
 	opts+=" OPTIMIZE=3"
 	opts+=" TOOLS=1"
+	opts+=" LTO=0"
 	opts+=" USE_SYSTEM_LIB_EXPAT=1"
 	opts+=" USE_SYSTEM_LIB_ZLIB=1"
 	opts+=" USE_SYSTEM_LIB_JPEG=1"

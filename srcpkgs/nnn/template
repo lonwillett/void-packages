@@ -1,17 +1,17 @@
 # Template file for 'nnn'
 pkgname=nnn
-version=1.9
-revision=1
+version=2.0
+revision=2
 build_style=gnu-makefile
 hostmakedepends="pkg-config"
-makedepends="readline-devel"
+makedepends="ncurses-devel"
 short_desc="The missing terminal file browser for X"
 maintainer="Dennis Kraus <kraus@posteo.de>"
 license="BSD-2-Clause"
 changelog="https://raw.githubusercontent.com/jarun/nnn/master/CHANGELOG"
 homepage="https://github.com/jarun/nnn"
 distfiles="https://github.com/jarun/nnn/archive/v${version}.tar.gz"
-checksum=7ba298a55a579640fe0ae37f553be739957da0c826f532beac46acfb56e2d726
+checksum=0029efd3d009c197b1646d260350f3f87edca76eef3be6b81846af133d58d6a9
 
 post_install() {
 	vlicense LICENSE

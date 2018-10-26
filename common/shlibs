@@ -528,12 +528,12 @@ libmaildir.so.5 kdepim-runtime-17.12.3_1
 libfolderarchivesettings.so.5 kdepim-runtime-17.12.3_1
 libbabl-0.1.so.0 babl-0.1.10_1
 libbamf3.so.2 bamf-0.5.1_1
-libicuio.so.62 icu-libs-62.1_1
-libicui18n.so.62 icu-libs-62.1_1
-libicudata.so.62 icu-libs-62.1_1
-libicutu.so.62 icu-libs-62.1_1
-libicuuc.so.62 icu-libs-62.1_1
-libicutest.so.62 icu-libs-62.1_1
+libicuio.so.63 icu-libs-63.1_1
+libicui18n.so.63 icu-libs-63.1_1
+libicudata.so.63 icu-libs-63.1_1
+libicutu.so.63 icu-libs-63.1_1
+libicuuc.so.63 icu-libs-63.1_1
+libicutest.so.63 icu-libs-63.1_1
 libaspell.so.15 aspell-0.60_1
 libpspell.so.15 aspell-0.60_1
 libenchant.so.1 enchant-1.4.2_1
@@ -544,11 +544,8 @@ libsoup-2.4.so.1 libsoup-2.34.0_1
 libsoup-gnome-2.4.so.1 libsoup-gnome-2.34.0_1
 libunique-3.0.so.0 libunique-2.91.4_1
 libwebkitgtk-1.0.so.0 webkitgtk2-2.4.8_2
-libwebkitgtk-3.0.so.0 webkitgtk-2.0.0_1
-libwebkit2gtk-3.0.so.25 webkitgtk-2.0.0_1
 libwebkit2gtk-4.0.so.37 webkit2gtk-2.6.2_1
 libjavascriptcoregtk-1.0.so.0 webkitgtk2-2.4.8_2
-libjavascriptcoregtk-3.0.so.0 webkitgtk-2.0.0_1
 libjavascriptcoregtk-4.0.so.18 webkit2gtk-2.6.2_1
 libgimp-2.0.so.0 libgimp-2.10.0_1
 libgimpwidgets-2.0.so.0 libgimp-2.10.0_1
@@ -3323,3 +3320,5 @@ libwlroots.so.0 wlroots-0.1_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
 libcotp.so.12 libcotp-1.2.1_1
 libunarr.so.1 libunarr-1.0.1_1
+libretro-gtk-0.14.so.0 retro-gtk-0.16.0_1
+libmanette-0.2.so.0 libmanette-0.2.1_1

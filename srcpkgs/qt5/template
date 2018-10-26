@@ -1,7 +1,7 @@
 # Template file for 'qt5'
 pkgname=qt5
 version=5.10.1
-revision=12
+revision=13
 wrksrc="qt-everywhere-src-${version}"
 build_style=gnu-configure
 hostmakedepends="flex ruby gperf git python perl pkg-config protobuf re2c ninja"
@@ -47,7 +47,7 @@ if [ -n "$CROSS_BUILD" ]; then
 	# wayland-devel contains /usr/bin/wayland-scanner
 	hostmakedepends+=" zlib-devel wayland-devel icu-devel"
 	# Cross building qtwebengine requires some more host packages
-	hostmakedepends+=" nss-devel"
+	hostmakedepends+=" nss-devel libevent-devel"
 fi
 
 _cleanup_wrksrc_leak() {

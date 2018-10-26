@@ -1,6 +1,6 @@
 # Template file for 'pywal'
 pkgname=pywal
-version=3.1.0
+version=3.2.1
 revision=1
 noarch=yes
 build_style=python3-module
@@ -13,7 +13,7 @@ license="MIT"
 homepage="https://github.com/dylanaraps/pywal"
 changelog="https://raw.githubusercontent.com/dylanaraps/pywal/master/CHANGELOG.md"
 distfiles="${PYPI_SITE}/p/${pkgname}/${pkgname}-${version}.tar.gz"
-checksum=e6d89e72e6108c54ac21c215a8d718fc84328a206b614b3efcc0916aa54c91c4
+checksum=2cb6d59c743c709c6d82229174613300a790df5cdf0792eaaa90cb98020443de
 
 post_install() {
 	vlicense LICENSE.md

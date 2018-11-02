@@ -543,9 +543,7 @@ libpsl.so.5 libpsl-0.20.2_1
 libsoup-2.4.so.1 libsoup-2.34.0_1
 libsoup-gnome-2.4.so.1 libsoup-gnome-2.34.0_1
 libunique-3.0.so.0 libunique-2.91.4_1
-libwebkitgtk-1.0.so.0 webkitgtk2-2.4.8_2
 libwebkit2gtk-4.0.so.37 webkit2gtk-2.6.2_1
-libjavascriptcoregtk-1.0.so.0 webkitgtk2-2.4.8_2
 libjavascriptcoregtk-4.0.so.18 webkit2gtk-2.6.2_1
 libgimp-2.0.so.0 libgimp-2.10.0_1
 libgimpwidgets-2.0.so.0 libgimp-2.10.0_1
@@ -847,6 +845,8 @@ libgdkmm-2.4.so.1 gtkmm2-2.24.0_1
 libgtkmm-2.4.so.1 gtkmm2-2.24.0_1
 libquadmath.so.0 libquadmath-4.4.0_1
 libgfortran.so.5 libgfortran-8.2.0_1
+libgnarl-8.so libada-8.2.0_5
+libgnat-8.so libada-8.2.0_5
 libmozjs185.so.1.0 js-1.8.5_1
 libwebp.so.7 libwebp-0.6.0_1
 libwebpmux.so.3 libwebp-0.6.0_1
@@ -2289,9 +2289,9 @@ libpjsip.so.2 pjproject-2.4.5_1
 libpjsua.so.2 pjproject-2.4.5_1
 libpjsua2.so.2 pjproject-2.4.5_1
 libhdf5_hl.so.100 hdf5-1.10.1_2
-libhdf5.so.101 hdf5-1.10.1_2
+libhdf5.so.103 hdf5-1.10.4_1
 libhdf5_hl_cpp.so.100 hdf5-1.10.1_2
-libhdf5_cpp.so.101 hdf5-1.10.1_2
+libhdf5_cpp.so.103 hdf5-1.10.4_1
 libhdf5hl_fortran.so.100 hdf5-1.10.1_2
 libhdf5_fortran.so.100 hdf5-1.10.1_2
 libhdf5.so.10 hdf5-18-1.8.20_1
@@ -2787,7 +2787,7 @@ libdouble-conversion.so.1 double-conversion-2.0.1_1
 libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
-libqalculate.so.19 libqalculate-2.6.2_1
+libqalculate.so.20 libqalculate-2.8.0_1
 libweston-4.so.0 weston-4.0.0_1
 libweston-desktop-4.so.0 weston-4.0.0_1
 libostree-1.so.1 libostree-2017.3_1
@@ -2936,7 +2936,7 @@ libvted-3.so.0 libvted-3.7.0_2
 libpeasd-3.so.0 libpeasd-3.7.0_2
 libgstreamerd-3.so.0 libgstreamerd-3.7.0_2
 libgtkdgl-3.so.0 libgtkdgl-3.7.0_2
-libmega.so.30401 MEGAsdk-3.4.1_1
+libmega.so.30403 MEGAsdk-3.4.3_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1
@@ -2950,7 +2950,7 @@ libhackrf.so.0 libhackrf-2017.02.1_1
 libtecla.so.1 libtecla-1.6.3_1
 libtecla_r.so.1 libtecla-1.6.3_1
 libzim.so.4 libzim-4.0.0_1
-libkiwix.so.2 kiwix-lib-2.0.0_1
+libkiwix.so.3 kiwix-lib-3.0.0_1
 libctpp2.so.2 ctpp2-2.8.3_1
 libaria2.so.0 libaria2-1.33.1_3
 librpm.so.8 librpm-4.14.1_1
@@ -3322,3 +3322,7 @@ libcotp.so.12 libcotp-1.2.1_1
 libunarr.so.1 libunarr-1.0.1_1
 libretro-gtk-0.14.so.0 retro-gtk-0.16.0_1
 libmanette-0.2.so.0 libmanette-0.2.1_1
+libfmt.so.5 fmt-5.2.1_1
+libelementary-calendar.so.0 libio.elementary.calendar-4.2.3_1
+libolm.so.2 olm-2.3.0_1
+libmatrix_client.so.0.2.0 mtxclient-0.2.0_1

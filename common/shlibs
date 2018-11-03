@@ -129,13 +129,16 @@ libGL.so.1 libGL-7.11_1
 libnvidia-ml.so.1 nvidia-libs-346.47_1 ignore
 libnvidia-ml.so.1 nvidia304-libs-304.00_1 ignore
 libnvidia-ml.so.1 nvidia340-libs-340.46_1 ignore
+libnvidia-ml.so.1 nvidia390-libs-390.87_1 ignore
 libnvidia-tls.so.346.47 nvidia-libs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia-libs-346.47_1 ignore
 libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
+libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.87 nvidia-libs-390.87_1 ignore
+libnvidia-fatbinaryloader.so.390.87 nvidia390-libs-390.87_1 ignore
+libnvidia-fatbinaryloader.so.410.73 nvidia-libs-410.73_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -999,6 +1002,7 @@ libuchardet.so.0 uchardet-0.0.6_1
 libgtksourceviewmm-3.0.so.0 gtksourceviewmm-3.2.0_1
 libyajl.so.2 yajl-2.0.1_1
 libconfuse.so.2 confuse-3.2.1_1
+liblldb.so.6 lldb-6.0.0_1
 libclang.so.6 clang-6.0.0_1
 libLLVM-3.9.so libllvm3.9-3.9.0_1
 libLLVM-6.0.so libllvm6.0-6.0.0_1

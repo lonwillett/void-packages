@@ -1,7 +1,6 @@
 # Template file for 'rtl8812au-dkms'
 pkgname=rtl8812au-dkms
 version=5.2.20.2
-#xxx version=20180825
 revision=2
 _commit=9111e467b242839e2ee725446118d966367eef52
 patch_args="-Np1"
@@ -14,18 +13,8 @@ hostmakedepends="unzip"
 distfiles="$homepage/archive/$_commit.zip"
 checksum=d0a7d1d1ca19ff28a65365af38148c1da5b950e2458e7d2e095000d337caf4fd
 
-triggers="dkms"
 dkms_modules="rtl8812au ${version}"
-#xxx hostmakedepends="git"
 depends="dkms"
-
-#xxx
-#do_fetch() {
-#	git clone https://github.com/abperiasamy/rtl8812AU_8821AU_linux ${pkgname}-${version}
-#	cd ${pkgname}-${version}
-#	git reset --hard b664e121
-#}
-#xxx
 
 do_install() {
 	vmkdir usr/src/rtl8812au-${version}

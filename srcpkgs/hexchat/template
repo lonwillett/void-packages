@@ -1,7 +1,7 @@
 # Template file for 'hexchat'
 pkgname=hexchat
 version=2.14.2
-revision=2
+revision=3
 build_style=meson
 configure_args="-Dwith-dbus=true -Dwith-ssl=true -Dwith-text=false
  -Dwith-perl=/usr/bin/perl -Dwith-python=python3"
@@ -20,6 +20,7 @@ checksum=7792b9e52560fbd3e10d75bfb5d138a20913a87771d676d296547f1b4ac09618
 lib32disabled=yes
 
 if [ "$CROSS_BUILD" ]; then
+	broken="cross builds currently broken"
 	# dbus-binding-tools
 	# xmllint
 	# gdk-pixbuf-pixdata

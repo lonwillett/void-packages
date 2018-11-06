@@ -3,12 +3,12 @@ pkgname=linux4.19
 version=4.19.1
 revision=1
 patch_args="-Np1"
-wrksrc="linux-${version%.0}"
+wrksrc="linux-${version}"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
-distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version%.0}.tar.xz"
+distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
 checksum=64d637c65c0b210659ff1719bcc9e34c5576fc3a4df9aa67087fa00bc2e08829
 
 nodebug=yes  # -dbg package is generated below manually

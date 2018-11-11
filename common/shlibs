@@ -343,7 +343,7 @@ libMagickCore-6.Q16.so.6 libmagick6-6.9.10.11_1
 libMagickWand-6.Q16.so.6 libmagick6-6.9.10.11_1
 libMagick++-6.Q16.so.8 libmagick6-6.9.10.11_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.79 poppler-0.68.0_1
+libpoppler.so.82 poppler-0.71.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -1546,8 +1546,8 @@ libfreerdp-gdi.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-cache.so.1.0 libfreerdp-1.0.2_2
 libcppunit-1.12.so.1 libcppunit-1.12.1_1
 libcppunit-1.14.so.0 libcppunit-1.14.0_1
-libcalc.so.2.12.6.5 libcalc-2.12.6.5_1
-libcustcalc.so.2.12.6.5 libcalc-2.12.6.5_1
+libcalc.so.2.12.7.1 libcalc-2.12.7.1_1
+libcustcalc.so.2.12.7.1 libcalc-2.12.7.1_1
 libOgreRTShaderSystem.so.1.10.11 libogre-1.10.11_2
 libOgreTerrain.so.1.10.11 libogre-1.10.11_2
 libOgrePaging.so.1.10.11 libogre-1.10.11_2
@@ -3333,3 +3333,5 @@ libmatrix_client.so.0.2.0 mtxclient-0.2.0_1
 libcrypto.so.44 libcrypto44-2.8.2_1
 libtls.so.18 libtls18-2.8.2_1
 libssl.so.46 libssl46-2.8.2_1
+libxmlb.so.1 libxmlb-0.1.3_1
+libvoikko.so.1 libvoikko-4.2_1

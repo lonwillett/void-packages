@@ -1,7 +1,8 @@
 # Template file for 'elfutils'
 pkgname=elfutils
+reverts="0.175_1"
 version=0.174
-revision=1
+revision=3
 build_style=gnu-configure
 configure_args="--program-prefix=eu-"
 hostmakedepends="automake libtool"

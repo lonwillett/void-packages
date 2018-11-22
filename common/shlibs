@@ -138,7 +138,7 @@ libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
 libnvidia-fatbinaryloader.so.390.87 nvidia390-libs-390.87_1 ignore
-libnvidia-fatbinaryloader.so.410.73 nvidia-libs-410.73_1 ignore
+libnvidia-fatbinaryloader.so.410.78 nvidia-libs-410.78_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -1026,13 +1026,13 @@ libgssglue.so.1 libgssglue-0.3_1
 libtirpc.so.3 libtirpc-1.0.2_1
 librpcsecgss.so.3 librpcsecgss-0.19_1
 libnfsidmap.so.0 libnfsidmap-0.24_1
-libbind9.so.160 bind-libs-9.11.3_1
-libdns.so.1102 bind-libs-9.11.4_1
-libirs.so.160 bind-libs-9.11.3_1
-libisc.so.169 bind-libs-9.11.3_1
-libisccc.so.160 bind-libs-9.11.3_1
-libisccfg.so.160 bind-libs-9.11.3_1
-liblwres.so.160 bind-libs-9.11.3_1
+libbind9.so.161 bind-libs-9.11.5_1
+libdns.so.1104 bind-libs-9.11.5_1
+libirs.so.161 bind-libs-9.11.5_1
+libisc.so.1100 bind-libs-9.11.5_1
+libisccc.so.161 bind-libs-9.11.5_1
+libisccfg.so.163 bind-libs-9.11.5_1
+liblwres.so.161 bind-libs-9.11.5_1
 libplist.so.3 libplist-1.12_1
 libplist++.so.3 libplist++-1.12_1
 libnsbmp.so.0 libnsbmp-0.0.3_1
@@ -1209,7 +1209,7 @@ libpurple.so.0 libpurple-2.10.6_1
 libpurple-client.so.0 libpurple-2.10.6_1
 libjabber.so.0 libpurple-2.13.0_1
 libgnt.so.0 libgnt-2.10.6_1
-libvarnishapi.so.1 libvarnishapi-3.0.3_1
+libvarnishapi.so.2 libvarnishapi-6.1.1_1
 libao.so.4 libao-1.1.0_1
 libjansson.so.4 jansson-2.4_1
 libleveldb.so.1 leveldb-1.8.0_1
@@ -1229,7 +1229,6 @@ libtinyxml2.so.7 tinyxml2-7.0.0_1
 libbluray.so.2 libbluray-1.0.0_1
 libnfs.so.12 libnfs-3.0.0_1
 libzip.so.5 libzip-1.2_1
-libapp.so.0 libapp-20110513_1
 libluajit-5.1.so.2 LuaJIT-2.0.0_1
 libOSMesa.so.8 libOSMesa-9.1_1
 libtaginfo.so.1 libtaginfo-0.1.3_1
@@ -1443,7 +1442,6 @@ libcinnamon-control-center.so.1 libcinnamon-control-center-2.4.2_1
 libcvc.so.0 cinnamon-desktop-3.2.0_1
 libnemo-extension.so.1 libnemo-2.0.8_1
 libxshmfence.so.1 libxshmfence-1.1_1
-libgoffice-0.8.so.8 goffice0.8-0.8.13_1
 libgoffice-0.10.so.10 goffice-0.10.9_1
 libc++.so.1 libcxx-3.4_1
 libopenobex.so.2 openobex-1.7.1_1
@@ -2563,6 +2561,9 @@ libnss_sss.so.2 sssd-1.13.4_1
 libwbclient.so.0 sssd-1.13.4_1
 libsss_nss_idmap.so.0 sssd-1.13.4_1
 libsss_simpleifp.so.0 sssd-1.13.4_1
+libsss_util.so sssd-2.0.0_1
+libsss_crypt.so sssd-2.0.0_1
+libsss_debug.so sssd-2.0.0_1
 libforms.so.2 xforms-1.2.4_2
 libflimage.so.2 xforms-1.2.4_2
 libutilspp.so.0 curlpp-0.7.3_2
@@ -3280,7 +3281,7 @@ liblinphone.so.9 linphone-3.12.0_1
 liblinphone++.so.9 linphone-3.12.0_1
 libbelr.so.1 belr-0.1.3_1
 libbelcard.so.1 belcard-1.0.2_1
-libshaderc_shared.so shaderc-2017.2_1
+libshaderc_shared.so.1 shaderc-2018.0_1
 libglslang.so glslang-6.2.2596_1
 libSPIRV.so glslang-6.2.2596_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1

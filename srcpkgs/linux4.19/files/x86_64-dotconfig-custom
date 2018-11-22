@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86_64 4.19.2 Kernel Configuration
+# Linux/x86_64 4.19.3 Kernel Configuration
 #
 
 #
@@ -844,7 +844,7 @@ CONFIG_HAVE_ARCH_PREL32_RELOCATIONS=y
 #
 # CONFIG_GCOV_KERNEL is not set
 CONFIG_ARCH_HAS_GCOV_PROFILE_ALL=y
-CONFIG_PLUGIN_HOSTCC=""
+CONFIG_PLUGIN_HOSTCC="g++"
 CONFIG_HAVE_GCC_PLUGINS=y
 CONFIG_GCC_PLUGINS=y
 # CONFIG_GCC_PLUGIN_CYC_COMPLEXITY is not set

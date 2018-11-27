@@ -1129,6 +1129,7 @@ liblab_gamut.so.1 graphviz-libs-2.40.1_1
 libflowcanvas.so.5 flowcanvas-0.7.1_1
 liblash.so.1 ladish-1_1
 libmowgli-2.so.0 libmowgli-2.0.0_1
+libgts-0.7.so.5 gts-0.7.6_1
 libguess.so.1 libguess-1.1_1
 libaudcore.so.5 audacious-3.9_1
 libaudgui.so.5 audacious-3.9_1
@@ -2906,7 +2907,7 @@ libArcus.so.3 libArcus-2.7.0_1
 libArcus.so.3 libArcus-3.0.3_1
 libkrfbprivate.so.5.0 krfb-17.08.1_1
 libArcus.so.3 libArcus-3.1.0_1
-libgutenprint.so.2 gutenprint-5.2.12_1
+libgutenprint.so.8 gutenprint-5.3.1_1
 libunbound.so.8 unbound-1.8.0_1
 libmirage.so.11 libmirage-3.1.0_1
 libwkhtmltox.so.0 libwkhtmltopdf-0.12.5_1
@@ -3338,3 +3339,11 @@ libfstrcmp.so.0 libfstrcmp-0.7.D001_1
 libUMP.so.3 libump-git-20181122_2
 libdri2.so.1 libdri2-git-20140317_2
 libpst.so.4 libpst-0.6.72_1
+libhamlib.so.2 hamlib-3.3_1
+libhamlib++.so.2 hamlib-3.3_1
+libnss_mdns_minimal.so.2 nss-mdns-0.14.1_1
+libnss_mdns4_minimal.so.2 nss-mdns-0.14.1_1
+libnss_mdns6_minimal.so.2 nss-mdns-0.14.1_1
+libnss_mdns.so.2 nss-mdns-0.14.1_1
+libnss_mdns4.so.2 nss-mdns-0.14.1_1
+libnss_mdns6.so.2 nss-mdns-0.14.1_1

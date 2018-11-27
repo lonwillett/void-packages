@@ -1,0 +1,13 @@
+# Template file for 'tmplgen'
+pkgname=tmplgen
+version=0.5.3
+revision=1
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libressl-devel"
+short_desc="Void Linux template generator for language-specific package managers"
+maintainer="Rasmus Thomsen <rasmus.thomsen@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Cogitri/tmplgen"
+distfiles="https://static.crates.io/crates/tmplgen/tmplgen-${version}.crate"
+checksum=afc403bf69ad4da168938961b0f02da86ef29d655967cfcbacc8201e1327aff4

@@ -1,7 +1,8 @@
 # Template file for 'wpa_supplicant'
 pkgname=wpa_supplicant
+reverts="2.7_1"
 version=2.6
-revision=12
+revision=13
 build_wrksrc="$pkgname"
 short_desc="WPA/WPA2/IEEE 802.1X Supplicant"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"

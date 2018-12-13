@@ -719,8 +719,7 @@ libtalloc.so.2 talloc-2.0.1_1
 libmount.so.1 libmount-2.18_1
 libdconf.so.1 dconf-0.13.90_1
 libassuan.so.0 libassuan-2.0.1_1
-libgpgme.so.11 gpgme-1.3.0_1
-libgpgme-pthread.so.11 gpgme-1.3.0_1
+libgpgme.so.11 libgpgme-1.12.0_2
 libgpgmepp.so.6 gpgmepp-1.7.0_3
 libqgpgme.so.7 gpgmeqt-1.7.0_3
 libgarcon-1.so.0 garcon-0.1.12_1
@@ -1438,6 +1437,10 @@ libector.so.1 efl-1.18.1_1
 libemile.so.1 efl-1.18.1_1
 libcjs.so.0 cjs-2.0.0_1
 libmuffin.so.0 muffin-2.0.5_1
+libmuffin-cogl-pango-0.so muffin-4.0.5_1
+libmuffin-cogl-path-0.so muffin-4.0.5_1
+libmuffin-cogl-0.so muffin-4.0.5_1
+libmuffin-clutter-0.so muffin-4.0.5_1
 libcinnamon-desktop.so.4 cinnamon-desktop-2.0.4_1
 libcinnamon-control-center.so.1 libcinnamon-control-center-2.4.2_1
 libcvc.so.0 cinnamon-desktop-3.2.0_1
@@ -1582,7 +1585,7 @@ libplibssgaux.so.1 plib-1.8.5_1
 libplibnet.so.1 plib-1.8.5_1
 libplibpsl.so.1 plib-1.8.5_1
 libplibpw.so.1 plib-1.8.5_1
-libode.so.6 libode-0.14_1
+libode.so.8 libode-0.16_1
 libosmocore.so.11 libosmocore-0.12.1_1
 libosmovty.so.4 libosmocore-0.10.2_1
 libosmosim.so.0 libosmocore-0.8.0_1
@@ -3244,7 +3247,7 @@ libfifechan.so.0.1.4 fifechan-0.1.4_1
 libfifechan_sdl.so.0.1.4 fifechan-0.1.4_1
 libfifechan_opengl.so.0.1.4 fifechan-0.1.4_1
 libpolyclipping.so.22 clipper-6.4.2_1
-libSoapySDR.so.0.6 SoapySDR-0.6.1_1
+libSoapySDR.so.0.7 SoapySDR-0.7.0_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
 libkid3-core.so.3.6.2 kid3-3.6.2_1
 libkid3-gui.so.3.6.2 kid3-3.6.2_1
@@ -3354,3 +3357,4 @@ libcsfml-window.so.2.5 CSFML-2.5_1
 libcsfml-system.so.2.5 CSFML-2.5_1
 libcsfml-network.so.2.5 CSFML-2.5_1
 libtokyocabinet.so.9 tokyocabinet-1.4.48_1
+libdav1d.so.0 libdav1d0-0.1.0_1

@@ -147,8 +147,8 @@ do_install() {
 	# Remove firmware stuff provided by the "linux-firmware" pkg.
 	rm -rf ${DESTDIR}/usr/lib/firmware
 
-	for i in acpi asm-generic config crypto drm generated linux math-emu \
-		media net pcmcia scsi sound trace uapi video xen; do
+	for i in acpi asm-generic clocksource config crypto drm generated linux \
+		math-emu media net pcmcia scsi sound trace uapi video xen; do
 		if [ -d include/$i ]; then
 			cp -a include/$i ${hdrdest}/include
 		fi

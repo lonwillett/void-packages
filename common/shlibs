@@ -343,7 +343,7 @@ libMagickCore-6.Q16.so.6 libmagick6-6.9.10.11_1
 libMagickWand-6.Q16.so.6 libmagick6-6.9.10.11_1
 libMagick++-6.Q16.so.8 libmagick6-6.9.10.11_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.82 poppler-0.71.0_1
+libpoppler.so.83 libpoppler83-0.72.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -3365,3 +3365,4 @@ libwoff2dec.so.1.0.2 libwoff2dec1.0.2-1.0.2_1
 libcloudproviders.so.0 libcloudproviders-0.2.5_2
 libKF5KDEGames.so.7 libkdegames-18.08.3_1
 libidn2.so.0 libidn2-2.0.5_1
+libgmime-3.0.so.0 gmime3-3.2.3_1

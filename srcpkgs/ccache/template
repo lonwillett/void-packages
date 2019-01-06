@@ -1,22 +1,18 @@
 # Template file for 'ccache'
 pkgname=ccache
-version=3.5.1
-revision=1
+version=3.5.1a
+revision=2
+wrksrc=${pkgname}-${version%a}
 bootstrap=yes
 build_style=gnu-configure
 makedepends="zlib-devel"
 short_desc="A Fast C/C++ Compiler Cache"
-maintainer="Juan RP <xtraeme@voidlinux.eu>"
+maintainer="Juan RP <xtraeme@voidlinux.org>"
 homepage="https://ccache.samba.org/"
 changelog="https://ccache.samba.org/news.html"
 license="GPL-3.0-or-later"
 distfiles="https://samba.org/ftp/${pkgname}/${pkgname}-${version}.tar.xz"
-checksum=0fe1baa18208ba11abd188ab6eeaf4453b08ee783945dbb357dd93c2308a1d60
-
-pre_build() {
-	# Probably a missing AC_SUBST(getopt_long_c) somewhere.
-	sed -i Makefile -e "s;@getopt_long_c@;src/getopt_long.c;g"
-}
+checksum=0baea2c5bc4169ed3dad1f895e6d279323c5b8d3c9f0209998fe6da4601d0701
 
 post_install() {
 	vmkdir usr/lib/ccache/bin
@@ -25,7 +21,8 @@ post_install() {
 		for x in arm-linux-gnueabi arm-linux-gnueabihf armv7l-linux-gnueabihf \
 			arm-linux-musleabihf armv7l-linux-musleabihf aarch64-linux-gnu \
 			i686-pc-linux-gnu aarch64-linux-musl i686-linux-musl \
-			mips-linux-musl mips-linux-muslhf mipsel-linux-musl mipsel-linux-muslhf; do
+			mips-linux-musl mips-linux-muslhf mipsel-linux-musl mipsel-linux-muslhf \
+			powerpc64-linux-musl powerpc64le-linux-musl powerpc64le-linux-gnu; do
 			ln -sfr ${DESTDIR}/usr/bin/ccache ${DESTDIR}/usr/lib/ccache/bin/${x}-${f}
 		done
 	done

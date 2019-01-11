@@ -1,7 +1,7 @@
 # Template file for 'base-chroot-musl'
 pkgname=base-chroot-musl
 version=0.19
-revision=3
+revision=4
 bootstrap=yes
 build_style=meta
 homepage="https://www.voidlinux.eu"
@@ -17,5 +17,5 @@ depends="
  base-files kernel-libc-headers musl-devel musl-legacy-compat
  gcc patch chroot-bash chroot-grep coreutils findutils
  mpfr gettext chroot-texinfo sed chroot-gawk diffutils
- make gzip file tar chroot-util-linux chroot-distcc
- chroot-git ccache xbps xz which libada-devel gcc-ada"
+ make gzip file tar chroot-util-linux chroot-git ccache
+ xbps xz which libada-devel gcc-ada"

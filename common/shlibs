@@ -1547,7 +1547,6 @@ libfreerdp-utils.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-codec.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-gdi.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-cache.so.1.0 libfreerdp-1.0.2_2
-libcppunit-1.12.so.1 libcppunit-1.12.1_1
 libcppunit-1.14.so.0 libcppunit-1.14.0_1
 libcalc.so.2.12.7.1 libcalc-2.12.7.1_1
 libcustcalc.so.2.12.7.1 libcalc-2.12.7.1_1
@@ -3387,3 +3386,4 @@ libbroker.so.0 bro-2.6.1_1
 libcaf_core.so.0.16.2 bro-2.6.1_1
 libcaf_openssl.so.0.16.2 bro-2.6.1_1
 libllhttp.so.1 llhttp-1.0.1_1
+libpinyin.so.13 libpinyin-2.2.1_1

@@ -3063,6 +3063,7 @@ libgnuradio-vocoder-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-fcd-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-wavelet-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
 libgnuradio-wxgui-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_1
+libgnuradio-uhd-3.7.13.4.so.0.0.0 gnuradio-3.7.13.4_3
 libgnuradio-osmosdr-0.1.4.so.0.0.0 gnuradio-osmosdr-0.1.4_1
 libflann_cpp.so.1.9 flann-1.9.1_1
 libflann.so.1.9 flann-1.9.1_1
@@ -3387,3 +3388,10 @@ libcaf_core.so.0.16.2 bro-2.6.1_1
 libcaf_openssl.so.0.16.2 bro-2.6.1_1
 libllhttp.so.1 llhttp-1.0.1_1
 libpinyin.so.13 libpinyin-2.2.1_1
+libuhd.so.3 uhd-3.13.0.2_1
+libeditline.so.1 editline-1.16.0_1
+libgnuradio-rds-3.7.0git.so.0.0.0 gnuradio-rds-1.1.0_1
+libgnuradio-nrsc5-1.0.0git.so.0.0.0 gnuradio-nrsc5-1.0.0_1
+libgaminggear.so.0 libgaminggear-0.15.1_1
+libgaminggearfx.so.0 libgaminggear-0.15.1_1
+libgaminggearwidget.so.0 libgaminggear-0.15.1_1

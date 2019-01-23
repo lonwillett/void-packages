@@ -369,6 +369,8 @@ in this directory such as `${XBPS_BUILDDIR}/${wrksrc}`.
 
 - `XBPS_CROSS_BASE` Full path to where cross-compile dependencies are installed, varies according to the target architecture triplet. i.e `aarch64` -> `aarch64-unknown-linux-gnu`.
 
+- `XBPS_RUST_TARGET` The target architecture triplet used by `rustc` and `cargo`.
+
 <a id="available_vars"></a>
 ### Available variables
 
@@ -655,6 +657,8 @@ the package is updated, reinstalled or removed. This is mostly useful for kernel
 that shouldn't remove the kernel files when they are removed in case it might break the
 user's booting and module loading. Otherwise in the majority of cases it should not be
 used.
+
+- `fetch_cmd` Executable to be used to fetch URLs in `distfiles` during the `do_fetch` phase.
 
 <a id="explain_depends"></a>
 #### About the many types of `depends` variable.

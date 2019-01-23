@@ -326,9 +326,6 @@ setup_pkg() {
     export XBPS_INSTALL_XCMD XBPS_QUERY_XCMD XBPS_RECONFIGURE_XCMD \
         XBPS_REMOVE_XCMD XBPS_RINDEX_XCMD XBPS_UHELPER_XCMD
 
-    export XBPS_GCC_VERSION_MAJOR XBPS_GCC_VERSION_MINOR XBPS_GCC_VERSION_BUILD \
-        XBPS_GCC_VERSION
-
     # Source all sourcepkg environment setup snippets.
     # Source all subpkg environment setup snippets.
     for f in ${XBPS_COMMONDIR}/environment/setup-subpkg/*.sh; do
@@ -466,6 +463,11 @@ setup_pkg() {
     export LDFLAGS_FOR_BUILD="$XBPS_LDFLAGS"
     export FFLAGS_FOR_BUILD="$XBPS_FFLAGS"
 
+    # Define equivalent of TOML config in environment
+    # [build]
+    # jobs = $XBPS_MAKEJOBS
+    export CARGO_BUILD_JOBS="$XBPS_MAKEJOBS"
+
     if [ -n "$cross" ]; then
         # Regular tools names
         export CC="${XBPS_CROSS_TRIPLET}-gcc"
@@ -526,6 +528,19 @@ setup_pkg() {
         export RUSTFLAGS="$XBPS_CROSS_RUSTFLAGS"
         # Rust target, which differs from our triplets
         export RUST_TARGET="$XBPS_CROSS_RUST_TARGET"
+
+        # Define equivalent of TOML config in environment
+        # [target.${RUST_TARGET}]
+        # linker = ${CC}
+        _XBPS_CROSS_RUST_TARGET_ENV="${XBPS_CROSS_RUST_TARGET^^}"
+        _XBPS_CROSS_RUST_TARGET_ENV="${_XBPS_CROSS_RUST_TARGET_ENV//-/_}"
+        export CARGO_TARGET_${_XBPS_CROSS_RUST_TARGET_ENV}_LINKER="$CC"
+        unset _XBPS_CROSS_RUST_TARGET_ENV
+
+        # Define equivalent of TOML config in environment
+        # [build]
+        # target = ${RUST_TARGET}
+        export CARGO_BUILD_TARGET="$RUST_TARGET"
     else
         export CC="cc"
         export CXX="g++"
@@ -542,7 +557,7 @@ setup_pkg() {
         export NM="nm"
         export READELF="readelf"
         export RUST_TARGET="$XBPS_RUST_TARGET"
-        # Unse cross evironment variables
+        # Unset cross evironment variables
         unset CC_target CXX_target CPP_target GCC_target FC_target LD_target AR_target AS_target
         unset RANLIB_target STRIP_target OBJDUMP_target OBJCOPY_target NM_target READELF_target
         unset CFLAGS_target CXXFLAGS_target CPPFLAGS_target LDFLAGS_target

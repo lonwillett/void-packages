@@ -1,7 +1,8 @@
 # Template file for 'btrfs-progs'
 pkgname=btrfs-progs
+reverts="4.20_1" # Remove when snapper is fixed (#7540)
 version=4.19.1
-revision=1
+revision=2
 wrksrc="${pkgname}-v${version}"
 build_style=gnu-configure
 make_check_target=test

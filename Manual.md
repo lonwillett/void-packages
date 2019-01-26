@@ -24,6 +24,7 @@ packages for XBPS, the `Void Linux` native packaging system.
 		* [Package defined repositories](#pkg_defined_repo)
 	* [Checking for new upstream releases](#updates)
 	* [Build style scripts](#build_scripts)
+	* [Build helper scripts](#build_helper)
 	* [Functions](#functions)
 	* [Build options](#build_options)
 		* [Runtime dependencies](#deps_runtime)
@@ -490,6 +491,9 @@ binaries sources or when the program is written in assembly. Example:
 - `build_style` This specifies the `build method` for a package. Read below to know more
 about the available package `build methods` or effect of leaving this not set.
 
+- `build_helper` Whitespace-separated list of files in `common/build-helper` to be
+sourced and its variables be made available on the template. i.e. `build_helper="rust"`.
+
 - `configure_script` The name of the `configure` script to execute at the `configure` phase if
 `${build_style}` is set to `configure` or `gnu-configure` build methods.
 By default set to `./configure`.
@@ -858,6 +862,17 @@ Environment variables for a specific `build_style` can be declared in a filename
 matching the `build_style` name, Example:
 
     `common/environment/build-style/gnu-configure.sh`
+
+<a id="build_helper"></a>
+### build helper scripts
+
+The `build_helper` variable specifies shell snippets to be sourced that will create a
+suitable environment for working with certain sets of packages.
+
+The current list of available `build_helper` scripts is the following:
+
+- `rust` specifies environment variables required for cross-compiling crates via cargo and
+for compiling cargo -sys crates.
 
 <a id="functions"></a>
 ### Functions

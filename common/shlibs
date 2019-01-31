@@ -1282,6 +1282,7 @@ libunwind-x86.so.8 libunwind-1.1_1
 libunwind-arm.so.8 libunwind-1.1_4
 libunwind-mips.so.8 libunwind-1.1_4
 libunwind-aarch64.so.8 libunwind-1.2rc1_1
+libunwind-ppc32.so.8 libunwind-1.2.1_1
 libunwind-ppc64.so.8 libunwind-1.2.1_1
 libmicrohttpd.so.12 libmicrohttpd-0.9.48_1
 libgit2.so.27 libgit2-0.27.3_1
@@ -1651,10 +1652,10 @@ libvtv.so.0 libvtv-6.3.0_1
 libatomic.so.1 libatomic-4.9.0_1
 libpcsclite.so.1 libpcsclite-1.8.11_1
 libpcscspy.so.0 libpcsclite-1.8.11_1
-libBulletDynamics.so.2.87 bullet-2.87_1
-libBulletCollision.so.2.87 bullet-2.87_1
-libLinearMath.so.2.87 bullet-2.87_1
-libBulletSoftBody.so.2.87 bullet-2.87_1
+libBulletDynamics.so.2.88 bullet-2.88_1
+libBulletCollision.so.2.88 bullet-2.88_1
+libLinearMath.so.2.88 bullet-2.88_1
+libBulletSoftBody.so.2.88 bullet-2.88_1
 libinotifytools.so.0 libinotify-tools-3.14_2
 libfswatch.so.11 libfswatch-1.13.0_1
 libopensc.so.6 libopensc-0.18.0_1
@@ -2313,7 +2314,7 @@ libfirm.so.1.22 libfirm-1.22.0_1
 libaudiofile.so.1 audiofile-0.3.6_1
 libbs2b.so.0 libbs2b-3.1.0_1
 libmunge.so.2 munge-libs-0.5.11_1
-libmgba.so.0.6 libmgba-0.6.0_1
+libmgba.so.0.7 libmgba-0.7.0_1
 libglabels-3.0.so.8 libglabels30-3.2.1_1
 libglbarcode-3.0.so.0 libglabels30-3.2.1_1
 libjim.so.0.78 jimtcl-0.78_1
@@ -2600,7 +2601,7 @@ libavogadro.so.1 avogadro-1.2.0_1
 libavogadro_OpenQube.so.0 avogadro-1.2.0_1
 libcourier-unicode.so.4 courier-unicode-2.0_1
 libzstd.so.1 libzstd-1.0.0_1
-libudis86.so.0 udis86-devel-1.7.2_3
+libudis86.so.0 udis86-1.7.2_4
 libsass.so.1 libsass-3.5.0_1
 libjbig.so.0 jbigkit-libs-2.1_2
 libjbig85.so.0 jbigkit-libs-2.1_2
@@ -2834,6 +2835,10 @@ libyaz_icu.so.5 yaz-5.23.1_1
 libyaz.so.5 yaz-5.23.1_1
 libyaz_server.so.5 yaz-5.23.1_1
 libgcab-1.0.so.0 gcab-0.7_1
+libliveMedia.so.65 live555-2018.12.14_1
+libgroupsock.so.8 live555-2018.12.14_1
+libUsageEnvironment.so.3 live555-2018.12.14_1
+libBasicUsageEnvironment.so.1 live555-2018.12.14_1
 libappstream.so.4 AppStream-0.12.2_1
 libappstream-glib.so.8 appstream-glib-0.6.13_1
 libappstream-builder.so.8 appstream-glib-0.6.13_1
@@ -2955,7 +2960,7 @@ libhackrf.so.0 libhackrf-2017.02.1_1
 libtecla.so.1 libtecla-1.6.3_1
 libtecla_r.so.1 libtecla-1.6.3_1
 libzim.so.4 libzim-4.0.0_1
-libkiwix.so.3 kiwix-lib-3.0.0_1
+libkiwix.so.4 kiwix-lib-4.0.0_1
 libctpp2.so.2 ctpp2-2.8.3_1
 libaria2.so.0 libaria2-1.33.1_3
 librpm.so.8 librpm-4.14.1_1

@@ -314,6 +314,8 @@ install_bbootstrap() {
 
     msg_normal "Installed bootstrap successfully!\n"
     chroot_prepare $XBPS_TARGET_PKG || msg_error "Failed to initialize chroot!\n"
+    chroot_check
+    chroot_handler clean
 }
 
 reconfigure_bootstrap_pkgs() {
@@ -555,9 +557,13 @@ if [ -n "${NO_COLOR+x}" ]; then
     export NOCOLORS=1
 fi
 
-if [ -f $XBPS_MASTERDIR/.xbps_chroot_init ]; then
-    export CHROOT_READY=1
-fi
+chroot_check() {
+    if [ -f $XBPS_MASTERDIR/.xbps_chroot_init ]; then
+        export CHROOT_READY=1
+    fi
+}
+
+chroot_check
 
 if [ -z "$XBPS_REINIT" -a -s $XBPS_MASTERDIR/.xbps_chroot_init ]; then
     export XBPS_ARCH=${XBPS_ARCH:-$(cat $XBPS_MASTERDIR/.xbps_chroot_init)}
@@ -673,7 +679,7 @@ case "$XBPS_TARGET" in
         install_bbootstrap bootstrap
         ;;
     bootstrap-update)
-        bootstrap_update
+        chroot_handler bootstrap-update
         ;;
     chroot)
         chroot_handler chroot dummy

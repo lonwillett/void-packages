@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86_64 4.20.4 Kernel Configuration
+# Linux/x86_64 4.20.6 Kernel Configuration
 #
 
 #
@@ -5371,7 +5371,8 @@ CONFIG_DRM_I915=m
 CONFIG_DRM_I915_CAPTURE_ERROR=y
 CONFIG_DRM_I915_COMPRESS_ERROR=y
 CONFIG_DRM_I915_USERPTR=y
-# CONFIG_DRM_I915_GVT is not set
+CONFIG_DRM_I915_GVT=y
+CONFIG_DRM_I915_GVT_KVMGT=m
 
 #
 # drm/i915 Debugging

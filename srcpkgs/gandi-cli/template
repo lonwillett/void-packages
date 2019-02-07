@@ -16,7 +16,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3.0-or-later"
 homepage="http://cli.gandi.net"
 distfiles="https://github.com/Gandi/gandi.cli/archive/${version}.tar.gz"
-checksum=e6a28a26cfa16ad4d369958146152b293b4a0e68df6e9cfbfc2d07f84fbaa5e7
+checksum=81333e6982b45c27938ae9e1ae4612ace1145bab69abf36373d2ac23dbd0090b
 #xxx distfiles="https://github.com/Gandi/gandi.cli/archive/${_commit}.tar.gz>${wrksrc}.tar.gz"
 #xxx checksum=fbfa232320c41e52a94225397e46bbbb6fd6cf7d2ff978e349044cb102c3f48a
 

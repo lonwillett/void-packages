@@ -1,7 +1,7 @@
 # Template file for 'flatpak'
 pkgname=flatpak
-version=1.2.0
-revision=2
+version=1.2.3
+revision=1
 build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-documentation --with-system-bubblewrap
@@ -17,7 +17,7 @@ license="LGPL-2.1-or-later"
 homepage="https://flatpak.org/"
 changelog="https://github.com/flatpak/flatpak/blob/master/NEWS"
 distfiles="https://github.com/flatpak/flatpak/releases/download/${version}/flatpak-${version}.tar.xz"
-checksum=dbc5debba445621a5c753849aabc7042bdbc718a3af44204408df8ad2b36b3ad
+checksum=bb4720307fc10465660e37bb9489c1d9a349c19143e24f65ddb49032f8b00d44
 
 build_options="gir"
 

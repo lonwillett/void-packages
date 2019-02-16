@@ -488,6 +488,8 @@ where the program really only will ever work on certain architectures, like
 binaries sources or when the program is written in assembly. Example:
 `only_for_archs="x86_64 armv6l"`.
 
+> NOTE: `only_for_archs` is deprecated and must be replaced by `archs=`
+
 - `build_style` This specifies the `build method` for a package. Read below to know more
 about the available package `build methods` or effect of leaving this not set.
 
@@ -564,6 +566,8 @@ Example: `conf_files="/etc/foo.conf /etc/foo2.conf /etc/foo/*.conf"`.
 
 - `noarch` If set, the binary package is not architecture specific and can be shared
 by all supported architectures.
+
+> NOTE: `noarch` is deprecated and must be replaced by `archs=noarch`
 
 - `repository` Defines the repository in which the package will be placed. See
   *Repositories* for a list of valid repositories.
@@ -663,6 +667,21 @@ user's booting and module loading. Otherwise in the majority of cases it should 
 used.
 
 - `fetch_cmd` Executable to be used to fetch URLs in `distfiles` during the `do_fetch` phase.
+
+- `archs` Whitespace separated list of architectures that a package can be
+built for.
+Examples:
+
+	```
+	# Build package only for musl architectures
+	archs="*-musl"
+	# Build package for x86_64-musl and any non-musl architecture
+	archs="x86_64-musl ~*-musl"
+	# Default value (all arches)
+	archs="*"
+	# Packages that do not depend on architecture-specific objects
+	archs=noarch
+	```
 
 <a id="explain_depends"></a>
 #### About the many types of `depends` variable.
@@ -816,9 +835,9 @@ can be used to pass arguments during compilation. If your package does not make 
 extensions consider using the `gem` build style instead.
 
 - `gem` For packages that are installed using gems from [RubyGems](https://rubygems.org/).
-The gem command can be overridden by `gem_cmd`. `noarch` is set unconditionally and `distfiles`
-is set by the build style if the template does not do so. If your gem provides extensions which
-must be compiled consider using the `gemspec` build style instead.
+The gem command can be overridden by `gem_cmd`. `archs` is set to `noarch` unconditionally
+and `distfiles` is set by the build style if the template does not do so. If your gem
+provides extensions which must be compiled consider using the `gemspec` build style instead.
 
 - `ruby-module` For packages that are ruby modules and are installable via `ruby install.rb`.
 Additional install arguments can be specified via `make_install_args`.
@@ -1265,7 +1284,7 @@ type used to split architecture independent, big(ger) or huge amounts
 of data from a package's main and architecture dependent part. It is up
 to you to decide, if a `-data` subpackage makes sense for your package.
 This type is common for games (graphics, sound and music), part libraries (CAD)
-or card material (maps). Data subpackages are almost always `noarch=yes`.
+or card material (maps). Data subpackages are almost always `archs=noarch`.
 The main package must then have `depends="${pkgname}-data-${version}_${revision}"`,
 possibly in addition to other, non-automatic depends.
 
@@ -1392,7 +1411,7 @@ The following variables influence how Haskell packages are built:
 Font packages are very straightforward to write, they are always set with the
 following variables:
 
-- `noarch=yes`: Font packages don't install arch specific files.
+- `archs=noarch`: Font packages don't install arch specific files.
 - `depends="font-util"`: because they are required for regenerating the font
 cache during the install/removal of the package
 - `font_dirs`: which should be set to the directory where the package
@@ -1429,7 +1448,7 @@ the source of those patches/files.
 pkgname=$pkgname
 version=$version
 revision=$((revision + 1))
-noarch=yes
+archs=noarch
 build_style=meta
 short_desc="${short_desc} (removed package)"
 license="metapackage"

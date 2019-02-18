@@ -2690,7 +2690,7 @@ libKDb3.so.4 kdb-3.1.0_1
 libKPropertyWidgets3.so.4 kproperty-3.1.0_1
 libKPropertyCore3.so.4 kproperty-3.1.0_1
 libKReport3.so.4 kreport-3.1.0_1
-libbotan-2.so.8 botan-2.8.0_1
+libbotan-2.so.9 botan-2.9.0_1
 libswipl.so.8 swi-prolog-8.0.0_1
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
@@ -2756,7 +2756,7 @@ libopencsg.so.1 opencsg-1.4.2_1
 libCGAL.so.13 cgal-4.10_1
 libCGAL_Core.so.13 cgal-4.10_1
 libCGAL_ImageIO.so.13 cgal-4.10_1
-libqscintilla2_qt5.so.13 qscintilla-qt5-2.10_1
+libqscintilla2_qt5.so.15 qscintilla-qt5-2.11_1
 libQtAVWidgets.so.1 qtav-1.12.0_1
 libQtAV.so.1 qtav-1.12.0_1
 liblxpanel.so.0 lxpanel-0.9.3_1
@@ -2948,7 +2948,7 @@ libvted-3.so.0 libvted-3.7.0_2
 libpeasd-3.so.0 libpeasd-3.7.0_2
 libgstreamerd-3.so.0 libgstreamerd-3.7.0_2
 libgtkdgl-3.so.0 libgtkdgl-3.7.0_2
-libmega.so.30406 MEGAsdk-3.4.5_1
+libmega.so.30407 MEGAsdk-3.4.7_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1
@@ -3335,7 +3335,7 @@ libretro-gtk-0.14.so.0 retro-gtk-0.16.0_1
 libmanette-0.2.so.0 libmanette-0.2.1_1
 libfmt.so.5 fmt-5.2.1_1
 libelementary-calendar.so.0 libio.elementary.calendar-4.2.3_1
-libolm.so.2 olm-2.3.0_1
+libolm.so.3 olm-3.0.0_1
 libcrypto.so.44 libcrypto44-2.8.2_1
 libtls.so.18 libtls18-2.8.2_1
 libssl.so.46 libssl46-2.8.2_1
@@ -3396,6 +3396,7 @@ libgaminggear.so.0 libgaminggear-0.15.1_1
 libgaminggearfx.so.0 libgaminggear-0.15.1_1
 libgaminggearwidget.so.0 libgaminggear-0.15.1_1
 libopkg.so.1 libopkg-0.4.0_1
+libkodiplatform.so.18.0 kodi-platform-17.1.0_1
 libQMatrixClient.so.0.4 libqmatrixclient-0.4.2.1_1
 libipset.so.13 libipset-7.1_1
 libmp3splt.so.0 libmp3splt-0.9.2_1

@@ -902,7 +902,13 @@ GObject Introspection
 The following functions can be defined to change the behavior of how the
 package is downloaded, compiled and installed.
 
+- `pre_fetch()` Actions to execute before `do_fetch()`.
+
 - `do_fetch()` if defined and `distfiles` is not set, use it to fetch the required sources.
+
+- `post_fetch()` Actions to execute after `do_fetch()`.
+
+- `pre_extract()` Actions to execute after `post_fetch()`.
 
 - `do_extract()` if defined and `distfiles` is not set, use it to extract the required sources.
 
@@ -931,6 +937,17 @@ still be passed in if it's a GNU configure script.
 
 > A function defined in a template has preference over the same function
 defined by a `build_style` script.
+
+Current working directory for functions is set as follows:
+
+- For pre_fetch, pre_extract, do_clean: `<masterdir>`.
+
+- For do_fetch, post_fetch: `XBPS_BUILDDIR`.
+
+- For do_extract, post_extract: `wrksrc`.
+
+- For pre_configure through post_install: `build_wrksrc`
+if it is defined, otherwise `wrksrc`.
 
 <a id="build_options"></a>
 ### Build options

@@ -142,7 +142,7 @@ libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
 libnvidia-fatbinaryloader.so.390.87 nvidia390-libs-390.87_1 ignore
-libnvidia-fatbinaryloader.so.410.93 nvidia-libs-410.93_1 ignore
+libnvidia-fatbinaryloader.so.418.43 nvidia-libs-418.43_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -3416,5 +3416,10 @@ libOGDF.so libogdf-2018.03_1
 libCOIN.so libogdf-2018.03_1
 librocksdb.so.5 rocksdb-5.17.2_1
 libfrr.so.0 libfrr-6.0_1
+libkaccounts.so.1 kaccounts-integration-18.12.2_1
 libfrrospfapiclient.so.0 libfrrospfapiclient-6.0_1
 liborocos-kdl.so.1.4 orocos-kdl-1.4.0_1
+libibumad.so.3 rdma-core-22.1_1
+libibverbs.so.1 rdma-core-22.1_1
+librdmacm.so.1 rdma-core-22.1_1
+libdvdcss.so.2 libdvdcss-1.4.2_1

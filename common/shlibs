@@ -2125,7 +2125,7 @@ libp8-platform.so.2 p8-platform-2.1.0.1_1
 libOIS.so.1.5.0 ois-1.5_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
-libbrlapi.so.0.6 brltty-5.2_1
+libbrlapi.so.0.7 brltty-6.0_1
 liblouis.so.17 liblouis-3.8.0_1
 libCEGUIBase-0.7.9.so cegui07-0.7.9_1
 libCEGUIFalagardWRBase-0.7.9.so cegui07-0.7.9_1
@@ -2606,7 +2606,6 @@ libudis86.so.0 udis86-1.7.2_4
 libsass.so.1 libsass-3.5.0_1
 libjbig.so.0 jbigkit-libs-2.1_2
 libjbig85.so.0 jbigkit-libs-2.1_2
-libmac.so.2 mac-3.99_1
 libskk.so.0 libskk-1.0.2_1
 libKF5WaylandServer.so.5 kwayland-5.26.0_1
 libKF5WaylandClient.so.5 kwayland-5.26.0_1
@@ -3169,10 +3168,6 @@ libvtkRenderingVolumeOpenGL2-8.1.so.1 vtk-8.1.0_1
 libvtkViewsContext2D-8.1.so.1 vtk-8.1.0_1
 libvtkViewsInfovis-8.1.so.1 vtk-8.1.0_1
 libvolume_key.so.1 volume_key-0.3.9_1
-libwayland-egl++.so.0.2 libwaylandpp-2.2.0_1
-libwayland-client++.so.0.2 libwaylandpp-2.2.0_1
-libwayland-cursor++.so.0.2 libwaylandpp-2.2.0_1
-libwayland-client-extra++.so.0.2 libwaylandpp-2.2.0_1
 libxxhash.so.0 libxxHash-0.6.5_2
 libfwup.so.1 libfwup-11_1
 libcapnp_c.so.0 c-capnproto-0.3_1
@@ -3423,3 +3418,8 @@ libibumad.so.3 rdma-core-22.1_1
 libibverbs.so.1 rdma-core-22.1_1
 librdmacm.so.1 rdma-core-22.1_1
 libdvdcss.so.2 libdvdcss-1.4.2_1
+libvalapanel.so.0 vala-panel-0.4.87_1
+libappmenu-gtk2-parser.so.0 appmenu-gtk-module-0.7.1_1
+libappmenu-gtk3-parser.so.0 appmenu-gtk3-module-0.7.1_1
+libqhttpengine.so.1 qhttpengine-1.0.1_1
+libqmdnsengine.so.0 qmdnsengine-0.1.0_1

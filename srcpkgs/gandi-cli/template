@@ -2,7 +2,7 @@
 pkgname=gandi-cli
 version=1.4
 revision=1
-noarch=yes
+archs=noarch
 #xxx _commit=2d0903c9b69da3dd6df384ebf7f450d51e5a507d
 wrksrc="gandi.cli-${version}"
 #xxx wrksrc=gandi.cli-${_commit}

@@ -1286,7 +1286,7 @@ libunwind-aarch64.so.8 libunwind-1.2rc1_1
 libunwind-ppc32.so.8 libunwind-1.2.1_1
 libunwind-ppc64.so.8 libunwind-1.2.1_1
 libmicrohttpd.so.12 libmicrohttpd-0.9.48_1
-libgit2.so.27 libgit2-0.27.3_1
+libgit2.so.28 libgit2-0.28.0_1
 libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
 libagg.so.2 agg-2.5_1
 libzzip-0.so.13 zziplib-0.13.62_1
@@ -2327,7 +2327,7 @@ libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
 libopenshot.so.16 libopenshot-0.2.1_1
 libopenshot-audio.so.6 libopenshot-audio-0.1.5_1
-libpqxx-6.2.so libpqxx-6.2.2_1
+libpqxx-6.3.so libpqxx-6.3.3_1
 libndpi.so.1 ndpi-1.6_1
 liblog.so android-studio-3.0.1_1
 libm.so android-studio-3.0.1_1
@@ -2946,7 +2946,7 @@ libvted-3.so.0 libvted-3.7.0_2
 libpeasd-3.so.0 libpeasd-3.7.0_2
 libgstreamerd-3.so.0 libgstreamerd-3.7.0_2
 libgtkdgl-3.so.0 libgtkdgl-3.7.0_2
-libmega.so.30407 MEGAsdk-3.4.7_1
+libmega.so.30408 MEGAsdk-3.4.8_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1
@@ -3168,6 +3168,7 @@ libvtkRenderingVolumeOpenGL2-8.1.so.1 vtk-8.1.0_1
 libvtkViewsContext2D-8.1.so.1 vtk-8.1.0_1
 libvtkViewsInfovis-8.1.so.1 vtk-8.1.0_1
 libvolume_key.so.1 volume_key-0.3.9_1
+librand48_r.so.0 rand48_r-0.1_1
 libxxhash.so.0 libxxHash-0.6.5_2
 libfwup.so.1 libfwup-11_1
 libcapnp_c.so.0 c-capnproto-0.3_1
@@ -3423,3 +3424,4 @@ libappmenu-gtk2-parser.so.0 appmenu-gtk-module-0.7.1_1
 libappmenu-gtk3-parser.so.0 appmenu-gtk3-module-0.7.1_1
 libqhttpengine.so.1 qhttpengine-1.0.1_1
 libqmdnsengine.so.0 qmdnsengine-0.1.0_1
+libyang.so.0.16 libyang-0.16r3_1

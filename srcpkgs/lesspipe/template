@@ -4,7 +4,7 @@ version="1.83.20160929"
 revision=1
 wrksrc=lesspipe
 #create_wrksrc=yes
-noarch=yes
+archs=noarch
 build_style=configure
 configure_args="--fixed --prefix=/usr"
 patch_args="-Np1"

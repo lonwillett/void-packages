@@ -5,6 +5,7 @@ revision=3
 _commit=2dad788f5d71d50df4f692b67a4428967ba3d42c
 patch_args="-Np1"
 wrksrc=rtl8812au-${_commit}
+archs=noarch
 short_desc="Realtek 8812AU driver"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2"

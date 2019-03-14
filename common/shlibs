@@ -1528,9 +1528,9 @@ libnetapi.so.0 samba-3.6.23_1
 libsmbsharemodes.so.0 samba-3.6.23_1
 libmysqld.so.18 libmariadbclient-5.5.36_1
 libwscodecs.so.2 libwireshark-2.6.2_1
-libwiretap.so.8 libwireshark-2.6.2_1
-libwireshark.so.10 libwireshark-2.6.2_1
-libwsutil.so.9 libwireshark-2.6.2_1
+libwiretap.so.9 libwireshark-3.0.0_1
+libwireshark.so.12 libwireshark-3.0.0_1
+libwsutil.so.10 libwireshark-3.0.0_1
 libKF5ContactEditor.so.5 akonadi-contacts-17.12.1_1
 libKF5AkonadiContact.so.5 akonadi-contacts-17.12.1_1
 libKF5Prison.so.5 prison-5.43.0_1
@@ -2768,11 +2768,11 @@ libdecoration.so.0 compiz-core-0.8.14_1
 libcompizconfig.so.0 libcompizconfig-0.8.14_1
 libemeraldengine.so.0 emerald-0.8.14_1
 libhangul.so.1 libhangul-0.1.0_1
-libmutter-3.so.0 mutter-3.30.0_1
-libmutter-clutter-3.so mutter-3.30.0_1
-libmutter-cogl-path-3.so mutter-3.30.0_1
-libmutter-cogl-3.so mutter-3.30.0_1
-libmutter-cogl-pango-3.so mutter-3.30.0_1
+libmutter-4.so.0 mutter-3.32.0_1
+libmutter-clutter-4.so.0 mutter-3.32.0_1
+libmutter-cogl-path-4.so mutter-3.32.0_1
+libmutter-cogl-4.so.0 mutter-3.32.0_1
+libmutter-cogl-pango-4.so.0 mutter-3.32.0_1
 libgeoclue-2.so.0 geoclue2-2.4.4_1
 libgepub.so.0 libgepub-0.4_1
 libslopy.so.7.4 slop-7.4_1
@@ -3324,7 +3324,7 @@ libcodecore.so.0 libio.elementary.code-3.0_1
 libio.elementary.music-core.so.0 libio.elementary.music-5.0_1
 libpantheon-files-core.so.4 libio.elementary.files-4.1.4_1
 libpantheon-files-widgets.so.4 libio.elementary.files-4.1.4_1
-libwlroots.so.1 wlroots-0.4.1_1
+libwlroots.so.2 wlroots-0.5.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
 libcotp.so.12 libcotp-1.2.1_1
 libunarr.so.1 libunarr-1.0.1_1
@@ -3357,7 +3357,7 @@ libcsfml-window.so.2.5 CSFML-2.5_1
 libcsfml-system.so.2.5 CSFML-2.5_1
 libcsfml-network.so.2.5 CSFML-2.5_1
 libtokyocabinet.so.9 tokyocabinet-1.4.48_1
-libdav1d.so.0 libdav1d0-0.1.0_1
+libdav1d.so.1 libdav1d1-0.2.0_1
 libdqlite.so.0 dqlite-0.2.1_1
 libwoff2common.so.1.0.2 libwoff2common1.0.2-1.0.2_1
 libwoff2enc.so.1.0.2 libwoff2enc1.0.2-1.0.2_1
@@ -3427,3 +3427,5 @@ libappmenu-gtk3-parser.so.0 appmenu-gtk3-module-0.7.1_1
 libqhttpengine.so.1 qhttpengine-1.0.1_1
 libqmdnsengine.so.0 qmdnsengine-0.1.0_1
 libyang.so.0.16 libyang-0.16r3_1
+libhtp.so.2 libhtp-0.5.30_1
+libgedit-3.14.so gedit-3.32.0_1

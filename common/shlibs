@@ -756,8 +756,8 @@ libtotem-plparser.so.18 totem-pl-parser-3.26.1_1
 libtotem-plparser-mini.so.18 libtotem-plparser-mini-3.26.1_1
 libgladeui-2.so.6 libgladeui3-3.10.0_1
 libtdb.so.1 libtdb-1.2.2_1
-libgssdp-1.0.so.3 gssdp-0.9.0_1
-libgupnp-1.0.so.4 gupnp-0.18.0_1
+libgssdp-1.2.so.0 gssdp-1.2.0_1
+libgupnp-1.2.so.0 gupnp-1.2.0_1
 libsamplerate.so.0 libsamplerate-0.1.7_1
 libmms.so.0 libmms-0.6_1
 libsmbclient.so.0 libsmbclient-3.5.6_1
@@ -3313,9 +3313,6 @@ libnomacsCore.so.3 nomacs-3.10.2_4
 libaudit.so.1 libaudit-2.8.4_1
 libauparse.so.0 libauparse-2.8.4_1
 libOpenCL.so.1 ocl-icd-2.2.12_1
-libdleyna-core-1.0.so.5 dleyna-core-0.6.0_1
-libdleyna-renderer-1.0.so.1 dleyna-renderer-0.6.0_1
-libdleyna-server-1.0.so.1 dleyna-server-0.6.0_1
 liburiparser.so.1 uriparser-0.8.6_1
 libcpptest.so.1 cpptest-2.0.0_1
 libhandy-0.0.so.0 libhandy-0.0.3_1

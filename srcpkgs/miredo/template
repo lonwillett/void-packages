@@ -1,7 +1,7 @@
 # Template file for 'miredo'
 pkgname=miredo
 version=1.2.6
-revision=1
+revision=2
 build_style=gnu-configure
 configure_args="--enable-miredo-user --enable-binreloc $(vopt_with Judy)"
 # NB: --enable-binreloc needed for cross-compile (can be omitted for native)
@@ -23,13 +23,14 @@ if [ -z "$CROSS_BUILD" ]; then
 	build_options_default="Judy"
 fi
 
+CFLAGS=-DNDEBUG
+
 post_install() {
 	vmkdir var/chroot/miredo 755
 	touch ${DESTDIR}/var/chroot/miredo/.empty
 	rm -rf ${DESTDIR}/usr/lib/systemd
 	vsv miredo
 	vdoc README
-	vdoc ${FILESDIR}/README.Void
 	# Move the example configurations to the appropriate Void location
 	vmkdir /usr/share/examples
 	mv ${DESTDIR}/usr/share/doc/${pkgname}/examples ${DESTDIR}/usr/share/examples/${pkgname}

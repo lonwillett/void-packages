@@ -124,8 +124,10 @@ libEGL.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so rpi-userland-0.0.0.0.20150907_1
 libGLESv2.so opera-55.0.2994.37_2
 libGLESv2.so discord-0.0.7_1
+libGLESv2.so keybase-desktop-3.1.2_1
 libGLESv2.so riot-desktop-0.17.9_2
 libGLESv2.so wire-desktop-3.6.2885_1
+libGLESv2.so Signal-Desktop-1.23.2_1
 libbrcmEGL.so rpi-userland-20180103_2
 libbrcmGLESv2.so rpi-userland-20180103_2
 libbrcmOpenVG.so rpi-userland-20180103_2
@@ -143,7 +145,7 @@ libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
 libnvidia-fatbinaryloader.so.390.116 nvidia390-libs-390.116_1 ignore
-libnvidia-fatbinaryloader.so.418.43 nvidia-libs-418.43_1 ignore
+libnvidia-fatbinaryloader.so.418.56 nvidia-libs-418.56_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -277,6 +279,7 @@ libdrm_radeon.so.1 libdrm-2.4.6_1
 libdrm_intel.so.1 libdrm-2.4.6_1
 libdrm_nouveau.so.2 libdrm-2.4.34_1
 libdrm_amdgpu.so.1 libdrm-2.4.64_1
+libdrm_freedreno.so.1 libdrm-2.4.97_1
 libkms.so.1 libdrm-2.4.6_1
 libXxf86vm.so.1 libXxf86vm-1.0.2_1
 libXi.so.6 libXi-1.2.1_1
@@ -2691,7 +2694,7 @@ libKDb3.so.4 kdb-3.1.0_1
 libKPropertyWidgets3.so.4 kproperty-3.1.0_1
 libKPropertyCore3.so.4 kproperty-3.1.0_1
 libKReport3.so.4 kreport-3.1.0_1
-libbotan-2.so.9 botan-2.9.0_1
+libbotan-2.so.10 botan-2.10.0_1
 libswipl.so.8 swi-prolog-8.0.0_1
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
@@ -2756,7 +2759,7 @@ libstlink.so.1 stlink-1.5.1_1
 libopencsg.so.1 opencsg-1.4.2_1
 libCGAL.so.13 cgal-4.10_1
 libCGAL_Core.so.13 cgal-4.10_1
-libCGAL_ImageIO.so.13 cgal-4.10_1
+libCGAL_ImageIO.so.14 cgal-4.14_1
 libqscintilla2_qt5.so.15 qscintilla-qt5-2.11_1
 libQtAVWidgets.so.1 qtav-1.12.0_1
 libQtAV.so.1 qtav-1.12.0_1
@@ -2796,8 +2799,7 @@ libspectrum.so.8 libspectrum-1.2.2_1
 libbearssl.so.0 bearssl-0.3_1
 libXfont2.so.2 libXfont2-2.0.1_1
 libqalculate.so.21 libqalculate-3.0.0_1
-libweston-5.so.0 weston-5.0.0_1
-libweston-desktop-5.so.0 weston-5.0.0_1
+libweston-6.so.0 weston-6.0.0_1
 libostree-1.so.1 libostree-2017.3_1
 librhash.so.0 rhash-1.3.4_1
 libserialport.so.0 libserialport-0.1.1_1
@@ -3429,3 +3431,6 @@ libyang.so.0.16 libyang-0.16r3_1
 libhtp.so.2 libhtp-0.5.30_1
 libgedit-3.14.so gedit-3.32.0_1
 libchewing.so.3 libchewing-0.5.1_1
+libdwarves.so.1 pahole-1.12_1
+libdwarves_emit.so.1 pahole-1.12_1
+libdwarves_reorganize.so.1 pahole-1.12_1

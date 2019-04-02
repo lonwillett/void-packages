@@ -1,6 +1,6 @@
 # Template file for 'perl-ExtUtils-CppGuess'
 pkgname=perl-ExtUtils-CppGuess
-version=0.14
+version=0.19
 revision=1
 archs=noarch
 wrksrc="ExtUtils-CppGuess-${version}"
@@ -13,4 +13,4 @@ maintainer="Jasper Chan <jasperchan515@gmail.com>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/ExtUtils-CppGuess"
 distfiles="${CPAN_SITE}/ExtUtils/${pkgname#perl-}-${version}.tar.gz"
-checksum=1b2ecf01862adcc718758375c04978b3758a4255380aa4caca317be061ab6555
+checksum=4cc631bab662848ea7c8899e0c62cdfdb367f2fe205b5bd85dfc1082672a6ad3

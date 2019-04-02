@@ -1,6 +1,6 @@
 # Template file for 'ruby-asciidoctor'
 pkgname=ruby-asciidoctor
-version=2.0.3
+version=2.0.5
 revision=1
 archs=noarch
 build_style=gem
@@ -8,7 +8,7 @@ short_desc="Ruby implementation of AsciiDoc"
 maintainer="maxice8 <thinkabit.ukim@gmail.com>"
 license="MIT"
 homepage="https://asciidoctor.org"
-checksum=2d34c61d82808192cc631e1a8d9a1f98daa9c340852b08d73368fe4d77f7625e
+checksum=89a1dab0463ed2677775c092ef4a890791136a7aa9cc4bf51210fa999d8e51e0
 
 post_install() {
 	vlicense LICENSE

@@ -6,7 +6,6 @@ build_style=gnu-configure
 configure_args="--enable-geoip"
 hostmakedepends="perl"
 makedepends="geoip-devel"
-depends="geoip"
 short_desc="Small utility to manipulate IPv6 addresses"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2.0-only"

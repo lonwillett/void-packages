@@ -23,6 +23,7 @@ packages for XBPS, the `Void Linux` native packaging system.
 		* [Repositories defined by Branch](#repo_by_branch)
 		* [Package defined repositories](#pkg_defined_repo)
 	* [Checking for new upstream releases](#updates)
+	* [Handling patches](#patches)
 	* [Build style scripts](#build_scripts)
 	* [Build helper scripts](#build_helper)
 	* [Functions](#functions)
@@ -304,11 +305,13 @@ The following functions are defined by `xbps-src` and can be used on any templat
 	`$DESTDIR`. The optional 2nd argument can be used to change the
 	`file name`.
 
-- *vlicense()* `vlicense <file> [<name>]`
+- <a id="vlicense"></a>
+ *vlicense()* `vlicense <file> [<name>]`
 
 	Installs `file` into `usr/share/licenses/<pkgname>` in the pkg
 	`$DESTDIR`. The optional 2nd argument can be used to change the
-	`file name`. Note: Non-`GPL` licenses, `MIT`, `BSD` and `ISC` require the
+	`file name`. Note: Custom licenses,
+	non-`GPL` licenses, `MIT`, `BSD` and `ISC` require the
 	license file to	be supplied with the binary package.
 
 - *vsv()* `vsv <service>`
@@ -386,8 +389,9 @@ The list of mandatory variables for a template:
 
 - `homepage` A string pointing to the `upstream` homepage.
 
-- `license` A string matching the license's [SPDX Short identifier](https://spdx.org/licenses)
-Multiple licenses should be separated by commas, Example: `GPL-3.0-or-later, LGPL-2.1-only`.
+- `license` A string matching the license's [SPDX Short identifier](https://spdx.org/licenses),
+or string prefixed with `custom:` for licenses not listed there (see [vlicense](#vlicense)).
+Multiple licenses should be separated by commas, Example: `GPL-3.0-or-later, custom:Hugware`.
 
 - `maintainer` A string in the form of `name <user@domain>`.  The
   email for this field must be a valid email that you can be reached
@@ -626,14 +630,14 @@ A list is composed of three components separated by a colon: group, symlink and 
 Example: `alternatives="vi:/usr/bin/vi:/usr/bin/nvi ex:/usr/bin/ex:/usr/bin/nvi-ex"`.
 
 - `font_dirs` A white space separated list of directories specified by an absolute path where a
-font package installs its fonts.  
+font package installs its fonts.
 It is used in the `x11-fonts` xbps-trigger to rebuild the font cache during install/removal
-of the package.  
+of the package.
 Example: `font_dirs="/usr/share/fonts/TTF /usr/share/fonts/X11/misc"`
 
 - `dkms_modules` A white space separated list of Dynamic Kernel Module Support (dkms) modules
 that will be installed and removed by the `dkms` xbps-trigger with the install/removal of the
-package.  
+package.
 The format is a white space separated pair of strings that represent the name of the module,
 most of the time `pkgname`, and the version of the module, most of the time `version`.
 Example: `dkms_modules="$pkgname $version zfs 4.14"`
@@ -758,6 +762,29 @@ versions.  Example: `ignore="*b*"`
 - `version` is the version number used to compare against
 upstream versions. Example: `version=${version//./_}`
 
+<a id="patches"></a>
+### Handling patches
+
+Sometimes software needs to be patched, most commonly to fix bugs that have
+been found or to fix compilation with new software.
+
+To handle this, xbps-src has patching functionality. It will look for all files
+that match the glob `srcpkgs/$pkgname/patches/*.{diff,patch}` and will
+automatically apply all files it finds using `patch(1)` with `-Np0`. This happens
+during the `do_patch()` phase. The variable `PATCHESDIR` is
+available in the template, pointing to the `patches` directory.
+
+The patching behaviour can be changed in the following ways:
+
+- A file called `series` can be created in the `patches` directory with a newline
+separated list of patches to be applied in the order presented. When present
+xbps-src will only apply patches named in the `series` file.
+
+- A file with the same name as one of the patches but with `.args` as extension can
+be used to set the args passed to `patch(1)`. As an example, if `foo.patch` requires
+special arguments to be passed to `patch(1)` that can't be used when applying other
+patches, `foo.patch.args` can be created containing those args.
+
 <a id="build_scripts"></a>
 ### build style scripts
 
@@ -811,7 +838,7 @@ depend on additional packages. This build style does not install
 dependencies to the root directory, and only checks if a binary package is
 available in repositories. If your meta-package doesn't include any files
 which thus have and require no license, then you should also set
-`license="metapackage"`.
+`license="BSD-2-Clause"`.
 
 - `R-cran` For packages that are available on The Comprehensive R Archive
 Network (CRAN). The build style requires the `pkgname` to start with
@@ -1205,7 +1232,7 @@ of `mkdir -p`.
 ```sh
 #!/bin/sh
 install -d -m0700 /run/foo
-exec foo 
+exec foo
 ```
 
 ```sh
@@ -1505,7 +1532,7 @@ revision=$((revision + 1))
 archs=noarch
 build_style=meta
 short_desc="${short_desc} (removed package)"
-license="metapackage"
+license="BSD-2-Clause"
 homepage="${homepage}"
 ```
 

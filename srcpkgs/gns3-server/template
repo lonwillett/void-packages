@@ -1,19 +1,19 @@
 # Template file for 'gns3-server'
 pkgname=gns3-server
-version=2.1.15
+version=2.1.16
 revision=1
 build_style=python3-module
 pycompile_module="gns3server"
 hostmakedepends="python3-setuptools"
 depends="python3-setuptools python3-jsonschema python3-aiohttp-cors2 python3-yarl
- python3-Jinja2 python3-raven python3-psutil python3-zipstream python3-prompt_toolkit
+ python3-Jinja2 python3-raven python3-psutil python3-zipstream python3-prompt_toolkit1
  dynamips"
 short_desc="Graphical Network Simulator 3 - Server"
 maintainer="Michael Aldridge <maldridge@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://gns3.com"
 distfiles="https://github.com/GNS3/gns3-server/archive/v${version}.tar.gz"
-checksum=d21a13cfc19e849e97cd792e1b97cf9e32c14ccecc0b2eb3fe8fc6e4c40aa13f
+checksum=d41ddb835b6248164675aa5a70240f014c52447e7bead92239c34e3072d17929
 
 pre_build() {
 	# relax requirements

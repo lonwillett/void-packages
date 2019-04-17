@@ -1,9 +1,8 @@
 # Template file for 'bind'
 pkgname=bind
 reverts="9.13.6_1"
-version=9.11.5
-_patchver=P4
-revision=8
+version=9.11.6
+revision=1
 _fullver="${version}${_patchver:+-${_patchver}}"
 wrksrc="${pkgname}-${_fullver}"
 build_style=gnu-configure
@@ -11,7 +10,7 @@ configure_args="--disable-static --enable-threads --enable-largefile
  --with-libtool --enable-atomic --sysconfdir=/etc/named --enable-epoll
  --enable-ipv6 --with-randomdev=/dev/random --with-ecdsa=yes --with-eddsa=no
  --with-libtool --with-openssl=${XBPS_CROSS_BASE}/usr --without-gssapi --without-gost
- --enable-openssl-hash --with-readline --with-tuning=default
+ --enable-openssl-hash --with-readline --with-tuning=default --without-python
  --enable-fetchlimit --enable-sit --with-libidn2 $(vopt_enable seccomp)
  $(vopt_if geoip "--with-geoip=${XBPS_CROSS_BASE}/usr" "--without-geoip")"
 hostmakedepends="automake libtool perl"
@@ -22,7 +21,7 @@ maintainer="Juan RP <xtraeme@voidlinux.org>"
 license="ISC"
 homepage="https://www.isc.org/downloads/bind/"
 distfiles="https://ftp.isc.org/isc/bind9/${_fullver}/bind-${_fullver}.tar.gz"
-checksum=7e8c08192bcbaeb6e9f2391a70e67583b027b90e8c4bc1605da6eb126edde434
+checksum=4499007f3a6b8bba84fc757053caeabf36466d6f7d278baccef9fd109beac6d4
 
 conf_files="/etc/named/named.conf"
 system_accounts="named"
@@ -37,10 +36,9 @@ build_options_default="geoip"
 #	x86_64*|i686*) build_options_default+=" seccomp";;
 #esac
 
-pre_configure() {
-	autoreconf -fi
-	# disable bin tests for now.
-	sed -e "s,tests,,g" -i bin/Makefile.in
+do_check() {
+	# requires special network setup
+	:
 }
 
 post_install() {

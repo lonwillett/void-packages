@@ -1012,10 +1012,13 @@ libuchardet.so.0 uchardet-0.0.6_1
 libgtksourceviewmm-3.0.so.0 gtksourceviewmm-3.2.0_1
 libyajl.so.2 yajl-2.0.1_1
 libconfuse.so.2 confuse-3.2.1_1
-liblldb.so.7 lldb-7.0.0_1
-libclang.so.7 clang-7.0.0_1
+liblldb.so.8 lldb-8.0.0_1
+libclang.so.8 clang-8.0.0_1
 libLLVM-6.0.so libllvm6.0-6.0.0_1
 libLLVM-7.so libllvm7-7.0.0_1
+libLLVM-8.so libllvm8-8.0.0_1
+libOptRemarks.so.8 libllvm8-8.0.0_1
+libLTO.so.8 libllvm8-8.0.0_1
 libisofs.so.6 libisofs-0.6.24_1
 libmpack.so.0 libmpack-1.0.5_1
 libGeoIP.so.1 libgeoip-1.4.8_1
@@ -1036,7 +1039,7 @@ libtirpc.so.3 libtirpc-1.0.2_1
 librpcsecgss.so.3 librpcsecgss-0.19_1
 libnfsidmap.so.0 libnfsidmap-0.24_1
 libbind9.so.161 bind-libs-9.11.5_1
-libdns.so.1104 bind-libs-9.11.5_1
+libdns.so.1105 bind-libs-9.11.6_1
 libirs.so.161 bind-libs-9.11.5_1
 libisc.so.1100 bind-libs-9.11.5_1
 libisccc.so.161 bind-libs-9.11.5_1
@@ -1121,9 +1124,6 @@ libecryptfs.so.1 libecryptfs-104_1
 libnuma.so.1 libnuma-2.0.7_1
 libxar.so.1 xar-1.5.2_1
 libqpdf.so.21 libqpdf-8.0.0_1
-libpolkit-qt-core-1.so.1 polkit-qt-0.103.0_1
-libpolkit-qt-gui-1.so.1 polkit-qt-0.112_3
-libpolkit-qt-agent-1.so.1 polkit-qt-0.103.0_1
 libmikmod.so.3 libmikmod-3.1.12_1
 libSDL_sound-1.0.so.1 SDL_sound-1.0.3_1
 libgtksourceview-2.0.so.0 gtksourceview2-2.10.5_1
@@ -1304,7 +1304,6 @@ libdb-5.3.so libdb-5.3.21_1
 libdb_cxx-5.3.so libdb-cxx-5.3.21_1
 libcares.so.2 c-ares-1.10.0_1
 libcryptopp.so.5.6 crypto++-565_1
-libqzeitgeist.so.1 libqzeitgeist-0.8.0_1
 libphonon.so.4 phonon-4.6.0_1
 libphononexperimental.so.4 phonon-4.6.0_1
 libdbusmenu-glib.so.4 libdbusmenu-glib-12.10.2_1
@@ -1606,8 +1605,10 @@ libgdkglext-x11-1.0.so.0 gtkglext-1.2.0_4
 libXaw3d.so.8 libXaw3d-1.6.2_1
 libshiboken-python2.7.so.1.2 libshiboken-python-1.2.2_2
 libshiboken-python3.6.so.1.2 libshiboken-python3-1.2.2_4
+libshiboken2.so.5.11 libshiboken2-5.11.2_1
 libpyside-python2.7.so.1.2 libpyside-python-1.2.2_2
 libpyside-python3.6.so.1.2 libpyside-python3-1.2.2_6
+libpyside2.so.5.11 libpyside2-python3-5.11.2_1
 libupsclient.so.4 libnetwork-ups-tools-2.7.2_1
 libnutclient.so.0 libnetwork-ups-tools-2.7.2_1
 libnutscan.so.1 libnetwork-ups-tools-2.7.3_3
@@ -1916,7 +1917,6 @@ libglfw.so.3 glfw-3.0.4_1
 libusbmuxd.so.4 libusbmuxd-1.0.10_1
 libimobiledevice.so.6 libimobiledevice-1.2.0_1
 libstfl.so.0 stfl-0.23_1
-libenventor.so.1 enventor-1.0.0_1
 libCDApplet.so cairo-dock-plugins-3.4.0_1
 libldns.so.2 libldns-1.7.0_1
 libopenjpeg.so.5 libopenjpeg-1.5.2_1
@@ -2331,7 +2331,7 @@ libax25io.so.0 libax25-0.0.12rc4_1
 libmill.so.18 libmill-1.14_1
 libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
-libopenshot.so.16 libopenshot-0.2.1_1
+libopenshot.so.17 libopenshot-0.2.3_1
 libopenshot-audio.so.6 libopenshot-audio-0.1.5_1
 libpqxx-6.3.so libpqxx-6.3.3_1
 libndpi.so.1 ndpi-1.6_1
@@ -2682,7 +2682,7 @@ libz80ex.so.1 z80ex-1.1.21_1
 libz80ex_dasm.so.1 z80ex-1.1.21_1
 libqmmp.so.1 qmmp-1.1.4_1
 libqmmpui.so.1 qmmp-1.1.4_1
-libalkimia5.so.7 libalkimia-7.0_1
+libalkimia5.so.8 libalkimia-8.0.1_1
 libpayeeidentifier_iban_bic_widgets.so.5 kmymoney-5.0.0_1
 libkmm_plugin.so.5 kmymoney-5.0.0_1
 libkmm_widgets.so.5 kmymoney-5.0.0_1
@@ -2965,8 +2965,7 @@ libhackrf.so.0 libhackrf-2017.02.1_1
 libtecla.so.1 libtecla-1.6.3_1
 libtecla_r.so.1 libtecla-1.6.3_1
 libzim.so.4 libzim-4.0.0_1
-libkiwix.so.4 kiwix-lib-4.0.0_1
-libctpp2.so.2 ctpp2-2.8.3_1
+libkiwix.so.5 kiwix-lib-5.0.0_1
 libaria2.so.0 libaria2-1.33.1_3
 librpm.so.8 librpm-4.14.1_1
 librpmsign.so.8 librpmsign-4.14.1_1
@@ -3448,3 +3447,8 @@ libbitcoin-database.so.0 libbitcoin-database-3.5.0_1
 libbitcoin-blockchain.so.0 libbitcoin-blockchain-3.5.0_1
 libbitcoin-node.so.0 libbitcoin-node-3.5.0_1
 libbitcoin-server.so.0 libbitcoin-server-3.5.0_1
+libvpd-2.2.so.2 libvpd-2.2.6_1
+libvpd_cxx-2.2.so.2 libvpd-2.2.6_1
+liblcf.so.0 liblcf-0.6.0_1
+libWildMidi.so.2 WildMidi-0.4.3_1
+liboblibs.so.0.0 oblibs-0.0.1.1_1

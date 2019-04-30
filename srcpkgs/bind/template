@@ -2,7 +2,8 @@
 pkgname=bind
 reverts="9.13.6_1"
 version=9.11.6
-revision=1
+_patchver="P1"
+revision=2
 _fullver="${version}${_patchver:+-${_patchver}}"
 wrksrc="${pkgname}-${_fullver}"
 build_style=gnu-configure
@@ -21,7 +22,7 @@ maintainer="Juan RP <xtraeme@voidlinux.org>"
 license="ISC"
 homepage="https://www.isc.org/downloads/bind/"
 distfiles="https://ftp.isc.org/isc/bind9/${_fullver}/bind-${_fullver}.tar.gz"
-checksum=4499007f3a6b8bba84fc757053caeabf36466d6f7d278baccef9fd109beac6d4
+checksum=58ace2abb4d048b67abcdef0649ecd6cbd3b0652734a41a1d34f942d5500f8ef
 
 conf_files="/etc/named/named.conf"
 system_accounts="named"

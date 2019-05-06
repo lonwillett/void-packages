@@ -1,6 +1,6 @@
 # Template file for 'linux5.0'
 pkgname=linux5.0
-version=5.0.12
+version=5.0.13
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=1e0278196679d04980b9370a1fdab9065946cf324b859b91bb59e689201508f0
+checksum=bcfd52bf1faa24f5f712146a873959461e001656ad67717e80b947aa6ad53479
 patch_args="-Np1"
 
 nodebug=yes  # -dbg package is generated below manually
@@ -17,7 +17,7 @@ noverifyrdeps=yes
 noshlibprovides=yes
 preserve=yes
 
-archs="i686* x86_64* armv5tel* armv6l* armv7l* aarch64* ppc64*"
+archs="i686* x86_64* armv5tel* armv6l* armv7l* aarch64* ppc*"
 hostmakedepends="bc elfutils-devel flex gmp-devel kmod libmpc-devel libressl-devel perl uboot-mkimage"
 
 _kernver="${version}_${revision}"
@@ -52,6 +52,7 @@ do_configure() {
 		aarch64*) arch=arm64;;
 		ppc64le*) arch=powerpc; subarch=ppc64le;;
 		ppc64*) arch=powerpc; subarch=ppc64;;
+		ppc*) arch=powerpc;;
 	esac
 
 	if [ "$CROSS_BUILD" ]; then
@@ -86,7 +87,7 @@ do_build() {
 		x86_64*) _args="bzImage modules"; arch=x86_64;;
 		arm*) _args="zImage modules dtbs"; arch=arm;;
 		aarch64*) _args="Image modules dtbs"; arch=arm64;;
-		ppc64*) _args="zImage modules"; arch=powerpc;;
+		ppc*) _args="zImage modules"; arch=powerpc;;
 	esac
 	if [ "$CROSS_BUILD" ]; then
 		_cross="CROSS_COMPILE=${XBPS_CROSS_TRIPLET}-"
@@ -106,7 +107,7 @@ do_install() {
 		x86_64*) arch=x86; subarch=x86_64;;
 		arm*) arch=arm;;
 		aarch64*) arch=arm64;;
-		ppc64*) arch=powerpc;;
+		ppc*) arch=powerpc;;
 	esac
 
 	# Run depmod after compressing modules.

@@ -2243,7 +2243,7 @@ libu2f-host.so.0 libu2f-host-1.0.0_1
 libu2f-server.so.0 libu2f-server-1.0.1_2
 libsqlcipher.so.0 sqlcipher-3.3.1_1
 libgta.so.0 libgta-1.0.7_1
-libgdal.so.20 libgdal-2.0.1_1
+libgdal.so.26 libgdal-3.0.0_1
 libosgViewer.so.131 osg-3.4.1_1
 libosgShadow.so.131 osg-3.4.1_1
 libosgParticle.so.131 osg-3.4.1_1
@@ -2859,7 +2859,7 @@ libunshield.so.0 libunshield-0.6_1
 libMyGUIEngine.so.3 libmygui-3.2.2_1
 libEditorFramework.so libmygui-devel-3.2.2_3
 Plugin_StrangeButton.so libmygui-devel-3.2.2_3
-libproj.so.14 proj-5.2.0_1
+libproj.so.15 proj-6.0.0_1
 libnlopt.so.0 nlopt-2.4.2_1
 libeb.so.16 libeb-4.3.3_1
 libchipcard.so.6 libchipcard-5.0.4_1
@@ -3468,3 +3468,5 @@ libgrpc_cronet.so.7 grpc-1.19.1_1
 libgrpc_unsecure.so.7 grpc-1.19.1_1
 libgrpcpp_channelz.so.1 grpc-1.19.1_1
 libircclient.so.1 libircclient-1.10_1
+libFAudio.so.0 FAudio-19.05_1
+libqaccessibilityclient-qt5.so.0 libqaccessibilityclient-0.4.0_1

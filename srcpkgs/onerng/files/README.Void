@@ -57,28 +57,19 @@ i.e. as root:
 
 	ln -s /etc/sv/rngd-onerng /var/service/
 
-Finally, if your OneRNG device was already plugged in when the
-"onerng" package was installed, then you need to unplug it and plug it
-back in (or take some equivalent action, e.g. remove and re-insert the
-cdc-acm module). This is needed to get udev to execute the newly
-installed rule.
+Note that the service will disable itself ("sv down rngd-onerng") when
+a device is not found, and that a udev rule is installed to enable it
+("sv up rngd-onerng") when a device is plugged in, and disable it ("sv
+down rngd-onerng") when a device is removed.
 
 
 === RNGD SERVICE ===
 
-Note that the "rngd" service (from the rng-tools package) does not
-need to be enabled to use a OneRNG device. In fact, it should not be
-run simultaneously with the "rngd-onerng" service.
-
-If your OneRNG device is only intermittently connected to your
-computer, then you may want to enable the "rngd" service as well as
-the "rngd-onerng" service. This should work: the "rngd-onerng" service
-stops the "rngd" service when it starts up, and starts it when it
-shuts down.
-
-Especially note that the value of RNGD_OPTS in "/etc/sv/rngd/conf" is
-distinct from the one in "/etc/sv/rngd-onerng/conf", and does *not*
-affect the options that the onerng service uses with rngd.
+The "rngd" service (from the rng-tools package) should not be run
+simultaneously with the "rngd-onerng" service. It may be desirable to
+modify the installed udev rule and "finish" file so that the "rngd"
+service is brought-up/taken-down when the "rngd-onerng" service is
+taken-down/brought-up.
 
 
 === FIRMWARE VERIFICATION ===

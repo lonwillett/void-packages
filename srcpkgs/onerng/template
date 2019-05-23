@@ -1,10 +1,10 @@
 # Template file for 'onerng'
 pkgname=onerng
 version=3.6
-revision=1
+revision=2
+archs=noarch
 wrksrc=onerng_${version}
 build_style=fetch
-noarch=yes
 conf_files="/etc/sv/rngd-onerng/conf"
 depends="rng-tools"
 short_desc="Support for OneRNG hardware RNG devices"

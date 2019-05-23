@@ -7,7 +7,7 @@ if [ -L /run/hwrng ]; then
 fi
 
 # Don't restart when device is missing or broken
-[ ! -c /dev/onerng -o "x$1" = "x2" ] && sv down rngd-onerng
-
-# Start up regular rngd service if it appears to be wanted
-[ -e /var/service/rngd -a ! -e /var/service/rngd/down ] && sv up rngd
+# udev should restart us when device is plugged in
+if [ ! -c /dev/onerng -o "x$1" = "x2" ]; then
+    sv down "${PWD##*/}"
+fi

@@ -2,12 +2,10 @@
 
 [ -r conf ] && . ./conf
 
-sleep 1		# wait for udev to finish
-[ -c /dev/onerng ] || exit 2			# Need device
+sleep 2		# wait for udev to finish
+[  -c /dev/onerng ] || exit 2		# Device missing
 ONERNGDEV="/dev/$(readlink /dev/onerng)"	# Use canonical name
 . /usr/share/onerng/init.sh			# Init device
 ln -f -s "$ONERNGDEV" /run/hwrng		# Use private link
 
-# Stop the default rngd service, and run our own
-[ -d /var/service/rngd ] && sv force-shutdown rngd
 exec chpst -b rngd-onerng rngd $RNGD_OPTS -r /run/hwrng -f

@@ -187,9 +187,10 @@ libgdbm.so.6 gdbm-1.16_1
 libgdbm_compat.so.4 gdbm-1.10_1_1
 libintl.so.8 gettext-libs-0.19.2_1
 libgnuintl.so.8 gettext-libs-0.19.2_1
-libgettextlib-0.19.8.1.so gettext-libs-0.19.8.1_1
-libgettextsrc-0.19.8.1.so gettext-libs-0.19.8.1_1
+libgettextlib-0.20.1.so gettext-libs-0.20.1_1
+libgettextsrc-0.20.1.so gettext-libs-0.20.1_1
 libgettextpo.so.0 gettext-libs-0.17_1
+libtextstyle.so.0 gettext-libs-0.20.1_1
 libattr.so.1 attr-2.4.43_1
 libacl.so.1 acl-2.2.47_1
 libpython2.7.so.1.0 python-2.7_1
@@ -2965,7 +2966,7 @@ libKF5Kipi.so.32.0.0 libkipi5-17.04.3_1
 libhackrf.so.0 libhackrf-2017.02.1_1
 libtecla.so.1 libtecla-1.6.3_1
 libtecla_r.so.1 libtecla-1.6.3_1
-libzim.so.4 libzim-4.0.0_1
+libzim.so.5 libzim-5.0.0_1
 libkiwix.so.5 kiwix-lib-5.0.0_1
 libaria2.so.0 libaria2-1.33.1_3
 librpm.so.8 librpm-4.14.1_1
@@ -3472,3 +3473,4 @@ libFAudio.so.0 FAudio-19.05_1
 libqaccessibilityclient-qt5.so.0 libqaccessibilityclient-0.4.0_1
 libnitrokey.so.3 libnitrokey-3.4.1_1
 libceres.so.1 ceres-solver-1.14.0_1
+libmodule.so.4 libmodule-4.1.0_1

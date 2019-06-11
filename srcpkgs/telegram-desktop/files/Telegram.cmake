@@ -27,6 +27,7 @@ find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
+find_package(RapidJSON REQUIRED)
 
 find_package(Qt5 REQUIRED COMPONENTS Core DBus Gui Widgets Network)
 get_target_property(QTCORE_INCLUDE_DIRS Qt5::Core INTERFACE_INCLUDE_DIRECTORIES)
@@ -57,6 +58,7 @@ list(APPEND THIRD_PARTY_INCLUDE_DIRS
 
 add_subdirectory(${THIRD_PARTY_DIR}/crl)
 add_subdirectory(${THIRD_PARTY_DIR}/libtgvoip)
+add_subdirectory(${THIRD_PARTY_DIR}/qtlottie)
 
 set(TELEGRAM_SOURCES_DIR ${CMAKE_SOURCE_DIR}/SourceFiles)
 set(TELEGRAM_RESOURCES_DIR ${CMAKE_SOURCE_DIR}/Resources)
@@ -93,6 +95,7 @@ file(GLOB FLAT_SOURCE_FILES
 	SourceFiles/inline_bots/*.cpp
 	SourceFiles/intro/*.cpp
 	SourceFiles/lang/*.cpp
+	SourceFiles/main/*.cpp
 	SourceFiles/mtproto/*.cpp
 	SourceFiles/overview/*.cpp
 	SourceFiles/passport/*.cpp
@@ -145,11 +148,9 @@ set(TELEGRAM_COMPILE_DEFINITIONS
 )
 
 set(TELEGRAM_INCLUDE_DIRS
-	${FFMPEG_INCLUDE_DIRS}
 	${GENERATED_DIR}
 	${LIBDRM_INCLUDE_DIRS}
 	${LIBLZMA_INCLUDE_DIRS}
-	${LIBVA_INCLUDE_DIRS}
 	${MINIZIP_INCLUDE_DIRS}
 	${OPENAL_INCLUDE_DIR}
 	${QT_PRIVATE_INCLUDE_DIRS}
@@ -160,6 +161,7 @@ set(TELEGRAM_INCLUDE_DIRS
 set(TELEGRAM_LINK_LIBRARIES
 	xxhash
 	crl
+	qtlottie
 	tgvoip
 	OpenSSL::Crypto
 	OpenSSL::SSL

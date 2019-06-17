@@ -1,23 +1,20 @@
 # Template file for 'gajim-omemo'
 pkgname=gajim-omemo
-version=2.5.7
+version=2.6.29
 revision=1
-noarch=yes
 wrksrc="omemo"
-build_style="fetch"
-# xxx Need python3 in hostmakedepends to use py3_ver
-pycompile_version=$py3_ver
-pycompile_dirs="usr/share/gajim/plugins/omemo"
-hostmakedepends="unzip python3"
-depends="python3-axolotl python3-cryptography python3-qrcode gajim"
-short_desc="OMEMO Plugin for Gajim"
-maintainer="Lon Willett <xgit@lonw.net>"
-license="GPL-3"
+hostmakedepends="unzip"
+depends="python3 python3-setuptools python3-cryptography python3-axolotl python3-qrcode"
+short_desc="Gajim plugin for OMEMO Encryption"
+maintainer="Urs Schulz <voidpkgs@ursschulz.de>"
+license="GPL-3.0-or-later"
 homepage="https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin"
-distfiles="https://ftp.gajim.org/plugins_1/omemo.zip"
-checksum=aba0ac06f84519bf77ddfd9759f17b734ae8f76128d6add9dc3cb213da7f6812
+distfiles="https://ftp.gajim.org/plugins_releases/${pkgname#gajim-}_${version}.zip"
+checksum=f1ed4690080cd10983135c206b8b5ef62b4aa28dd21a5cf1c294f59d272e2ed6
+
 
 do_install() {
-	vmkdir usr/share/gajim/plugins/omemo
-	vcopy * usr/share/gajim/plugins/omemo
+	rm CHANGELOG COPYING
+	install -d "${DESTDIR}/${py3_sitelib}/gajim/data/plugins/${pkgname#gajim-}"
+	cp -r * "${DESTDIR}/${py3_sitelib}/gajim/data/plugins/${pkgname#gajim-}"
 }

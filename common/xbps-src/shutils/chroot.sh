@@ -3,17 +3,11 @@
 # FIXME: $XBPS_FFLAGS is not set when chroot_init() is run
 # It is set in common/build-profiles/bootstrap.sh but lost somewhere?
 chroot_init() {
-    XBPSSRC_CF=$XBPS_MASTERDIR/etc/xbps/xbps-src.conf
-
     mkdir -p $XBPS_MASTERDIR/etc/xbps
 
-    cat > $XBPSSRC_CF <<_EOF
+    cat > $XBPS_MASTERDIR/etc/xbps/xbps-src.conf <<_EOF
 # Generated configuration file by xbps-src, DO NOT EDIT!
-_EOF
-    if [ -e "$XBPS_CONFIG_FILE" ]; then
-        grep -E '^XBPS_.*' $XBPS_CONFIG_FILE >> $XBPSSRC_CF
-    fi
-    cat >> $XBPSSRC_CF <<_EOF
+$(grep -E '^XBPS_.*' "$XBPS_CONFIG_FILE")
 XBPS_MASTERDIR=/
 XBPS_CFLAGS="$XBPS_CFLAGS"
 XBPS_CXXFLAGS="$XBPS_CXXFLAGS"
@@ -21,9 +15,8 @@ XBPS_FFLAGS="-fPIC -pipe"
 XBPS_CPPFLAGS="$XBPS_CPPFLAGS"
 XBPS_LDFLAGS="$XBPS_LDFLAGS"
 XBPS_HOSTDIR=/host
+# End of configuration file.
 _EOF
-
-    echo "# End of configuration file." >> $XBPSSRC_CF
 
     # Create custom script to start the chroot bash shell.
     cat > $XBPS_MASTERDIR/bin/xbps-shell <<_EOF
@@ -35,20 +28,12 @@ XBPS_SRC_VERSION="$XBPS_SRC_VERSION"
 
 PATH=/void-packages:/usr/bin:/usr/sbin
 
-exec env -i -- SHELL=/bin/sh PATH="\$PATH" DISTCC_HOSTS="\$XBPS_DISTCC_HOSTS" DISTCC_DIR="/host/distcc" @@XARCH@@ \
-    @@CHECK@@ CCACHE_DIR="/host/ccache" IN_CHROOT=1 LC_COLLATE=C LANG=en_US.UTF-8 TERM=linux HOME="/tmp" \
+exec env -i -- SHELL=/bin/sh PATH="\$PATH" DISTCC_HOSTS="\$XBPS_DISTCC_HOSTS" DISTCC_DIR="/host/distcc" \
+    ${XBPS_ARCH+XBPS_ARCH=$XBPS_ARCH} ${XBPS_CHECK_PKGS+XBPS_CHECK_PKGS=$XBPS_CHECK_PKGS} \
+    CCACHE_DIR="/host/ccache" IN_CHROOT=1 LC_COLLATE=C LANG=en_US.UTF-8 TERM=linux HOME="/tmp" \
     PS1="[\u@$XBPS_MASTERDIR \W]$ " /bin/bash +h
 _EOF
-    if [ -n "$XBPS_ARCH" ]; then
-        sed -e "s,@@XARCH@@,XBPS_ARCH=${XBPS_ARCH},g" -i $XBPS_MASTERDIR/bin/xbps-shell
-    else
-        sed -e 's,@@XARCH@@,,g' -i $XBPS_MASTERDIR/bin/xbps-shell
-    fi
-    if [ -z "$XBPS_CHECK_PKGS" ]; then
-        sed -e 's,@@CHECK@@,,g' -i $XBPS_MASTERDIR/bin/xbps-shell
-    else
-        sed -e "s,@@CHECK@@,XBPS_CHECK_PKGS=$XBPS_CHECK_PKGS,g" -i $XBPS_MASTERDIR/bin/xbps-shell
-    fi
+
     chmod 755 $XBPS_MASTERDIR/bin/xbps-shell
 
     cp -f /etc/resolv.conf $XBPS_MASTERDIR/etc

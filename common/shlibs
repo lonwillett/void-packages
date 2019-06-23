@@ -51,7 +51,7 @@ libcidn.so.1 glibc-2.29_1
 libmvec.so.1 glibc-2.29_1
 libz.so.1 zlib-1.2.3_1
 libbz2.so.1 bzip2-1.0.5_1
-libarchive.so.13 libarchive-3.1.2_1
+libarchive.so.13 libarchive-3.3.3_5
 libcc1.so.0 gcc-6.2.1_1
 libcc1plugin.so.0 gcc-6.2.1_1
 libitm.so.1 libitm-4.7.3_1
@@ -1115,7 +1115,7 @@ libORBit-2.so.0 libORBit2-2.14.19_1
 libORBit-imodule-2.so.0 libORBit2-2.14.19_1
 libORBitCosNaming-2.so.0 libORBit2-2.14.19_1
 libminiupnpc.so.17 miniupnpc-2.1_1
-libxbps.so.3 libxbps-0.53_1
+libxbps.so.4 libxbps-0.54_1
 libatf-c.so.1 atf-libs-0.21_1
 libatf-c++.so.2 atf-libs-0.21_1
 libvdeplug.so.3 libvde2-2.3.2_1

@@ -8,8 +8,8 @@ _triplet="powerpc64-linux-musl"
 _sysroot="/usr/${_triplet}"
 
 pkgname=cross-${_triplet}
-version=0.30
-revision=5
+version=0.31
+revision=1
 short_desc="Cross toolchain for powerpc64 with musl"
 maintainer="q66 <daniel@octaforge.org>"
 homepage="https://www.voidlinux.org/"
@@ -89,9 +89,6 @@ _gcc_bootstrap() {
 	_apply_patch -p1 ${FILESDIR}/libgnarl-musl.patch
 
 	sed -i 's/lib64/lib/' gcc/config/rs6000/linux64.h
-
-	# REMOVE WITH 9.1
-	sed -i 's/ \-D__gnu_linux__//' gcc/config/rs6000/sysv4.h
 
 	msg_normal "Building cross gcc bootstrap\n"
 

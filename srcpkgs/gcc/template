@@ -8,7 +8,7 @@ _isl_version=0.19
 
 pkgname=gcc
 version=${_minorver}.0
-revision=1
+revision=2
 short_desc="GNU Compiler Collection"
 maintainer="Juan RP <xtraeme@voidlinux.org>"
 homepage="http://gcc.gnu.org"
@@ -163,12 +163,6 @@ pre_configure() {
 	sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" {gcc,libiberty}/configure
 	case "$XBPS_TARGET_MACHINE" in
 		*-musl) patch -p1 -i ${FILESDIR}/libgnarl-musl.patch ;;
-	esac
-	# REMOVE WITH 9.1
-	case "$XBPS_TARGET_MACHINE" in
-		ppc*-musl)
-			sed -i 's/ \-D__gnu_linux__//' gcc/config/rs6000/sysv4.h
-			;;
 	esac
 }
 do_configure() {

@@ -42,7 +42,7 @@ do_configure() {
 
 	# If there's a file called <arch>-dotconfig, use it to
 	# configure the kernel; otherwise use arch defaults and all stuff
-	# as modules (defconfig+allmodconfig).
+	# as modules (allmodconfig).
 	local arch subarch _args
 
 	case "$XBPS_TARGET_MACHINE" in
@@ -72,8 +72,7 @@ do_configure() {
 		cp -f ${FILESDIR}/${XBPS_TARGET_MACHINE%%-musl}-dotconfig .config
 		make ${makejobs} ARCH=$arch ${_args} oldconfig
 	else
-		msg_normal "Defaulting to 'defconfig and allmodconfig'.\n"
-		make ${makejobs} ARCH=$arch ${_args} defconfig
+		msg_normal "Defaulting to 'allmodconfig'.\n"
 		make ${makejobs} ARCH=$arch ${_args} allmodconfig
 	fi
 	# Always use our revision to CONFIG_LOCALVERSION to match our pkg version.
@@ -286,8 +285,8 @@ do_install() {
 	mkdir -p ${hdrdest}/arch/x86/ras
 	cp -a arch/x86/ras/Kconfig ${hdrdest}/arch/x86/ras/Kconfig
 
-	# Extract debugging symbols
-	msg_normal "$pkgver: extracting debug info, please wait...\n"
+	# Extract debugging symbols and compress modules
+	msg_normal "$pkgver: extracting debug info and compressing modules, please wait...\n"
 	install -Dm644 vmlinux ${DESTDIR}/usr/lib/debug/boot/vmlinux-${_kernver}
 	(
 	cd ${DESTDIR}

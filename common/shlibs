@@ -3385,7 +3385,7 @@ libcaf_core.so.0.16.2 bro-2.6.1_1
 libcaf_openssl.so.0.16.2 bro-2.6.1_1
 libllhttp.so.1 llhttp-1.0.1_1
 libpinyin.so.13 libpinyin-2.2.1_1
-libuhd.so.3 uhd-3.13.0.2_1
+libuhd.so.3.14.1 uhd-3.14.1.0_1
 libeditline.so.1 editline-1.16.0_1
 libgnuradio-rds-3.7.0git.so.0.0.0 gnuradio-rds-1.1.0_1
 libgnuradio-nrsc5-1.0.0git.so.0.0.0 gnuradio-nrsc5-1.0.0_1
@@ -3482,3 +3482,9 @@ libgtk-4.so.0.9400.0 gtk4-3.94.0_1
 libmodule.so.4 libmodule-4.1.0_1
 libgnustep-gui.so.0.27 gnustep-gui-0.27.0_1
 libmhash.so.2 mhash-0.9.9.9_1
+librlottie.so.0 rlottie-0.0.20160709_1
+libfstrm.so.0 fstrm-0.5.0_1
+libknot.so.9 libknot-2.8.2_1
+libdnssec.so.7 libknot-2.8.2_1
+libzscanner.so.3 libknot-2.8.2_1
+libkres.so.9 knot-resolver-4.0.0_1

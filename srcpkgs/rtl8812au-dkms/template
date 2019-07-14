@@ -1,8 +1,8 @@
 # Template file for 'rtl8812au-dkms'
 pkgname=rtl8812au-dkms
 version=5.2.20.2
-revision=5
-_commit=ac063a4b1a87855e10f6cd1f358aaccbeee9b9c1
+revision=6
+_commit=6faa3eaf8916667cb7f4ab59923b3608e6ab7b18
 patch_args="-Np1"
 wrksrc=rtl8812au-${_commit}
 archs=noarch
@@ -12,7 +12,7 @@ license="GPL-2"
 homepage="https://github.com/gordboy/rtl8812au"
 hostmakedepends="unzip"
 distfiles="$homepage/archive/$_commit.zip"
-checksum=fcc28f51682edefbe7d134431e911de105599c6e95fb95073935c1ff7a773abc
+checksum=8e8bc1bd8fd5c8cfbbde863ad68dea9e767572019a98b238acc7cd1206efb06e
 
 dkms_modules="rtl8812au ${version}"
 depends="dkms"

@@ -1,7 +1,7 @@
 # Template file for 'qt5'
 pkgname=qt5
 version=5.13.0
-revision=3
+revision=4
 wrksrc="qt-everywhere-src-${version}"
 build_style=gnu-configure
 hostmakedepends="cmake clang flex git glib-devel gperf ninja pkg-config
@@ -14,7 +14,7 @@ makedepends="SDL2-devel Vulkan-Headers alsa-lib-devel double-conversion-devel
  opus-devel pciutils-devel pcre2-devel postgresql-libs-devel
  protobuf-devel pulseaudio-devel snappy-devel tslib-devel
  unixodbc-devel xcb-util-image-devel xcb-util-keysyms-devel
- xcb-util-renderutil-devel xcb-util-wm-devel libzstd-devel"
+ xcb-util-renderutil-devel xcb-util-wm-devel libzstd-devel harfbuzz-devel"
 depends="qtchooser"
 short_desc="Cross-platform application and UI framework (QT5)"
 maintainer="Jürgen Buchmüller <pullmoll@t-online.de>"
@@ -27,6 +27,8 @@ replaces="qt5-doc<5.6.0 qt5-quick1<5.6.0 qt5-quick1-devel<5.6.0 qt5-webkit<5.6.0
 
 build_options="webengine"
 desc_option_webengine="Build Chromium-based WebEngine component"
+
+makedepends+=" harfbuzz-devel"
 
 case "$XBPS_TARGET_MACHINE" in
 	armv5tel*) ;; # qtwebengine uses VSM assembler commands

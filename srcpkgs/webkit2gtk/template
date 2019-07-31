@@ -1,7 +1,7 @@
 # Template file for 'webkit2gtk'
 pkgname=webkit2gtk
 version=2.24.3
-revision=1
+revision=2
 wrksrc="webkitgtk-${version}"
 build_style=cmake
 build_helper="gir"
@@ -28,6 +28,8 @@ license="LGPL-2.1-or-later, BSD-2-Clause"
 homepage="https://webkitgtk.org/"
 distfiles="${homepage}/releases/webkitgtk-${version}.tar.xz"
 checksum=940d746d7e82c357222feb5b3f44c4b201e81df7d81ddca5ca2bf3ae0acf6c51
+
+makedepends+=" qt5-devel"
 
 # ETOOHUGE
 nodebug=1

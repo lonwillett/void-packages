@@ -1,7 +1,7 @@
 # Template file for 'gnucash'
 pkgname=gnucash
 version=3.6
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DWITH_SQL=0 -DWITH_PYTHON=1"
 hostmakedepends="pkg-config guile python3 libxslt perl"
@@ -20,6 +20,8 @@ pycompile_module="gnucash"
 pycompile_dirs="usr/share/gnucash/python"
 conf_files="/etc/gnucash/environment"
 nocross="fails to compile guile code when cross-compiling"
+
+broken="https://build.voidlinux.org/builders/x86_64-musl_builder/builds/22073/steps/shell_3/logs/stdio"
 
 CXXFLAGS="-Wno-error"
 CFLAGS="-Wno-error"

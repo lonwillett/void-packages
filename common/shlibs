@@ -558,6 +558,7 @@ libpackagekit-glib2.so.18 PackageKit-1.1.12_1
 libpsl.so.5 libpsl-0.20.2_1
 libsoup-2.4.so.1 libsoup-2.34.0_1
 libsoup-gnome-2.4.so.1 libsoup-gnome-2.34.0_1
+libuninum.so.5 libuninum-2.7_1
 libunique-3.0.so.0 libunique-2.91.4_1
 libwebkit2gtk-4.0.so.37 webkit2gtk-2.6.2_1
 libjavascriptcoregtk-4.0.so.18 webkit2gtk-2.6.2_1
@@ -3499,3 +3500,4 @@ libbcc_bpf.so.0 bcc-0.10.0_1
 libde265.so.0 libde265-1.0.3_1
 libheif.so.1 libheif-1.4.0_1
 libuninameslist.so.1 libuninameslist-20190701_1
+libgambit.so.4 gambit-4.9.3_1

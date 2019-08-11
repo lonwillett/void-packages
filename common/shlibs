@@ -720,6 +720,7 @@ libaprutil-1.so.0 apr-util-1.3.9_1
 libnetpgp.so.0 libnetpgp-20100313_1
 libmj.so.0 libmj-20140211_1
 libmca_common_sm.so.40 libopenmpi-3.0.1_1
+libmca_common_dstore.so.1 libopenmpi-4.0.1_1
 libmca_common_ompio.so.41 libopenmpi-3.0.1_1
 libmca_common_monitoring.so.50 libopenmpi-3.1.2_1
 libmpi.so.40 libopenmpi-3.0.1_1
@@ -1600,12 +1601,12 @@ libplibnet.so.1 plib-1.8.5_1
 libplibpsl.so.1 plib-1.8.5_1
 libplibpw.so.1 plib-1.8.5_1
 libode.so.8 libode-0.16_1
-libosmocore.so.12 libosmocore-1.0.0_1
+libosmocore.so.12 libosmocore-1.2.0_1
 libosmovty.so.4 libosmocore-0.10.2_1
 libosmosim.so.0 libosmocore-0.8.0_1
 libosmocodec.so.0 libosmocore-0.6.6_1
-libosmogsm.so.11 libosmocore-1.0.0_1
-libosmogb.so.6 libosmocore-0.12.1_1
+libosmogsm.so.13 libosmocore-1.2.0_1
+libosmogb.so.9 libosmocore-1.2.0_1
 libosmoctrl.so.0 libosmocore-0.7.0_1
 libgtkglext-x11-1.0.so.0 gtkglext-1.2.0_4
 libgdkglext-x11-1.0.so.0 gtkglext-1.2.0_4
@@ -2357,7 +2358,7 @@ libp2edrvmagick++.so.0 libpstoedit-3.70_1
 libp2edrvstd.so.0 libpstoedit-3.70_1
 libpstoedit.so.0 libpstoedit-3.70_1
 libtolua.so tolua-5.2.0_1
-libhwloc.so.5 libhwloc-1.11.2_1
+libhwloc.so.15 libhwloc-2.0.4_1
 libnetfilter_cttimeout.so.1 libnetfilter_cttimeout-1.0.0_1
 libnetfilter_cthelper.so.0 libnetfilter_cthelper-1.0.0_1
 libnetfilter_queue.so.1 libnetfilter_queue-1.0.2_1

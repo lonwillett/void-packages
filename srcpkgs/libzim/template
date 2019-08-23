@@ -1,6 +1,6 @@
 # Template file for 'libzim'
 pkgname=libzim
-version=5.0.1
+version=5.1.0
 revision=1
 build_style=meson
 hostmakedepends="pkg-config git"
@@ -13,7 +13,7 @@ license="GPL-2.0-or-later"
 homepage="https://wiki.openzim.org/wiki/OpenZIM"
 changelog="https://github.com/openzim/libzim/blob/${version}/ChangeLog"
 distfiles="https://github.com/openzim/libzim/archive/${version}.tar.gz"
-checksum=b567fd90be772a47dfc9120f95344f46441f5fa5f8780e44726903b14e27a894
+checksum=0c8f1ba928a21874beb10ef21d95e51b2f313ccfc05672820366b74984fb0d02
 replaces="libzim-tools>=0"
 
 build_options="zlib xapian"

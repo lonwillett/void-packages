@@ -1,12 +1,12 @@
 # Template file for 'libqtxdg'
 pkgname=libqtxdg
 version=3.3.1
-revision=2
+revision=3
 build_style=cmake
 hostmakedepends="pkg-config qt5-qmake qt5-host-tools lxqt-build-tools"
 makedepends="qt5-svg-devel"
 short_desc="Qt implementation of freedesktop.org XDG specifications"
-maintainer="Juan RP <xtraeme@voidlinux.org>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://lxqt.org/"
 distfiles="https://github.com/lxqt/libqtxdg/releases/download/${version}/libqtxdg-${version}.tar.xz"

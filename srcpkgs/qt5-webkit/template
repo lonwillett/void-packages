@@ -13,7 +13,7 @@ makedepends="libwebp-devel libxslt-devel libXcomposite-devel sqlite-devel
  qt5-location-devel qt5-sensors-devel qt5-webchannel-devel hyphen-devel
  ruby-devel"
 short_desc="Cross-platform application and UI framework (Qt5) - WebKit2 component"
-maintainer="Juan RP <xtraeme@voidlinux.org>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://www.qt.io/"
 distfiles="https://download.qt.io/snapshots/ci/qtwebkit/${_v}/${_snap}/src/submodules/qtwebkit-everywhere-src-${_v}.tar.xz"
@@ -27,6 +27,11 @@ if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -DRUBY_CONFIG_INCLUDE_DIR=${XBPS_CROSS_BASE}/usr/include/ruby-*"
 fi
 
+# reduce memory footprint when linking
+if [ "$XBPS_WORDSIZE" -eq 32 ]; then
+	nodebug=yes
+fi
+
 case "$XBPS_TARGET_MACHINE" in
 	armv6*)	# Need libatomic for __atomic_fetch_add_8 etc.
 		makedepends+=" libatomic-devel"
@@ -34,9 +39,6 @@ case "$XBPS_TARGET_MACHINE" in
 		;;
 	ppc64*)	# no JIT on ppc64 and other build workarounds
 		configure_args+=" -DENABLE_JIT=OFF -DUSE_SYSTEM_MALLOC=ON"
-		;;
-	i686*)  # try to reduce memory footprint when linking
-		nodebug=1
 		;;
 	ppc*)   # no JIT on ppc and need libatomic
 		configure_args+=" -DENABLE_JIT=OFF -DUSE_SYSTEM_MALLOC=ON"

@@ -7,13 +7,13 @@ configure_args="--program-prefix=eu-"
 hostmakedepends="automake libtool"
 makedepends="bzip2-devel liblzma-devel zlib-devel"
 short_desc="Utilities to handle ELF object files"
-maintainer="Juan RP <xtraeme@voidlinux.org>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://sourceware.org/elfutils/"
 distfiles="https://sourceware.org/${pkgname}/ftp/${version}/${pkgname}-${version}.tar.bz2"
 checksum=eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023
 
-CFLAGS="-Wno-error"
+CFLAGS="-Wno-error -Wno-error=null-dereference"
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) makedepends+=" argp-standalone musl-fts-devel musl-obstack" ;;

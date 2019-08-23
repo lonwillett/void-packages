@@ -17,7 +17,7 @@ makedepends="xorgproto eudev-libudev-devel libpng-devel libass-devel
  sqlite-devel librsvg-devel libtheora-devel speex-devel pulseaudio-devel
  libmodplug-devel libva-devel libvdpau-devel v4l-utils-devel xvidcore-devel"
 short_desc="Multimedia player"
-maintainer="Juan RP <xtraeme@voidlinux.org>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2"
 homepage="http://www.mplayerhq.hu/"
 distfiles="http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-${version}.tar.xz"
@@ -33,8 +33,11 @@ do_configure() {
 	sed 's|-march=i486||g' -i configure
 
 	case "$XBPS_TARGET_MACHINE" in
-		i686*|x86_64*|ppc64*) configure_args+=" --enable-vdpau --enable-runtime-cpudetection";;
+		i686*|x86_64*|ppc*) configure_args+=" --enable-vdpau --enable-runtime-cpudetection";;
 	esac
+
+	# we enable runtime cpu detection for ppc, let the altivec bits build
+	export CFLAGS="${CFLAGS/-mno-altivec}"
 
 	./configure --prefix=/usr \
 		--disable-gui --disable-arts --disable-liblzo --disable-speex \

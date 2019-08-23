@@ -1,6 +1,6 @@
 # Template file for 'lesspipe'
 pkgname=lesspipe
-version="1.83.20160929"
+version=1.84
 revision=1
 wrksrc=lesspipe
 #create_wrksrc=yes
@@ -15,10 +15,12 @@ patch_args="-Np1"
 hostmakedepends="git perl"
 #makedepends=""
 depends="less"
-short_desc="lesspipe.sh, a preprocessor for less"
-maintainer="Lon Willett <xgit@lonw.net>"
-license="GPL-2"
-homepage="https://github.com/wofr06/lesspipe"
+short_desc="Input filter for the pager less"
+maintainer="Olga Ustuzhanina <me@laserbat.pw>"
+license="GPL-2.0-only"
+homepage="http://www-zeuthen.desy.de/~friebel/unix/lesspipe.html"
+distfiles="https://github.com/wofr06/lesspipe/archive/${version}.tar.gz"
+checksum=5eb4811cc8ded108e98448bd83057e730906f643ad689ccd695828f2a46c4410
 
 do_fetch() {
     git clone https://github.com/wofr06/lesspipe.git

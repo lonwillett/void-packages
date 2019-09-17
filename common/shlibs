@@ -542,7 +542,7 @@ libakonadi-filestore.so.5 kdepim-runtime-17.12.3_1
 libmaildir.so.5 kdepim-runtime-17.12.3_1
 libfolderarchivesettings.so.5 kdepim-runtime-17.12.3_1
 libkColorPicker.so.0.0.1 kColorPicker-0.0.1_1
-libkImageAnnotator.so.0.0.2 kImageAnnotator-0.0.2_1
+libkImageAnnotator.so.0.1.0 kImageAnnotator-0.1.0_1
 libbabl-0.1.so.0 babl-0.1.16_1
 libbamf3.so.2 bamf-0.5.1_1
 libicuio.so.64 icu-libs-64.1_1
@@ -1151,6 +1151,7 @@ libguess.so.1 libguess-1.1_1
 libaudcore.so.5 audacious-3.9_1
 libaudgui.so.5 audacious-3.9_1
 libaudtag.so.3 audacious-3.8_1
+libaudqt.so.2 audacious-3.10.1_2
 libgstreamer-1.0.so.0 gstreamer1-1.0.0_1
 libgstbase-1.0.so.0 gstreamer1-1.0.0_1
 libgstcontroller-1.0.so.0 gstreamer1-1.0.0_1
@@ -2958,7 +2959,7 @@ libvted-3.so.0 libvted-3.7.0_2
 libpeasd-3.so.0 libpeasd-3.7.0_2
 libgstreamerd-3.so.0 libgstreamerd-3.7.0_2
 libgtkdgl-3.so.0 libgtkdgl-3.7.0_2
-libmega.so.30504 MEGAsdk-3.5.4_1
+libmega.so.30602 MEGAsdk-3.6.2a_1
 libopenglrecorder.so.0 libopenglrecorder-0.1.0_1
 libgpod.so.4 libgpod-0.8.3_1
 libi2c.so.0 i2c-tools-4.0_1
@@ -2971,8 +2972,8 @@ libKF5Kipi.so.32.0.0 libkipi5-17.04.3_1
 libhackrf.so.0 libhackrf-2017.02.1_1
 libtecla.so.1 libtecla-1.6.3_1
 libtecla_r.so.1 libtecla-1.6.3_1
-libzim.so.5 libzim-5.0.0_1
-libkiwix.so.6 kiwix-lib-6.0.0_1
+libzim.so.6 libzim-6.0.1_1
+libkiwix.so.7 kiwix-lib-7.0.0_1
 libaria2.so.0 libaria2-1.33.1_3
 librpm.so.8 librpm-4.14.1_1
 librpmsign.so.8 librpmsign-4.14.1_1

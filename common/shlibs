@@ -541,7 +541,7 @@ libkdexoauth2.so.3 kdepim-runtime-17.12.3_1
 libakonadi-filestore.so.5 kdepim-runtime-17.12.3_1
 libmaildir.so.5 kdepim-runtime-17.12.3_1
 libfolderarchivesettings.so.5 kdepim-runtime-17.12.3_1
-libkColorPicker.so.0.0.1 kColorPicker-0.0.1_1
+libkColorPicker.so.0.1.0 kColorPicker-0.1.0_1
 libkImageAnnotator.so.0.1.0 kImageAnnotator-0.1.0_1
 libbabl-0.1.so.0 babl-0.1.16_1
 libbamf3.so.2 bamf-0.5.1_1
@@ -1301,6 +1301,7 @@ libunwind-aarch64.so.8 libunwind-1.2rc1_1
 libunwind-ppc32.so.8 libunwind-1.2.1_1
 libunwind-ppc64.so.8 libunwind-1.2.1_1
 libmicrohttpd.so.12 libmicrohttpd-0.9.48_1
+libmicrodns.so.0 libmicrodns-0.1.0_1
 libgit2.so.28 libgit2-0.28.0_1
 libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
 libagg.so.2 agg-2.5_1
@@ -2065,6 +2066,7 @@ libsfml-graphics.so.2.5 SFML-2.5.0_1
 libclamav.so.9 clamav-0.101.0_1
 libclamunrar.so.9 clamav-0.101.0_1
 libclamunrar_iface.so.9 clamav-0.101.0_1
+libfreshclam.so.2 clamav-0.102.0_1
 libqca-qt5.so.2 qca-qt5-2.1.3_1
 libqt5keychain.so.1 qtkeychain-qt5-0.7.0_1
 libphonon4qt5.so.4 phonon-qt5-4.8.3_1
@@ -2926,7 +2928,7 @@ libArcus.so.3 libArcus-2.7.0_1
 libArcus.so.3 libArcus-3.0.3_1
 libkrfbprivate.so.5.0 krfb-17.08.1_1
 libArcus.so.3 libArcus-3.1.0_1
-libgutenprint.so.8 gutenprint-5.3.1_1
+libgutenprint.so.9 gutenprint-5.3.3_1
 libunbound.so.8 unbound-1.8.0_1
 libmirage.so.11 libmirage-3.1.0_1
 libwkhtmltox.so.0 libwkhtmltopdf-0.12.5_1
@@ -3520,3 +3522,4 @@ libnozzle.so.1 libnozzle1-1.11_2
 libmygpo-qt5.so.1 libmygpo-qt-1.1.0_1
 libluv.so.1 libluv-1.30.1.0_1
 libarmadillo.so.9 armadillo-9.700.2_1
+libvarnishapi.so.2 libvarnishapi-6.3.0_1

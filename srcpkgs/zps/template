@@ -1,0 +1,11 @@
+# Template file for 'zps'
+pkgname=zps
+version=1.2.0
+revision=1
+build_style=cmake
+short_desc="Small utility for listing and reaping zombie processes"
+maintainer="Andrew Benson <abenson+void@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/orhun/zps"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=6347422c883065349a24bafbe39cdb1e8293a92a4402015f3ae1dbd26b817621

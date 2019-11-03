@@ -5,11 +5,11 @@
 #
 #   https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=224931
 
-_githash="047589b6dcd5dfd9673a995c5d36ec4073e578b5"
+_githash="bbdf44a11a065ebb2aa2ed5690b82287739b471d"
 _gitshort="${_githash:0:7}"
 
 pkgname=rpi-kernel
-version=4.19.79
+version=4.19.81
 revision=1
 wrksrc="linux-${_githash}"
 maintainer="Peter Bui <pbui@github.bx612.space>"
@@ -17,7 +17,7 @@ homepage="http://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel for Raspberry Pi (${version%.*} series [git ${_gitshort}])"
 distfiles="https://github.com/raspberrypi/linux/archive/${_githash}.tar.gz"
-checksum=f617730cd3a3ca35351259cc58105d95a4d106b8a2971386c81dab073c0fbd15
+checksum=b9ebdfc4622613e919d72089445ab715e2e438a31ecd1bdb357953bed0be1512
 
 _kernver="${version}_${revision}"
 
@@ -80,6 +80,14 @@ do_configure() {
 	echo "CONFIG_PROC_EVENTS=y" >> "$defconfig"
 	echo "CONFIG_F2FS_FS_SECURITY=y" >> "$defconfig"
 	echo "CONFIG_CGROUP_PIDS=y" >> "$defconfig"
+	
+	# IR Remote Support
+	echo "CONFIG_RC_CORE=y" >> "$defconfig"
+	echo "CONFIG_LIRC=y" >> "$defconfig"
+	echo "CONFIG_RC_DECODERS=y" >> "$defconfig"
+	echo "CONFIG_RC_DEVICES=y" >> "$defconfig"
+	echo "CONFIG_IR_RC6_DECODER=m" >> "$defconfig"
+	echo "CONFIG_IR_MCEUSB=m" >> "$defconfig"
 
 	make ${makejobs} ${_cross} ARCH=${_arch} ${target}
 
@@ -173,6 +181,8 @@ do_install() {
 	# they need to be copied to ${hdrdest} before this step
 	if [ "$CROSS_BUILD" ]; then
 		make ${makejobs} ARCH=${_arch} _mrproper_scripts
+		# remove host specific objects as well
+		find scripts -name '*.o' -delete
 	fi
 
 	# Copy files necessary for later builds.

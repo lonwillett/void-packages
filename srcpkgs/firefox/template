@@ -3,7 +3,7 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/firefox-i18n".
 #
 pkgname=firefox
-version=69.0.2
+version=70.0.1
 revision=1
 build_helper="rust"
 short_desc="Mozilla Firefox web browser"
@@ -11,7 +11,7 @@ maintainer="Johannes <johannes.brechtmann@gmail.com>"
 license="MPL-2.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.mozilla.org/firefox/"
 distfiles="${MOZILLA_SITE}/${pkgname}/releases/${version}/source/${pkgname}-${version}.source.tar.xz"
-checksum=2904ef954626d2a7f320670ccb7cb5d9060610f091c94190a6cbee14aa2cd82e
+checksum=f2e9bb26af7682b31e82fdfc3a4b3e04fd1caa8b004469ea608185d33e35691b
 
 lib32disabled=yes
 
@@ -25,7 +25,7 @@ makedepends="nss-devel libjpeg-turbo-devel gtk+-devel gtk+3-devel icu-devel
  $(vopt_if startup_notification startup-notification-devel)
  $(vopt_if xscreensaver libXScrnSaver-devel)
  $(vopt_if sndio sndio-devel)"
-depends="nss>=3.37.3 desktop-file-utils hicolor-icon-theme"
+depends="nss>=3.46.1 desktop-file-utils hicolor-icon-theme"
 conflicts="firefox-esr>=0"
 
 build_options="alsa dbus pulseaudio startup_notification xscreensaver sndio wayland"

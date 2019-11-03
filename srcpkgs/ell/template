@@ -1,6 +1,6 @@
 # Template file for 'ell'
 pkgname=ell
-version=0.24
+version=0.26
 revision=1
 build_style=gnu-configure
 configure_args="--enable-glib"
@@ -11,7 +11,7 @@ maintainer="Peter Bui <pbui@github.bx612.space>"
 license="GPL-2.0-only"
 homepage="https://01.org/ell"
 distfiles="https://mirrors.edge.kernel.org/pub/linux/libs/ell/ell-${version}.tar.xz"
-checksum=2f96de39c48cc7facf91015a4dbb123541a8f7818cffa7885db6f8837837cc15
+checksum=7855b4b8f271ba6ee67d87d0965b975a9a8dbeaa616665ca2248afa3b5fcbc77
 
 ell-devel_package() {
 	depends="ell-${version}_${revision}"

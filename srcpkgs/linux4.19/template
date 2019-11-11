@@ -1,14 +1,14 @@
 # Template file for 'linux4.19'
 pkgname=linux4.19
-version=4.19.81
-revision=2
+version=4.19.83
+revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=293ec1ae0f6b3b4be83a217224b51d137f2163cf2d9d294eecf5d0a354e4e29d
+checksum=02ba4809df71d221e65998ded6b1ae9c11752c39aa386c475fd40b2735d650dd
 patch_args="-Np1"
 
 nodebug=yes  # -dbg package is generated below manually

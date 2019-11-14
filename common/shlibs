@@ -146,7 +146,7 @@ libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.129 nvidia390-libs-390.129_1 ignore
+libnvidia-fatbinaryloader.so.390.132 nvidia390-libs-390.132_1 ignore
 libnvidia-fatbinaryloader.so.430.40 nvidia-libs-430.40_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
@@ -3351,7 +3351,7 @@ libcotp.so.12 libcotp-1.2.1_1
 libunarr.so.1 libunarr-1.0.1_1
 libretro-gtk-0.14.so.0 retro-gtk-0.16.0_1
 libmanette-0.2.so.0 libmanette-0.2.1_1
-libfmt.so.5 fmt-5.2.1_1
+libfmt.so.6 fmt-5.2.1_1
 libelementary-calendar.so.0 libio.elementary.calendar-4.2.3_1
 libolm.so.3 olm-3.0.0_1
 libcrypto.so.44 libcrypto44-2.8.2_1

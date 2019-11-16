@@ -3357,9 +3357,9 @@ libolm.so.3 olm-3.0.0_1
 libcrypto.so.44 libcrypto44-2.8.2_1
 libtls.so.18 libtls18-2.8.2_1
 libssl.so.46 libssl46-2.8.2_1
-libcrypto.so.45 libcrypto45-2.9.2_1
-libtls.so.19 libtls19-2.9.2_1
-libssl.so.47 libssl47-2.9.2_1
+libcrypto.so.45 libcrypto45-3.0.2_1
+libtls.so.19 libtls19-3.0.2_1
+libssl.so.47 libssl47-3.0.2_1
 libxmlb.so.1 libxmlb-0.1.3_1
 libvoikko.so.1 libvoikko-4.2_1
 libfstrcmp.so.0 libfstrcmp-0.7.D001_1
@@ -3671,3 +3671,7 @@ librte_cryptodev.so.8 dpdk-19.08_1
 librte_rawdev.so.1 dpdk-19.08_1
 librte_kni.so.2 dpdk-19.08_1
 libredwg.so.0 libredwg-0.9_1
+libgcj-tools.so.17 libgcj-6.5.0_1
+libgcj_bc.so.1 libgcj-6.5.0_1
+libgcj.so.17 libgcj-6.5.0_1
+libgij.so.17 libgcj-6.5.0_1

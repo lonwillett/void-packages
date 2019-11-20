@@ -339,6 +339,7 @@ libtheoraenc.so.1 libtheora-1.0_1
 libcdda_interface.so.0 libcdparanoia-10.2_10
 libcdda_paranoia.so.0 libcdparanoia-10.2_10
 libasound.so.2 alsa-lib-1.0.20_1
+libatopology.so.2 alsa-lib-1.2.1_1
 libvisual-0.4.so.0 libvisual-0.4.0_1
 libxfsm-4.6.so.0 xfce4-session-4.9.1_1
 libxklavier.so.16 libxklavier-5.0_1
@@ -1788,6 +1789,12 @@ libawt_xawt.so openjdk11-11.0.5+10_1
 libjava.so openjdk11-11.0.5+10_1
 libjli.so openjdk11-11.0.5+10_1
 libjvm.so openjdk11-11.0.5+10_1
+libjawt.so openjdk7-bootstrap-7u221b02_1
+libawt.so openjdk7-bootstrap-7u221b02_1
+libawt_xawt.so openjdk7-bootstrap-7u221b02_1
+libjava.so openjdk7-bootstrap-7u221b02_1
+libjli.so openjdk7-bootstrap-7u221b02_1
+libjvm.so openjdk7-bootstrap-7u221b02_1
 libucl.so.5 libucl-0.8.1_1
 libhandle.so.1 xfsprogs-3.2.1_1
 libnfnetlink.so.0 libnfnetlink-1.0.1_1
@@ -2347,7 +2354,7 @@ libmunge.so.2 munge-libs-0.5.11_1
 libmgba.so.0.7 libmgba-0.7.0_1
 libglabels-3.0.so.8 libglabels30-3.2.1_1
 libglbarcode-3.0.so.0 libglabels30-3.2.1_1
-libjim.so.0.78 jimtcl-0.78_1
+libjim.so.0.79 jimtcl-0.79_1
 libftdi1.so.2 libftdi1-1.2_1
 libax25.so.0 libax25-0.0.12rc4_1
 libax25io.so.0 libax25-0.0.12rc4_1

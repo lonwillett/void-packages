@@ -1053,7 +1053,7 @@ libnfsidmap.so.0 libnfsidmap-0.24_1
 libbind9.so.161 bind-libs-9.11.5_1
 libdns.so.1107 bind-libs-9.11.10_1
 libirs.so.161 bind-libs-9.11.5_1
-libisc.so.1100 bind-libs-9.11.5_1
+libisc.so.1104 bind-libs-9.11.13_1
 libisccc.so.161 bind-libs-9.11.5_1
 libisccfg.so.163 bind-libs-9.11.5_1
 liblwres.so.161 bind-libs-9.11.5_1
@@ -1701,7 +1701,8 @@ libefivar.so.1 libefivar-31_1
 libefiboot.so.1 libefivar-31_1
 libportaudio.so.2 portaudio-19.20140130_1
 libportaudiocpp.so.0 portaudio-cpp-19.20140130_1
-libdar.so.5000 libdar-2.4.14_1
+libdar.so.6000 libdar-2.6.6_1
+libdar64.so.6000 libdar-2.6.6_1
 libpython3.so python3-3.6.2_1
 libpython3.6m.so.1.0 python3-3.6.2_1
 libbrscandec2.so.1 brother-brscan3-0.2.11_2
@@ -1777,12 +1778,12 @@ libslab.so.0 libmate-control-center-1.8.2_1
 liblz4.so.1 liblz4-1.8.2_1
 libatrilview.so.3 libatril-1.8.0_1
 libatrildocument.so.3 libatril-1.8.0_1
-libjawt.so openjdk-jre-8u20_2
-libawt.so openjdk-jre-8u20_1
-libawt_xawt.so openjdk-jre-8u20_1
-libjava.so openjdk-jre-8u20_1
-libjli.so openjdk-jre-8u20_1
-libjvm.so openjdk-jre-8u20_1
+libjawt.so openjdk8-jre-8u20_2
+libawt.so openjdk8-jre-8u20_1
+libawt_xawt.so openjdk8-jre-8u20_1
+libjava.so openjdk8-jre-8u20_1
+libjli.so openjdk8-jre-8u20_1
+libjvm.so openjdk8-jre-8u20_1
 libjawt.so openjdk11-11.0.5+10_1
 libawt.so openjdk11-11.0.5+10_1
 libawt_xawt.so openjdk11-11.0.5+10_1
@@ -1947,7 +1948,7 @@ libfm-qt.so.6 libfm-qt-0.14.0_1
 libqtermwidget5.so.0 qtermwidget-0.6.0_1
 libnpth.so.0 npth-1.1_1
 libglfw.so.3 glfw-3.0.4_1
-libusbmuxd.so.4 libusbmuxd-1.0.10_1
+libusbmuxd.so.6 libusbmuxd-1.0.10_1
 libimobiledevice.so.6 libimobiledevice-1.2.0_1
 libstfl.so.0 stfl-0.23_1
 libCDApplet.so cairo-dock-plugins-3.4.0_1
@@ -3526,7 +3527,7 @@ libheif.so.1 libheif-1.4.0_1
 libuninameslist.so.1 libuninameslist-20190701_1
 libgambit.so.4 gambit-4.9.3_1
 liblog4cpp.so.5 log4cpp-1.1.3_1
-libnuspell.so.2 libnuspell-2.3.0_1
+libnuspell.so.3 libnuspell-3.0.0_1
 liblog4c.so.3 log4c-1.2.4_1
 libqb.so.0 libqb-1.0.5_1
 libusbguard.so.0 usbguard-0.7.5_1

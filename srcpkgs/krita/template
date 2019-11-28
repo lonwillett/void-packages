@@ -1,6 +1,6 @@
 # Template file for 'krita'
 pkgname=krita
-version=4.2.7.1
+version=4.2.8.2
 revision=1
 build_style=cmake
 configure_args="-Wno-dev -DBUILD_TESTING=OFF"
@@ -16,8 +16,8 @@ short_desc="Painting and image editing program"
 maintainer="John <johnz@posteo.net>"
 license="GPL-3.0-only"
 homepage="https://krita.org/"
-distfiles="${KDE_SITE}/krita/${version}/krita-${version}.tar.gz"
-checksum=3ed29fd9d8e067def55e703fc55312815c21041d274727e228bdbe0478c09c3d
+distfiles="${KDE_SITE}/krita/${version%.*}/krita-${version}.tar.gz"
+checksum=80f741fa11245ff20a99f529f5f62def17791f3ad2c9aec5c5cf5440ae1fcba7
 nocross=yes
 replaces="calligra-krita>=0"
 

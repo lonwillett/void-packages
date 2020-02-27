@@ -24,9 +24,9 @@ else
 fi
 
 do_extract() {
-	ar p ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${debpkgid} data.tar.gz | tar xzpf - ./usr ./etc
-	gunzip usr/share/doc/${pkgname}/changelog.gz
-	find usr/share/man -type f -name '*.gz' -print0 | xargs -0 gunzip
+	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${debpkgid}
+	bsdtar xzpvf data.tar.gz
+	gunzip usr/share/man/man1/yandex-disk.1.gz
 }
 
 do_install() {

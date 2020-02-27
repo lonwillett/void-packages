@@ -1,6 +1,6 @@
 # Template file for 'wine'
 pkgname=wine
-version=4.21
+version=5.2
 revision=1
 build_style=gnu-configure
 configure_args="--without-gstreamer"
@@ -9,7 +9,7 @@ maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
 distfiles="https://dl.winehq.org/wine/source/${version%%.*}.x/wine-${version}.tar.xz"
-checksum=324ce14a70059835f33d293f0740b1bf0366bc6b5514548bc083d89b44744ad0
+checksum=c10c9c34f0eade1d1063ce983e6f1ad8904c9cb604d8fea4df5e1cefdba85d40
 
 nopie_files="/usr/bin/wine"
 

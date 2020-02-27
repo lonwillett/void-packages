@@ -5,11 +5,11 @@
 #
 #   https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=224931
 
-_githash="798a72f0bbb1a06446b614516d76ff0c2ebaec9b"
+_githash="e645cec69367ba4b6daf63933f48661ab4b59ee1"
 _gitshort="${_githash:0:7}"
 
 pkgname=rpi-kernel
-version=4.19.95
+version=4.19.105
 revision=1
 wrksrc="linux-${_githash}"
 maintainer="Peter Bui <pbui@github.bx612.space>"
@@ -17,7 +17,7 @@ homepage="http://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel for Raspberry Pi (${version%.*} series [git ${_gitshort}])"
 distfiles="https://github.com/raspberrypi/linux/archive/${_githash}.tar.gz"
-checksum=8c800ce213baae3a9b6b62943e50a4f34d31c9a233791d59e7726250db735868
+checksum=bcc3ea5b5b3d6d10953f73e55c43bee8a1c1997826b0299c37c18b0095c18415
 
 _kernver="${version}_${revision}"
 

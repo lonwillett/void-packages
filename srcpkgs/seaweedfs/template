@@ -1,6 +1,6 @@
 # Template file for 'seaweedfs'
 pkgname=seaweedfs
-version=1.45
+version=1.57
 revision=1
 build_style=go
 go_import_path="github.com/chrislusf/seaweedfs"
@@ -11,4 +11,4 @@ maintainer="Toyam Cox <Vaelatern@voidlinux.org>"
 license="Apache-2.0"
 homepage="https://github.com/chrislusf/seaweedfs"
 distfiles="https://github.com/chrislusf/seaweedfs/archive/${version}.tar.gz"
-checksum=c2a653ad10890dc33370e44f70a13ebeeeec270d179022bf9e0c2b9c2b444213
+checksum=d916e17dbf06f34afc6299c374d00cc494433af38fbfd0ec57466b6ab827eb97

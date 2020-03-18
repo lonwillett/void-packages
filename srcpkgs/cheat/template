@@ -1,6 +1,6 @@
 # Template file for 'cheat'
 pkgname=cheat
-version=3.6.0
+version=3.7.1
 revision=1
 build_style=go
 go_import_path="github.com/cheat/cheat/cmd/cheat"
@@ -9,12 +9,10 @@ maintainer="bra1nwave <bra1nwave@protonmail.com>"
 license="MIT"
 homepage="https://github.com/cheat/cheat"
 distfiles="${homepage}/archive/${version}.tar.gz"
-checksum=8441c94d12b6a6f088818c8cabd91f75bc583bee3c66dac7a53851ae1032862f
+checksum=a24cdd2ab82da6115d0daeeeabedb933f9e40ab48ffeec712f442dba945ed856
 
 post_install() {
-	vinstall scripts/cheat.bash 644 \
-		usr/share/bash-completion/completions cheat
-	vinstall scripts/cheat.fish 644 \
-		usr/share/fish/completions
+	vinstall scripts/cheat.bash 644 usr/share/bash-completion/completions cheat
+	vinstall scripts/cheat.fish 644 usr/share/fish/vendor_completions.d
 	vlicense LICENSE.txt
 }

@@ -199,7 +199,7 @@ libtextstyle.so.0 gettext-libs-0.20.1_1
 libattr.so.1 attr-2.4.43_1
 libacl.so.1 acl-2.2.47_1
 libpython2.7.so.1.0 python-2.7_1
-libffi.so.6 libffi-3.1_1
+libffi.so.7 libffi-3.3_1
 libffcall.so.0 ffcall-2.1_1
 libavcall.so.1 ffcall-2.1_1
 libtrampoline.so.1 ffcall-2.1_1
@@ -830,9 +830,9 @@ libtotem.so.0 libtotem-3.6.2_1
 libclutter-1.0.so.0 clutter-1.14.0_1
 libavfs.so.0 libavfs-1.0.5_1
 libdmr.so.0.1 deepin-movie-reborn-3.2.5_1
-libgjs.so.0 gjs-0.7.11_1
-libgjs-gi.so gjs-0.7.11_1
-libgjs-dbus.so.0 gjs-0.7.11_1
+libgjs.so.0 gjs-1.63.3_1
+libgjs-gi.so gjs-1.63.3_1
+libgjs-dbus.so.0 gjs-1.63.3_1
 libtelepathy-glib.so.0 telepathy-glib-0.15.5_1
 libaccountsservice.so.0 accountsservice-0.6.4_1
 libfolks.so.25 folks-0.9.5_1
@@ -861,7 +861,7 @@ libgiblib.so.1 giblib-1.2.4_1
 libgc.so.1 gc-7.6.4_1
 libcord.so.1 gc-7.4_1
 libgslcblas.so.0 gsl-1.15_1
-libgsl.so.23 gsl-2.4_1
+libgsl.so.25 gsl-2.6_1
 liblua5.1.so.5.1 lua51-5.1.5_1
 liblua5.2.so.5.2 lua52-5.2.4_2
 liblua5.3.so.5.3 lua-5.3.1_2
@@ -2557,7 +2557,6 @@ libvidstab.so.1.1 libvidstab-1.1.0_1
 libxdo.so.3 xdotool-3.20150503.1_1
 libabigail.so.0 libabigail-1.0.rc3_1
 libgnome-games-support-1.so.3 libgnome-games-support-1.4.0_1
-libwlc.so.0 wlc-0.0.2_1
 libKDevCMakeCommon.so.33 kdevelop-5.5.0_1
 libKDevClangPrivate.so.33 kdevelop-5.5.0_1
 libKDevCompileAnalyzerCommon.so.33 kdevelop-5.5.0_1
@@ -3853,3 +3852,7 @@ libblosc.so.1 c-blosc-1.17.1_1
 libopenvdb.so.7.0 openvdb-7.0.0_1
 libAlembic.so.1.7 alembic-1.7.12_1
 libmodsecurity.so.3 modsecurity-3.0.4_1
+libraven.so.0 budgie-desktop-10.5.1_1
+libbudgie-private.so.0 budgie-desktop-10.5.1_1
+libbudgietheme.so.0 budgie-desktop-10.5.1_1
+libbudgie-plugin.so.0 budgie-desktop-10.5.1_1

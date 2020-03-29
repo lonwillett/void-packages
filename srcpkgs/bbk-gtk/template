@@ -1,14 +1,15 @@
-# Template file for 'bbk-cli'
-pkgname=bbk-cli
+# Template file for 'bbk-gtk'
+pkgname=bbk-gtk
 version=1.1
 revision=1
 _gitrev=7b810a696c78b746185c11282bdbe3fb7f8c5d4b
-wrksrc=bbkcli-${version}
+wrksrc=bbkgtk-${version}
 build_style=gnu-makefile
-make_build_target="cli"
-make_build_args="GNUTLS=1 -C src/cli"
-makedepends="gnutls-devel"
-short_desc="Bredbandskollen's command line tool"
+make_build_target="bredbandskollen"
+make_build_args="GNUTLS=1 -C src/gtkgui "
+makedepends="gtk+3-devel gnutls-devel glib-devel"
+hostmakedepends="pkg-config"
+short_desc="Bredbandskollen's GTK+ frontend"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2.0-or-later"
 homepage="http://www.bredbandskollen.se/om/mer-om-bbk/bredbandskollen-cli/"
@@ -16,9 +17,9 @@ distfiles="https://github.com/dotse/bbk/archive/${_gitrev}.tar.gz>bbk-${version}
 checksum=cad79e71cedf06daf518db7496e18361f0f0450be168fa9ecb57ae1314d10e2c
 
 post_extract() {
-	mv ${XBPS_BUILDDIR}/bbk-${_gitrev} ${XBPS_BUILDDIR}/bbkcli-${version}
+	mv ${XBPS_BUILDDIR}/bbk-${_gitrev} ${XBPS_BUILDDIR}/bbkgtk-${version}
 }
 
 do_install() {
-	     vbin src/cli/cli bbk_cli
+	     vbin src/gtkgui/bredbandskollen
 }

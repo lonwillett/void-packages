@@ -1,23 +1,28 @@
 # Template file for 'rtl8812au-dkms'
 pkgname=rtl8812au-dkms
-version=5.2.20.2
-revision=7
-_commit=30d47a0a3f43ccb19e8fd59fe93d74a955147bf2
-patch_args="-Np1"
-wrksrc=rtl8812au-${_commit}
+version=20200318
+revision=1
+_modver=5.6.4.2
+_gitrev=49e98ff9bfdbe2ddce843808713de383132002e0
 archs=noarch
-short_desc="Realtek 8812AU driver"
-maintainer="Lon Willett <xgit@lonw.net>"
-license="GPL-2"
-homepage="https://github.com/gordboy/rtl8812au"
-hostmakedepends="unzip"
-distfiles="$homepage/archive/$_commit.zip"
-checksum=452aae487e832e49947a84ca6d6b0d52fcdcc3e41e285e000b61140e6a10182c
-
-dkms_modules="rtl8812au ${version}"
+wrksrc="rtl8812au-${_modver}-${_gitrev}"
 depends="dkms"
+short_desc="Realtek 8812AU/8821AU USB WiFi driver (DKMS)"
+maintainer="Renato Aguiar <renato@renag.me>"
+license="GPL-2.0-only"
+homepage="http://www.dlink.com"
+distfiles="https://github.com/gordboy/rtl8812au-${_modver}/archive/${_gitrev}.tar.gz"
+checksum=75c8ba004b405f8bf8542c0e29f2ee5451ce572fecac41cb2ba01da5e0312952
+dkms_modules="rtl8812au ${_modver}"
 
 do_install() {
-	vmkdir usr/src/rtl8812au-${version}
-	vcopy "*" usr/src/rtl8812au-${version}
+	local dest=/usr/src/rtl8812au-${_modver}
+
+	vmkdir ${dest}
+	cp -r dkms.conf Kconfig Makefile platform core hal include os_dep ${DESTDIR}/${dest}
+
+	# modules-load.d(5) file.
+	vmkdir usr/lib/modules-load.d
+	echo "8812au" > ${DESTDIR}/usr/lib/modules-load.d/${pkgname}.conf
+	chmod 644 ${DESTDIR}/usr/lib/modules-load.d/${pkgname}.conf
 }

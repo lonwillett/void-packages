@@ -12,6 +12,8 @@ homepage="https://zoom.us/"
 distfiles="https://zoom.us/client/${version}/zoom_x86_64.pkg.tar.xz"
 checksum=764f29c89ad2c988b55a44e41cf8fc48c153ee0707f26d64edb90bc4b0764d6c
 repository=nonfree
+noshlibprovides=yes
+noverifyrdeps=yes
 restricted=yes
 nopie=yes
 

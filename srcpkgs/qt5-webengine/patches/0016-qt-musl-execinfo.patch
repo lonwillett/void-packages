@@ -92,16 +92,3 @@
      !defined(OS_AIX)
    if (severity_ == LOG_FATAL && !base::debug::BeingDebugged()) {
      // Include a stack trace on a fatal, unless a debugger is attached.
---- qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/assertions.cc	2019-04-09 09:31:16.000000000 +0200
-+++ -	2019-05-06 23:12:07.040977258 +0200
-@@ -51,8 +51,10 @@
- #if defined(OS_MACOSX) || (defined(OS_LINUX) && !defined(__UCLIBC__))
- #include <cxxabi.h>
- #include <dlfcn.h>
-+#if defined(__GLIBC__)
- #include <execinfo.h>
- #endif
-+#endif
- 
- #if defined(OS_ANDROID)
- #include <android/log.h>

@@ -1,15 +1,23 @@
-This includes additional build fixes for the musl libc.
+From 8854db726f90e53bf5ed5af8b236ef36a709a682 Mon Sep 17 00:00:00 2001
+From: q66 <daniel@octaforge.org>
+Date: Sun, 19 Jan 2020 01:06:40 +0100
+Subject: [PATCH 3/3] Additional fixes for musl libc with ppc64
 
---- qtwebengine/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h
-+++ qtwebengine/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h
-@@ -11,12 +11,14 @@
- // All x86_64 builds use a new enough bionic to have sys/user.h.
- #if !defined(__BIONIC__) || defined(__x86_64__)
- #if !defined(__native_client_nonsfi__)
-+#if !defined(__powerpc64__) || defined(__GLIBC__)
- #include <sys/user.h>
- #endif
-+#endif
+---
+ .../chromium/sandbox/linux/bpf_dsl/seccomp_macros.h        | 6 +++---
+ src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc | 4 ++--
+ .../abseil-cpp/absl/base/internal/unscaledcycleclock.cc    | 4 ++--
+ .../abseil-cpp/absl/base/internal/unscaledcycleclock.h     | 2 +-
+ .../src/client/linux/dump_writer_common/thread_info.cc     | 7 +++++--
+ .../src/client/linux/dump_writer_common/ucontext_reader.cc | 7 +++++--
+ .../breakpad/src/client/linux/handler/exception_handler.cc | 5 +++++
+ 7 files changed, 23 insertions(+), 12 deletions(-)
+
+diff --git a/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h b/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h
+index a6aec544e..2a4a7f1bc 100644
+--- a/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h
++++ b/src/3rdparty/chromium/sandbox/linux/bpf_dsl/seccomp_macros.h
+@@ -16,7 +16,7 @@
  #if defined(__mips__)
  // sys/user.h in eglibc misses size_t definition
  #include <stddef.h>
@@ -18,7 +26,7 @@ This includes additional build fixes for the musl libc.
  // Manually define greg_t on ppc64
  typedef unsigned long long greg_t;
  #endif
-@@ -361,11 +363,11 @@ typedef struct pt_regs regs_struct;
+@@ -361,11 +361,11 @@ typedef struct pt_regs regs_struct;
  #define SECCOMP_ARCH AUDIT_ARCH_PPC64
  #endif
  
@@ -32,8 +40,10 @@ This includes additional build fixes for the musl libc.
  #define SECCOMP_PARM1(_ctx) SECCOMP_REG(_ctx, 3)
  #define SECCOMP_PARM2(_ctx) SECCOMP_REG(_ctx, 4)
  #define SECCOMP_PARM3(_ctx) SECCOMP_REG(_ctx, 5)
---- qtwebengine/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc
-+++ qtwebengine/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc
+diff --git a/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc b/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc
+index 10fa5fd07..30b7b3851 100644
+--- a/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc
++++ b/src/3rdparty/chromium/sandbox/linux/seccomp-bpf/syscall.cc
 @@ -497,9 +497,9 @@ void Syscall::PutValueInUcontext(intptr_t ret_val, ucontext_t* ctx) {
    // Same as MIPS, need to invert ret and set error register (cr0.SO)
    if (ret_val <= -1 && ret_val >= -4095) {
@@ -46,8 +56,10 @@ This includes additional build fixes for the musl libc.
    }
  #endif
    SECCOMP_RESULT(ctx) = static_cast<greg_t>(ret_val);
---- qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
-+++ qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
+diff --git a/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc b/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
+index 593762bc8..689248755 100644
+--- a/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
++++ b/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
 @@ -20,7 +20,7 @@
  #include <intrin.h>
  #endif
@@ -66,8 +78,10 @@ This includes additional build fixes for the musl libc.
  
  int64_t UnscaledCycleClock::Now() {
    return __ppc_get_timebase();
---- qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h
-+++ qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h
+diff --git a/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h b/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h
+index 2d361e962..98242096c 100644
+--- a/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h
++++ b/src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.h
 @@ -46,7 +46,7 @@
  
  // The following platforms have an implementation of a hardware counter.
@@ -77,8 +91,10 @@ This includes additional build fixes for the musl libc.
    defined(_M_IX86) || defined(_M_X64)
  #define ABSL_HAVE_UNSCALED_CYCLECLOCK_IMPLEMENTATION 1
  #else
---- qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc
-+++ qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc
+diff --git a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc
+index 03afec7a5..0264ecf13 100644
+--- a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc
++++ b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/thread_info.cc
 @@ -273,6 +273,9 @@ void ThreadInfo::FillCPUContext(RawContextCPU* out) const {
  
  #elif defined(__powerpc64__)
@@ -101,8 +117,10 @@ This includes additional build fixes for the musl libc.
  
      for (int i = 0; i < MD_VECTORSAVEAREA_PPC_VR_COUNT; i++)
          out->vector_save.save_vr[i] = \
---- qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc
-+++ qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc
+diff --git a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc
+index 7620cf6f7..54e373611 100644
+--- a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc
++++ b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/dump_writer_common/ucontext_reader.cc
 @@ -257,6 +257,9 @@ void UContextReader::FillCPUContext(RawContextCPU *out, const ucontext_t *uc) {
  
  #elif defined(__powerpc64__)
@@ -125,8 +143,10 @@ This includes additional build fixes for the musl libc.
  
      for (int i = 0; i < MD_VECTORSAVEAREA_PPC_VR_COUNT; i++)
          out->vector_save.save_vr[i] =
---- qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc
-+++ qtwebengine/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc
+diff --git a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc
+index 901cd68fb..561958c44 100644
+--- a/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc
++++ b/src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc
 @@ -105,6 +105,11 @@
  #define PR_SET_PTRACER 0x59616d61
  #endif
@@ -139,3 +159,6 @@ This includes additional build fixes for the musl libc.
  namespace google_breakpad {
  
  namespace {
+-- 
+2.26.0
+

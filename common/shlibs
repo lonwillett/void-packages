@@ -429,6 +429,7 @@ libproxy.so.1 libproxy-0.4.6_1
 libmoar.so MoarVM-2015.11_1
 libFLAC.so.8 libflac-1.2.1_1
 libFLAC++.so.6 libflac-1.2.1_1
+libMAC.so.6 libMAC-5.28_1
 libmad.so.0 libmad-0.15.1b_1
 libmatroska.so.6 libmatroska-1.4.1_5
 libmatrix_client.so.0.2.1 mtxclient-0.2.1_1
@@ -1029,7 +1030,6 @@ libconfuse.so.2 confuse-3.2.1_1
 liblldb.so.9 lldb-9.0.0_1
 libclang.so.9 clang-9.0.0_1
 libclang-cpp.so.9 clang-9.0.0_1
-libLLVM-7.so libllvm7-7.0.0_1
 libLLVM-9.so libllvm9-9.0.0_1
 libisofs.so.6 libisofs-0.6.24_1
 libmpack.so.0 libmpack-1.0.5_1
@@ -2071,11 +2071,11 @@ libFcitxQt5WidgetsAddons.so.1 libfcitx-qt5-1.2.1_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
 liblastfm.so.1 liblastfm-1.0.9_1
 liblastfm_fingerprint.so.1 liblastfm-1.0.9_1
-libdruntime-ldc-debug-shared.so.83 ldc-runtime-1.13.0_1
-libdruntime-ldc-shared.so.83 ldc-runtime-1.13.0_1
-libphobos2-ldc-shared.so.83 ldc-runtime-1.13.0_1
-libphobos2-ldc-debug-shared.so.83 ldc-runtime-1.13.0_1
-libldc-jit.so.83 ldc-runtime-1.13.0_1
+libdruntime-ldc-debug-shared.so.90 ldc-runtime-1.20.1_1
+libdruntime-ldc-shared.so.90 ldc-runtime-1.20.1_1
+libphobos2-ldc-shared.so.90 ldc-runtime-1.20.1_1
+libphobos2-ldc-debug-shared.so.90 ldc-runtime-1.20.1_1
+libldc-jit.so.90 ldc-runtime-1.20.1_1
 libmarblewidget-qt5.so.28 marble5-17.12.2_1
 libastro.so.2 marble5-17.12.2_1
 libparrot.so.6.9.0 parrot-6.9.0_1

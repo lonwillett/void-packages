@@ -462,7 +462,6 @@ libQtSql.so.4 qt-4.5.3_1
 libQtDeclarative.so.4 qt-4.5.3_1
 libQtDesignerComponents.so.4 qt-designer-libs-4.7.8_13
 libQtDesigner.so.4 qt-designer-libs-4.7.8_13
-libQtWebKit.so.4 qt-webkit-2.3.4_1
 libsysfs.so.2 libsysfs-2.1.0_1
 libsensors.so.5 libsensors-3.5.0_1
 libcap-ng.so.0 libcap-ng-0.6.2_1
@@ -1316,8 +1315,6 @@ libdb-5.3.so libdb-5.3.21_1
 libdb_cxx-5.3.so libdb-cxx-5.3.21_1
 libcares.so.2 c-ares-1.10.0_1
 libcryptopp.so.8 crypto++-820_1
-libphonon.so.4 phonon-4.6.0_1
-libphononexperimental.so.4 phonon-4.6.0_1
 libdbusmenu-glib.so.4 libdbusmenu-glib-12.10.2_1
 libdbusmenu-gtk3.so.4 libdbusmenu-gtk3-12.10.2_1
 libGrantlee_Templates.so.5 grantlee5-5.0.0_1
@@ -3105,7 +3102,7 @@ libffms2.so.4 libffms2-2.23.1_1
 libddcutil.so.2 ddcutil-0.9.8_1
 liblsmash.so.2 liblsmash-2.9.1_1
 libgiac.so.0 libgiac-1.4.9r17_1
-libgnustep-base.so.1.26 gnustep-base-1.26.0_1
+libgnustep-base.so.1.27 gnustep-base-1.27.0_1
 libtermbox.so.1 termbox-1.1.0_1
 libmysofa.so.0 libmysofa-0.6_1
 libzinnia.so.0 libzinnia-0.06_1
@@ -3643,7 +3640,7 @@ libflite_usenglish.so.1 flite-2.1_1
 libflite_cmulex.so.1 flite-2.1_1
 libgtk-4.so.0.9400.0 gtk4-3.94.0_1
 libmodule.so.5 libmodule-5.0.0_1
-libgnustep-gui.so.0.27 gnustep-gui-0.27.0_1
+libgnustep-gui.so.0.28 gnustep-gui-0.28.0_1
 libmhash.so.2 mhash-0.9.9.9_1
 librlottie.so.0 rlottie-0.0.20160709_1
 libfstrm.so.0 fstrm-0.5.0_1
@@ -3849,7 +3846,7 @@ libmpir.so.23 mpir-3.0.0_1
 libmpirxx.so.8 mpir-3.0.0_1
 libcaribou.so.0 libcaribou-0.4.21_3
 libtinyclipboard.so.1 tinyclipboard-16.01_1
-libcbor.so.0.6 libcbor-0.6.1_1
+libcbor.so.0.7 libcbor-0.7.0_1
 libfido2.so.1 libfido2-1.3.0_1
 libjanet.so.1.8 janet-1.8.0_1
 libOpenImageDenoise.so.0 openimagedenoise-1.1.0_1
@@ -3868,3 +3865,4 @@ libstk-4.6.1.so libstk-4.6.1_1
 libc++utilities.so.5 cpp-utilities-5.2.0_1
 libtagparser.so.9 tagparser-9.1.2_1
 libqtutilities.so.6 qtutilities-6.0.4_1
+libkdsoap.so.1.9.0 KDSoap-1.9.0_1

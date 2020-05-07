@@ -3147,7 +3147,6 @@ libkdeconnectinterfaces.so.1 kdeconnect-1.2_1
 libkdeconnectcore.so.1 kdeconnect-1.2_1
 libkpmcore.so.9 kpmcore-4.1.0_1
 libpkcs11-helper.so.1 pkcs11-helper-1.22_1
-libr2.so.2.5.0 radare2-2.5.0_1
 libr_core.so radare2-2.2.0_1
 libr_config.so radare2-2.2.0_1
 libr_cons.so radare2-2.2.0_1
@@ -3881,4 +3880,4 @@ libhidrd_item.so.0
 libhidrd_opt.so.0 hidrd-0.2.0_1
 libhidrd_strm.so.0 hidrd-0.2.0_1
 libhidrd_fmt.so.0 hidrd-0.2.0_1
-
+libjcat.so.1 libjcat-0.1.2_1

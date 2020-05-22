@@ -1,0 +1,11 @@
+--- a/Onboard/LayoutLoaderSVG.py	2017-02-15 09:42:04.000000000 +0100
++++ b/Onboard/LayoutLoaderSVG.py	2020-05-22 11:43:36.993711488 +0200
+@@ -445,7 +445,7 @@
+             except KeyError as ex:
+                 (strerror) = ex
+                 raise Exceptions.LayoutFileError("Unrecognized modifier %s in" \
+-                    "definition of %s" (strerror, full_id))
++                    "definition of %s" % (strerror, full_id))
+ 
+         value = attributes.get("action")
+         if value:

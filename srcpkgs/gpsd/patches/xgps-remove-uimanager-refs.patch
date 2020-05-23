@@ -1,0 +1,22 @@
+--- xgps~	2020-01-01 02:13:23.000000000 +0100
++++ xgps	2020-05-23 13:48:55.124432071 +0200
+@@ -1472,15 +1472,15 @@
+                 self.noiseview.update(self.daemon.data)
+                 if not self.noise_latch:
+                     self.noise_latch = True
+-                    self.uimanager.get_widget(
+-                        '/MenuBar/View/Noise').set_active(True)
++                    #self.uimanager.get_widget(
++                    #    '/MenuBar/View/Noise').set_active(True)
+                     self.noisebox.show()
+             elif self.daemon.data["class"] == "AIS":
+                 self.aisview.update(self.daemon.data)
+                 if not self.ais_latch:
+                     self.ais_latch = True
+-                    self.uimanager.get_widget(
+-                        '/MenuBar/View/AIS').set_active(True)
++                    #self.uimanager.get_widget(
++                    #    '/MenuBar/View/AIS').set_active(True)
+                     self.aisbox.show()
+ 
+         return True

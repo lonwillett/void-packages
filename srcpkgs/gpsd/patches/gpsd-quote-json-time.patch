@@ -1,0 +1,11 @@
+--- gpsd.c~	2019-12-20 05:05:17.000000000 +0100
++++ gpsd.c	2020-05-24 11:05:48.677260148 +0200
+@@ -748,7 +748,7 @@
+ #ifdef SOCKET_EXPORT_ENABLE
+ 	    notify_watchers(devp, true, false,
+ 			    "{\"class\":\"DEVICE\",\"path\":\"%s\","
+-                            "\"activated\":%s}\r\n",
++                            "\"activated\":\"%s\"}\r\n",
+ 			    devp->gpsdata.dev.path,
+ 		            now_to_iso8601(tbuf, sizeof(tbuf)));
+ #endif /* SOCKET_EXPORT_ENABLE */

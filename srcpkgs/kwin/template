@@ -1,7 +1,7 @@
 # Template file for 'kwin'
 pkgname=kwin
-version=5.19.0
-revision=1
+version=5.19.1
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="extra-cmake-modules gettext breeze pkg-config"
@@ -10,13 +10,13 @@ makedepends="plasma-framework-devel kcmutils-devel knewstuff-devel
  kdecoration-devel libxkbcommon-devel libinput-devel libSM-devel
  libICE-devel xcb-util-wm-devel qt5-sensors-devel libcap-devel
  kwayland-server-devel"
-depends="breeze hicolor-icon-theme kinit qt5-core>=5.14.2<5.14.3"
+depends="breeze hicolor-icon-theme kinit qt5-core>=5.15.0<5.15.1"
 short_desc="KDE Window manager"
 maintainer="John <johnz@posteo.net>"
 license="GPL-2.0-or-later"
 homepage="https://projects.kde.org/projects/plasma/kwin"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=b0c87db1376655761589e9a7166ebab769da6377e5bc8be41dd706657b4dbdd0
+checksum=c9b072699d700abc87b36f6b513d6c2d785c540fbb9e39d4d33ab33e85a6826e
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" qt5-qmake qt5-host-tools kcoreaddons kconfig"

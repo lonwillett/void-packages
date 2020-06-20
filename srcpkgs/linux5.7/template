@@ -1,6 +1,6 @@
 # Template file for 'linux5.7'
 pkgname=linux5.7
-version=5.7.2
+version=5.7.4
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=6065ae820e2d52a77a549ef97444c36adf7ab2969b294460256f028b4eed7909
+checksum=bca4f5ca3001a4cde341652af7fcaefed555be52a92e08ddf58a142eeb02b51a
 python_version=3
 patch_args="-Np1"
 

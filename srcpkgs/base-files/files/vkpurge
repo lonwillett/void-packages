@@ -26,14 +26,14 @@ list_kernels() {
 			case "$installed" in
 				*"$k"*) continue ;;
 			esac
-			kver=${k##*-}
+			kver=${k#*-}
 			case "$kver" in
 				"$running") ;;
 				"*") ;; # /boot isn't mounted -> no vmlinu[xz]
 				$pattern) printf "%s\n" "$kver" ;;
 			esac
 		done
-	done | sort -u
+	done | sort -uV
 }
 
 run_hooks() {

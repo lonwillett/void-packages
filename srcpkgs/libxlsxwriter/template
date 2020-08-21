@@ -1,6 +1,6 @@
 # Template file for 'libxlsxwriter'
 pkgname=libxlsxwriter
-version=0.9.7
+version=0.9.9
 revision=1
 wrksrc="${pkgname}-RELEASE_${version}"
 build_style=cmake
@@ -11,7 +11,7 @@ maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="BSD-2-Clause"
 homepage="https://libxlsxwriter.github.io/"
 distfiles="https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_${version}.tar.gz"
-checksum=0a2102f415770548299a1f4cc5c86fc99b5e94ee605ee059e3fba63e75429d08
+checksum=bfb8c3bafc12a1191353152c51c75ce95741e7ee50a8ae4afbd8dd6b28c31e95
 
 pre_configure() {
 	sed -i "/^add_library/a set_target_properties(\${PROJECT_NAME}	\

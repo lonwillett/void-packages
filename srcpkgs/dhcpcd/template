@@ -1,7 +1,7 @@
 # Template file for 'dhcpcd'
 pkgname=dhcpcd
 version=9.2.0
-revision=2
+revision=1
 build_style=configure
 make_check_target=test
 configure_args="--prefix=/usr --sbindir=/usr/bin --sysconfdir=/etc --rundir=/run/dhcpcd --privsepuser=_dhcpcd"

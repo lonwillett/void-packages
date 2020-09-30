@@ -2332,7 +2332,7 @@ libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
 libQupZilla.so.2 qupzilla-2.0.0_1
 libinjeqt.so.1 injeqt-1.1.0_1
 libgadu.so.3 libgadu-1.12.1_1
-libhiredis.so.0.14 hiredis-0.14.0_1
+libhiredis.so.1.0.0 hiredis-1.0.0_1
 libIL.so.1 devil-1.7.8_1
 libILU.so.1 devil-1.7.8_1
 libILUT.so.1 devil-1.7.8_1
@@ -3983,6 +3983,7 @@ libselinux.so.1 libselinux-3.0_1
 libsepol.so.1 libsepol-3.0_1
 libfrrcares.so.0 libfrr-7.3.1_1
 libhugetlbfs.so.0 libhugetlbfs-2.22_1
+libmonocypher.so.3 monocypher-3.1.1_1
 libkpathsea.so.6 texlive-20200406_1
 libtexluajit.so.2 texlive-LuaTeX-20200406_1
 libtexlua53.so.5 texlive-LuaTeX-20200406_1

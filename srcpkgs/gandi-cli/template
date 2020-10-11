@@ -1,8 +1,7 @@
 # Template file for 'gandi-cli'
 pkgname=gandi-cli
 version=1.5
-revision=2
-archs=noarch
+revision=3
 #xxx _commit=2d0903c9b69da3dd6df384ebf7f450d51e5a507d
 wrksrc="gandi.cli-${version}"
 #xxx wrksrc=gandi.cli-${_commit}

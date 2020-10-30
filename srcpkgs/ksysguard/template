@@ -1,6 +1,6 @@
 # Template file for 'ksysguard'
 pkgname=ksysguard
-version=5.20.0
+version=5.20.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -13,4 +13,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, GFDL-1.2"
 homepage="https://invent.kde.org/plasma/ksysguard"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=5e972b4e8bd799f902013b408e4677ef28b7a40c3be4739234c86ba92b2d1e84
+checksum=1fc3529453c38151bebd582da9256907d213b309d7e1f6870b0aac0626208cf7

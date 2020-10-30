@@ -1,6 +1,6 @@
 # Template file for 'kactivitymanagerd'
 pkgname=kactivitymanagerd
-version=5.20.0
+version=5.20.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -12,7 +12,7 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/plasma/kactivitymanagerd"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=3edc81cc588db4405e1b51831288bdd9ad5c33ef097620549bf936fc7ec21fbe
+checksum=675d87636398e1236f2c0af7129b961b9ac2feac53cc32d6194da41a026d8972
 
 if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -DRUN_RESULT_VAR=0"

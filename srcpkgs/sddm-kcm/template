@@ -1,6 +1,6 @@
 # Template file for 'sddm-kcm'
 pkgname=sddm-kcm
-version=5.20.0
+version=5.20.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -14,4 +14,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/plasma/sddm-kcm"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=c0d75983f8e1ebc4c7f57524fc6028c40446eaa35f9972088d1ebb17469fa3e1
+checksum=632f5bb8546a46c611b50ec9c4058653d7cdcfcd959f19f0b946290807fc050a

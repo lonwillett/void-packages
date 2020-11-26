@@ -1,6 +1,6 @@
 # Template file for 'linux5.9'
 pkgname=linux5.9
-version=5.9.10
+version=5.9.11
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=f591b2f2e939ae6bd35cae2dc3cb87f9472e439695df7f23ed0a341a2c66f030
+checksum=5eb20a65a410669928f94b3975872e493fa6d0fe441c6a78b7564affa2a5d260
 python_version=3
 patch_args="-Np1"
 

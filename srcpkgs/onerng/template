@@ -5,13 +5,15 @@ revision=3
 wrksrc=onerng_${version}
 build_style=fetch
 conf_files="/etc/sv/rngd-onerng/conf"
+hostmakedepends="tar"
 depends="rng-tools"
 short_desc="Support for OneRNG hardware RNG devices"
 maintainer="Lon Willett <xgit@lonw.net>"
-license="LGPL-3"
+license=" LGPL-3.0-or-later"
 homepage="http://onerng.info/onerng/"
 distfiles="https://github.com/OneRNG/onerng.github.io/blob/master/sw/onerng_${version}.orig.tar.gz?raw=true>onerng_${version}.tar.gz"
 checksum=66a6d4be9725642488c33effa04b389bf24e4dd66b45f7316f3403142c1d80a3
+python_version=3	# Actually, either 2 or 3 works
 # NOTE: DO NOT BLINDLY UPDATE. You must check that files/init.sh is
 # correctly updated for new upstream versions (it is derived from
 # files/onerng.sh in the upstream source).

@@ -2982,7 +2982,6 @@ libczmq.so.4 czmq-4.0.1_1
 liblz.so.1 lzlib-1.8_1
 libelogind.so.0 libelogind-238.1_2
 libseat.so.1 libseat-0.3.0_1
-libnma.so.0 libnm-gtk-1.4.0_1
 libnma.so.0 libnma-1.8.30_1
 libgspell-1.so.2 gspell-1.8.0_1
 libotf.so.1 libotf-0.9.16_1
@@ -3059,7 +3058,7 @@ libPocoNetSSL.so.64 poco-1.9.4_1
 libPocoCrypto.so.64 poco-1.9.4_1
 libopenblas.so.0 openblas-0.2.19_1
 librtmidi.so.5 rtmidi-4.0.0_1
-libbiblesync.so.2.0.1 biblesync-2.0.1_1
+libbiblesync.so.2.1.0 biblesync-2.1.0_1
 libbac-9.4.2.so bacula-common-9.4.2_1
 libbaccfg-9.4.2.so bacula-common-9.4.2_1
 libbacfind-9.4.2.so bacula-common-9.4.2_1
@@ -3919,11 +3918,12 @@ libtss2-tcti-device.so.0 tpm2-tss-2.3.1_1
 libtss2-rc.so.0 tpm2-tss-2.3.1_1
 libtss2-tcti-mssim.so.0 tpm2-tss-2.3.1_1
 libtss2-tctildr.so.0 tpm2-tss-2.3.1_1
-libzfs.so.2 zfs-0.8.2_1
-libnvpair.so.1 zfs-0.8.2_1
-libzfs_core.so.1 zfs-0.8.3_1
-libzpool.so.2 zfs-0.8.3_1
-libuutil.so.1 zfs-0.8.3_1
+libzfsbootenv.so.1 zfs-2.0.0_1
+libzfs.so.4 zfs-2.0.0_1
+libuutil.so.3 zfs-2.0.0_1
+libzpool.so.4 zfs-2.0.0_1
+libzfs_core.so.3 zfs-2.0.0_1
+libnvpair.so.3 zfs-2.0.0_1
 libgmio.so gmio-0.4.1_1
 libjsonnet.so.0 jsonnet-0.14.0_2
 libjsonnet++.so.0 jsonnet-0.14.0_2

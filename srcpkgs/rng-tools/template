@@ -1,10 +1,10 @@
 # Template file for 'rng-tools'
 pkgname=rng-tools
 version=6.10
-revision=4
+revision=5
 wrksrc=${pkgname}-${version}
 build_style=gnu-configure
-configure_args="--sbindir=/usr/bin --without-pkcs11 --without-rtlsdr LIBS=-lpthread"
+configure_args="--sbindir=/usr/bin --without-pkcs11 --without-rtlsdr"
 hostmakedepends="automake pkg-config"
 makedepends="libgcrypt-devel libsysfs-devel libcurl-devel libxml2-devel
  jitterentropy-devel jansson-devel"

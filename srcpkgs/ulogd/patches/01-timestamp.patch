@@ -1,0 +1,11 @@
+--- input/packet/ulogd_inppkt_NFLOG.c~	2018-04-27 01:10:42.308872050 +0200
++++ input/packet/ulogd_inppkt_NFLOG.c	2020-12-31 04:38:22.301380979 +0100
+@@ -372,7 +372,7 @@
+ 
+ 	/* god knows why timestamp_usec contains crap if timestamp_sec
+ 	 * == 0 if (pkt->timestamp_sec || pkt->timestamp_usec) { */
+-	if (! (nflog_get_timestamp(ldata, &ts) == 0 && ts.tv_sec))
++	if (nflog_get_timestamp(ldata, &ts) != 0 || (ts.tv_sec&0xffffffff) == 0)
+ 		gettimeofday(&ts, NULL);
+ 
+ 	okey_set_u32(&ret[NFLOG_KEY_OOB_TIME_SEC], ts.tv_sec & 0xffffffff);

@@ -1,4 +1,4 @@
-/var/log/ulog.log /var/log/ulog.pcap {
+/var/log/ulog.log /var/log/ulog.pcap /var/log/ulogd_syslogemu.log {
     missingok
     compress
     sharedscripts

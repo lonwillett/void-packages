@@ -1007,8 +1007,6 @@ libIcePatch2.so.35 libIce-3.5.0_1
 libIceDB.so.35 libIce-3.5.0_1
 libIceXML.so.35 libIce-3.5.0_1
 libvdpau.so.1 libvdpau-0.4.1_1
-libgtkhtml-4.0.so.0 libgtkhtml-4.2.1_1
-libgtkhtml-editor-4.0.so.0 libgtkhtml-4.2.1_1
 libgsm.so.1 libgsm-1.0.13_13
 libcgroup.so.1 libcgroup-0.37.1_1
 libxdg-basedir.so.1 libxdg-basedir-1.1.1_1
@@ -2121,9 +2119,8 @@ libwvstreams.so.4.6 wvstreams-4.6.1_1
 libespeak-ng.so.1 libespeak-ng-1.50_1
 libKF5Plotting.so.5 kplotting-5.26.0_1
 libpgf.so.6 libpgf-6.14.12_1
-libqhull_p.so.7 libqhull-2015.2_1
-libqhull_r.so.7 libqhull-2015.2_1
-libqhull.so.7 libqhull-2015.2_1
+libqhull_r.so.8.0 libqhull-2020.2_1
+libqhull.so.8.0 libqhull-2020.2_1
 libKF5NetworkManagerQt.so.6 networkmanager-qt5-5.26.0_1
 libfcitx-core.so.0 libfcitx-4.2.8_1
 libfcitx-gclient.so.1 libfcitx-4.2.9.5_1

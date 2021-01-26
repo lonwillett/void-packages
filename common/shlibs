@@ -2193,7 +2193,7 @@ libudns.so.0 udns-0.4_1
 libcriu.so.2 criu-3.13_2
 libcompel.so.1 criu-3.13_2
 libwebsockets.so.15 libwebsockets-3.2.0_1
-libnfc.so.0 libnfc-1.7.1_1
+libnfc.so.6 libnfc-1.8.0_1
 libfuzzy.so.2 libfuzzy-2.12_1
 libSDL_gfx.so.15 SDL_gfx-2.0.25_2
 libsfml-network.so.2.5 SFML-2.5.0_1
@@ -2551,7 +2551,7 @@ libdl.so android-studio-3.0.1_1
 libKF5WidgetsAddons.so.5 kwidgetsaddons-5.26.0_1
 libsearpc.so.1 libsearpc-3.0.7_1
 libseafile.so.0 seafile-libclient-5.0.4_1
-libpodofo.so.0.9.6 libpodofo-0.9.6_1
+libpodofo.so.0.9.7 libpodofo-0.9.7_1
 libIrcUtil.so.3 libcommuni-3.4.0_1
 libIrcCore.so.3 libcommuni-3.4.0_1
 libIrcModel.so.3 libcommuni-3.4.0_1

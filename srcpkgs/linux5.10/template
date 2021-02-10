@@ -1,6 +1,6 @@
 # Template file for 'linux5.10'
 pkgname=linux5.10
-version=5.10.12
+version=5.10.14
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=1d454f2817ab4f34cf313ea680ab75e20f79c6431b3bd3ea3bcd39353030c4aa
+checksum=fa27b79f198b5be969e497ed5461860df48e0591c85e60699fc8be26837a1d2a
 python_version=3
 patch_args="-Np1"
 

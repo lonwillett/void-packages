@@ -1,7 +1,7 @@
 # Template file for 'rtl8812au-dkms'
 pkgname=rtl8812au-dkms
 version=20201214
-revision=1
+revision=2
 _modver=5.9.3.2
 _gitrev=b95e75064d6aa5b680049a3fe63b2131a3033e3e
 wrksrc="rtl8812au-${_modver}-${_gitrev}"

@@ -1,6 +1,6 @@
 # Template file for 'android-file-transfer-linux'
 pkgname=android-file-transfer-linux
-version=4.1
+version=4.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_SHARED_LIB=1"
@@ -12,4 +12,4 @@ maintainer="Toyam Cox <Vaelatern@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/whoozle/android-file-transfer-linux"
 distfiles="https://github.com/whoozle/android-file-transfer-linux/archive/v${version}.tar.gz"
-checksum=66a3cb1748a4212155294ac615b432ee56c93247a924a45225cc356d6f6eda44
+checksum=cc607d68e8a18273c9b56975a70a0e68fbdf9d5b903b2727a345a605ff48a19f

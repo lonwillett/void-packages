@@ -15,7 +15,9 @@ configure_args="--
  $(vopt_if pipewire '' '-no')-webengine-webrtc-pipewire"
 # Rely on auto detection (fails if forced for cross builds) -webengine-alsa
 hostmakedepends="qt5-qmake gperf ninja qt5-host-tools flex pkg-config nodejs
- which perl python protobuf nss-devel libevent-devel zlib-devel icu-devel"
+ which perl python protobuf nss-devel libevent-devel zlib-devel icu-devel
+ libjpeg-turbo-devel libpng-devel libwebp-devel freetype-devel
+ harfbuzz-devel"
 makedepends="qt5-webchannel-devel qt5-location-devel qt5-tools-devel qt5-devel
  qt5-declarative-devel libevent-devel snappy-devel icu-devel ffmpeg-devel
  libwebp-devel opus-devel cups-devel nss-devel minizip-devel libxslt-devel
@@ -33,6 +35,7 @@ checksum="8e86257d25a641939d50c14de2049b384c371fcb70a60a289dc5426be0423b40
  ee97e569529a60729e3c6b7317011fd2cc40600079e90c4afa2e5ea9edcd58ef"
 patch_args="-Np1"
 
+no_generic_pkgconfig_link=yes
 build_options="sndio pipewire"
 build_options_default="pipewire"
 desc_option_pipewire="Enable support for screen sharing for WebRTC via PipeWire"
@@ -73,6 +76,10 @@ fi
 
 case "$XBPS_TARGET_MACHINE" in
 	ppc64*) makedepends+=" libatomic-devel" ;;
+esac
+
+case "$XBPS_TARGET_MACHINE" in
+	ppc64*-musl) makedepends+=" libucontext-devel" ;;
 esac
 
 _bootstrap_gn() {
@@ -128,6 +135,13 @@ post_patch() {
 		${wrksrc}/src/3rdparty/chromium/media/audio/openbsd
 	# Eternal 5.15.2, this can't ever be increased since other components are 5.15.2
 	sed -e "/^MODULE_VERSION/s/5.*/5.15.2/" -i .qmake.conf
+	# enable libucontext on ppc with musl for breakpad
+	case "$XBPS_TARGET_MACHINE" in
+		ppc64*-musl)
+			vsed -i 's,#libs +=,libs +=,' \
+				${wrksrc}/src/3rdparty/chromium/third_party/breakpad/BUILD.gn
+			;;
+	esac
 }
 
 pre_configure() {

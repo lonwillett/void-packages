@@ -1,7 +1,7 @@
 # Template file for 'hplip'
 pkgname=hplip
-version=3.20.11
-revision=2
+version=3.21.2
+revision=1
 build_style=gnu-configure
 pycompile_dirs="usr/share/hplip"
 configure_args="
@@ -31,7 +31,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, BSD-3-Clause, MIT"
 homepage="https://developers.hp.com/hp-linux-imaging-and-printing"
 distfiles="${SOURCEFORGE_SITE}/hplip/hplip/${version}/hplip-${version}.tar.gz"
-checksum=0b1675b3d8e709a1325fe863f5aace3bd3710779a73eae868f7b2ee9a56fdb11
+checksum=410421a13e62205d41bacd3215993c89e513fb4d7fab07e23e2720465aea7c41
 conflicts="hplip-gui"
 
 CFLAGS="-I${XBPS_CROSS_BASE}/usr/include/libusb-1.0 -I${XBPS_CROSS_BASE}/${py3_inc}"

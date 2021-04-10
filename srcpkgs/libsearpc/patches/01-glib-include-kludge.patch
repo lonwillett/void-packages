@@ -1,0 +1,19 @@
+  This patch is needed because searpc-client.h is sometimes included in an extern "C" block,
+  but the latest glib.h doesn't like that.
+--- lib/searpc-client.h~	2020-06-18 05:23:11.000000000 +0200
++++ lib/searpc-client.h	2021-04-10 15:48:09.994005146 +0200
+@@ -7,8 +7,14 @@
+ #define LIBSEARPC_API
+ #endif
+ 
++#ifdef __cplusplus
++extern "C++" {
++#endif
+ #include <glib.h>
+ #include <glib-object.h>
++#ifdef __cplusplus
++}
++#endif
+ #include <jansson.h>
+ 
+ #ifndef DFT_DOMAIN

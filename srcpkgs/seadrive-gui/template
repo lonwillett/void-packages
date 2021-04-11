@@ -1,0 +1,24 @@
+# Template file for 'seadrive-gui'
+pkgname=seadrive-gui
+version=2.0.10
+revision=1
+build_style=cmake
+configure_args="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr"
+hostmakedepends="autoconf automake libtool intltool vala pkg-config"
+# python3?
+makedepends="libevent-devel libcurl-devel gtk+-devel libuuid-devel sqlite-devel jansson-devel openssl-devel libsearpc-devel qt5-devel qt5-tools-devel qt5-webengine-devel qt5-webchannel-devel qt5-declarative-devel qt5-location-devel"
+depends="seadrive>=${version}_0"
+short_desc="Seafile drive client (qt5 gui)"
+maintainer="Lon Willett <xgit@lonw.net>"
+license="Apache-2.0"
+homepage="https://seafile.com"
+distfiles="https://github.com/haiwen/seadrive-gui/archive/v${version}.tar.gz"
+checksum=e9dc3e3bf7d18f3931a57faa528fa469a9d54f158d8247c96126509981c240c8
+#python_version=3
+
+#autoconf automake libtool intltool valac cmake qtchooser
+#libevent-dev libcurl4-openssl-dev libgtk2.0-dev uuid-dev libsqlite3-dev libjansson-dev libssl-dev
+#qtbase5-dev libqt5webkit5-dev qttools5-dev qttools5-dev-tools
+
+#intltool cmake libtool vala gcc-c++ 
+#libevent-devel openssl-devel gtk2-devel libuuid-devel sqlite-devel jansson-devel qt5-qtbase-devel qt5-qttools-devel qt5-qtwebkit-devel libcurl-devel openssl-devel

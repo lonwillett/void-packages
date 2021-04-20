@@ -412,6 +412,7 @@ libproxy.so.1 libproxy-0.4.6_1
 libmoar.so MoarVM-2015.11_1
 libFLAC.so.8 libflac-1.2.1_1
 libFLAC++.so.6 libflac-1.2.1_1
+libField3D.so.1.7 Field3D-1.7.3_1
 libMAC.so.6 libMAC-5.28_1
 libmad.so.0 libmad-0.15.1b_1
 libmatroska.so.7 libmatroska-1.6.0_1
@@ -2163,8 +2164,8 @@ libgom-1.0.so.0 gom-0.3.0_1
 libetpan.so.20 libetpan-1.9.3_4
 libxmp.so.4 libxmp-4.3.7_1
 libKF5ThreadWeaver.so.5 threadweaver-5.26.0_1
-libOpenImageIO_Util.so.1.8 openimageio-1.8.12_1
-libOpenImageIO.so.1.8 openimageio-1.8.12_1
+libOpenImageIO_Util.so.2.2 openimageio-2.2.13.1_1
+libOpenImageIO.so.2.2 openimageio-2.2.13.1_1
 libOpenColorIO.so.1 opencolorio-1.0.8_1
 libyaml-cpp.so.0.6 yaml-cpp-0.6.2_1
 libpaper.so.1 libpaper-1.1.24_1
@@ -2968,6 +2969,7 @@ libPocoRedis.so.64 poco-1.9.4_3
 libPocoEncodings.so.64 poco-1.9.4_3
 libPocoNetSSL.so.64 poco-1.9.4_3
 libPocoCrypto.so.64 poco-1.9.4_3
+libPtex.so ptex-2.3.2_1
 libopenblas.so.0 openblas-0.2.19_1
 librtaudio.so.6 rtaudio-5.1.0_1
 librtmidi.so.5 rtmidi-4.0.0_1
@@ -3468,7 +3470,7 @@ libcodecore.so.0 libio.elementary.code-3.0_1
 libio.elementary.music-core.so.0 libio.elementary.music-5.0_1
 libpantheon-files-core.so.4 libio.elementary.files-4.1.4_1
 libpantheon-files-widgets.so.4 libio.elementary.files-4.1.4_1
-libwlroots.so.7 wlroots-0.12.0_1
+libwlroots.so.8 wlroots-0.13.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
 libcotp.so.12 libcotp-1.2.1_1
 libunarr.so.1 libunarr-1.0.1_1

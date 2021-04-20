@@ -15,7 +15,7 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="GPL-2.0-or-later" # Has openssl exception not yet present on SPDX
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/seafile/archive/v${version}.tar.gz"
-checksum=acfb77993887221d93b9f413f1726805133fe8cb32420c61aaa6c9e7a48e0e0d
+checksum=282e3210b4560d86fb86fa344097c09578b32a52adc0d8fa0a6082885e04bbd9
 
 pre_configure() {
 	./autogen.sh

@@ -1,0 +1,6 @@
+# Build instructions for linux (as of 2021-04-20) say to use the same
+# version of seadrive-gui as for seadrive-daemon (seadrive-fuse).
+# This is not a good approach, but I see no better option than to stick
+# with it.
+site=https://github.com/haiwen/seadrive-fuse/releases
+pattern='tags/v\K[\d.]+(?=.tar.gz)'

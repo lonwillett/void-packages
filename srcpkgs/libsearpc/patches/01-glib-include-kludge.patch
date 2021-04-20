@@ -1,5 +1,6 @@
-  This patch is needed because searpc-client.h is sometimes included in an extern "C" block,
-  but the latest glib.h doesn't like that.
+  Seafile sources sometimes include searpc-client.h an extern "C" block,
+  and recent versions of glib.h don't tolerate that. This is the easy fix,
+  until such time as the source is fixed upstream.
 --- lib/searpc-client.h~	2020-06-18 05:23:11.000000000 +0200
 +++ lib/searpc-client.h	2021-04-10 15:48:09.994005146 +0200
 @@ -7,8 +7,14 @@

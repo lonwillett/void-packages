@@ -1,0 +1,2 @@
+site=https://github.com/haiwen/seadrive-fuse/releases
+pattern='tags/v\K[\d.]+(?=.tar.gz)'

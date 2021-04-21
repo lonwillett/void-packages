@@ -1,8 +1,8 @@
 # Template file for 'seafile-libclient'
 pkgname=seafile-libclient
-version=8.0.1.20210322
+version=8.0.2
 _gitrev=eed7fa2250e7e13e4ac98ec519e044ce892ca508
-revision=1
+revision=2
 _distname="${pkgname/-libclient/}"
 #wrksrc="${_distname}-${version}"
 wrksrc="${_distname}-${_gitrev}"
@@ -16,7 +16,7 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="GPL-2.0-or-later" # Has openssl exception not yet present on SPDX
 homepage="https://seafile.com"
 #distfiles="https://github.com/haiwen/seafile/archive/v${version}.tar.gz"
-distfile="https://github.com/haiwen/seafile/archive/${_gitrev}.tar.gz"
+distfiles="https://github.com/haiwen/seafile/archive/${_gitrev}.tar.gz"
 checksum=40dee80018ac7f020aa7c0003c8bf6b2e10c644215bdda9a0d597c01af91836e
 
 pre_configure() {

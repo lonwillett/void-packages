@@ -133,7 +133,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.390.87 nvidia390-libs-390.87_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.390.141 nvidia390-libs-390.141_1 ignore
+libnvidia-fatbinaryloader.so.390.143 nvidia390-libs-390.143_1 ignore
 libnvidia-fatbinaryloader.so.430.40 nvidia-libs-430.40_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
@@ -2994,6 +2994,8 @@ libyaz_icu.so.5 yaz-5.23.1_1
 libyaz.so.5 yaz-5.23.1_1
 libyaz_server.so.5 yaz-5.23.1_1
 libgcab-1.0.so.0 gcab-0.7_1
+libwpe-1.0.so.1 libwpe-1.10.0_1
+libWPEBackend-fdo-1.0.so.1 wpebackend-fdo-1.8.3_1
 libliveMedia.so.81 live555-2020.08.11_2
 libgroupsock.so.8 live555-2020.08.11_2
 libUsageEnvironment.so.3 live555-2020.08.11_2

@@ -256,6 +256,7 @@ libxcb-xkb.so.1 libxcb-1.10_1
 libxcb-xinput.so.0 libxcb-1.10_1
 libxcb-dri3.so.0 libxcb-1.10_1
 libxcb-present.so.0 libxcb-1.10_1
+libxcb-imdkit.so.1 xcb-imdkit-1.0.2_1
 libXdmcp.so.6 libXdmcp-1.0.2_1
 libpolkit-gobject-1.so.0 polkit-0.99_1
 libpolkit-agent-1.so.0 polkit-0.99_1
@@ -2115,6 +2116,12 @@ libfcitx-config.so.4 libfcitx-4.2.8_1
 libFcitxQt5DBusAddons.so.1 libfcitx-qt5-1.2.1_1
 libFcitxQt5WidgetsAddons.so.1 libfcitx-qt5-1.2.1_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
+libFcitx5Utils.so.2 libfcitx5-5.0.5_1
+libFcitx5Core.so.7 libfcitx5-5.0.5_1
+libFcitx5Config.so.6 libfcitx5-5.0.5_1
+libFcitx5GClient.so.2 fcitx5-gtk-5.0.4_1
+libFcitx5Qt5DBusAddons.so.1 fcitx5-qt5-5.0.3_1
+libFcitx5Qt5WidgetsAddons.so.2 fcitx5-qt5-5.0.3_1
 libdruntime-ldc-debug-shared.so.94 ldc-runtime-1.24.0_1
 libdruntime-ldc-shared.so.94 ldc-runtime-1.24.0_1
 libphobos2-ldc-shared.so.94 ldc-runtime-1.24.0_1
@@ -2323,6 +2330,9 @@ liboath.so.0 oath-toolkit-2.6.0_2
 libanthy.so.1 libanthy-0.4_1
 libanthydic.so.1 libanthy-0.4_1
 libanthyinput.so.0 libanthy-0.4_1
+libanthy-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
+libanthydic-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
+libanthyinput-unicode.so.0 libanthy-unicode-1.0.0.20201109_1
 libanthygobject-1.0.so.5 ibus-anthy-1.5.6_1
 libtbbmalloc_proxy_debug.so.2 tbb-4.3_1
 libtbbmalloc_proxy.so.2 tbb-4.3_1
@@ -3105,6 +3115,10 @@ libi2c.so.0 i2c-tools-4.0_1
 libmarisa.so.0 marisa-0.2.5_1
 libopencc.so.1.1 opencc-1.1.1_1
 librime.so.1 librime-1.2.9_1
+libIMECore.so.0 libime-1.0.5_1
+libIMEPinyin.so.0 libime-1.0.5_1
+libIMETable.so.0 libime-1.0.5_1
+libIMEJyutping.so.1 libime-jyutping-1.0.2_1
 libairspy.so.0 libairspy-1.0.9_1
 libKF5KDcraw.so.5 libkdcraw5-17.04.3_1
 libKF5Kipi.so.32.0.0 libkipi5-17.04.3_1
@@ -3532,6 +3546,7 @@ libcaf_openssl.so.0.18.0 zeek-4.0.0_1
 libbinpac.so.0 zeek-3.2.4_2
 libllhttp.so.1 llhttp-1.0.1_1
 libpinyin.so.13 libpinyin-2.2.1_1
+libzhuyin.so.13 libzhuyin-2.6.0_3
 libuhd.so.4.0.0 uhd-4.0.0.0_1
 libeditline.so.1 editline-1.16.0_1
 libgnuradio-rds.so.1 gnuradio-rds-3.8.0_1

@@ -340,7 +340,7 @@ libMagickCore-6.Q16.so.7 libmagick6-6.9.11.61_1
 libMagickWand-6.Q16.so.7 libmagick6-6.9.11.61_1
 libMagick++-6.Q16.so.9 libmagick6-6.9.12.1_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.102 libpoppler102-20.09.0_1
+libpoppler.so.110 libpoppler110-21.05.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -3105,7 +3105,7 @@ libffms2.so.4 libffms2-2.23.1_1
 libddcutil.so.4 ddcutil-1.0.1_1
 liblsmash.so.2 liblsmash-2.9.1_1
 libgiac.so.0 libgiac-1.4.9r17_1
-libgnustep-base.so.1.27 gnustep-base-1.27.0_1
+libgnustep-base.so.1.28 gnustep-base-1.28.0_1
 libtermbox.so.1 termbox-1.1.0_1
 libmysofa.so.1 libmysofa-1.2_1
 libzinnia.so.0 libzinnia-0.06_1
@@ -3648,7 +3648,7 @@ libflite_usenglish.so.1 flite-2.1_1
 libflite_cmulex.so.1 flite-2.1_1
 libgtk-4.so.1 gtk4-4.0.0_1
 libmodule.so.5 libmodule-5.0.0_1
-libgnustep-gui.so.0.28 gnustep-gui-0.28.0_1
+libgnustep-gui.so.0.29 gnustep-gui-0.29.0_1
 libmhash.so.2 mhash-0.9.9.9_1
 librlottie.so.0 rlottie-0.0.20160709_1
 libfstrm.so.0 fstrm-0.5.0_1
@@ -3994,3 +3994,6 @@ libmariadb.so.3 libmariadbclient-10.5.9_1
 libmariadbd.so.19 libmariadbclient-10.5.9_1
 libinstpatch-1.0.so.2 libinstpatch-1.1.6_1
 libbasu.so.0 basu-0.2.0_1
+libXcomp.so.3 nx-libs-3.5.99.24_1
+libXcompshad.so.3 nx-libs-3.5.99.24_1
+libNX_X11.so.6 nx-libs-3.5.99.24_1

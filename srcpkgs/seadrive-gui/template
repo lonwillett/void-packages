@@ -1,6 +1,6 @@
 # Template file for 'seadrive-gui'
 pkgname=seadrive-gui
-version=2.0.10
+version=2.0.14
 revision=1
 build_style=cmake
 configure_args="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr"
@@ -13,7 +13,7 @@ maintainer="Lon Willett <xgit@lonw.net>"
 license="Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/${pkgname}/archive/v${version}.tar.gz"
-checksum=e9dc3e3bf7d18f3931a57faa528fa469a9d54f158d8247c96126509981c240c8
+checksum=6d01e8aeab1d36c7a1171456fbf6136acbd88b38893089b6e97db892a982ffd1
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl)	# need fts implementation

@@ -1,12 +1,10 @@
 # Template file for 'seafile-client-qt'
 pkgname=seafile-client-qt
 version=8.0.2
-_gitrev=837be8efd5cab4aea8fc1138ab91e93539a4e010
-revision=2
-version=8.0.1
-revision=1
+_gitrev=205b080861d77c169efa12605983431d7e844d15
+revision=3
 _sourcename="seafile-client"
-#wrksrc="${_sourcename}-${version}"
+#zzzwrksrc="${_sourcename}-${version}"
 wrksrc="${_sourcename}-${_gitrev}"
 build_style=cmake
 configure_args="$(vopt_if shibboleth '-DBUILD_SHIBBOLETH_SUPPORT=ON -DUSE_QT_WEBKIT=ON')"
@@ -17,9 +15,9 @@ short_desc="Cloud storage system - Qt graphical client"
 maintainer="yopito <pierre.bourgin@free.fr>"
 license="Apache-2.0"
 homepage="https://seafile.com"
-#distfiles="https://github.com/haiwen/seafile-client/archive/v${version}.tar.gz"
+#zzzdistfiles="https://github.com/haiwen/seafile-client/archive/v${version}.tar.gz"
 distfiles="https://github.com/haiwen/seafile-client/archive/${_gitrev}.tar.gz"
-checksum=15ef8600f01579d3d1296fddf84c88e1264ec0802a340d413fd80941a88ff362
+checksum=642c1d4f6beef0f40ed12d17d3653a8c276d7acc3beb732efb45d52f4e849b65
 
 build_options="shibboleth"
 desc_option_shibboleth="Build with Shibboleth support"

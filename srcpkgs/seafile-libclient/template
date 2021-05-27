@@ -1,10 +1,10 @@
 # Template file for 'seafile-libclient'
 pkgname=seafile-libclient
 version=8.0.2
-_gitrev=eed7fa2250e7e13e4ac98ec519e044ce892ca508
-revision=2
+_gitrev=c95bc45a987d0e3b0bb78e6429a35459e7e03c47
+revision=3
 _distname="${pkgname/-libclient/}"
-#wrksrc="${_distname}-${version}"
+#zzzwrksrc="${_distname}-${version}"
 wrksrc="${_distname}-${_gitrev}"
 build_style=gnu-configure
 configure_args="PYTHON=python3 --disable-static"
@@ -15,9 +15,9 @@ short_desc="Cloud storage system - library"
 maintainer="yopito <pierre.bourgin@free.fr>"
 license="GPL-2.0-or-later" # Has openssl exception not yet present on SPDX
 homepage="https://seafile.com"
-#distfiles="https://github.com/haiwen/seafile/archive/v${version}.tar.gz"
+#zzzdistfiles="https://github.com/haiwen/seafile/archive/v${version}.tar.gz"
 distfiles="https://github.com/haiwen/seafile/archive/${_gitrev}.tar.gz"
-checksum=40dee80018ac7f020aa7c0003c8bf6b2e10c644215bdda9a0d597c01af91836e
+checksum=6287b363bb0a3679b60193344ff87d1e8b33ae930b4b5dd58269056ad027cd66
 
 pre_configure() {
 	./autogen.sh

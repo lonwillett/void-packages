@@ -1,7 +1,8 @@
 # Template file for 'samba'
 pkgname=samba
-version=4.14.5
-revision=1
+reverts="4.14.5_1"
+version=4.13.4
+revision=2
 build_style=waf3
 build_helper="qemu"
 configure_script="buildtools/bin/waf"
@@ -27,7 +28,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="http://www.samba.org"
 distfiles="http://download.samba.org/pub/samba/stable/${pkgname}-${version}.tar.gz"
-checksum=bb6ef5d2f16b85288d823578abc453d9a80514c42e5a2ea2c4e3c60dc42335c3
+checksum=a1b34c63f7100cc8626902d80f335c7cb0b45d4707dd3c4b010f7a28ed615c78
 lib32disabled=yes
 conf_files="/etc/pam.d/samba /etc/samba/smb.conf"
 make_dirs="/etc/samba/private 0750 root root"

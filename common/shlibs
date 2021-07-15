@@ -2353,7 +2353,7 @@ libgnunettransportcore.so.0 gnunet-0.12.2_1
 libgnunettransportcommunicator.so.0 gnunet-0.12.2_1
 libskarnet.so.2.10 skalibs-2.10.0.1_1
 libKF5BalooWidgets.so.5 baloo-widgets5-17.04.3_1
-libtidy.so.5 libtidy5-5.1.25_1
+libtidy.so.58 libtidy5-5.8.0_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
 libQupZilla.so.2 qupzilla-2.0.0_1
 libinjeqt.so.1 injeqt-1.1.0_1
@@ -2416,6 +2416,8 @@ libiniparser.so.1 iniparser-4.1_1
 libzita-resampler.so.1 zita-resampler-1.3.0_1
 libmlt.so.6 mlt-6.4.1_1
 libmlt++.so.3 mlt-6.4.1_1
+libmlt++-7.so.7 mlt7-7.0.1_1
+libmlt-7.so.7 mlt7-7.0.1_1
 libunibilium.so.4 unibilium-2.0.0_1
 libtermkey.so.1 libtermkey-0.17_1
 libicu4lua.so.0 icu4lua-0.2B_1
@@ -3856,7 +3858,7 @@ libtss2-tctildr.so.0 tpm2-tss-2.3.1_1
 libzfsbootenv.so.1 zfs-2.0.3_2
 libzfs.so.4 zfs-2.0.3_2
 libuutil.so.3 zfs-2.0.3_2
-libzpool.so.4 zfs-2.0.3_2
+libzpool.so.5 zfs-2.1.0_1
 libzfs_core.so.3 zfs-2.0.3_2
 libnvpair.so.3 zfs-2.0.3_2
 libgmio.so gmio-0.4.1_1
@@ -3897,7 +3899,8 @@ libstk-4.6.1.so libstk-4.6.1_1
 libc++utilities.so.5 cpp-utilities-5.2.0_1
 libtagparser.so.10 tagparser-10.0.0_1
 libqtutilities.so.6 qtutilities-6.0.4_1
-libkdsoap.so.1 KDSoap-1.9.1_1
+libkdsoap.so.2 KDSoap-2.0.0_1
+libkdsoap-server.so.2 KDSoap-2.0.0_1
 libstoken.so.1 stoken-0.92_1
 libjpegxr.so.0 jxrlib-0.2.2_1
 libjxrglue.so.0 jxrlib-0.2.2_1
@@ -4022,3 +4025,4 @@ libXcomp.so.3 nx-libs-3.5.99.24_1
 libXcompshad.so.3 nx-libs-3.5.99.24_1
 libNX_X11.so.6 nx-libs-3.5.99.24_1
 librnnoise.so.0 rnnoise-0.4.1_1
+liblhasa.so.0 lhasa-0.3.1_2

@@ -1,6 +1,6 @@
 # Template file for 'kdegraphics-thumbnailers'
 pkgname=kdegraphics-thumbnailers
-version=21.04.3
+version=21.08.2
 revision=1
 build_style=cmake
 hostmakedepends="extra-cmake-modules kcoreaddons kconfig-devel pkg-config gettext"
@@ -11,4 +11,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/graphics/kdegraphics-thumbnailers"
 distfiles="${KDE_SITE}/release-service/${version}/src/kdegraphics-thumbnailers-${version}.tar.xz"
-checksum=c1b7a34542826e093bf0cb5ee9b9235c0d6f7acfb7f88f106c1edbd4651d706c
+checksum=e2a090b49319aea7dee072a683bffb97a4968f2e8b2586b58e990ae5889dc188

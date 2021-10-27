@@ -1,6 +1,6 @@
 # Template file for 'linux5.10'
 pkgname=linux5.10
-version=5.10.50
+version=5.10.75
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=8bda327a7d95acfff8f87fb6ef4223e3194fa22195f5551249a9aa3393bfb436
+checksum=0a2b2f5fefb90773190aaef4726ac363e03992aedc424b0a57eca092d084304b
 python_version=3
 
 # XXX Restrict archs until a proper <arch>-dotconfig is available in FILESDIR.
@@ -41,7 +41,7 @@ mutable_files="
  /usr/lib/modules/${_kernver}/modules.devname"
 
 # reproducible build
-export KBUILD_BUILD_TIMESTAMP=${SOURCE_DATE_EPOCH:-0}
+export KBUILD_BUILD_TIMESTAMP=$(LC_ALL=C date -ud @${SOURCE_DATE_EPOCH:-0})
 export KBUILD_BUILD_USER=voidlinux
 export KBUILD_BUILD_HOST=voidlinux
 

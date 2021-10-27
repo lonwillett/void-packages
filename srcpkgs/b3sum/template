@@ -1,6 +1,6 @@
 # Template file for 'b3sum'
 pkgname=b3sum
-version=0.3.8
+version=1.1.0
 revision=1
 wrksrc="BLAKE3-${version}"
 build_wrksrc="b3sum"
@@ -10,4 +10,4 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="CC0-1.0"
 homepage="https://github.com/BLAKE3-team/BLAKE3/"
 distfiles="https://github.com/BLAKE3-team/BLAKE3/archive/${version}.tar.gz"
-checksum=0a418acc3beacc212fd360ab16e96c9a830b519a8dab321885900efc2db8d3b4
+checksum=0bfba4ba71a9b04afbaa6bfc45c38e0598ce404e2cc5094b1d4ef45e83db2ca1

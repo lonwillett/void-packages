@@ -1,6 +1,6 @@
 # Template file for 'breeze-gtk'
 pkgname=breeze-gtk
-version=5.22.3
+version=5.23.1
 revision=1
 build_style=cmake
 hostmakedepends="extra-cmake-modules sassc python3 python3-cairo"
@@ -10,7 +10,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/breeze-gtk"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=cff20c1605a09a85966a5d03f323fd8ad6b94828c347b68cbc874d896e0c7dbf
+checksum=50667357732aced49eec270e875546bf56a4e3a945d575c2d95a946aa055d287
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" qt5-devel"

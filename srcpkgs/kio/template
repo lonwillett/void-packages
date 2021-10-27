@@ -1,6 +1,6 @@
 # Template file for 'kio'
 pkgname=kio
-version=5.84.0
+version=5.87.0
 revision=1
 build_style=cmake
 configure_args="
@@ -15,7 +15,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.0-or-later"
 homepage="https://invent.kde.org/frameworks/kio"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=96be2b732faf97a484edc5238049ad22f0f233b9e404468f4da40c5ec839e0d3
+checksum=b91ed59de09c3b69c1eb50e6df2e087d912bda06a5d394763aa6e2e936cebc6b
 
 do_check() {
 	cd build

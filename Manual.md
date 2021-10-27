@@ -434,7 +434,7 @@ in this directory such as `${XBPS_BUILDDIR}/${wrksrc}`.
 
 The list of mandatory variables for a template:
 
-- `homepage` A string pointing to the `upstream` homepage.
+- `homepage` An URL pointing to the upstream homepage.
 
 
 - <a id="var_license"></a>
@@ -443,8 +443,8 @@ The list of mandatory variables for a template:
 Multiple licenses should be separated by commas, Example: `GPL-3.0-or-later, custom:Hugware`.
 
   Empty meta-packages that don't include any files
-  which thus have and require no license, should have set
-  `license="BSD-2-Clause"`.
+  and thus have and require no license should use
+  `Public Domain`.
 
   Note: `MIT`, `BSD`, `ISC` and custom licenses
   require the license file to be supplied with the binary package.
@@ -605,8 +605,7 @@ patches to the package sources during `do_patch()`. Patches are stored in
 and `XBPS_MAKEJOBS` has no effect.
 
 - `make_check` Sets the cases in which the `check` phase is run.
-This option should usually be accompanied by a comment explaining why it was set, especially when
-set to `no`.
+This option has to be accompanied by a comment explaining why the tests fail.
 Allowed values:
   - `yes` (the default) to run if `XBPS_CHECK_PKGS` is set.
   - `extended` to run if `XBPS_CHECK_PKGS` is `full`.
@@ -743,6 +742,8 @@ used.
 
 - `fetch_cmd` Executable to be used to fetch URLs in `distfiles` during the `do_fetch` phase.
 
+- `changelog` An URL pointing to the upstream changelog. Raw text files are preferred.
+
 - `archs` Whitespace separated list of architectures that a package can be
 built for, available architectures can be found under `common/cross-profiles`.
 In general, `archs` should only be set if the upstream software explicitly targets
@@ -759,6 +760,10 @@ Examples:
 	archs="*"
 	```
 A special value `noarch` used to be available, but has since been removed.
+
+- `nocheckperms` If set, xbps-src will not fail on common permission errors (world writable files, etc.)
+
+- `nofixperms` If set, xbps-src will not fix common permission errors (executable manpages, etc.)
 
 <a id="explain_depends"></a>
 #### About the many types of `depends` variables

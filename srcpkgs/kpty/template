@@ -1,6 +1,6 @@
 # Template file for 'kpty'
 pkgname=kpty
-version=5.84.0
+version=5.87.0
 revision=1
 build_style=cmake
 hostmakedepends="gettext kcoreaddons extra-cmake-modules kcoreaddons-devel"
@@ -10,7 +10,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kpty"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=62297b5a891f156d1bf7b0d8ed5996d40c30917800ebdabbfadcf32dccc70613
+checksum=918acfe51a0b895a64d858c84eb16a659c2a76f92c731a5dbdeb813a8aa4a2e1
 
 kpty-devel_package() {
 	short_desc+=" - development"

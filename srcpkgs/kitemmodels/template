@@ -1,6 +1,6 @@
 # Template file for 'kitemmodels'
 pkgname=kitemmodels
-version=5.84.0
+version=5.87.0
 revision=1
 build_style=cmake
 hostmakedepends="kcoreaddons extra-cmake-modules qt5-host-tools qt5-declarative-devel"
@@ -10,7 +10,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.0-or-later"
 homepage="https://invent.kde.org/frameworks/kitemmodels"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=da66a5608d2cffc6f465e963b3364e5faa81d88b19ca867e1004ca5202db29ec
+checksum=22f139281ba32a15d3721168dc08e496d80f9894182967ac455873bbdc45a7e3
 
 kitemmodels-devel_package() {
 	short_desc+=" - development"

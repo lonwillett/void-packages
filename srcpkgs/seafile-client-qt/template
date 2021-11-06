@@ -1,7 +1,7 @@
 # Template file for 'seafile-client-qt'
 pkgname=seafile-client-qt
-version=8.0.3
-#yyy_gitrev=205b080861d77c169efa12605983431d7e844d15
+version=8.0.4
+#yyy_gitrev=7317fb425226961708c6dccf5c0607ba2a177797
 revision=1
 _sourcename="seafile-client"
 wrksrc="${_sourcename}-${version}"
@@ -16,8 +16,9 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/seafile-client/archive/v${version}.tar.gz"
+checksum=36cf8bab06aad9680dc043111941c72f9a681ac3828aa7a07ea4f32a829e2159
 #yyydistfiles="https://github.com/haiwen/seafile-client/archive/${_gitrev}.tar.gz"
-checksum=37241cddcfd0bbf46c41f346458fd93a27bec9879d3fd461145b24e8aa2405fb
+#yyychecksum=61cb84feefcc02175921cab5d3f8e04b588fd4a8278d772f59c0577de0c553f2
 
 build_options="shibboleth"
 desc_option_shibboleth="Build with Shibboleth support"

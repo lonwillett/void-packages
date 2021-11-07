@@ -523,7 +523,6 @@ libicuuc.so.69 icu-libs-69.1_1
 libicutest.so.69 icu-libs-69.1_1
 libaspell.so.15 libaspell-0.60.8_2
 libpspell.so.15 libaspell-0.60.8_2
-libenchant.so.1 enchant-1.4.2_1
 libenchant-2.so.2 enchant2-2.2.3_1
 libgconf-2.so.4 GConf-2.32.0_1
 libpackagekit-glib2.so.18 PackageKit-1.1.12_1
@@ -987,13 +986,13 @@ libobrender.so.32 libopenbox-3.6.1_1
 libgssglue.so.1 libgssglue-0.3_1
 libtirpc.so.3 libtirpc-1.0.2_1
 libnfsidmap.so.1 libnfsidmap-2.4.3_2
-libbind9-9.16.15.so bind-libs-9.16.15_1
-libdns-9.16.15.so bind-libs-9.16.15_1
-libirs-9.16.15.so bind-libs-9.16.15_1
-libisc-9.16.15.so bind-libs-9.16.15_1
-libisccc-9.16.15.so bind-libs-9.16.15_1
-libisccfg-9.16.15.so bind-libs-9.16.15_1
-libns-9.16.15.so bind-libs-9.16.15_1
+libbind9-9.16.22.so bind-libs-9.16.22_1
+libdns-9.16.22.so bind-libs-9.16.22_1
+libirs-9.16.22.so bind-libs-9.16.22_1
+libisc-9.16.22.so bind-libs-9.16.22_1
+libisccc-9.16.22.so bind-libs-9.16.22_1
+libisccfg-9.16.22.so bind-libs-9.16.22_1
+libns-9.16.22.so bind-libs-9.16.22_1
 libplist-2.0.so.3 libplist-2.2.0_1
 libplist++-2.0.so.3 libplist++-2.2.0_1
 libnsbmp.so.0 libnsbmp-0.0.3_1
@@ -3055,7 +3054,7 @@ libsctp.so.1 lksctp-tools-1.0.17_1
 libwithsctp.so.1 lksctp-tools-1.0.17_1
 libnss_ldap.so.2 nss-pam-ldapd-0.9.7_4
 libunshield.so.0 libunshield-0.6_1
-libMyGUIEngine.so.3.4.0 libmygui-3.4.0_1
+libMyGUIEngine.so.3.4.1 libmygui-3.4.1_1
 libproj.so.18 proj-6.3.0_1
 libnlopt.so.0 nlopt-2.4.2_1
 libeb.so.16 libeb-4.3.3_1
@@ -3443,7 +3442,7 @@ libSoapySDR.so.0.7 SoapySDR-0.7.0_1
 libeditorconfig.so.0 editorconfig-0.12.2_1
 libcfitsio.so.9 cfitsio-3.480_1
 libapparmor.so.1 libapparmor-2.12.0_1
-libplacebo.so.72 libplacebo-2.72.0_1
+libplacebo.so.157 libplacebo-4.157.0_1
 libw2xc.so waifu2x-converter-cpp-5.2_1
 libnova-0.15.so.0 libnova-0.15.0_1
 libcue.so.2 libcue-2.2.0_1
@@ -4045,4 +4044,4 @@ libqrtr-glib.so.0 libqrtr-glib-1.0.0_1
 libstemmer.so.2 libstemmer-2.1.0_1
 libdecor-0.so.0 libdecor-0.1.0_1
 libavif.so.13 libavif-0.9.3_1
-libkdumpfile.so.8 libkdumpfile-0.4.0_1
+libkdumpfile.so.9 libkdumpfile-0.4.1_1

@@ -1,2 +1,2 @@
-site=https://github.com/haiwen/seadrive-fuse/releases
+site=https://github.com/haiwen/seadrive-fuse/tags
 pattern='tags/v\K[\d.]+(?=.tar.gz)'

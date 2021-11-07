@@ -2,5 +2,5 @@
 # version of seadrive-gui as for seadrive-daemon (seadrive-fuse).
 # This is not a good approach, but I see no better option than to stick
 # with it.
-site=https://github.com/haiwen/seadrive-fuse/releases
+site=https://github.com/haiwen/seadrive-fuse/tags
 pattern='tags/v\K[\d.]+(?=.tar.gz)'

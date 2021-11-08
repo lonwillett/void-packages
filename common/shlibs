@@ -60,6 +60,7 @@ libgo.so.16 libgo-10.2.0_1
 libperl.so.5.34 perl-5.34.0_1
 libgmp.so.10 gmp-5.0.1_1
 libgmpxx.so.4 gmpxx-6.0.0_2
+libmpfi.so.0 mpfi-1.5.3_1
 libmpfr.so.6 mpfr-4.0.0_1
 libppl.so.14 ppl-1.2_1
 libppl_c.so.4 ppl-0.11_1
@@ -70,6 +71,7 @@ libncursesw.so.6 ncurses-libs-5.8_1 ignore
 libtinfo.so.6 ncurses-libtinfo-libs-6.2_2
 libnetcdf.so.15 netcdf-4.7.0_1
 libformw.so.6 ncurses-libs-5.8_1 ignore
+libfplll.so.7 fplll-5.4.1_1
 libpanelw.so.6 ncurses-libs-5.8_1 ignore
 libmenuw.so.6 ncurses-libs-5.8_1 ignore
 libobjc.so.4 libobjc-4.7.3_12
@@ -1051,6 +1053,7 @@ libfltk_images.so.1.3 fltk-1.3.0_1
 libspectre.so.1 libspectre-0.2.6_1
 libsratom-0.so.0 sratom-0.4.0_1
 libpwquality.so.1 libpwquality-1.1.1_1
+libiml.so.0 iml-1.0.5_1
 libisl.so.23 isl-0.23_1
 libisl.so.19 isl15-0.19_1
 libcloog-isl.so.4 cloog-0.18.1_1

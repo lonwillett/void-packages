@@ -47,6 +47,8 @@ libSegFault.so glibc-2.32_1
 libpcprofile.so glibc-2.32_1
 libcidn.so.1 glibc-2.32_1
 libmvec.so.1 glibc-2.32_1
+libcddgmp.so.0 cddlib-0.94m_1
+libcdd.so.0 cddlib-0.94m_1
 libz.so.1 zlib-1.2.3_1
 libb2.so.1 libb2-0.98.1_1
 libbz2.so.1 bzip2-1.0.5_1
@@ -66,6 +68,7 @@ libppl.so.14 ppl-1.2_1
 libppl_c.so.4 ppl-0.11_1
 libstdc++.so.6 libstdc++-4.4.0_1
 libssp.so.0 libssp-4.4.0_1
+libcxsparse.so.3 SuiteSparse-5.10.1_1
 libncurses.so.6 ncurses-libs-6.0_1 ignore
 libncursesw.so.6 ncurses-libs-5.8_1 ignore
 libtinfo.so.6 ncurses-libtinfo-libs-6.2_2
@@ -437,6 +440,7 @@ libparted.so.2 libparted-3.1_1
 libparted-fs-resize.so.0 libparted-3.1_1
 libntfs-3g.so.89 ntfs-3g-2021.8.22_1
 libruby.so.3.0 ruby-3.0.2_1
+librw.so.0 rankwidth-0.9_1
 libprocessui.so.9 libksysguard-5.18.90_1
 libksignalplotter.so.9 libksysguard-5.18.90_1
 libksgrd.so.9 libksysguard-5.18.90_1
@@ -3873,6 +3877,8 @@ libjsonnet.so.0 jsonnet-0.14.0_2
 libjsonnet++.so.0 jsonnet-0.14.0_2
 libigdgmm.so.11 intel-gmmlib-21.3.1_1
 libigfxcmrt.so.7 intel-media-driver-21.3.5_1
+libigdgmm.so.11 intel-gmmlib-19.4.1_1
+libigraph.so.0 igraph-0.9.4_1
 libgtk-layer-shell.so.0 gtk-layer-shell-0.1.0_1
 librdkafka.so.1 librdkafka-1.4.4_3
 librdkafka++.so.1 librdkafka-1.4.4_3
@@ -4017,12 +4023,14 @@ liblinbox.so.0 linbox-1.6.3_1
 libpari-gmp.so.7 pari-2.13.0_1
 libpari-gmp-tls.so.7 pari-2.13.2_1
 libtree-sitter.so.0 tree-sitter-0.19.0_1
+libplanarity.so.0 planarity-3.0.1.1_1
 libgtkdatabox.so.1 gtkdatabox3-1.0.0_1
 libgf2x.so.3 gf2x-1.3.0_1
 libntl.so.44 ntl-11.5.1_1
 libflint.so.16 flintlib-2.8.0_1
 libarb.so.2 arb-2.20.0_1
 libec.so.8 eclib-20210625_1
+libsymmetrica.so.2 symmetrica-3.0.1_1
 libwayland-client++.so.0 libwaylandpp-0.2.8_1
 libwayland-cursor++.so.0 libwaylandpp-0.2.8_1
 libwayland-egl++.so.0 libwaylandpp-0.2.8_1
@@ -4048,3 +4056,5 @@ libstemmer.so.2 libstemmer-2.1.0_1
 libdecor-0.so.0 libdecor-0.1.0_1
 libavif.so.13 libavif-0.9.3_1
 libkdumpfile.so.9 libkdumpfile-0.4.1_1
+libm4ri-0.0.20200125.so m4ri-20200125_1
+libm4rie-0.0.20200125.so m4rie-20200125_1

@@ -962,7 +962,7 @@ libgsm.so.1 libgsm-1.0.13_13
 libcgroup.so.1 libcgroup-0.37.1_1
 libxdg-basedir.so.1 libxdg-basedir-1.1.1_1
 libev.so.4 libev-4.04_1
-libell.so.0 ell-0.41_1
+libell.so.0 ell-0.45_1
 libgvnc-1.0.so.0 gtk-vnc-0.4.4_1
 libgtk-vnc-2.0.so.0 gtk-vnc-0.4.4_1
 libyaml-0.so.2 libyaml-0.1.4_1
@@ -3953,9 +3953,9 @@ liburing.so.2 liburing-2.0_1
 libbson-1.0.so.0 libbson-1.17.4_2
 libsonic.so.0 libsonic-0.2.0_1
 libtickit.so.3 libtickit-0.4.1_1
-libnotcurses.so.2 notcurses-2.0.4_1
-libnotcurses-core.so.2 notcurses-2.1.7_1
-libnotcurses++.so.2 notcurses-2.0.4_1
+libnotcurses.so.2 notcurses-2.4.9_1
+libnotcurses-core.so.2 notcurses-2.4.9_1
+libnotcurses++.so.2 notcurses-2.4.9_1
 libevemu.so.3 evemu-2.7.0_1
 libantilib.so.1 libantimicrox-3.1.2_1
 libinih.so.0 inih-52_1

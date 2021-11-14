@@ -581,8 +581,9 @@ phase if `${build_style}` is set to `configure`, `gnu-configure` or
 `PREFIX=/usr DESTDIR=${DESTDIR}`.
 
 - `make_build_target` The build target. If `${build_style}` is set to `configure`, `gnu-configure`
-or `gnu-makefile`, this is the target passed to `${make_cmd}` in the build phase; when unset, it
-defaults to `all`. If `${build_style}` is `python3-pep517`, this is the path of the package
+or `gnu-makefile`, this is the target passed to `${make_cmd}` in the build phase;
+when unset the default target is used.
+If `${build_style}` is `python3-pep517`, this is the path of the package
 directory that should be built as a Python wheel; when unset, defaults to `.` (the current
 directory with respect to the build).
 
@@ -997,6 +998,10 @@ configure arguments can be specified via `cross_*_configure_args` where `*` is `
 `gcc_bootstrap` (early gcc), `gcc` (final gcc), `glibc` (or `musl`), `configure_args` is
 additionally passed to both early and final `gcc`. You can also specify custom `CFLAGS`
 and `LDFLAGS` for the libc as `cross_(glibc|musl)_(cflags|ldflags)`.
+
+- `zig-build` For packages using [Zig](https://ziglang.org)'s build
+system. Additional arguments may be passed to the `zig build` invocation using
+`configure_args`.
 
 For packages that use the Python module build method (`setup.py` or
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)), you can choose one of the following:

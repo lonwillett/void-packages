@@ -1,5 +1,5 @@
---- input/packet/ulogd_inppkt_NFLOG.c~	2018-04-27 01:10:42.308872050 +0200
-+++ input/packet/ulogd_inppkt_NFLOG.c	2020-12-31 04:38:22.301380979 +0100
+--- a/input/packet/ulogd_inppkt_NFLOG.c	2018-04-27 01:10:42.308872050 +0200
++++ b/input/packet/ulogd_inppkt_NFLOG.c	2020-12-31 04:38:22.301380979 +0100
 @@ -372,7 +372,7 @@
  
  	/* god knows why timestamp_usec contains crap if timestamp_sec

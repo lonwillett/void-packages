@@ -1,8 +1,8 @@
 # Template file for 'ookla-speedtest-cli'
 pkgname=ookla-speedtest-cli
-version=1.0.0.2
+version=1.1.1
 revision=1
-wrksrc="${pkgname}-${version}"
+create_wrksrc=yes
 build_style="fetch"
 
 short_desc="Ookla's bandwidth test tool using speedtest.net"
@@ -11,44 +11,37 @@ homepage="https://www.speedtest.net/apps/cli"
 license="Proprietary"
 repository="nonfree"
 archs="x86_64 x86_64-musl i686 i686-musl aarch64 aarch64-musl armv7l armv7l-musl armv6l armv6l-musl"
-hostmakedepends="wget tar"
+hostmakedepends="tar"
 nostrip="yes"
 
 case "${XBPS_TARGET_MACHINE}" in
 	x86_64*)
 		_arch="x86_64"
-		checksum=5fe2028f0d4427e4f4231d9f9cf70e6691bb890a70636d75232fe4d970633168
+		checksum=970477fdfee4d741e75f088faf648f9b51c7be04313fb88ffb5de07eb1a3040c
 		;;
 	i686*)
 		_arch="i386"
-		checksum=828362e559e53d80b3579df032fe756a0993cf33934416fa72e9d69c8025321b
+		checksum=2854018a9319ff73d19212c497bb3c329dd53aae2fd28a1b5f94ede619c1d976
 		;;
 	aarch64*)
 		_arch="aarch64"
-		checksum=073684dc3490508ca01b04c5855e04cfd797fed33f6ea6a6edc26dfbc6f6aa9e
+		checksum=276a40873fe1c3ca24a21580c2fc64aa92ed358ffc6db6071a13d03a8d431fd9
 		;;
 	armv7l*)
 		_arch="armhf"
-		checksum=04b54991cfb9492ea8b2a3500340e7eeb78065a00ad25a032be7763f1415decb
+		checksum=78cf629619043535640a0a6de7a1c7b6f8d837768baee13e296655e3d830c3da
 		;;
 	armv6l*)
-		_arch="arm"
-		checksum=0fa7b3237d0fe4fa15bc1e7cb27ccac63b02a2679b71c2879d59dd75d3c9235d
+		_arch="armel"
+		checksum=87cd7e1790576a2cb2b3e5f5412f7dded553996487d49c991435e7544c10055b  -
 		;;
 esac
 
-_filename="ookla-speedtest-${version%.*}-${_arch}-linux.tgz"
-distfiles="https://bintray.com/ookla/download/download_file?file_path=${_filename}"
+_filename="ookla-speedtest-${version}-linux-${_arch}.tgz"
+distfiles="https://install.speedtest.net/app/cli/${_filename}"
 
-do_fetch() {
-	mkdir -p $wrksrc
-	cd $wrksrc
-	wget -O "$_filename" $distfiles
-	echo "$checksum  $_filename" | sha256sum -c || { sha256sum "$_filename"; return 1; }
-}
-
-do_extract() {
-	tar xzf $_filename
+post_extract() {
+	tar xzf "${_filename}"
 }
 
 do_install() {

@@ -3,7 +3,7 @@
 pkgname=libsearpc
 # 3.2-latest (as of 2021-12-07)
 version=3.2.0.20211008
-revision=1
+revision=2
 _gitrev=e72c1158c8feb344ef44d2b4a60638e7dbfd1a8e
 wrksrc="${pkgname}-${_gitrev}"
 build_style=gnu-configure

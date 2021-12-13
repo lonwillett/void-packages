@@ -2,7 +2,7 @@
 pkgname=seafile-libclient
 version=8.0.5
 #yyy_gitrev=28ede40ebeca4f046c1d6625ac69fd4949e66042
-revision=1
+revision=2
 _distname="${pkgname/-libclient/}"
 wrksrc="${_distname}-${version}"
 #yyywrksrc="${_distname}-${_gitrev}"

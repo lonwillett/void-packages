@@ -7,7 +7,7 @@ diff --git src/common/Makefile src/common/Makefile
 index ec04710..2af845f 100644
 --- a/src/common/Makefile
 +++ b/src/common/Makefile
-@@ -30,11 +30,14 @@ include $(top_builddir)/src/Makefile.global
+@@ -30,10 +30,13 @@ include $(top_builddir)/src/Makefile.global
  
  # don't include subdirectory-path-dependent -I and -L switches
  STD_CPPFLAGS := $(filter-out -I$(top_srcdir)/src/include -I$(top_builddir)/src/include,$(CPPFLAGS))
@@ -15,7 +15,6 @@ index ec04710..2af845f 100644
 +STD_CFLAGS   := $(subst @XBPS_SYSROOT@,,$(CFLAGS))
  STD_LDFLAGS := $(filter-out -L$(top_builddir)/src/common -L$(top_builddir)/src/port,$(LDFLAGS))
 +STD_LDFLAGS := $(subst @XBPS_SYSROOT@,,$(STD_LDFLAGS))
- override CPPFLAGS += -DVAL_CONFIGURE="\"$(configure_args)\""
  override CPPFLAGS += -DVAL_CC="\"$(CC)\""
  override CPPFLAGS += -DVAL_CPPFLAGS="\"$(STD_CPPFLAGS)\""
 -override CPPFLAGS += -DVAL_CFLAGS="\"$(CFLAGS)\""

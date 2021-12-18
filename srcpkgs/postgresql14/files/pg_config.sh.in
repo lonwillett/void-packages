@@ -18,7 +18,7 @@ PKGLIBDIR="$sysroot/@PREFIX@/lib/postgresql"
 LOCALEDIR="$sysroot/@PREFIX@/share/locale"
 MANDIR="$sysroot/@PREFIX@/share/man"
 SHAREDIR="$sysroot/@PREFIX@/share/postgresql"
-SYSCONFDIR="$sysroot/@PREFIX@/etc/postgresql"
+SYSCONFDIR="$sysroot/etc/psql@VERSION@/postgresql"
 PGXS="$sysroot/@PREFIX@/lib/postgresql/pgxs/src/makefiles/pgxs.mk"
 
 CONFIGURE="@configure_args@"

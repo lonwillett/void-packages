@@ -558,10 +558,10 @@ libKF5PurposeWidgets.so.5 purpose-5.48.0_1
 libKF5Purpose.so.5 purpose-5.48.0_1
 libKF5PulseAudioQt.so.3 pulseaudio-qt-1.3_1
 libReviewboardHelpers.so.5 purpose-5.48.0_1
-libecpg_compat.so.3 postgresql-libs-13.2_2
-libecpg.so.6 postgresql-libs-13.2_2
-libpgtypes.so.3 postgresql-libs-13.2_2
-libpq.so.5 postgresql-libs-13.2_2
+libecpg_compat.so.3 postgresql-libs-14.0_1
+libecpg.so.6 postgresql-libs-14.0_1
+libpgtypes.so.3 postgresql-libs-14.0_1
+libpq.so.5 postgresql-libs-14.0_1
 libmypaint.so.0 libmypaint-1.6.1_1
 libgssapi_krb5.so.2 mit-krb5-libs-1.8_1
 libgssrpc.so.4 mit-krb5-libs-1.8_1
@@ -4097,3 +4097,4 @@ libkmaillanguagetool.so.5 kdepim-addons-21.08.3_1
 libkaddressbookmergelibprivate.so.5 kdepim-addons-21.08.3_1
 libkmailconfirmbeforedeleting.so.5 kdepim-addons-21.08.3_1
 libkaddressbookprivate.so.5 kaddressbook-21.08.3_1
+libcodec2.so.1.0 codec2-1.0.1_1

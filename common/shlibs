@@ -3115,12 +3115,8 @@ libtracker-miner-2.0.so.0 libtracker-2.0.1_1
 libtracker-sparql-3.0.so.0 libtracker3-3.0.0_1
 libdockapp.so.3 libdockapp-0.7.2_1
 libkrdccore.so.5 krdc-17.04.3_1
-libkrfbprivate.so.5.0 krfb-17.08.1_1 
-libJudy.so.1 judy-1.0.5_1
-libArcus.so.3 libArcus-2.7.0_1
-libArcus.so.3 libArcus-3.0.3_1
-libkrfbprivate.so.5.0 krfb-17.08.1_1
 libArcus.so.3 libArcus-3.1.0_1
+libJudy.so.1 judy-1.0.5_1
 libgutenprint.so.9 gutenprint-5.3.3_1
 libunbound.so.8 libunbound-1.13.1_2
 libmirage.so.11 libmirage-3.1.0_1
@@ -3132,8 +3128,6 @@ libvaladoc-0.52.so.0 libvaladoc-0.52.0_1
 libvalaccodegen.so libvala-0.44.0_1
 libphodav-2.0.so.0 phodav-2.2_1
 libgfshare.so.2 libgfshare-2.0.0_1
-libJudy.so.1 judy-1.0.5_1
-libtracker-miner-2.0.so.0 libtracker-2.0.1_1
 libtacacs.so.1 tacacs-4.0.4.28_1
 libffms2.so.4 libffms2-2.23.1_1
 libddcutil.so.4 ddcutil-1.0.1_1
@@ -3992,7 +3986,7 @@ libndr-krb5pac.so.0 samba-libs-4.13.2_1
 libndr-nbt.so.0 samba-libs-4.13.2_1
 libndr-standard.so.0 samba-libs-4.13.2_1
 libndr.so.1 samba-libs-4.13.2_1
-libsamba-credentials.so.1 samba-libs-4.14.11_1
+libsamba-credentials.so.1 samba-libs-4.13.2_1
 libsamba-errors.so.1 samba-libs-4.13.2_1
 libsamba-hostconfig.so.0 samba-libs-4.13.2_1
 libsamba-passdb.so.0 samba-libs-4.13.2_1

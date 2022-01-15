@@ -14,7 +14,7 @@ short_desc="Event system based on the talloc memory management library"
 maintainer="Yuusha Spacewolf <xyuusha@paranoici.org>"
 license="GPL-3.0-or-later"
 homepage="https://tevent.samba.org"
-distfiles="https://ftp.samba.org/pub/tevent/tevent-${version}.tar.gz"
+distfiles="https://download.samba.org/pub/tevent/tevent-${version}.tar.gz"
 checksum=ee9a86c8e808aac2fe1e924eaa139ff7f0269d0e8e4fafa850ae5c7489bc82ba
 
 export PYTHON_CONFIG="${XBPS_CROSS_BASE}/usr/bin/python3-config"

@@ -2,7 +2,7 @@
 pkgname=seadrive-daemon
 #yyy_gitrev=3fe6f69ff74fc6b1b166c8b49ebb51ca459980a3
 version=2.0.16
-revision=2
+revision=3
 _distname="seadrive-fuse"
 wrksrc="${_distname}-${version}"
 #yyywrksrc="${_distname}-${_gitrev}"

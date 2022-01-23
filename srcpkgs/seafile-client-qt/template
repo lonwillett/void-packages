@@ -2,7 +2,7 @@
 pkgname=seafile-client-qt
 version=8.0.5
 #yyy_gitrev=484d80075f9dbcf49d80036e84ed67d47b8cedd4
-revision=2
+revision=3
 _sourcename="seafile-client"
 wrksrc="${_sourcename}-${version}"
 #yyywrksrc="${_sourcename}-${_gitrev}"

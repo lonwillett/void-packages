@@ -1,7 +1,7 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
 version=0.1
-revision=59
+revision=60
 build_style=meta
 short_desc="Uninstalls packages removed from repository"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
@@ -386,3 +386,17 @@ case "$XBPS_TARGET_MACHINE" in
 		"
 		;;
 esac
+
+case "$XBPS_TARGET_MACHINE" in
+	armv6l*) ;;
+	armv7l*) ;;
+	aarch64*)
+		replaces+="
+		 xf86-video-fbturbo<=0.4.0
+		"
+		;;
+esac
+
+if [ "$XBPS_TARGET_MACHINE" = "armv7l" ]; then
+	replaces+=" xf86-video-fbturbo-sunxi<=0.4.0"
+fi

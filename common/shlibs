@@ -421,7 +421,7 @@ libField3D.so.1.7 Field3D-1.7.3_1
 libMAC.so.6 libMAC-5.28_1
 libmad.so.0 libmad-0.15.1b_1
 libmatroska.so.7 libmatroska-1.6.0_1
-libmatrix_client.so.0.6.2 mtxclient-0.6.2_1
+libmatrix_client.so.0.7.0 mtxclient-0.7.0_1
 libebml.so.5 libebml-1.4.0_1
 libdvdread.so.8 libdvdread-6.1.1_1
 libdvdnav.so.4 libdvdnav-4.1.3_1
@@ -3044,7 +3044,7 @@ libbctoolbox.so.1 bctoolbox-0.6.0_1
 libortp.so.15 ortp-4.4.0_1
 libsuperlu.so.5 superlu-5.2.1_1
 libgosu.so.0 gosu-0.12.0_1
-libyara.so.8 libyara-4.1.0_1
+libyara.so.9 libyara-4.2.0_1
 libyaz_icu.so.5 yaz-5.23.1_1
 libyaz.so.5 yaz-5.23.1_1
 libyaz_server.so.5 yaz-5.23.1_1

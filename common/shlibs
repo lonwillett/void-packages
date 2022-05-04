@@ -992,6 +992,7 @@ libmdbsql.so.0 libmdb-0.5_1
 libkmod.so.2 libkmod-5_1
 libestr.so.0 libestr-0.1.2_1
 libee.so.0 libee-0.3.2_1
+libopendht.so.2 opendht-2.3.1_1
 libobt.so.2 libopenbox-3.5.2_1
 libobrender.so.32 libopenbox-3.6.1_1
 libgssglue.so.1 libgssglue-0.3_1
@@ -3723,7 +3724,7 @@ libdrumstick-rt.so.1 drumstick-1.1.2_1
 libnozzle.so.1 libnozzle1-1.11_4
 libmygpo-qt5.so.1 libmygpo-qt-1.1.0_1
 libluv.so.1 libluv-1.30.1.0_1
-libarmadillo.so.9 armadillo-9.700.2_1
+libarmadillo.so.11 armadillo-11.0.1_1
 libvarnishapi.so.2 libvarnishapi-6.3.0_1
 libicns.so.1 libicns-0.8.1_1
 librabbitmq.so.4 rabbitmq-c-0.10.0_2

@@ -3886,9 +3886,8 @@ libnvpair.so.3 zfs-2.0.3_2
 libgmio.so gmio-0.4.1_1
 libjsonnet.so.0 jsonnet-0.14.0_2
 libjsonnet++.so.0 jsonnet-0.14.0_2
-libigdgmm.so.11 intel-gmmlib-21.3.1_1
+libigdgmm.so.12 intel-gmmlib-22.1.3_1
 libigfxcmrt.so.7 intel-media-driver-21.3.5_1
-libigdgmm.so.11 intel-gmmlib-19.4.1_1
 libigraph.so.0 igraph-0.9.4_1
 libgtk-layer-shell.so.0 gtk-layer-shell-0.1.0_1
 librdkafka.so.1 librdkafka-1.4.4_3
@@ -4064,6 +4063,7 @@ libmariadbd.so.19 libmariadbclient-10.5.9_1
 libinstpatch-1.0.so.2 libinstpatch-1.1.6_1
 libbasu.so.0 basu-0.2.0_1
 libhomfly.so.0 libhomfly-1.02r6_1
+libsrt.so.1.4 libsrt-1.4.4_1
 libXcomp.so.3 nx-libs-3.5.99.24_1
 libXcompshad.so.3 nx-libs-3.5.99.24_1
 libNX_X11.so.6 nx-libs-3.5.99.24_1
@@ -4172,3 +4172,4 @@ libThread.so root-6.24.06_1
 libTMVA.so root-6.24.06_1
 libMathCore.so root-6.24.06_1
 liblowdown.so lowdown-0.11.2_1
+libjaylink.so.0 libjaylink-0.2.0_1

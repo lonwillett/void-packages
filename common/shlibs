@@ -42,6 +42,8 @@ libnss_dns.so.2 glibc-2.32_1
 libnss_hesiod.so.2 glibc-2.32_1
 libcrypt.so.1 glibc-2.32_1
 libBrokenLocale.so.1 glibc-2.32_1
+libSimGearCore.so.2020.3.13 simgear-2020.3.13_1
+libSimGearScene.so.2020.3.13 simgear-2020.3.13_1
 libmemusage.so glibc-2.32_1
 libSegFault.so glibc-2.32_1
 libpcprofile.so glibc-2.32_1
@@ -522,12 +524,12 @@ libkImageAnnotator.so.0 kImageAnnotator-0.4.1_1
 libkColorPicker.so.0 kColorPicker-0.1.5_1
 libbabl-0.1.so.0 babl-0.1.16_1
 libbamf3.so.2 bamf-0.5.1_1
-libicuio.so.70 icu-libs-70.1_1
-libicui18n.so.70 icu-libs-70.1_1
-libicudata.so.70 icu-libs-70.1_1
-libicutu.so.70 icu-libs-70.1_1
-libicuuc.so.70 icu-libs-70.1_1
-libicutest.so.70 icu-libs-70.1_1
+libicuio.so.71 icu-libs-71.1_1
+libicui18n.so.71 icu-libs-71.1_1
+libicudata.so.71 icu-libs-71.1_1
+libicutu.so.71 icu-libs-71.1_1
+libicuuc.so.71 icu-libs-71.1_1
+libicutest.so.71 icu-libs-71.1_1
 libaspell.so.15 libaspell-0.60.8_2
 libpspell.so.15 libaspell-0.60.8_2
 libenchant-2.so.2 enchant2-2.2.3_1
@@ -3556,7 +3558,7 @@ libcsfml-window.so.2.5 CSFML-2.5_1
 libcsfml-system.so.2.5 CSFML-2.5_1
 libcsfml-network.so.2.5 CSFML-2.5_1
 libtokyocabinet.so.9 tokyocabinet-1.4.48_1
-libdav1d.so.5 libdav1d4-0.8.1_1
+libdav1d.so.6 libdav1d6-1.0.0_1
 libdqlite.so.0 dqlite-0.2.1_1
 libwoff2common.so.1.0.2 libwoff2common1.0.2-1.0.2_1
 libwoff2enc.so.1.0.2 libwoff2enc1.0.2-1.0.2_1

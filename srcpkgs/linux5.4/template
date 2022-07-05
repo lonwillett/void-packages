@@ -1,6 +1,6 @@
 # Template file for 'linux5.4'
 pkgname=linux5.4
-version=5.4.200
+version=5.4.203
 revision=1
 wrksrc="linux-${version}"
 short_desc="Linux kernel and modules (${version%.*} series)"
@@ -8,7 +8,7 @@ maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz"
-checksum=eae97c9bbf0228bef165be60283ec42cfc9531cea5c641aa3ba131f2125525b8
+checksum=fc933f5b13066cfa54aacb5e86747a167bad1d8d23972e4a03ab5ee36c29798a
 python_version=3
 
 nodebug=yes  # -dbg package is generated below manually
@@ -24,10 +24,6 @@ hostmakedepends="tar xz bc elfutils-devel flex gmp-devel kmod libmpc-devel
 _kernver="${version}_${revision}"
 triggers="kernel-hooks"
 kernel_hooks_version="${_kernver}"
-
-case "$XBPS_TARGET_MACHINE" in
-	aarch64*) broken="https://build.voidlinux.org/builders/aarch64_builder/builds/37218/steps/shell_3/logs/stdio";;
-esac
 
 
 # These files could be modified when an external module is built.

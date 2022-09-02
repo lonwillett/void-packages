@@ -1,8 +1,8 @@
 # Template file for 'seafile-client-qt'
 pkgname=seafile-client-qt
-version=8.0.5
-#yyy_gitrev=484d80075f9dbcf49d80036e84ed67d47b8cedd4
-revision=3
+version=8.0.8
+#yyy_gitrev=ffffffffffffffffffffffffffffffffffffffff
+revision=1
 _sourcename="seafile-client"
 wrksrc="${_sourcename}-${version}"
 #yyywrksrc="${_sourcename}-${_gitrev}"
@@ -17,7 +17,7 @@ license="Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/seafile-client/archive/v${version}.tar.gz"
 #yyydistfiles="https://github.com/haiwen/seafile-client/archive/${_gitrev}.tar.gz"
-checksum=a3956c7b7825d79b0a35ffe9e554a29de16f9077dde0209d9b1064653056bb3c
+checksum=4490128f7f8a1691d43fb9d3152b7a842af3542332b2a43e346f1c62ab2c37bc
 
 build_options="shibboleth"
 desc_option_shibboleth="Build with Shibboleth support"
@@ -38,7 +38,7 @@ pre_configure() {
 			# append '-ltfs' argument on link via cmake (macro TARGET_LINK_LIBRARIES)
 			# "LDFLAGS=-lfts" does not work, its prepends it (useless)
 			# XXX prefer patch on CMakeLists.txt ?
-			sed -i -e 's,\(\${EXTRA_LIBS}\)$,\1 -lfts,' ${wrksrc}/CMakeLists.txt
+			vsed -i -e 's,\(\${EXTRA_LIBS}\)$,\1 -lfts,' ${wrksrc}/CMakeLists.txt
 			;;
 	esac
 }

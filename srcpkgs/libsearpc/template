@@ -1,10 +1,10 @@
 # Template file for 'libsearpc'
 # WARNING: upstream sometimes retag source. Wait for official announcement
 pkgname=libsearpc
-# 3.2-latest (as of 2021-12-07)
-version=3.2.0.20211008
-revision=3
-_gitrev=e72c1158c8feb344ef44d2b4a60638e7dbfd1a8e
+# floating tag 3.2-latest
+version=3.2.0.20220405
+revision=1
+_gitrev=54145b03f4240222e336a9a2f402e93facefde65
 wrksrc="${pkgname}-${_gitrev}"
 build_style=gnu-configure
 configure_args="--with-python3 --disable-static --disable-compile-demo"
@@ -15,7 +15,7 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="LGPL-3.0-or-later, Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/libsearpc/archive/${_gitrev}.tar.gz"
-checksum=3eff97ff5cc254f1f519b694ee5f6c91249a18b4c3d5074bf15ac14892eb42d0
+checksum=401c736be7bb8c6b116a85bd5af36431046c7dd4b6392d5006f917c7fd1d2132
 python_version=3
 
 pre_configure() {

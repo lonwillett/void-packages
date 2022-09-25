@@ -1,7 +1,8 @@
 # Template file for 'gobject-introspection'
 pkgname=gobject-introspection
+reverts="1.74.0_1"
 version=1.72.0
-revision=1
+revision=2
 build_style=meson
 pycompile_dirs="usr/lib/${pkgname}/giscanner"
 hostmakedepends="flex pkg-config"

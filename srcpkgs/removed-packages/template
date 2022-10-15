@@ -1,7 +1,7 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
 version=0.1
-revision=74
+revision=76
 build_style=meta
 short_desc="Uninstalls packages removed from repository"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
@@ -83,6 +83,7 @@ replaces="
  eclipse-ecj<=4.9_3
  elasticsearch<=5.1.2_2
  electron10<=10.4.7_2
+ electron13<=13.6.7_1
  electron7<=7.3.3_1
  electron9<=9.4.1_1
  emacs-gtk2<=27.2_1
@@ -259,6 +260,8 @@ replaces="
  libmpd<=11.8.17_3
  libopencv-python<=3.4.15_1
  libopencv4-python<=4.5.3_2
+ libpipewire0.2<=0.2.7_2
+ libpipewire0.2-devel<=0.2.7_2
  libpng12<=1.2.59_1
  libpyside-python3<=5.15.0_2
  libqmatrixclient-devel<=0.5.3.2_1

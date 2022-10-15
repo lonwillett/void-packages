@@ -470,6 +470,7 @@ libfsimage.so.1.0 xen-libs-4.10.0_1
 libxenstat.so.4.14 xen-libs-4.14.0_1
 libfam.so.0 gamin-0.1.10_1
 libgamin-1.so.0 gamin-0.1.10_1
+libkateprivate.so.22.08.2 libkate-22.08.2_1
 libKF5SyntaxHighlighting.so.5 syntax-highlighting-5.29.0_1
 libKF5Libkleo.so.5 libkleo-17.12.3_1
 libKF5GrantleeTheme.so.5 grantleetheme-17.12.3_1
@@ -1328,7 +1329,7 @@ libunwind-ppc64.so.8 libunwind-1.5.0_3
 libunwind-setjmp.so.0 libunwind-1.5.0_3
 libmicrohttpd.so.12 libmicrohttpd-0.9.73_1
 libmicrodns.so.1 libmicrodns-0.2.0_1
-libgit2.so.1.0 libgit2-1.0.1_3
+libgit2.so.1.5 libgit2-1.5.0_1
 libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
 libagg.so.2 agg-2.5_1
 libzzip-0.so.13 zziplib-0.13.62_1
@@ -3218,7 +3219,6 @@ libarcan_shmif_server.so.0.15 arcan-0.6.1.1_1
 libarcan_tui.so.0.15 arcan-0.6.1.1_1
 libarcan_a12.so.0.1 arcan-0.6.1.1_1
 liblwipv6.so.2 lwipv6-1.5a_1
-libpipewire-0.2.so.1 libpipewire0.2-0.2.7_1
 libpipewire-0.3.so.0 libpipewire-0.3.6_1
 libvolk.so.2.5 volk-2.5.0_1
 libgnuradio-runtime.so.3.10.3 gnuradio-3.10.3.0_1

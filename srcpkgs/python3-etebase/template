@@ -2,12 +2,11 @@
 pkgname=python3-etebase
 version=0.31.5
 revision=1
-archs="x86_64"
 wrksrc="etebase-py-${version}"
 build_style=python3-module
 build_helper="rust"
 hostmakedepends="python3-setuptools python3-wheel python3-setuptools-rust cargo"
-makedepends="libsodium libsodium-devel openssl-devel pkg-config"
+makedepends="libsodium libsodium-devel openssl-devel pkg-config rust-std"
 depends="python3-msgpack openssl"
 checkdepends="python3-pytest python3-pytest ${depends}"
 short_desc="Python library for Etebase"
@@ -18,6 +17,7 @@ changelog="https://raw.githubusercontent.com/etesync/etebase-py/master/ChangeLog
 distfiles="https://github.com/etesync/etebase-py/archive/refs/tags/v${version}.tar.gz"
 checksum=3f372b18cc518e04788ca553fb05989f77f393d041688a44f69b7b5b56d71048
 make_check=no  #checking requires starting the server on localhost
+nocross=yes
 
 pre_build() {
 	vsed -i -e 's|.rustfmt_bindings(true);|.rustfmt_bindings(false);|' build.rs

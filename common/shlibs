@@ -1160,10 +1160,10 @@ libharfbuzz.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-icu.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-subset.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-gobject.so.0 libharfbuzz-5.1.0_1
-libosinfo-1.0.so.0 libosinfo-0.2.0_1
-libspice-client-gtk-3.0.so.5 spice-gtk-0.37_6
-libspice-client-glib-2.0.so.8 spice-gtk-0.37_6
-libspice-controller.so.0 spice-gtk-0.37_6
+libosinfo-1.0.so.0 libosinfo-0.10.0_2
+libspice-client-gtk-3.0.so.5 spice-gtk-0.41_2
+libspice-client-glib-2.0.so.8 spice-gtk-0.41_2
+libspice-controller.so.0 spice-gtk-0.41_2
 libvirt-gconfig-1.0.so.0 libvirt-glib-0.1.2_1
 libvirt-gobject-1.0.so.0 libvirt-glib-0.1.2_1
 libgsasl.so.7 libgsasl-1.8.0_1
@@ -2607,7 +2607,7 @@ libhwloc.so.15 libhwloc-2.0.4_1
 libnetfilter_cttimeout.so.1 libnetfilter_cttimeout-1.0.0_1
 libnetfilter_cthelper.so.0 libnetfilter_cthelper-1.0.0_1
 libnetfilter_queue.so.1 libnetfilter_queue-1.0.2_1
-libfilezilla.so.31 libfilezilla-0.39.1_1
+libfilezilla.so.32 libfilezilla-0.39.2_1
 libtommath.so.1 libtommath-1.0_1
 libKF5ItemViews.so.5 kitemviews-5.26.0_1
 libunicorn.so.1 unicorn-1.0_1
@@ -3112,7 +3112,7 @@ libsysprof-ui-4.so sysprof-3.37.90_1
 libvala-0.56.so.0 libvala-0.56.0_1
 libvaladoc-0.56.so.0 libvaladoc-0.56.0_1
 libvalaccodegen.so libvala-0.44.0_1
-libphodav-2.0.so.0 phodav-2.2_1
+libphodav-3.0.so.0 phodav-3.0_1
 libgfshare.so.2 libgfshare-2.0.0_1
 libtacacs.so.1 tacacs-4.0.4.28_1
 libffms2.so.4 libffms2-2.23.1_1
@@ -3950,7 +3950,6 @@ libnotcurses-core.so.3 notcurses-3.0.5_1
 libnotcurses++.so.3 notcurses-3.0.5_1
 libnotcurses-ffi.so.3 notcurses-3.0.5_1
 libevemu.so.3 evemu-2.7.0_1
-libantilib.so.1 libantimicrox-3.1.2_1
 libinih.so.0 inih-52_1
 libpcaudio.so.0 pcaudiolib-1.1_1
 libdcerpc-samr.so.0 samba-4.13.2_1

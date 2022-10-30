@@ -1,6 +1,6 @@
 # Template file for 'google-chrome'
 pkgname=google-chrome
-version=106.0.5249.119
+version=107.0.5304.87
 revision=1
 _channel=stable
 archs="x86_64"
@@ -20,7 +20,7 @@ _chromeUrl="${_baseUrl}/${_filename}"
 _licenseUrl="https://www.google.com/intl/en/chrome/terms/"
 
 distfiles="$_chromeUrl"
-checksum=ad017c199fb1a9b642676fb6913025163b580d157d1f1f1536fde31d0d458ecd
+checksum=422b1b0732ed0f69d4638858d55f83c65c3b87773b1f033130bdbad975c44699
 
 do_extract() {
 	mkdir -p ${DESTDIR}

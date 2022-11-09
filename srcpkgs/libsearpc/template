@@ -14,7 +14,7 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="LGPL-3.0-or-later, Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/libsearpc/archive/${_gitrev}.tar.gz"
-checksum=34e0d1b4ba7a9e4a63d2ce2ff6f3bd06f46c6f9e41d4607dde7c725f28886929
+checksum=694ab76ea0e3c0616a4c517fc6f264cc35679ed70a843c4e74e0b35b779def8d
 python_version=3
 
 pre_configure() {

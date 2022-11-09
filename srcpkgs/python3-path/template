@@ -1,8 +1,7 @@
 # Template file for 'python3-path'
 pkgname=python3-path
 version=16.5.0
-revision=1
-wrksrc="path-${version}"
+revision=2
 build_style=python3-pep517
 hostmakedepends="python3-wheel python3-setuptools_scm"
 depends="python3"

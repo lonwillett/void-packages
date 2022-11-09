@@ -1,8 +1,7 @@
 # Template file for 'python3-ansible-compat'
 pkgname=python3-ansible-compat
 version=2.2.1
-revision=1
-wrksrc="${pkgname/python3-/}-${version}"
+revision=2
 build_style=python3-pep517
 hostmakedepends="python3-wheel python3-setuptools_scm"
 depends="python3-subprocess-tee python3-yaml"

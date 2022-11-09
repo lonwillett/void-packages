@@ -4,7 +4,6 @@ version=8.0.8
 #yyy_gitrev=ffffffffffffffffffffffffffffffffffffffff
 revision=1
 _sourcename="seafile-client"
-wrksrc="${_sourcename}-${version}"
 #yyywrksrc="${_sourcename}-${_gitrev}"
 build_style=cmake
 configure_args="$(vopt_if shibboleth '-DBUILD_SHIBBOLETH_SUPPORT=ON -DUSE_QT_WEBKIT=ON')"

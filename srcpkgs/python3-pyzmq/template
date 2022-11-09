@@ -1,8 +1,7 @@
 # Template file for 'python3-pyzmq'
 pkgname=python3-pyzmq
 version=24.0.1
-revision=1
-wrksrc="pyzmq-${version}"
+revision=2
 build_style=python3-module
 make_build_args="--zmq=${XBPS_CROSS_BASE}/usr"
 hostmakedepends="python3-setuptools python3-packaging"

@@ -1,8 +1,7 @@
 # Template file for 'python3-pikepdf'
 pkgname=python3-pikepdf
 version=6.2.0
-revision=1
-wrksrc="pikepdf-${version}"
+revision=2
 build_style=python3-module
 hostmakedepends="python3-pybind11 python3-setuptools_scm python3-wheel"
 makedepends="libqpdf-devel python3-pybind11"

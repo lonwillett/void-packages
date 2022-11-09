@@ -1,8 +1,7 @@
 # Template file for 'pre-commit'
 pkgname=pre-commit
 version=2.20.0
-revision=1
-wrksrc="pre_commit-${version}"
+revision=2
 build_style=python3-module
 hostmakedepends="python3-setuptools"
 depends="nodeenv python3-cfgv python3-identify python3-yaml

@@ -326,7 +326,6 @@ libnotify.so.4 libnotify-0.7_1
 libexo-1.so.0 exo-0.7.3_1
 libexo-2.so.0 exo-0.12.0_1
 libglade-2.0.so.0 libglade-2.6.4_1
-libglademm-2.4.so.1 libglademm-2.6.7_1
 libthunarx-3.so.0 Thunar-1.8.1_1
 libexif.so.12 libexif-0.6.17_1
 liboil-0.3.so.0 liboil-0.3.16_1
@@ -661,7 +660,7 @@ libboost_fiber.so.1.80.0 libboost_fiber1.80-1.80.0_1
 libboost_stacktrace_noop.so.1.80.0 libboost_stacktrace_noop1.80-1.80.0_1
 libboost_stacktrace_addr2line.so.1.80.0 libboost_stacktrace_addr2line1.80-1.80.0_1
 libboost_stacktrace_basic.so.1.80.0 libboost_stacktrace_basic1.80-1.80.0_1
-libboost_python310.so.1.80.0 boost-python3-1.80-1.80.0_1
+libboost_python311.so.1.80.0 boost-python3-1.80-1.80.0_3
 libexempi.so.8 exempi-2.5.0_1
 libatasmart.so.4 libatasmart-0.17_1
 libsgutils2-1.45.so.2 libsgutils-1.45_1
@@ -1747,7 +1746,7 @@ libportaudiocpp.so.0 portaudio-cpp-19.20140130_1
 libdar.so.6000 libdar-2.6.6_1
 libdar64.so.6000 libdar-2.6.6_1
 libpython3.so python3-3.9.2_2
-libpython3.10.so.1.0 python3-3.10.0_1
+libpython3.11.so.1.0 python3-3.11.0_1
 libbrscandec2.so.1 brother-brscan3-0.2.11_2
 libpyglib-2.0-python.so.0 python-gobject2-2.28.6_11
 libxmlrpc_server_abyss.so.3 xmlrpc-c-1.51.06_2

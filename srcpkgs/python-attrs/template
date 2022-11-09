@@ -1,8 +1,7 @@
 # Template file for 'python-attrs'
 pkgname=python-attrs
 version=21.2.0
-revision=2
-wrksrc="attrs-${version}"
+revision=3
 build_style=python-module
 hostmakedepends="python-setuptools python3-setuptools"
 depends="python"

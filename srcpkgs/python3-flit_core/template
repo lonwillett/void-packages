@@ -1,8 +1,7 @@
 # Template file for 'python3-flit_core'
 pkgname=python3-flit_core
 version=3.7.1
-revision=1
-wrksrc="flit-${version}"
+revision=2
 build_wrksrc="flit_core"
 build_style=python3-pep517
 depends="python3-tomli"

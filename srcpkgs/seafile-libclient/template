@@ -2,9 +2,8 @@
 pkgname=seafile-libclient
 version=8.0.8
 #yyy_gitrev=ffffffffffffffffffffffffffffffffffffffff
-revision=1
+revision=2
 _distname="${pkgname/-libclient/}"
-wrksrc="${_distname}-${version}"
 #yyywrksrc="${_distname}-${_gitrev}"
 build_style=gnu-configure
 configure_args="PYTHON=python3 --disable-static"

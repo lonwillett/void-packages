@@ -1,8 +1,7 @@
 # Template file for 'python3-email-validator'
 pkgname=python3-email-validator
 version=1.3.0
-revision=1
-wrksrc="python-email-validator-${version}"
+revision=2
 build_style=python3-module
 hostmakedepends="python3-setuptools"
 makedepends="python3"

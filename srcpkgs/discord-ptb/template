@@ -1,7 +1,7 @@
 # Template file for 'discord-ptb'
 pkgname=discord-ptb
 version=0.0.35
-revision=1
+revision=2
 archs="x86_64"
 hostmakedepends="w3m"
 depends="alsa-lib dbus-glib gtk+3 libnotify nss libXtst libcxx libatomic
@@ -16,6 +16,7 @@ _license_checksum=dbaeedb7a43fb093408a89fbe3ab84efcb96ae95eb87da01024d00d85e84f5
 nopie=yes
 restricted=yes
 repository=nonfree
+nostrip=yes
 
 post_extract() {
 	$XBPS_FETCH_CMD -o eula https://discord.com/terms

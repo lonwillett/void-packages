@@ -14,12 +14,19 @@ restricted=yes
 nostrip_files=yandex-disk
 
 if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
-	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/y/yandex-disk/yandex-disk_${version}_amd64.deb"
+	debpkgid="yandex-disk_${version}_amd64.deb"
+	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/y/yandex-disk/$debpkgid"
 	checksum=47ba503b4dfccecc824386d67d686abe4b5356b8b546e48fce8811b5fa88a718
 else
-	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/y/yandex-disk/yandex-disk_${version}_i386.deb"
+	debpkgid="yandex-disk_${version}_i386.deb"
+	distfiles="http://repo.yandex.ru/yandex-disk/deb/pool/main/y/yandex-disk/$debpkgid"
 	checksum=9d94d0036e22509950b2acceaa9520f36d1370256d2f9b56d7696f9ff09e249b
 fi
+
+do_extract() {
+	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/${debpkgid}
+	bsdtar xzpvf data.tar.gz
+}
 
 post_patch() {
 	vsed -e "s/^\(have.*\)/\#\1/" -i etc/bash_completion.d/yandex-disk-completion.bash

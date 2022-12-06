@@ -19,7 +19,6 @@ nostrip=yes
 
 post_extract() {
 	local _license_checksum=bbe45a50d92f383311376477dd6ebecefff801b5d47685757107b6f771cac58d
-	#local _license_checksum=dbaeedb7a43fb093408a89fbe3ab84efcb96ae95eb87da01024d00d85e84f5e6
 	$XBPS_FETCH_CMD -o eula https://discord.com/terms
 	w3m -dump -I utf-8 -T text/html eula |
 		sed -n '/Discord is your place/,/^Imagine a place$/p' > EULA

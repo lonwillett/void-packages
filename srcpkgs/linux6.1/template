@@ -1,16 +1,20 @@
-# Template file for 'linux6.0'
-pkgname=linux6.0
-version=6.0.15
+# Template file for 'linux6.1'
+pkgname=linux6.1
+version=6.1.1
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
-distfiles="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${version%.*}.tar.xz
- https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-${version}.xz"
-checksum="5c2443a5538de52688efb55c27ab0539c1f5eb58c0cfd16a2b9fbb08fd81788e
- 8d64d2220d8a199a2d777e9af952a4ee89c58b8e4c6e45852fcfb961681ad1a9"
-skip_extraction="patch-${version}.xz"
+distfiles="${KERNEL_SITE}/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz"
+
+if [ "${version##*.}" != 0 ]; then
+	distfiles+=" ${KERNEL_SITE}/kernel/v${version%%.*}.x/patch-${version}.xz"
+	skip_extraction="patch-${version}.xz"
+fi
+
+checksum="2ca1f17051a430f6fed1196e4952717507171acfd97d96577212502703b25deb
+ 8946cdb814a7876a37378129942531594ce5d656909a29585b10a35f2979b562"
 python_version=3
 
 # XXX Restrict archs until a proper <arch>-dotconfig is available in FILESDIR.
@@ -120,6 +124,8 @@ do_install() {
 
 	# Run depmod after compressing modules - makes depmod.sh a noop
 	sed -i '2iexit 0' scripts/depmod.sh
+	vmkdir usr/lib
+	ln -s usr/lib/ ${DESTDIR}
 
 	# Install kernel, firmware and modules
 	make ${makejobs} ARCH=${subarch:-$arch} INSTALL_MOD_PATH=${DESTDIR} ${_cross} modules_install
@@ -155,7 +161,6 @@ do_install() {
 
 	# Switch to /usr.
 	vmkdir usr
-	mv ${DESTDIR}/lib ${DESTDIR}/usr
 
 	cd ${DESTDIR}/usr/lib/modules/${_kernver}
 	rm -f source build
@@ -227,7 +232,7 @@ do_install() {
 		cp -a drivers/media/pci/${i}/*.h ${hdrdest}/drivers/media/pci/${i}
 	done
 	# usb
-	for i in cpia2 em28xx pwc; do
+	for i in em28xx pwc; do
 		mkdir -p ${hdrdest}/drivers/media/usb/${i}
 		cp -a drivers/media/usb/${i}/*.h ${hdrdest}/drivers/media/usb/${i}
 	done
@@ -304,8 +309,9 @@ do_install() {
 	)
 	# ... and run depmod again.
 	depmod -b ${DESTDIR}/usr -F System.map ${_kernver}
+	rm -f ${DESTDIR}/lib
 }
-linux6.0-headers_package() {
+linux6.1-headers_package() {
 	preserve=yes
 	nostrip=yes
 	noshlibprovides=yes
@@ -315,7 +321,7 @@ linux6.0-headers_package() {
 		vmove usr/lib/modules/${_kernver}/build
 	}
 }
-linux6.0-dbg_package() {
+linux6.1-dbg_package() {
 	preserve=yes
 	nostrip=yes
 	noverifyrdeps=yes

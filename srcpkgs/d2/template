@@ -1,10 +1,10 @@
 # Template file for 'd2'
 pkgname=d2
 version=0.1.4
-revision=1
+revision=2
 build_style=go
 go_import_path="oss.terrastruct.com/d2"
-go_package="oss.terrastruct.com/d2 oss.terrastruct.com/d2/cmd/d2plugin-dagre"
+go_package="oss.terrastruct.com/d2"
 short_desc="Modern diagram scripting language that turns text to diagrams"
 maintainer="Toyam Cox <Vaelatern@voidlinux.org>"
 license="MPL-2.0"

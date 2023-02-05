@@ -568,10 +568,10 @@ libKF5PurposeWidgets.so.5 purpose-5.48.0_1
 libKF5Purpose.so.5 purpose-5.48.0_1
 libKF5PulseAudioQt.so.3 pulseaudio-qt-1.3_1
 libReviewboardHelpers.so.5 purpose-5.48.0_1
-libecpg_compat.so.3 postgresql-libs-14.0_1
-libecpg.so.6 postgresql-libs-14.0_1
-libpgtypes.so.3 postgresql-libs-14.0_1
-libpq.so.5 postgresql-libs-14.0_1
+libecpg_compat.so.3 postgresql-libs-15.1_1
+libecpg.so.6 postgresql-libs-15.1_1
+libpgtypes.so.3 postgresql-libs-15.1_1
+libpq.so.5 postgresql-libs-15.1_1
 libmypaint.so.0 libmypaint-1.6.1_1
 libgssapi_krb5.so.2 mit-krb5-libs-1.8_1
 libgssrpc.so.4 mit-krb5-libs-1.8_1
@@ -1043,7 +1043,7 @@ libgck-2.so.0.0.0 gcr4-4.0.0_1
 libgcr-4.so.0.0.0 gcr4-4.0.0_1
 libcld2.so cld2-0.0.1.20150821_1
 libcld2_full.so cld2-full-0.0.1.20150821_1
-libwacom.so.2 libwacom-0.3_1
+libwacom.so.9 libwacom-2.6.0_1
 libfarstream-0.2.so.5 farstream-0.2.7_1
 libass.so.9 libass-0.13.6_1
 libcryptui.so.0 libcryptui-3.4.0_1
@@ -3589,8 +3589,8 @@ libcaf_io.so.0.18.0 zeek-4.0.0_1
 libcaf_openssl.so.0.18.0 zeek-4.0.0_1
 libbinpac.so.0 zeek-3.2.4_2
 libllhttp.so.1 llhttp-1.0.1_1
-libpinyin.so.13 libpinyin-2.2.1_1
-libzhuyin.so.13 libzhuyin-2.6.0_3
+libpinyin.so.15 libpinyin-2.8.1_1
+libzhuyin.so.15 libzhuyin-2.8.1_1
 libuhd.so.4.0.0 uhd-4.0.0.0_1
 libeditline.so.1 editline-1.16.0_1
 libgnuradio-rds.so.1 gnuradio-rds-3.8.0_1

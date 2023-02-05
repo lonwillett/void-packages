@@ -1,5 +1,5 @@
 #!/bin/sh
-. /@PREFIX@/etc/default/postgresql
+. /etc/psql@VERSION@/default/postgresql
 : ${PGDATA:="$PGROOT/data"}
 
 if [ "$PGROOT" != "/var/lib/postgresql@VERSION@" ]; then
@@ -19,8 +19,8 @@ if [ ! -d "$PGDATA" ]; then
 		exit 1
 	}
 
-	if [ -f /@PREFIX@/etc/postgresql/postgresql.conf ]; then
-		ln -sf /@PREFIX@/etc/postgresql/postgresql.conf "$PGDATA/postgresql.conf"
+	if [ -f /etc/psql@VERSION@/postgresql/postgresql.conf ]; then
+		ln -sf /etc/psql@VERSION@/postgresql/postgresql.conf "$PGDATA/postgresql.conf"
 	fi
 fi
 

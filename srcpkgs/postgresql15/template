@@ -1,11 +1,12 @@
-# Template file for 'postgresql13'
-pkgname=postgresql13
-version=13.8
-revision=3
+# Template file for 'postgresql15'
+pkgname=postgresql15
+version=15.1
+revision=1
 build_style=gnu-configure
 make_build_target=world
 _major="${version%%.*}"
 _prefix="usr/lib/psql${_major}"
+_sysconfdir="etc/psql${_major}"
 configure_args="--with-openssl --with-python
  --with-pam --enable-thread-safety
  --with-perl --with-tcl --without-ldap --without-gssapi
@@ -20,13 +21,13 @@ license="PostgreSQL"
 homepage="https://www.postgresql.org"
 changelog="https://www.postgresql.org/docs/current/release-${version//./-}.html"
 distfiles="https://ftp.postgresql.org/pub/source/v${version}/postgresql-${version}.tar.bz2"
-checksum=73876fdd3a517087340458dca4ce15b8d2a4dbceb334c0441424551ae6c4cded
+checksum=64fdf23d734afad0dfe4077daca96ac51dcd697e68ae2d3d4ca6c45cb14e21ae
 make_check=ci-skip # Postgres server can't be run as root
 
 conf_files="
- /${_prefix}/etc/default/postgresql
- /${_prefix}/etc/pam.d/postgresql
- /${_prefix}/etc/postgresql/postgresql.conf
+ /${_sysconfdir}/default/postgresql
+ /${_sysconfdir}/pam.d/postgresql
+ /${_sysconfdir}/postgresql/postgresql.conf
 "
 
 # Create 'postgres' user for the server.
@@ -58,7 +59,7 @@ pre_configure() {
 		esac
 	done
 	configure_args="--prefix=/${_prefix}
-	 --sysconfdir=/${_prefix}/etc
+	 --sysconfdir=/${_sysconfdir}
 	 --includedir=/usr/include
 	 ${configure_args}"
 }
@@ -85,12 +86,12 @@ post_install() {
 
 	vinstall ${FILESDIR}/profile.sh 644 etc/profile.d ${pkgname}.sh
 	_substitute ${DESTDIR}/etc/profile.d/${pkgname}.sh
-	vinstall ${FILESDIR}/postgresql.confd 644 ${_prefix}/etc/default postgresql
-	_substitute ${DESTDIR}/${_prefix}/etc/default/postgresql
-	vinstall ${FILESDIR}/postgresql.pam 644 ${_prefix}/etc/pam.d postgresql
-	_substitute ${DESTDIR}/${_prefix}/etc/pam.d/postgresql
+	vinstall ${FILESDIR}/postgresql.confd 644 ${_sysconfdir}/default postgresql
+	_substitute ${DESTDIR}/${_sysconfdir}/default/postgresql
+	vinstall ${FILESDIR}/postgresql.pam 644 ${_sysconfdir}/pam.d postgresql
+	_substitute ${DESTDIR}/${_sysconfdir}/pam.d/postgresql
 	vinstall ${DESTDIR}/${_prefix}/share/postgresql/postgresql.conf.sample \
-		644 ${_prefix}/etc/postgresql postgresql.conf
+		644 ${_sysconfdir}/postgresql postgresql.conf
 	vbin src/common/pg_config.sh
 
 	vsed -i 's/install_bin = .*/install_bin = install/g' \
@@ -101,16 +102,16 @@ _substitute() {
 	sed -i "$1" -e s:@PREFIX@:${_prefix}: -e s:@VERSION@:${_major}: -e s:@FULL_VERSION@:${version}:
 }
 
-postgresql13-doc_package() {
+postgresql15-doc_package() {
 	short_desc="PostgreSQL documentation"
 	pkg_install() {
 		vmove ${_prefix}/share/doc
 	}
 }
 
-postgresql13-libs_package() {
+postgresql-libs_package() {
 	short_desc="PostgreSQL shared libraries"
-	conflicts="postgresql9.6-libs>=0 postgresql12-libs>=0"
+	conflicts="postgresql9.6-libs>=0 postgresql12-libs>=0 postgresql13-libs>=0 postgresql14-libs>=0"
 	pkg_install() {
 		vmove "${_prefix}/lib/*.so*"
 		for d in $(find ${DESTDIR}/${_prefix}/share/locale \
@@ -122,10 +123,10 @@ postgresql13-libs_package() {
 	}
 }
 
-postgresql13-libs-devel_package() {
+postgresql-libs-devel_package() {
 	depends="postgresql-libs>=${version}_${revision} openssl-devel"
 	short_desc="PostgreSQL shared libraries (development files)"
-	conflicts="postgresql9.6-libs-devel>=0 postgresql12-libs-devel>=0"
+	conflicts="postgresql9.6-libs-devel>=0 postgresql12-libs-devel>=0 postgresql13-libs-devel>=0 postgresql14-libs-devel>=0"
 	pkg_install() {
 		vmkdir usr/bin
 		vmkdir usr/lib
@@ -154,7 +155,7 @@ postgresql13-libs-devel_package() {
 # XXX disabled for now in cross builds.
 if [ -z "$CROSS_BUILD" ]; then
 
-postgresql13-plperl_package() {
+postgresql15-plperl_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc="PL/Perl procedural language for PostgreSQL"
 	pkg_install() {
@@ -167,7 +168,7 @@ postgresql13-plperl_package() {
 	}
 }
 
-postgresql13-plpython_package() {
+postgresql15-plpython_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc="PL/Python procedural language for PostgreSQL"
 	pkg_install() {
@@ -180,7 +181,7 @@ postgresql13-plpython_package() {
 	}
 }
 
-postgresql13-pltcl_package() {
+postgresql15-pltcl_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc="PL/Tcl procedural language for PostgreSQL"
 	pkg_install() {
@@ -195,7 +196,7 @@ postgresql13-pltcl_package() {
 
 fi # !CROSS_BUILD
 
-postgresql13-client_package() {
+postgresql15-client_package() {
 	short_desc="Client frontends programs for PostgreSQL"
 	pkg_install() {
 		for f in clusterdb createdb createuser dropdb \
@@ -219,7 +220,7 @@ postgresql13-client_package() {
 	}
 }
 
-postgresql13-contrib_package() {
+postgresql15-contrib_package() {
 	short_desc="PostgreSQL contributed programs and extensions"
 	pkg_install() {
 		make -C contrib install DESTDIR=${PKGDESTDIR}

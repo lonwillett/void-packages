@@ -70,7 +70,6 @@ libmpfr.so.6 mpfr-4.0.0_1
 libppl.so.14 ppl-1.2_1
 libppl_c.so.4 ppl-0.11_1
 libstdc++.so.6 libstdc++-4.4.0_1
-libssp.so.0 libssp-4.4.0_1
 libncurses.so.6 ncurses-libs-6.0_1 ignore
 libncursesw.so.6 ncurses-libs-5.8_1 ignore
 libtinfo.so.6 ncurses-libtinfo-libs-6.2_2
@@ -82,7 +81,7 @@ libt3widget.so.2 libt3widget-1.2.2_1
 libtranscript.so.1 libtranscript-0.3.3_1
 libnetcdf.so.15 netcdf-4.7.0_1
 libformw.so.6 ncurses-libs-5.8_1 ignore
-libfplll.so.7 fplll-5.4.1_1
+libfplll.so.8 fplll-5.4.4_1
 libpanelw.so.6 ncurses-libs-5.8_1 ignore
 libmenuw.so.6 ncurses-libs-5.8_1 ignore
 libobjc.so.4 libobjc-4.7.3_12
@@ -156,7 +155,7 @@ librist.so.4 librist-0.2.7_1
 libdbus-1.so.3 dbus-libs-1.2.10_1
 libdbus-glib-1.so.2 dbus-glib-0.80_1
 libxml2.so.2 libxml2-2.7.0_1
-libxlsxwriter.so.4 libxlsxwriter-1.1.4_1
+libxlsxwriter.so.5 libxlsxwriter-1.1.5_1
 libfuse.so.2 fuse-2.8.1_1
 libfuse3.so.3 fuse3-3.1.0_1
 libXext.so.6 libXext-1.0.5_1
@@ -2255,7 +2254,7 @@ libcvm-v2client.so.1 cvm-0.97_1
 libudns.so.0 udns-0.4_1
 libcriu.so.2 criu-3.13_2
 libcompel.so.1 criu-3.13_2
-libwebsockets.so.15 libwebsockets-3.2.2_5
+libwebsockets.so.19 libwebsockets-4.3.2_1
 libnfc.so.6 libnfc-1.8.0_1
 libfuzzy.so.2 libfuzzy-2.12_1
 libSDL_gfx.so.15 SDL_gfx-2.0.25_2
@@ -4073,7 +4072,7 @@ libcholmod.so.4 SuiteSparse-6.0.1_1
 libcolamd.so.3 SuiteSparse-6.0.1_1
 libcxsparse.so.4 SuiteSparse-6.0.1_1
 libspqr.so.3 SuiteSparse-6.0.1_1
-libsuitesparseconfig.so.6 SuiteSparse-6.0.1_1
+libsuitesparseconfig.so.7 SuiteSparse-7.0.1_1
 libumfpack.so.6 SuiteSparse-6.0.1_1
 libecl.so.21.2 ecl-21.2.1_1
 libecm.so.1 ecm-7.0.4_3

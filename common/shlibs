@@ -736,7 +736,6 @@ libgpgme.so.11 libgpgme-1.12.0_2
 libgpgmepp.so.6 gpgmepp-1.7.0_3
 libqgpgme.so.15 gpgmeqt-1.18.0_1
 libgarcon-1.so.0 garcon-0.1.12_1
-libgarcon-gtk2-1.so.0 garcon-0.4.0_1
 libgarcon-gtk3-1.so.0 garcon-0.6.1_1
 libxfce4ui-2.so.0 libxfce4ui-4.18.0_1
 libxfce4kbd-private-3.so.0 libxfce4ui-4.18.0_1
@@ -3496,7 +3495,6 @@ libKF5Syndication.so.5 syndication-5.50.0_1
 liblqr-1.so.0 liblqr-0.4.2_1
 libmozjs-102.so.0 mozjs102-102.3.0_1
 libmozjs-78.so.0 mozjs78-78.1.0_1
-libmozjs-91.so.0 mozjs91-91.5.0_1
 libebur128.so.1 libebur128-1.2.4_1
 libgtksourceview-4.so.0 gtksourceview4-4.0.2_1
 libgtksourceview-5.so.0 gtksourceview5-5.2.0_1
@@ -4122,7 +4120,7 @@ mod_spatialite.so.7 libspatialite-5.0.1_1
 libreadosm.so.1 readosm-1.1.0a_1
 libSvtAv1Enc.so.1 libsvt-av1-1.3.0_1
 libSvtAv1Dec.so.0 libsvt-av1-0.9.0_1
-libyascreen.so.1 yascreen-1.92_1
+libyascreen.so.0 yascreen-1.96_1
 librz_analysis.so.0.4 rizin-0.4.0_1
 librz_asm.so.0.4 rizin-0.4.0_1
 librz_bin.so.0.4 rizin-0.4.0_1
@@ -4152,6 +4150,7 @@ librz_util.so.0.4 rizin-0.4.0_1
 libaravis-0.8.so.0 libaravis-0.8.21_1
 libLimeSuite.so.22.09-1 LimeSuite-22.09.0_1
 libnvme.so.1 libnvme-1.0_1
+libnvme-mi.so.1 libnvme-1.2_1
 libRInside.so R-cran-RInside-0.2.16_1
 libXrdUtils.so.3 xrootd-5.4.0_1
 libXrdCl.so.3 xrootd-5.4.0_1
@@ -4214,7 +4213,7 @@ libtracecmd.so.1 libtracecmd-3.1.2_1
 libkshark.so.2 libkshark-2.1.1_1
 libcpp-hocon.so.0.3.0 cpp-hocon-0.3.0_5
 libfst.so.25 openfst-1.8.2_1
-libvosk.so vosk-api-0.3.43_1
+libvosk.so vosk-api-0.3.45_1
 libdspy-1.so.1 d-spy-1.4.0_1
 libpanel-1.so.1 libpanel-1.0.1_1
 libqrtr.so.1 qrtr-ns-1.0_1
@@ -4226,3 +4225,6 @@ libOpenEXR-3_1.so.30 libopenexr-3.1.5_1
 libOpenEXRCore-3_1.so.30 libopenexr-3.1.5_1
 libOpenEXRUtil-3_1.so.30 libopenexr-3.1.5_1
 libdate-tz.so.3 chrono-date-3.0.1_1
+libayatana-ido3-0.4.so.0 ayatana-ido-0.9.2_1
+libayatana-indicator3.so.7 libayatana-indicator-0.9.3_1
+libayatana-appindicator3.so.1 libayatana-appindicator-0.5.91_1

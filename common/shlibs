@@ -954,7 +954,7 @@ libsuil-0.so.0 suil-0.6.4_1
 libmcpp.so.0 libmcpp-2.7.2_1
 libjitterentropy.so.3 jitterentropy-3.0.0_1
 libkdecorations2.so.5 kdecoration-5.8.4_1
-libkdecorations2private.so.9 kdecoration-5.23.0_1
+libkdecorations2private.so.10 kdecoration-5.26.90_1
 libGlacier2.so.37 libIce-3.7.5_2
 libGlacier2CryptPermissionsVerifier.so.37 libIce-3.7.5_2
 libIce.so.37 libIce-3.7.5_2
@@ -2522,7 +2522,8 @@ libosgUtil.so.161 osg-3.6.5_1
 libosgVolume.so.161 osg-3.6.5_1
 libosgGA.so.161 osg-3.6.5_1
 libosgPresentation.so.161 osg-3.6.5_1
-libKF5Screen.so.7 libkscreen-5.7.5_1
+libKF5Screen.so.8 libkscreen-5.26.90_1
+libKF5ScreenDpms.so.8 libkscreen-5.26.90_1
 libdbusmenu-qt5.so.2 libdbusmenu-qt5-0.9.3.0_1
 libKF5Solid.so.5 libksolid-5.15.0_2
 libfreeimage.so.3 freeimage-3.17.0_1
@@ -3511,7 +3512,7 @@ libwx_gtk3u_media-3.0.so.0 wxWidgets-gtk3-3.0.4_1
 libwx_gtk3u_ribbon-3.0.so.0 wxWidgets-gtk3-3.0.4_1
 libwx_gtk3u_gl-3.0.so.0 wxWidgets-gtk3-3.0.4_1
 libwx_gtk3u_stc-3.0.so.0 wxWidgets-gtk3-3.0.4_1
-libtepl-6.so.1 tepl-6.2.0_1
+libtepl-6.so.2 tepl-6.4.0_1
 libnomacsCore.so.3 nomacs-3.10.2_4
 libaudit.so.1 libaudit-2.8.4_1
 libauparse.so.0 libauparse-2.8.4_1
@@ -3633,7 +3634,7 @@ libqhttpengine.so.1 qhttpengine-1.0.1_1
 libqmdnsengine.so.0 qmdnsengine-0.1.0_1
 libyang.so.1 libyang-1.0r5_1
 libhtp.so.2 libhtp-0.5.30_1
-libgedit-43.so gedit-43.0_1
+libgedit-44.so gedit-44.0_1
 libchewing.so.3 libchewing-0.5.1_1
 libdwarves.so.1 pahole-1.12_1
 libdwarves_emit.so.1 pahole-1.12_1

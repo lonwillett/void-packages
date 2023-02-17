@@ -1,19 +1,24 @@
 # Template file for 'seadrive-gui'
 pkgname=seadrive-gui
-version=2.0.22
+version=2.0.26
+#_dmnver=${version}
+_dmnver=2.0.22
+#yyy_gitrev=d4a9fe7afbfe627a52fd78539f9a3b55ac8f9cbc
 revision=1
+#yyywrksrc="seadrive-gui-${_gitrev}"
 build_style=cmake
 configure_args="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr"
 hostmakedepends="autoconf automake libtool intltool vala pkg-config"
 # python3?
 makedepends="libevent-devel libcurl-devel gtk+-devel libuuid-devel sqlite-devel jansson-devel openssl-devel libsearpc-devel qt5-devel qt5-tools-devel qt5-webengine-devel qt5-webchannel-devel qt5-declarative-devel qt5-location-devel"
-depends="seadrive-daemon>=${version}"
+depends="seadrive-daemon>=${_dmnver}"
 short_desc="Seafile drive client (qt5 gui)"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/${pkgname}/archive/v${version}.tar.gz"
-checksum=d525301df509b9a07b7da304bb2e1195d0a9a735eacf5542880b79359a14594d
+#yyydistfiles="https://github.com/haiwen/seadrive-gui/archive/${_gitrev}.tar.gz"
+checksum=1c9f55ddc61e6c8eab808bd3f8bae42ff0dfbc02cbfc9e3f580d351b7745b9ce
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl)	# need fts implementation

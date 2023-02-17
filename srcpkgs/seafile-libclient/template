@@ -1,8 +1,8 @@
 # Template file for 'seafile-libclient'
 pkgname=seafile-libclient
 version=8.0.10
-#yyy_gitrev=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-revision=1
+#yyy_gitrev=91e5d897395c728a1e862dbdaf3d8a519c2ed73e
+revision=2
 _distname="${pkgname/-libclient/}"
 #yyywrksrc="${_distname}-${_gitrev}"
 build_style=gnu-configure

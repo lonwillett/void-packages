@@ -2094,6 +2094,13 @@ libQt6Positioning.so.6 qt6-location-6.2.0alpha_1
 libQt6MultimediaWidgets.so.6 qt6-multimedia-6.3.1_1
 libQt6MultimediaQuick.so.6 qt6-multimedia-6.3.1_1
 libQt6Multimedia.so.6 qt6-multimedia-6.3.1_1
+libQt6WebEngineQuick.so.6 qt6-webengine-6.3.1_1
+libQt6PdfWidgets.so.6 qt6-webengine-6.3.1_1
+libQt6PdfQuick.so.6 qt6-webengine-6.3.1_1
+libQt6WebEngineCore.so.6 qt6-webengine-6.3.1_1
+libQt6Pdf.so.6 qt6-webengine-6.3.1_1
+libQt6WebEngineQuickDelegatesQml.so.6 qt6-webengine-6.3.1_1
+libQt6WebEngineWidgets.so.6 qt6-webengine-6.3.1_1
 libnpth.so.0 npth-1.1_1
 libnpupnp.so.9 libnpupnp-5.0.0_1
 libglfw.so.3 glfw-3.0.4_1
@@ -2609,7 +2616,7 @@ libhwloc.so.15 libhwloc-2.0.4_1
 libnetfilter_cttimeout.so.1 libnetfilter_cttimeout-1.0.0_1
 libnetfilter_cthelper.so.0 libnetfilter_cthelper-1.0.0_1
 libnetfilter_queue.so.1 libnetfilter_queue-1.0.2_1
-libfilezilla.so.34 libfilezilla-0.41.0_1
+libfilezilla.so.35 libfilezilla-0.41.1_1
 libtommath.so.1 libtommath-1.0_1
 libKF5ItemViews.so.5 kitemviews-5.26.0_1
 libunicorn.so.1 unicorn-1.0_1

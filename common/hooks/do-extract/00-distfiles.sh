@@ -163,13 +163,14 @@ hook() {
 		esac
 	done
 
+	cd "$extractdir"
 	# find "$extractdir" -mindepth 1 -maxdepth 1 -printf '1\n' | wc -l
 	# However, it requires GNU's find
 	num_dirs=0
-	for f in "$extractdir"/* "$extractdir"/.*; do
+	for f in * .*; do
 		if [ -e "$f" ] || [ -L "$f" ]; then
 			case "$f" in
-			*/. | */..) ;;
+			. | ..) ;;
 			*)
 				innerdir="$f"
 				num_dirs=$(( num_dirs + 1 ))
@@ -177,7 +178,29 @@ hook() {
 			esac
 		fi
 	done
+	# Special case for num_dirs = 2, and it contains metadata
+	if [ "$num_dirs" != 2 ] || [ "$create_wrksrc" ]; then
+		:
+	elif grep -q 'xmlns="http://pear[.]php[.]net/dtd/package' package.xml 2>/dev/null
+	then
+		# PHP modules' metadata
+		rm -f package.xml
+		for f in */; do innerdir="$f"; done
+		num_dirs=1
+	else
+		for f in *; do
+			# AppleDouble encoded Macintosh file
+			if [ -e "$f" ] && [ -e "._$f" ]; then
+				rm -f "._$f"
+				num_dirs=1
+				innerdir="$f"
+				break
+			fi
+		done
+	fi
 	rm -rf "$wrksrc"
+	innerdir="$extractdir/$innerdir"
+	cd "$XBPS_BUILDDIR"
 	if [ "$num_dirs" = 1 ] && [ -d "$innerdir" ] && [ -z "$create_wrksrc" ]; then
 		# rename the subdirectory (top-level of distfiles) to $wrksrc
 		mv "$innerdir" "$wrksrc" &&

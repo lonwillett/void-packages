@@ -1,10 +1,9 @@
 # Template file for 'ookla-speedtest-cli'
 pkgname=ookla-speedtest-cli
-version=1.1.1
+version=1.2.0
 revision=1
 create_wrksrc=yes
 build_style="fetch"
-
 short_desc="Ookla's bandwidth test tool using speedtest.net"
 maintainer="Lon Willett <xgit@lonw.net>"
 homepage="https://www.speedtest.net/apps/cli"
@@ -17,23 +16,23 @@ nostrip="yes"
 case "${XBPS_TARGET_MACHINE}" in
 	x86_64*)
 		_arch="x86_64"
-		checksum=970477fdfee4d741e75f088faf648f9b51c7be04313fb88ffb5de07eb1a3040c
+		checksum=5690596c54ff9bed63fa3732f818a05dbc2db19ad36ed68f21ca5f64d5cfeeb7
 		;;
 	i686*)
 		_arch="i386"
-		checksum=2854018a9319ff73d19212c497bb3c329dd53aae2fd28a1b5f94ede619c1d976
+		checksum=9ff7e18dbae7ee0e03c66108445a2fb6ceea6c86f66482e1392f55881b772fe8
 		;;
 	aarch64*)
 		_arch="aarch64"
-		checksum=276a40873fe1c3ca24a21580c2fc64aa92ed358ffc6db6071a13d03a8d431fd9
+		checksum=3953d231da3783e2bf8904b6dd72767c5c6e533e163d3742fd0437affa431bd3
 		;;
 	armv7l*)
 		_arch="armhf"
-		checksum=78cf629619043535640a0a6de7a1c7b6f8d837768baee13e296655e3d830c3da
+		checksum=e45fcdebbd8a185553535533dd032d6b10bc8c64eee4139b1147b9c09835d08d
 		;;
 	armv6l*)
 		_arch="armel"
-		checksum=87cd7e1790576a2cb2b3e5f5412f7dded553996487d49c991435e7544c10055b  -
+		checksum=629a455a2879224bd0dbd4b36d8c721dda540717937e4660b4d2c966029466bf
 		;;
 esac
 

@@ -943,7 +943,6 @@ libserd-0.so.0 libserd-0.18.0_1
 libsord-0.so.0 libsord-0.5.0_1
 libgiggle.so.0 libgiggle-0.6.1_1
 libgiggle-git.so.0 libgiggle-0.6.1_1
-libwine.so.1 libwine-1.6_1
 libwv-1.2.so.4 libwv-1.2.9_1
 libabiword-3.0.so libabiword-3.0.0_1
 libmpg123.so.0 libmpg123-1.13.4_2
@@ -3242,7 +3241,7 @@ libarcan_tui.so.0.15 arcan-0.6.1.1_1
 libarcan_a12.so.0.1 arcan-0.6.1.1_1
 liblwipv6.so.2 lwipv6-1.5a_1
 libpipewire-0.3.so.0 libpipewire-0.3.6_1
-libvolk.so.2.5 volk-2.5.0_1
+libvolk.so.3.0 volk-3.0.0_1
 libgnuradio-runtime.so.3.10.3 gnuradio-3.10.3.0_1
 libgnuradio-pmt.so.3.10.3 gnuradio-3.10.3.0_1
 libgnuradio-blocks.so.3.10.3 gnuradio-3.10.3.0_1

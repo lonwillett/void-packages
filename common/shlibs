@@ -527,12 +527,12 @@ libkImageAnnotator.so.0 kImageAnnotator-0.4.1_1
 libkColorPicker.so.0 kColorPicker-0.1.5_1
 libbabl-0.1.so.0 babl-0.1.16_1
 libbamf3.so.2 bamf-0.5.1_1
-libicuio.so.71 icu-libs-71.1_1
-libicui18n.so.71 icu-libs-71.1_1
-libicudata.so.71 icu-libs-71.1_1
-libicutu.so.71 icu-libs-71.1_1
-libicuuc.so.71 icu-libs-71.1_1
-libicutest.so.71 icu-libs-71.1_1
+libicuio.so.72 icu-libs-72.1_1
+libicui18n.so.72 icu-libs-72.1_1
+libicudata.so.72 icu-libs-72.1_1
+libicutu.so.72 icu-libs-72.1_1
+libicuuc.so.72 icu-libs-72.1_1
+libicutest.so.72 icu-libs-72.1_1
 libaspell.so.15 libaspell-0.60.8_2
 libpspell.so.15 libaspell-0.60.8_2
 libenchant-2.so.2 enchant2-2.2.3_1
@@ -548,8 +548,8 @@ libwebkit2gtk-4.0.so.37 webkit2gtk-2.6.2_1
 libjavascriptcoregtk-4.0.so.18 webkit2gtk-2.6.2_1
 libwebkit2gtk-4.1.so.0 libwebkit2gtk41-2.38.0_1
 libjavascriptcoregtk-4.1.so.0 libwebkit2gtk41-2.38.0_1
-libwebkit2gtk-5.0.so.0 libwebkit2gtk50-2.38.0_1
-libjavascriptcoregtk-5.0.so.0 libwebkit2gtk50-2.38.0_1
+libwebkitgtk-6.0.so.4 libwebkitgtk60-2.40.0_1
+libjavascriptcoregtk-6.0.so.1 libwebkitgtk60-2.40.0_1
 libgimp-2.0.so.0 libgimp-2.10.0_1
 libgimpwidgets-2.0.so.0 libgimp-2.10.0_1
 libgimpui-2.0.so.0 libgimp-2.10.0_1
@@ -617,6 +617,7 @@ libevolution-calendar.so evolution-3.28.0_1
 libevolution-util.so evolution-3.28.0_1
 libemail-engine.so evolution-3.28.0_1
 libevolution-mail.so evolution-3.28.0_1
+libevolution-mail-composer.so evolution-3.48.0_1
 libevolution-mail-formatter.so evolution-3.40.0_1
 libevolution-shell.so evolution-3.28.0_1
 libedata-cal-2.0.so.2 evolution-data-server-3.46.0_1
@@ -1143,6 +1144,7 @@ libgstbasecamerabinsrc-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstcodecparsers-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstplayer-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstwebrtc-1.0.so.0 gst-plugins-bad1-1.18.4_2
+libgsttranscoder-1.0.so.0 gst-plugins-bad1-1.18.4_2
 libgstgl-1.0.so.0 gst-plugins-base1-1.14.0_1
 libgnome-desktop-3.so.20 gnome-desktop-43.0_1
 libgnome-desktop-4.so.2 gnome-desktop-43.0_1
@@ -1610,7 +1612,7 @@ libKF5Kirigami2.so.5 kirigami2-5.47.0_1
 libtaskmanager.so.6 plasma-workspace-5.8.4_1
 libnotificationmanager.so.1 plasma-workspace-5.15.90_1
 libKPipeWire.so.5 kpipewire-5.26.0_1
-libZXing.so.1 zxing-cpp-1.2.0_1
+libZXing.so.3 zxing-cpp-2.0.0_1
 libfreerdp-client2.so.2 libfreerdp-2.2.0_3
 libfreerdp2.so.2 libfreerdp-2.2.0_3
 libwinpr2.so.2 libfreerdp-2.2.0_3
@@ -3573,6 +3575,7 @@ libcsfml-system.so.2.5 CSFML-2.5_1
 libcsfml-network.so.2.5 CSFML-2.5_1
 libtokyocabinet.so.9 tokyocabinet-1.4.48_1
 libdav1d.so.6 libdav1d6-1.0.0_1
+librav1e.so.0 rav1e-0.6.3_1
 libdqlite.so.0 dqlite-0.2.1_1
 libwoff2common.so.1.0.2 libwoff2common1.0.2-1.0.2_1
 libwoff2enc.so.1.0.2 libwoff2enc1.0.2-1.0.2_1

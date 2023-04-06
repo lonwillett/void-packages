@@ -1,6 +1,6 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
-version=0.1.20230324
+version=0.1.20230405
 revision=1
 build_style=meta
 short_desc="Uninstalls packages removed from repository"
@@ -148,6 +148,7 @@ replaces="
  grv<=0.3.1_3
  gsettings-qt<=0.1+17.10.20170824_3
  gst1-python<=1.18.3_1
+ gtick<=0.5.4_1
  gtk-sharp2<=2.12.45_2
  gtkhtml-devel<=4.10.0_1
  gtkhtml<=4.10.0_1
@@ -303,6 +304,8 @@ replaces="
  libunique1-devel<=1.1.6_12
  libunique1<=1.1.6_12
  libunique<=3.0.2_11
+ libwebkit2gtk50-devel<=2.38.1_2
+ libwebkit2gtk50<=2.38.1_2
  libwnck2-devel<=2.30.7_8
  libwnck2<=2.30.7_8
  libxml2-python<=2.9.10_4

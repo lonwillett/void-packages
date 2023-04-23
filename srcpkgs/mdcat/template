@@ -1,6 +1,6 @@
 # Template file for 'mdcat'
 pkgname=mdcat
-version=1.1.1
+version=2.0.2
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config ruby-asciidoctor"
@@ -13,7 +13,7 @@ license="MPL-2.0"
 homepage="https://github.com/swsnr/mdcat"
 changelog="https://raw.githubusercontent.com/swsnr/mdcat/main/CHANGELOG.md"
 distfiles="https://github.com/swsnr/mdcat/archive/refs/tags/mdcat-${version}.tar.gz"
-checksum=2757e1a26a7843c673c2aecd1866c1714af74883ebb0c4195384a62b6a7627ec
+checksum=db22edd1a05938202f67f76a65c8d298ac0a1f8ce2d8538d7a25e2591c7d7590
 make_check=ci-skip  # uses network tests which fail in CI
 
 case "$XBPS_TARGET_MACHINE" in

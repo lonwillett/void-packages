@@ -1,5 +1,6 @@
 # Template file for 'python3-pycryptodome'
 pkgname=python3-pycryptodome
+reverts="3.17.0_1"
 version=3.17
 revision=1
 build_style=python3-module

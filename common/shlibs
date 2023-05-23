@@ -350,7 +350,7 @@ libMagickCore-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagickWand-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagick++-7.Q16HDRI.so.5 libmagick-7.0.11.1_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.126 libpoppler-22.12.0_1
+libpoppler.so.128 libpoppler-23.05.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -834,7 +834,6 @@ libclutter-gtk-1.0.so.0 clutter-gtk-1.1.2_1
 libchamplain-0.12.so.0 libchamplain-0.12.5_2
 libchamplain-gtk-0.12.so.0 libchamplain-0.12.5_2
 libshumate-1.0.so.1 libshumate-1.0.0_1
-libvpx.so.5 libvpx5-1.7.0_1
 libvpx.so.6 libvpx6-1.8.0_1
 libvpx.so.7 libvpx7-1.11.0_1
 libXevie.so.1 libXevie-1.0.2_1
@@ -2107,6 +2106,7 @@ libQt6Positioning.so.6 qt6-location-6.2.0alpha_1
 libQt6MultimediaWidgets.so.6 qt6-multimedia-6.3.1_1
 libQt6MultimediaQuick.so.6 qt6-multimedia-6.3.1_1
 libQt6Multimedia.so.6 qt6-multimedia-6.3.1_1
+libQt6SpatialAudio.so.6 qt6-multimedia-6.3.1_1
 libQt6WebEngineQuick.so.6 qt6-webengine-6.3.1_1
 libQt6PdfWidgets.so.6 qt6-webengine-6.3.1_1
 libQt6PdfQuick.so.6 qt6-webengine-6.3.1_1
@@ -4185,7 +4185,7 @@ libTMVA.so root-6.24.06_1
 libMathCore.so root-6.24.06_1
 libCore.so root-6.24.06_1
 libCore.so qtcreator-7.0.2_1
-liblowdown.so.2 lowdown-1.0.1_1
+liblowdown.so.3 lowdown-1.0.2_1
 libjaylink.so.0 libjaylink-0.2.0_1
 libnvidia-container.so.1 libnvidia-container-1.10.0_1
 libnvidia-container-go.so.1 libnvidia-container-1.10.0_1

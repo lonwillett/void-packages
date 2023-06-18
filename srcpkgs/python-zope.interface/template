@@ -2,9 +2,9 @@
 pkgname=python-zope.interface
 version=5.5.2
 revision=1
-build_style=python-module
-hostmakedepends="python-setuptools python3-setuptools"
-makedepends="python-devel python3-devel"
+build_style=python2-module
+hostmakedepends="python-setuptools"
+makedepends="python-devel"
 depends="python-setuptools"
 short_desc="Zope interfaces for Python2"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -18,17 +18,6 @@ make_check=no
 
 post_install() {
 	# zope.interface provides the zope namespace
-	for py_sitelib in $py2_sitelib $py3_sitelib; do
-		vinstall src/zope/__init__.py 644 ${py_sitelib}/zope
-	done
+	vinstall src/zope/__init__.py 644 ${py2_sitelib}/zope
 	vlicense LICENSE.txt LICENSE
-}
-
-python3-zope.interface_package() {
-	depends="python3-setuptools"
-	short_desc="${short_desc/Python2/Python3}"
-	pkg_install() {
-		vmove usr/lib/python3*
-		vlicense LICENSE.txt LICENSE
-	}
 }

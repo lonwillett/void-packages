@@ -240,7 +240,6 @@ libdevmapper-event-lvm2.so.2.02 device-mapper-2.02.110_1
 liblvm2cmd.so.2.02 device-mapper-2.02.54_1
 libprop.so.0 proplib-0.1_1
 libfontenc.so.1 libfontenc-1.0.4_1
-libXfont.so.1 libXfont-1.4.0_1
 libx86.so.1 libx86-1.1_1
 libxcb-render.so.0 libxcb-1.2_1
 libxcb-glx.so.0 libxcb-1.2_1
@@ -301,9 +300,7 @@ libXaw7.so.7 libXaw-1.0.5_1
 libXft.so.2 libXft-2.1.13_1
 libXcursor.so.1 libXcursor-1.1.9_1
 libXxf86dga.so.1 libXxf86dga-1.0.2_1
-libXxf86misc.so.1 libXxf86misc-1.0.1_1
 libXp.so.6 libXp-1.0.0_1
-libXfontcache.so.1 libXfontcache-1.0.4_1
 libXv.so.1 libXv-1.0.4_1
 libXvMC.so.1 libXvMC-1.0.4_1
 libXvMCW.so.1 libXvMC-1.0.4_1
@@ -836,7 +833,6 @@ libchamplain-gtk-0.12.so.0 libchamplain-0.12.5_2
 libshumate-1.0.so.1 libshumate-1.0.0_1
 libvpx.so.6 libvpx6-1.8.0_1
 libvpx.so.7 libvpx7-1.11.0_1
-libXevie.so.1 libXevie-1.0.2_1
 libatspi.so.0 at-spi2-core-1.91.91_1
 libatk-bridge-2.0.so.0 at-spi2-atk-2.6.0_1
 libvte-2.91.so.0 vte3-0.68.0_1

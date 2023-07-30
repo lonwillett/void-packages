@@ -2,7 +2,7 @@
 pkgname=seafile-libclient
 version=8.0.10
 #yyy_gitrev=91e5d897395c728a1e862dbdaf3d8a519c2ed73e
-revision=2
+revision=3
 _distname="${pkgname/-libclient/}"
 #yyywrksrc="${_distname}-${_gitrev}"
 build_style=gnu-configure

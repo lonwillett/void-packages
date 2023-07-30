@@ -1,21 +1,21 @@
 # Template file for 'seadrive-daemon'
 pkgname=seadrive-daemon
-#yyy_gitrev=07a788a395e4669156bca294475692fb56b24947
-version=2.0.22
-revision=2
+#yyy_gitrev=30e139d01730aef4356251bb409067935614208d
+version=2.0.27
+revision=1
 _distname="seadrive-fuse"
 wrksrc="${_distname}-${version}"
 #yyywrksrc="${_distname}-${_gitrev}"
 build_style=gnu-configure
 hostmakedepends="autoconf automake libtool intltool vala pkg-config python3"
-makedepends="libevent-devel libcurl-devel gtk+-devel libuuid-devel sqlite-devel jansson-devel openssl-devel libsearpc-devel fuse-devel"
+makedepends="libevent-devel libcurl-devel gtk+-devel libuuid-devel sqlite-devel jansson-devel openssl-devel libsearpc-devel fuse-devel libwebsockets-devel"
 short_desc="Seafile drive daemon (fuse interface)"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-3.0-or-later"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/${_distname}/archive/v${version}.tar.gz"
 #yyydistfiles="https://github.com/haiwen/${_distname}/archive/${_gitrev}.tar.gz"
-checksum=24b61b170b240f7d939ff711f57fe5e3a7bc5a03f18edb0d2aff7cac4243923a
+checksum=321bf695da1857eabc4d1dd9286b412d45967a8f8673f9298536f5125f666c39
 python_version=3
 
 pre_configure() {

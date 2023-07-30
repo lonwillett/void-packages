@@ -2,9 +2,9 @@
 # WARNING: upstream sometimes retag source. Wait for official announcement
 pkgname=libsearpc
 # floating tag 3.3-latest
-version=3.3.0.20220902
-revision=2
-_gitrev=15f6f0b9f451b9ecf99dedab72e9242e54e124eb
+version=3.3.0.20230527
+revision=1
+_gitrev=783141fb694f3bd1f8bd8a783670dd25a53b9fc1
 build_style=gnu-configure
 configure_args="--with-python3 --disable-static --disable-compile-demo"
 hostmakedepends="automake libtool pkg-config python3 glib-devel"
@@ -14,7 +14,7 @@ maintainer="yopito <pierre.bourgin@free.fr>"
 license="LGPL-3.0-or-later, Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/libsearpc/archive/${_gitrev}.tar.gz"
-checksum=694ab76ea0e3c0616a4c517fc6f264cc35679ed70a843c4e74e0b35b779def8d
+checksum=7ff767be84b260ccfa3b484249b555194e64ecc165cb6aa64b44c58703e109fb
 python_version=3
 
 pre_configure() {

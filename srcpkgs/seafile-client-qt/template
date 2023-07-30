@@ -1,8 +1,8 @@
 # Template file for 'seafile-client-qt'
 pkgname=seafile-client-qt
 version=8.0.10
-#yyy_gitrev=2b0ffd16170e0d98a69993a91ffdef6c1ddd5079
-revision=2
+#yyy_gitrev=df41db29ecaface78ab5cd18ed6597571d98bd57
+revision=3
 _sourcename="seafile-client"
 #yyywrksrc="${_sourcename}-${_gitrev}"
 build_style=cmake

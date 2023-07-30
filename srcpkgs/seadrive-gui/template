@@ -1,9 +1,9 @@
 # Template file for 'seadrive-gui'
 pkgname=seadrive-gui
-version=2.0.26
-#_dmnver=${version}
-_dmnver=2.0.22
-#yyy_gitrev=d4a9fe7afbfe627a52fd78539f9a3b55ac8f9cbc
+version=2.0.27
+_dmnver=${version}
+#_dmnver=2.0.27
+#yyy_gitrev=18a30324db7a88411eefc20f22b1a675f28fdd95
 revision=1
 #yyywrksrc="seadrive-gui-${_gitrev}"
 build_style=cmake
@@ -18,7 +18,7 @@ license="Apache-2.0"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/${pkgname}/archive/v${version}.tar.gz"
 #yyydistfiles="https://github.com/haiwen/seadrive-gui/archive/${_gitrev}.tar.gz"
-checksum=1c9f55ddc61e6c8eab808bd3f8bae42ff0dfbc02cbfc9e3f580d351b7745b9ce
+checksum=b71d6e766f083668b958b2d448c556a2d19e1c52bfcab228a48d6591e0ba3eb1
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl)	# need fts implementation

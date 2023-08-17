@@ -2604,7 +2604,7 @@ libmunge.so.2 munge-libs-0.5.14_3
 libmgba.so.0.10 libmgba-0.10.0_1
 libglabels-3.0.so.8 libglabels30-3.2.1_1
 libglbarcode-3.0.so.0 libglabels30-3.2.1_1
-libjim.so.0.81 jimtcl-0.81_1
+libjim.so.0.82 jimtcl-0.82_1
 libftdi1.so.2 libftdi1-1.2_1
 libax25.so.0 libax25-0.0.12rc4_1
 libax25io.so.0 libax25-0.0.12rc4_1
@@ -3080,8 +3080,6 @@ libappstream-glib.so.8 appstream-glib-0.6.13_1
 libappstream-builder.so.8 appstream-glib-0.6.13_1
 libflatpak.so.0 flatpak-0.9.3_2
 libnanomsg.so.5 nanomsg-1.1.3_1
-libindicator3.so.7 libindicator-12.10.1_1
-libappindicator3.so.1 libappindicator-12.10.0_1
 libscanmem.so.1 libscanmem-0.17_5
 libsctp.so.1 lksctp-tools-1.0.17_1
 libwithsctp.so.1 lksctp-tools-1.0.17_1

@@ -3629,6 +3629,7 @@ libdwarves_emit.so.1 pahole-1.12_1
 libdwarves_reorganize.so.1 pahole-1.12_1
 libclthreads.so.2 clthreads-2.4.2_1
 libclxclient.so.3 clxclient-3.9.2_1
+libsecp256k1.so.2 libsecp256k1-0.3.2_1
 libltc.so.11 libltc-1.3.1_1
 libvpd-2.2.so.2 libvpd-2.2.6_1
 libvpd_cxx-2.2.so.2 libvpd-2.2.6_1
@@ -4037,7 +4038,7 @@ libstemmer.so.2 libstemmer-2.1.0_1
 libdecor-0.so.0 libdecor-0.1.0_1
 libprimecount.so.7 primecount-7.2_1
 libprimesieve.so.11 primesieve-11.0_1
-libavif.so.15 libavif-0.11.0_1
+libavif.so.16 libavif-1.0.1_1
 libkdumpfile.so.10 libkdumpfile-0.4.1_1
 libamd.so.3 SuiteSparse-6.0.1_1
 libcamd.so.3 SuiteSparse-6.0.1_1

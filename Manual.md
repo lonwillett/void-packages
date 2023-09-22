@@ -1068,8 +1068,7 @@ suitable environment for working with certain sets of packages.
 
 The current list of available `build_helper` scripts is the following:
 
-- `rust` specifies environment variables required for cross-compiling crates via cargo and
-for compiling cargo -sys crates.
+- `cmake-wxWidgets-gtk3` sets the `WX_CONFIG` variable which is used by FindwxWidgets.cmake
 
 - `gir` specifies dependencies for native and cross builds to deal with
 GObject Introspection. The following variables may be set in the template to handle
@@ -1078,6 +1077,15 @@ additional paths to be searched when linking target binaries to be introspected.
 `GIR_EXTRA_OPTIONS` defines additional options for the `g-ir-scanner-qemuwrapper` calling
 `qemu-<target_arch>-static` when running the target binary. You can for example specify
 `GIR_EXTRA_OPTIONS="-strace"` to see a trace of what happens when running that binary.
+
+- `meson` creates a cross file, `${XBPS_WRAPPERDIR}/meson/xbps_meson.cross`, which configures
+meson for cross builds. This is particularly useful for building packages that wrap meson
+invocations (e.g., `python3-pep517` packages that use a meson backend) and is added by default
+for packages that use the `meson` build style.
+
+- `python3` configures the cross-build environment to use Python libraries, header files, and
+interpreter configurations in the target root. The `python3` helper is added by default for
+packages that use the `python3-module` or `python3-pep517` build styles.
 
 - `qemu` sets additional variables for the `cmake` and `meson` build styles to allow
 executing cross-compiled binaries inside qemu.
@@ -1092,7 +1100,9 @@ This aims to fix cross-builds for when the build-style is mixed: e.g. when in a
 `gnu-configure` style the configure script calls `qmake` or a `Makefile` in
 `gnu-makefile` style, respectively.
 
-- `cmake-wxWidgets-gtk3` sets the `WX_CONFIG` variable which is used by FindwxWidgets.cmake
+- `rust` specifies environment variables required for cross-compiling crates via cargo and
+for compiling cargo -sys crates. This helper is added by default for packages that use the
+`cargo` build style.
 
 <a id="functions"></a>
 ### Functions

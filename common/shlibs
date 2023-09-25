@@ -63,7 +63,7 @@ liblto_plugin.so.0 gcc-4.7.3_1
 libgcc_s.so.1 libgcc-4.4.0_1
 libgo.so.21 libgo-12.2.0_1
 libgccjit.so.0 libgccjit-10.2.1pre1_1
-libperl.so.5.36 perl-5.36.0_1
+libperl.so.5.38 perl-5.38.0_1
 libgmp.so.10 gmp-5.0.1_1
 libgmpxx.so.4 gmpxx-6.0.0_2
 libmpfi.so.0 mpfi-1.5.3_1
@@ -80,7 +80,7 @@ libt3key.so.1 libt3key-0.2.10_1
 libt3window.so.0 libt3window-0.4.1_1
 libt3widget.so.2 libt3widget-1.2.2_1
 libtranscript.so.1 libtranscript-0.3.3_1
-libnetcdf.so.15 netcdf-4.7.0_1
+libnetcdf.so.19 netcdf-4.9.2_1
 libformw.so.6 ncurses-libs-5.8_1 ignore
 libfplll.so.8 fplll-5.4.4_1
 libpanelw.so.6 ncurses-libs-5.8_1 ignore
@@ -4048,10 +4048,10 @@ libccolamd.so.3 SuiteSparse-6.0.1_1
 libcholmod.so.4 SuiteSparse-6.0.1_1
 libcolamd.so.3 SuiteSparse-6.0.1_1
 libcxsparse.so.4 SuiteSparse-6.0.1_1
-libspqr.so.3 SuiteSparse-6.0.1_1
+libspqr.so.4 SuiteSparse-7.2.0_1
 libsuitesparseconfig.so.7 SuiteSparse-7.0.1_1
 libumfpack.so.6 SuiteSparse-6.0.1_1
-libecl.so.21.2 ecl-21.2.1_1
+libecl.so.23.9 ecl-23.9.9_1
 libecm.so.1 ecm-7.0.4_3
 libcliquer.so.1 cliquer-1.22_1
 libomalloc-0.9.6.so singular-4.2.1_1
@@ -4289,3 +4289,6 @@ libchafa.so.0 libchafa-1.12.5_1
 libcppdap.so cppdap-1.58.0+a_1
 libkeyfinder.so.2 libkeyfinder-2.2.7_1
 libb64.so.0 libb64-1.2.1_1
+libei.so.1 libei-1.1.0_1
+libeis.so.1 libei-1.1.0_1
+liboeffis.so.1 libei-1.1.0_1

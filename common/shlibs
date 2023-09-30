@@ -319,7 +319,6 @@ libtiffxx.so.6 tiff-4.5.0_1
 libnotify.so.4 libnotify-0.7_1
 libexo-1.so.0 exo-0.7.3_1
 libexo-2.so.0 exo-0.12.0_1
-libglade-2.0.so.0 libglade-2.6.4_1
 libthunarx-3.so.0 Thunar-1.8.1_1
 libexif.so.12 libexif-0.6.17_1
 liboil-0.3.so.0 liboil-0.3.16_1
@@ -532,7 +531,6 @@ libicutest.so.73 icu-libs-73.2_1
 libaspell.so.15 libaspell-0.60.8_2
 libpspell.so.15 libaspell-0.60.8_2
 libenchant-2.so.2 enchant2-2.2.3_1
-libgconf-2.so.4 GConf-2.32.0_1
 libpackagekit-glib2.so.18 PackageKit-1.1.12_1
 libpsl.so.5 libpsl-0.20.2_1
 libsoup-2.4.so.1 libsoup-2.34.0_1
@@ -828,8 +826,7 @@ libclutter-gtk-1.0.so.0 clutter-gtk-1.1.2_1
 libchamplain-0.12.so.0 libchamplain-0.12.5_2
 libchamplain-gtk-0.12.so.0 libchamplain-0.12.5_2
 libshumate-1.0.so.1 libshumate-1.0.0_1
-libvpx.so.6 libvpx6-1.8.0_1
-libvpx.so.7 libvpx7-1.11.0_1
+libvpx.so.8 libvpx-1.13.0_1
 libatspi.so.0 at-spi2-core-1.91.91_1
 libatk-bridge-2.0.so.0 at-spi2-atk-2.6.0_1
 libvte-2.91.so.0 vte3-0.68.0_1
@@ -1728,7 +1725,6 @@ libdar64.so.6000 libdar-2.6.6_1
 libpython3.so python3-3.9.2_2
 libpython3.11.so.1.0 python3-3.11.0_1
 libbrscandec2.so.1 brother-brscan3-0.2.11_2
-libpyglib-2.0-python.so.0 python-gobject2-2.28.6_11
 libxmlrpc_server_abyss.so.3 xmlrpc-c-1.51.06_2
 libxmlrpc++.so.8 xmlrpc-c-1.51.06_2
 libxmlrpc_server.so.3 xmlrpc-c-1.51.06_2
@@ -2563,9 +2559,6 @@ libopenshot-audio.so.9 libopenshot-audio-0.3.0_1
 libopenshot.so.23 libopenshot-0.3.0_1
 libpqxx-6.3.so libpqxx-6.3.3_1
 libndpi.so.3 ndpi-3.4_1
-liblog.so android-studio-3.0.1_1
-libm.so android-studio-3.0.1_1
-libdl.so android-studio-3.0.1_1
 libKF5WidgetsAddons.so.5 kwidgetsaddons-5.26.0_1
 libsearpc.so.1 libsearpc-3.0.7_1
 libseafile.so.0 seafile-libclient-7.0.10_2
@@ -2983,7 +2976,7 @@ libPocoCrypto.so.94 poco-1.12.4_1
 libPtex.so ptex-2.3.2_1
 libopenblas.so.0 openblas-0.2.19_1
 librtaudio.so.6 rtaudio-5.1.0_1
-librtmidi.so.5 rtmidi-4.0.0_1
+librtmidi.so.7 rtmidi-6.0.0_1
 libbiblesync.so.2.1.0 biblesync-2.1.0_1
 libbac-9.4.2.so bacula-common-9.4.2_4
 libbaccfg-9.4.2.so bacula-common-9.4.2_4
@@ -3411,8 +3404,8 @@ libmed.so.11 libmed-4.0.0_1
 libeog.so eog-3.28.0_4
 libfreexl.so.1 freexl-1.0.5_1
 libgeos_c.so.1 geos-3.9.0_1
-libpapi.so.5 papi-5.6.0_1
-libpfm.so.4 papi-5.6.0_1
+libpapi.so.7 papi-7.0.1_1
+libpfm.so.4 libpfm4-4.13.0_1
 libfifechan.so.0.1.5 fifechan-0.1.5_1
 libfifechan_sdl.so.0.1.5 fifechan-0.1.5_1
 libfifechan_opengl.so.0.1.5 fifechan-0.1.5_1
@@ -4273,3 +4266,12 @@ libb64.so.0 libb64-1.2.1_1
 libei.so.1 libei-1.1.0_1
 libeis.so.1 libei-1.1.0_1
 liboeffis.so.1 libei-1.1.0_1
+libgrass_datetime.8.3.so grass-8.3.0_1
+libgrass_dbmibase.8.3.so grass-8.3.0_1
+libgrass_dbmiclient.8.3.so grass-8.3.0_1
+libgrass_gis.8.3.so grass-8.3.0_1
+libgrass_gmath.8.3.so grass-8.3.0_1
+libgrass_gproj.8.3.so grass-8.3.0_1
+libgrass_imagery.8.3.so grass-8.3.0_1
+libgrass_raster.8.3.so grass-8.3.0_1
+libgrass_vector.8.3.so grass-8.3.0_1

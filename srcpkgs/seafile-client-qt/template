@@ -2,7 +2,7 @@
 pkgname=seafile-client-qt
 version=9.0.3
 #yyy_gitrev=77accc8a94f1859bddd4f8d69fb656357507bd4c
-revision=2
+revision=3
 _sourcename="seafile-client"
 #yyywrksrc="${_sourcename}-${_gitrev}"
 build_style=cmake

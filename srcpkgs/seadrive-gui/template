@@ -4,7 +4,7 @@ version=2.0.27
 _dmnver=${version}
 #_dmnver=2.0.27
 #yyy_gitrev=18a30324db7a88411eefc20f22b1a675f28fdd95
-revision=2
+revision=3
 #yyywrksrc="seadrive-gui-${_gitrev}"
 build_style=cmake
 configure_args="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr"

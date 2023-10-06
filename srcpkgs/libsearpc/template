@@ -3,7 +3,7 @@
 pkgname=libsearpc
 # floating tag 3.3-latest
 version=3.3.0.20230527
-revision=2
+revision=3
 _gitrev=783141fb694f3bd1f8bd8a783670dd25a53b9fc1
 build_style=gnu-configure
 configure_args="--with-python3 --disable-static --disable-compile-demo"

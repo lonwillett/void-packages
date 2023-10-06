@@ -660,7 +660,7 @@ libboost_stacktrace_addr2line.so.1.83.0 libboost_stacktrace_addr2line-1.83.0_1
 libboost_stacktrace_basic.so.1.83.0 libboost_stacktrace_basic-1.83.0_1
 libboost_mpi.so.1.83.0 libboost_mpi-1.83.0_1
 libboost_mpi_python311.so.1.83.0 libboost_mpi-python3-1.83.0_1
-libboost_python311.so.1.83.0 boost-python3-1.83.0_1
+libboost_python312.so.1.83.0 boost-python3-1.83.0_1
 libexempi.so.8 exempi-2.5.0_1
 libatasmart.so.4 libatasmart-0.17_1
 libsgutils2-1.45.so.2 libsgutils-1.45_1
@@ -1029,8 +1029,8 @@ libcryptsetup.so.12 libcryptsetup-2.3.4_2
 libgusb.so.2 libgusb-0.1.3_1
 libmash-0.2.so.0 mash-0.2.0_4
 libbytesize.so.1 libbytesize-1.2_1
-libblockdev.so.2 libblockdev-2.16_1
-libbd_utils.so.2 libblockdev-2.16_1
+libblockdev.so.3 libblockdev-3.0_1
+libbd_utils.so.3 libblockdev-3.0_1
 libndctl.so.6 libndctl-60.3_1
 libdaxctl.so.1 libdaxctl-60.3_1
 libudisks2.so.0 udisks2-1.93.0_1
@@ -1105,8 +1105,6 @@ libgvc.so.6 graphviz-libs-2.28.0_6
 libcdt.so.5 graphviz-libs-2.28.0_6
 libpathplan.so.4 graphviz-libs-2.28.0_6
 liblab_gamut.so.1 graphviz-libs-2.40.1_1
-libflowcanvas.so.5 flowcanvas-0.7.1_1
-liblash.so.1 ladish-1_1
 libmowgli-2.so.0 libmowgli-2.1.3_8
 libgts-0.7.so.5 gts-0.7.6_1
 libguess.so.1 libguess-1.1_1
@@ -1722,8 +1720,8 @@ libportaudio.so.2 portaudio-19.20140130_1
 libportaudiocpp.so.0 portaudio-cpp-19.20140130_1
 libdar.so.6000 libdar-2.6.6_1
 libdar64.so.6000 libdar-2.6.6_1
-libpython3.so python3-3.9.2_2
-libpython3.11.so.1.0 python3-3.11.0_1
+libpython3.so python3-3.12.0_1
+libpython3.12.so.1.0 python3-3.12.0_1
 libbrscandec2.so.1 brother-brscan3-0.2.11_2
 libxmlrpc_server_abyss.so.3 xmlrpc-c-1.51.06_2
 libxmlrpc++.so.8 xmlrpc-c-1.51.06_2
@@ -3551,7 +3549,7 @@ libtexpdf.so.0 libtexpdf-0.9.5_1
 libupstart.so.1 libupstart-1.13.3_1
 librtas.so.2 librtas-2.0.2_1
 librtasevent.so.2 librtas-2.0.2_1
-libbroker.so.3 zeek-4.0.1_1
+libbroker.so.4 zeek-6.0.0_1
 libcaf_core.so.0.18.0 zeek-4.0.0_1
 libcaf_io.so.0.18.0 zeek-4.0.0_1
 libcaf_openssl.so.0.18.0 zeek-4.0.0_1

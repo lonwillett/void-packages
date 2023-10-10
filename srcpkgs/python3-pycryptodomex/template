@@ -2,7 +2,7 @@
 pkgname=python3-pycryptodomex
 reverts="3.17.0_1"
 version=3.17
-revision=2
+revision=3
 build_style=python3-module
 hostmakedepends="python3-setuptools"
 makedepends="python3-devel"

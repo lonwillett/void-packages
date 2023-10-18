@@ -469,7 +469,7 @@ libfsimage.so.1.0 xen-libs-4.10.0_1
 libxenstat.so.4.14 xen-libs-4.14.0_1
 libfam.so.0 gamin-0.1.10_1
 libgamin-1.so.0 gamin-0.1.10_1
-libkateprivate.so.23.08.0 libkate-23.08.0_1
+libkateprivate.so.23.08.2 libkate-23.08.2_1
 libKF5SyntaxHighlighting.so.5 syntax-highlighting-5.29.0_1
 libKPim5Libkleo.so.5 libkleo-23.04.0_1
 libKPim5GrantleeTheme.so.5 grantleetheme-23.04.0_1
@@ -2272,9 +2272,6 @@ libtesseract.so.4 tesseract-ocr-4.0.0_1
 libffmpegthumbnailer.so.4 ffmpegthumbnailer-2.0.10_1
 libopenraw.so.7 libopenraw-0.1.0_1
 libopenrawgnome.so.7 libopenraw-0.1.0_1
-libgeda.so.47 geda-1.10.1_1
-libgedacairo.so.1 geda-1.10.2_1
-libxornstorage.so.0 geda-1.10.2_1
 libclutter-gst-3.0.so.0 clutter-gst3-3.0.4_1
 libgsound.so.0 gsound-1.0.1_1
 libproc2.so.0 procps-ng-4.0.3_1
@@ -2507,7 +2504,7 @@ libfixedfann.so.2 fann-2.2.0_1
 libfann.so.2 fann-2.2.0_1
 libdoublefann.so.2 fann-2.2.0_1
 libxerces-c-3.2.so libxerces-c-3.2.0_1
-libunibreak.so.3 libunibreak-4.0_1
+libunibreak.so.5 libunibreak-5.1_1
 libiperf.so.0 iperf3-3.1.1_1
 libKF5UnitConversion.so.5 kunitconversion-5.26.0_1
 libfdk-aac.so.2 fdk-aac-2.0.0_1
@@ -2572,7 +2569,7 @@ libhwloc.so.15 libhwloc-2.0.4_1
 libnetfilter_cttimeout.so.1 libnetfilter_cttimeout-1.0.0_1
 libnetfilter_cthelper.so.0 libnetfilter_cthelper-1.0.0_1
 libnetfilter_queue.so.1 libnetfilter_queue-1.0.2_1
-libfilezilla.so.40 libfilezilla-0.44.0_1
+libfilezilla.so.41 libfilezilla-0.45.0_1
 libtommath.so.1 libtommath-1.0_1
 libKF5ItemViews.so.5 kitemviews-5.26.0_1
 libunicorn.so.1 unicorn-1.0_1
@@ -3459,7 +3456,6 @@ libmysqlpp.so.3 mysql++-3.2.5_1
 libKF5Syndication.so.5 syndication-5.50.0_1
 liblqr-1.so.0 liblqr-0.4.2_1
 libmozjs-102.so.0 mozjs102-102.3.0_1
-libmozjs-78.so.0 mozjs78-78.1.0_1
 libebur128.so.1 libebur128-1.2.4_1
 libgtksourceview-4.so.0 gtksourceview4-4.0.2_1
 libgtksourceview-5.so.0 gtksourceview5-5.2.0_1
@@ -3488,7 +3484,7 @@ liburiparser.so.1 uriparser-0.8.6_1
 libcpptest.so.1 cpptest-2.0.0_1
 libhandy-0.0.so.0 libhandy-0.0.3_1
 libhandy-1.so.0 libhandy1-0.90.0_1
-libadwaita-1.so.0 libadwaita-1.0.0alpha2_1
+libadwaita-1.so.0 libadwaita-1.4.0_1
 libswitchboard-2.0.so.0 switchboard-2.3.2_1
 libcodecore.so.0 libio.elementary.code-3.0_1
 libpantheon-files-core.so.6 libio.elementary.files-6.0.0_1
@@ -3897,7 +3893,7 @@ libJudy.so.1 judy-1.0.5_1
 libsignal-protocol-c.so.2 libsignal-protocol-c-2.3.3_2
 libKSeExprUI.so.4 seexpr-krita-4.0.4.0_1
 libKSeExpr.so.4 seexpr-krita-4.0.4.0_1
-libkritaqmicinterface.so.17 krita-5.0.0_1
+libkritaqmicinterface.so.19 krita-5.2.0_1
 liburing.so.2 liburing-2.0_1
 libbson-1.0.so.0 libbson-1.17.4_2
 libsonic.so.0 libsonic-0.2.0_1
@@ -4127,9 +4123,9 @@ libopensmtpd.so.0 libopensmtpd-0.7_1
 libiio.so.0 libiio-0.23_1
 libqtforkawesome.so.1 qtforkawesome-0.1.0_1
 libqtquickforkawesome.so.1 qtforkawesome-0.1.0_1
-libsyncthingwidgets.so.9 syncthingtray-1.4.4_1
-libsyncthingmodel.so.9 syncthingtray-1.4.4_1
-libsyncthingconnector.so.9 syncthingtray-1.4.4_1
+libsyncthingwidgets.so.10 syncthingtray-1.4.4_1
+libsyncthingmodel.so.10 syncthingtray-1.4.4_1
+libsyncthingconnector.so.10 syncthingtray-1.4.4_1
 libglibutil.so.1 libglibutil-1.0.64_1
 libgbinder.so.1 libgbinder-1.1.20_1
 libsunpinyin.so.3 libsunpinyin-3.0.0rc2_1

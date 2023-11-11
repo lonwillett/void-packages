@@ -414,8 +414,8 @@ libcdio.so.19 libcdio-2.1.0_1
 libmpcdec.so.5 libmpcdec-1.2.6_1
 libproxy.so.1 libproxy-0.4.6_1
 libmoar.so MoarVM-2015.11_1
-libFLAC.so.8 libflac-1.2.1_1
-libFLAC++.so.6 libflac-1.2.1_1
+libFLAC.so.12 libflac-1.4.3_1
+libFLAC++.so.10 libflac-1.4.3_1
 libField3D.so.1.7 Field3D-1.7.3_1
 libMAC.so.6 libMAC-5.28_1
 libmad.so.0 libmad-0.15.1b_1
@@ -4095,7 +4095,7 @@ librz_syscall.so.0.6 rizin-0.6.0_1
 librz_type.so.0.6 rizin-0.6.0_1
 librz_util.so.0.6 rizin-0.6.0_1
 libaravis-0.8.so.0 libaravis-0.8.21_1
-libLimeSuite.so.22.09-1 LimeSuite-22.09.0_1
+libLimeSuite.so.23.10-1 LimeSuite-23.10.0_1
 libnvme.so.1 libnvme-1.0_1
 libnvme-mi.so.1 libnvme-1.2_1
 libRInside.so R-cran-RInside-0.2.16_1
@@ -4123,9 +4123,9 @@ libopensmtpd.so.0 libopensmtpd-0.7_1
 libiio.so.0 libiio-0.23_1
 libqtforkawesome.so.1 qtforkawesome-0.1.0_1
 libqtquickforkawesome.so.1 qtforkawesome-0.1.0_1
-libsyncthingwidgets.so.10 syncthingtray-1.4.4_1
-libsyncthingmodel.so.10 syncthingtray-1.4.4_1
-libsyncthingconnector.so.10 syncthingtray-1.4.4_1
+libsyncthingwidgets.so.11 syncthingtray-1.4.8_1
+libsyncthingmodel.so.11 syncthingtray-1.4.8_1
+libsyncthingconnector.so.11 syncthingtray-1.4.8_1
 libglibutil.so.1 libglibutil-1.0.64_1
 libgbinder.so.1 libgbinder-1.1.20_1
 libsunpinyin.so.3 libsunpinyin-3.0.0rc2_1

@@ -3488,7 +3488,6 @@ libswitchboard-2.0.so.0 switchboard-2.3.2_1
 libcodecore.so.0 libio.elementary.code-3.0_1
 libpantheon-files-core.so.6 libio.elementary.files-6.0.0_1
 libpantheon-files-widgets.so.6 libio.elementary.files-6.0.0_1
-libwlroots.so.9 wlroots0.14-0.14.1_1
 libwlroots.so.10 wlroots0.15-0.15.1_1
 libwlroots.so.11 wlroots0.16-0.16.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
@@ -4277,3 +4276,4 @@ libgeotiff.so.5 libgeotiff-1.7.1_1
 libdraco.so.8 draco-1.5.6_1
 libpdal_base.so.15 libpdal-2.5.6_1
 libpdal_util.so.15 libpdal-2.5.6_1
+libdisplay-info.so.1 libdisplay-info-0.1.1_1

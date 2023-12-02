@@ -1,7 +1,8 @@
 # Template file for 'libxml2'
 pkgname=libxml2
+reverts="2.12.1_1"
 version=2.11.4
-revision=4
+revision=5
 build_style=gnu-configure
 configure_args="--with-threads --with-history --with-icu
  --with-legacy --with-ftp --with-xptr-locs --enable-static"

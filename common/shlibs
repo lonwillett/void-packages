@@ -2054,10 +2054,10 @@ libQt6MultimediaQuick.so.6 qt6-multimedia-6.3.1_1
 libQt6Multimedia.so.6 qt6-multimedia-6.3.1_1
 libQt6SpatialAudio.so.6 qt6-multimedia-6.3.1_1
 libQt6WebEngineQuick.so.6 qt6-webengine-6.3.1_1
-libQt6PdfWidgets.so.6 qt6-webengine-6.3.1_1
-libQt6PdfQuick.so.6 qt6-webengine-6.3.1_1
+libQt6PdfWidgets.so.6 qt6-pdf-6.6.0_3
+libQt6PdfQuick.so.6 qt6-pdf-6.6.0_3
+libQt6Pdf.so.6 qt6-pdf-6.6.0_3
 libQt6WebEngineCore.so.6 qt6-webengine-6.3.1_1
-libQt6Pdf.so.6 qt6-webengine-6.3.1_1
 libQt6WebEngineQuickDelegatesQml.so.6 qt6-webengine-6.3.1_1
 libQt6WebEngineWidgets.so.6 qt6-webengine-6.3.1_1
 libQt6TextToSpeech.so.6 qt6-speech-6.6.0_1
@@ -3491,6 +3491,7 @@ libpantheon-files-core.so.6 libio.elementary.files-6.0.0_1
 libpantheon-files-widgets.so.6 libio.elementary.files-6.0.0_1
 libwlroots.so.10 wlroots0.15-0.15.1_1
 libwlroots.so.11 wlroots0.16-0.16.0_1
+libwlroots.so.12 wlroots0.17-0.17.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
 libcotp.so.2 libcotp-2.0.1_1
 libunarr.so.1 libunarr-1.0.1_1

@@ -171,7 +171,7 @@ libxslt.so.1 libxslt-1.1.24_1
 libstartup-notification-1.so.0 startup-notification-0.10_1
 libwnck-3.so.0 libwnck-2.91.90_1
 libnl.so.1 libnl-1.1_1
-libnl-3.so.200 libnl3-3.2.1_1
+libnl-3.so.200 libnl3-3.2.22_1
 libnl-route-3.so.200 libnl3-3.2.1_1
 libnl-idiag-3.so.200 libnl3-3.2.28_1
 libnl-nf-3.so.200 libnl3-3.2.1_1
@@ -1770,7 +1770,7 @@ libnftnl.so.11 libnftnl-1.1.2_1
 libfcgi.so.0 fcgi-2.4.0_2
 libdshconfig.so.1 libdshconfig-0.20.13_1
 libpar2.so.1 libpar2-0.4_1
-libsodium.so.23 libsodium-1.0.15_1
+libsodium.so.26 libsodium-1.0.19_1
 libstrophe.so.0 libstrophe-0.10.1_2
 libganv-1.so.1 ganv-1.4.2_1
 libblas.so.3 blas-3.5.0_1
@@ -3494,7 +3494,7 @@ libwlroots.so.10 wlroots0.15-0.15.1_1
 libwlroots.so.11 wlroots0.16-0.16.0_1
 libwlroots.so.12 wlroots0.17-0.17.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
-libcotp.so.2 libcotp-2.0.1_1
+libcotp.so.3 libcotp-3.0.0_1
 libunarr.so.1 libunarr-1.0.1_1
 libretro-gtk-1.so.0 retro-gtk-1.0.0_1
 libmanette-0.2.so.0 libmanette-0.2.1_1

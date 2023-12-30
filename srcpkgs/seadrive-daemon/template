@@ -1,8 +1,8 @@
 # Template file for 'seadrive-daemon'
 pkgname=seadrive-daemon
-#yyy_gitrev=30e139d01730aef4356251bb409067935614208d
-version=2.0.27
-revision=3
+#yyy_gitrev=56d7ff82449a7091d76f44b1a92de2f85e4eacde
+version=2.0.28
+revision=1
 _distname="seadrive-fuse"
 wrksrc="${_distname}-${version}"
 #yyywrksrc="${_distname}-${_gitrev}"
@@ -15,7 +15,7 @@ license="GPL-3.0-or-later"
 homepage="https://seafile.com"
 distfiles="https://github.com/haiwen/${_distname}/archive/v${version}.tar.gz"
 #yyydistfiles="https://github.com/haiwen/${_distname}/archive/${_gitrev}.tar.gz"
-checksum=321bf695da1857eabc4d1dd9286b412d45967a8f8673f9298536f5125f666c39
+checksum=13a353c87b20c9a4856710db437b4aa878ccb9662e9368db0830c96cb3982d77
 python_version=3
 
 pre_configure() {

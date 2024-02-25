@@ -1,6 +1,6 @@
 # Template file for 'wine'
 pkgname=wine
-version=9.1
+version=9.3
 revision=1
 _pkgver=${version/r/-r}
 create_wrksrc=yes
@@ -13,8 +13,8 @@ license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
 distfiles="https://dl.winehq.org/wine/source/${version%.*}.x/wine-${_pkgver}.tar.xz
  https://github.com/wine-staging/wine-staging/archive/v${_pkgver}.tar.gz"
-checksum="01b3b91b6fc35cabe93b28f190a237ba95c8ac70c436d919586deaa3da258fff
- d5fb3d2b3aa2d61eac188d9e7e7436cdafbd7f370a797b22b9b473046acedf15"
+checksum="148b2e34147d1fa148415637c723c99f4376e92c84e90cc1d0e00ad4ed3b1793
+ 275fc60ccd8b3f4a05ca45bb5a606cea4575240b728c0a888526aedd6d205eb7"
 
 # NOTE: wine depends on specific versions of wine-mono and wine-gecko,
 # check for updates to these packages when updating wine

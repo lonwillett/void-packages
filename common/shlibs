@@ -808,6 +808,7 @@ libXss.so.1 libXScrnSaver-1.1.3_1
 libyelp.so.0 yelp-3.36.0_1
 libpeas-1.0.so.0 libpeas-1.0.0_2
 libpeas-gtk-1.0.so.0 libpeas-1.0.0_2
+libpeas-2.so.0 libpeas2-2.0.1_1
 libtotem.so.0 libtotem-3.6.2_1
 libclutter-1.0.so.0 clutter-1.14.0_1
 libavfs.so.0 libavfs-1.0.5_1
@@ -1333,7 +1334,7 @@ libunwind-setjmp.so.0 libunwind-1.5.0_3
 libmicrohttpd.so.12 libmicrohttpd-0.9.73_1
 libmicrodns.so.1 libmicrodns-0.2.0_1
 libgit2.so.1.6 libgit2-1.6.4_1
-libgit2-glib-1.0.so.0 libgit2-glib-0.23.4_1
+libgit2-glib-1.0.so.0 libgit2-glib-1.2.0_1
 libagg.so.2 agg-2.5_1
 libzzip-0.so.13 zziplib-0.13.62_1
 libzzipfseeko-0.so.13 zziplib-0.13.62_1
@@ -1944,6 +1945,9 @@ libsysstat-qt5.so.0 libsysstat-0.3.2_1
 libpolkit-qt5-agent-1.so.1 polkit-qt5-0.112.0_1
 libpolkit-qt5-gui-1.so.1 polkit-qt5-0.112.0_1
 libpolkit-qt5-core-1.so.1 polkit-qt5-0.112.0_1
+libpolkit-qt6-core-1.so.1 polkit-qt6-0.200.0_1
+libpolkit-qt6-gui-1.so.1 polkit-qt6-0.200.0_1
+libpolkit-qt6-agent-1.so.1 polkit-qt6-0.200.0_1
 libfm-qt.so.14 libfm-qt-1.4.0_1
 libqtermwidget5.so.1 qtermwidget-1.0.0_1
 libmd4c.so.0 libmd4c-0.4.8_1
@@ -2230,6 +2234,8 @@ libqca-qt6.so.2 qca-qt6-2.3.8_1
 libqt5keychain.so.1 qtkeychain-qt5-0.7.0_1
 libphonon4qt5.so.4 phonon-qt5-4.8.3_1
 libphonon4qt5experimental.so.4 phonon-qt5-4.8.3_1
+libphonon4qt6.so.4 phonon-4.12.0_1
+libphonon4qt6experimental.so.4 phonon-4.12.0_1
 libtelepathy-qt5.so.0 telepathy-qt5-0.9.5_1
 libtelepathy-qt5-service.so.1 telepathy-qt5-0.9.8_1
 libtelepathy-qt5-farstream.so.0 telepathy-qt5-farstream-0.9.5_1
@@ -2580,6 +2586,7 @@ liborcus-mso-0.18.so.0 liborcus-0.18.1_1
 liborcus-0.18.so.0 liborcus-0.18.1_1
 liborcus-spreadsheet-model-0.18.so.0 liborcus-0.18.1_1
 libnumbertext-1.0.so.0 libnumbertext-1.0.4_1
+libzmf-0.0.so.0 libzmf-0.0.2_1
 libGeneratedSaxParser.so opencollada-0.0.20160223_1
 libMathMLSolver.so opencollada-0.0.20160223_1
 libOpenCOLLADABaseUtils.so opencollada-0.0.20160223_1
@@ -3050,8 +3057,7 @@ libgutenprint.so.9 gutenprint-5.3.3_1
 libunbound.so.8 libunbound-1.13.1_2
 libmirage.so.11 libmirage-3.1.0_1
 libwkhtmltox.so.0 libwkhtmltopdf-0.12.5_1
-libsysprof-4.so sysprof-3.37.90_1
-libsysprof-ui-5.so sysprof-3.46.0_1
+libsysprof-6.so.6 libsysprof-45.1_1
 libvala-0.56.so.0 libvala-0.56.0_1
 libvaladoc-0.56.so.0 libvaladoc-0.56.0_1
 libvalaccodegen.so libvala-0.44.0_1
@@ -3447,6 +3453,7 @@ libmysqlpp.so.3 mysql++-3.2.5_1
 libKF5Syndication.so.5 syndication-5.50.0_1
 liblqr-1.so.0 liblqr-0.4.2_1
 libmozjs-102.so.0 mozjs102-102.3.0_1
+libmozjs-115.so.0 mozjs115-115.8.0_1
 libebur128.so.1 libebur128-1.2.4_1
 libgtksourceview-4.so.0 gtksourceview4-4.0.2_1
 libgtksourceview-5.so.0 gtksourceview5-5.2.0_1
@@ -3869,6 +3876,7 @@ libmatio.so.11 matio-1.5.23_1
 libportal.so.1 libportal-0.6_1
 libportal-gtk3.so.1 libportal-gtk3-0.6_1
 libportal-gtk4.so.1 libportal-gtk4-0.6_1
+libportal-qt5.so.1 libportal-qt5-0.7.1_1
 libvips.so.42 libvips-8.9.2_1
 libvips-cpp.so.42 libvips-8.9.2_1
 libselinux.so.1 libselinux-3.0_1
@@ -4006,7 +4014,7 @@ libbraiding.so.0 libbraiding-1.1_1
 libstemmer.so.2 libstemmer-2.1.0_1
 libdecor-0.so.0 libdecor-0.1.0_1
 libprimecount.so.7 primecount-7.2_1
-libprimesieve.so.11 primesieve-11.0_1
+libprimesieve.so.12 primesieve-12.0_1
 libavif.so.16 libavif-1.0.1_1
 libkdumpfile.so.10 libkdumpfile-0.4.1_1
 libamd.so.3 SuiteSparse-6.0.1_1
@@ -4284,3 +4292,4 @@ libunicode_ucd.so.0.4 libunicode-0.4.0_1
 libunicode_loader.so.0.4 libunicode-0.4.0_1
 force-stage.so.0.1 void-force-stage-0.1_1
 libliftoff.so.0 libliftoff-0.4.1_1
+libscfg.so libscfg-0.1.1_1

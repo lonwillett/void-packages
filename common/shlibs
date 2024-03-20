@@ -17,40 +17,40 @@
 # one (order top->bottom) is preferred over the next ones.
 #
 libc.so musl-1.1.24_7
-libc.so.6 glibc-2.38_1
-libm.so.6 glibc-2.38_1
-libpthread.so.0 glibc-2.38_1
-librt.so.1 glibc-2.38_1
-libdl.so.2 glibc-2.38_1
-ld-linux-x86-64.so.2 glibc-2.38_1 x86_64
-ld-linux.so.2 glibc-2.38_1 i686
-ld-linux.so.3 glibc-2.38_1 armv5tel
-ld-linux-aarch64.so.1 glibc-2.38_1 aarch64
-ld-linux-riscv64-lp64d.so.1 glibc-2.38_1 riscv64
-ld64.so.2 glibc-2.38_1 ppc64
-ld.so.1 glibc-2.38_1 mips
-ld.so.1 glibc-2.38_1 ppc
-ld-linux-armhf.so.3 glibc-2.38_1
-libresolv.so.2 glibc-2.38_1
-libanl.so.1 glibc-2.38_1
-libthread_db.so.1 glibc-2.38_1
-libutil.so.1 glibc-2.38_1
-libnsl.so.1 glibc-2.38_1
-libnss_db.so.2 glibc-2.38_1
-libnss_files.so.2 glibc-2.38_1
-libnss_compat.so.2 glibc-2.38_1
-libnss_dns.so.2 glibc-2.38_1
-libnss_hesiod.so.2 glibc-2.38_1
-libBrokenLocale.so.1 glibc-2.38_1
+libc.so.6 glibc-2.39_1
+libm.so.6 glibc-2.39_1
+libpthread.so.0 glibc-2.39_1
+librt.so.1 glibc-2.39_1
+libdl.so.2 glibc-2.39_1
+ld-linux-x86-64.so.2 glibc-2.39_1 x86_64
+ld-linux.so.2 glibc-2.39_1 i686
+ld-linux.so.3 glibc-2.39_1 armv5tel
+ld-linux-aarch64.so.1 glibc-2.39_1 aarch64
+ld-linux-riscv64-lp64d.so.1 glibc-2.39_1 riscv64
+ld64.so.2 glibc-2.39_1 ppc64
+ld.so.1 glibc-2.39_1 mips
+ld.so.1 glibc-2.39_1 ppc
+ld-linux-armhf.so.3 glibc-2.39_1
+libresolv.so.2 glibc-2.39_1
+libanl.so.1 glibc-2.39_1
+libthread_db.so.1 glibc-2.39_1
+libutil.so.1 glibc-2.39_1
+libnsl.so.1 glibc-2.39_1
+libnss_db.so.2 glibc-2.39_1
+libnss_files.so.2 glibc-2.39_1
+libnss_compat.so.2 glibc-2.39_1
+libnss_dns.so.2 glibc-2.39_1
+libnss_hesiod.so.2 glibc-2.39_1
+libBrokenLocale.so.1 glibc-2.39_1
+libmemusage.so glibc-2.39_1
+libSegFault.so glibc-2.39_1
+libpcprofile.so glibc-2.39_1
+libcidn.so.1 glibc-2.39_1
+libmvec.so.1 glibc-2.39_1
 libcrypt.so.2 libxcrypt-4.4.36_1
 libcrypt.so.1 libxcrypt-compat-4.4.36_1
 libSimGearCore.so.2020.3.17 simgear-2020.3.17_1
 libSimGearScene.so.2020.3.17 simgear-2020.3.17_1
-libmemusage.so glibc-2.38_1
-libSegFault.so glibc-2.38_1
-libpcprofile.so glibc-2.38_1
-libcidn.so.1 glibc-2.38_1
-libmvec.so.1 glibc-2.38_1
 libcddgmp.so.0 cddlib-0.94m_1
 libcdd.so.0 cddlib-0.94m_1
 libcowsql.so.0 cowsql-1.15.4_1
@@ -1426,7 +1426,7 @@ libgpaste-gtk4.so.0 libgpaste-42.1_1
 libthreadutil.so.6 libupnp-1.6.18_1
 libupnp.so.17 libupnp-1.14.0_1
 libixml.so.11 libupnp-1.14.0_1
-libupnpp.so.14 libupnpp-0.24.0_1
+libupnpp.so.16 libupnpp-0.26.3_1
 libgeocode-glib.so.0 geocode-glib-libsoup2-3.26.4_1
 libgeocode-glib-2.so.0 geocode-glib-3.26.4_2
 libzeitgeist-2.0.so.0 libzeitgeist2-0.9.14_1
@@ -2056,7 +2056,7 @@ libQt6WebEngineQuickDelegatesQml.so.6 qt6-webengine-6.3.1_1
 libQt6WebEngineWidgets.so.6 qt6-webengine-6.3.1_1
 libQt6TextToSpeech.so.6 qt6-speech-6.6.0_1
 libnpth.so.0 npth-1.1_1
-libnpupnp.so.9 libnpupnp-5.0.0_1
+libnpupnp.so.13 libnpupnp-6.1.1_1
 libglfw.so.3 glfw-3.0.4_1
 libusbmuxd-2.0.so.6 libusbmuxd-2.0.2_1
 libimobiledevice-1.0.so.6 libimobiledevice-1.3.0_2
@@ -3858,6 +3858,10 @@ libraven.so.0 budgie-desktop-10.5.1_1
 libbudgie-private.so.0 budgie-desktop-10.5.1_1
 libbudgietheme.so.0 budgie-desktop-10.5.1_1
 libbudgie-plugin.so.0 budgie-desktop-10.5.1_1
+libmagpie-0.so.0 magpie-0.9.3_1
+libmagpie-clutter-0.so.0 magpie-0.9.3_1
+libmagpie-cogl-0.so.0 magpie-0.9.3_1
+libmagpie-cogl-pango-0.so.0 magpie-0.9.3_1
 libslirp.so.0 libslirp-4.2.0_1
 libqpdf.so.29 libqpdf-11.0.0_1
 libstk-4.6.1.so libstk-4.6.1_1
@@ -4285,7 +4289,7 @@ libgrass_raster.8.3.so grass-8.3.0_1
 libgrass_vector.8.3.so grass-8.3.0_1
 libvpl.so.2 oneVPL-2023.3.1_1
 libusrsctp.so.2 usrsctp-0.9.5.0_1
-libdatachannel.so.0.19.1 libdatachannel-0.19.1_1
+libdatachannel.so.0.20 libdatachannel-0.20.2_1
 libgeotiff.so.5 libgeotiff-1.7.1_1
 libdraco.so.8 draco-1.5.6_1
 libpdal_base.so.16 libpdal-2.6.2_1

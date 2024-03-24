@@ -1,6 +1,6 @@
 # Template file for 'lsd'
 pkgname=lsd
-version=1.0.0
+version=1.1.1
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -10,9 +10,9 @@ short_desc="Next gen ls command with lots of pretty colors and awesome icons"
 maintainer="Marcin Puc <tranzystorek.io@protonmail.com>"
 license="Apache-2.0"
 homepage="https://github.com/lsd-rs/lsd"
-changelog="https://raw.githubusercontent.com/Peltoche/lsd/master/CHANGELOG.md"
+changelog="https://github.com/lsd-rs/lsd/releases"
 distfiles="https://github.com/lsd-rs/lsd/archive/refs/tags/v${version}.tar.gz"
-checksum=ab34e9c85bc77cfa42b43bfb54414200433a37419f3b1947d0e8cfbb4b7a6325
+checksum=7933e196bf7b164ea8879078f8a8e87381e0c49f71867e0036c82916199aba61
 conflicts="disputils"
 
 # The 'cannot_access_subdir_exit_status' fails on CI
@@ -25,7 +25,7 @@ fi
 export SHELL_COMPLETIONS_DIR="${wrksrc}"
 
 post_patch() {
-	cargo update --package git2@0.16.1 --precise 0.17.2
+	cargo update --package git2@0.18.2 --precise 0.17.2
 }
 
 post_install() {

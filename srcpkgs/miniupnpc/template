@@ -1,6 +1,6 @@
 # Template file for 'miniupnpc'
 pkgname=miniupnpc
-version=2.2.4
+version=2.2.7
 revision=1
 build_style=gnu-makefile
 make_use_env=y
@@ -12,7 +12,7 @@ license="BSD-3-Clause"
 #changelog="http://miniupnp.free.fr/files/changelog.php?file=miniupnpc-${version}.tar.gz"
 homepage="http://miniupnp.free.fr"
 distfiles="http://miniupnp.free.fr/files/${pkgname}-${version}.tar.gz"
-checksum=481a5e4aede64e9ef29895b218836c3608d973e77a35b4f228ab1f3629412c4b
+checksum=b0c3a27056840fd0ec9328a5a9bac3dc5e0ec6d2e8733349cf577b0aa1e70ac1
 
 post_install() {
 	vlicense LICENSE

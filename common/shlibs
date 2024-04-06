@@ -2235,6 +2235,7 @@ libfreshclam.so.2 clamav-0.103.1_2
 libqca-qt5.so.2 qca-qt5-2.1.3_1
 libqca-qt6.so.2 qca-qt6-2.3.8_1
 libqt5keychain.so.1 qtkeychain-qt5-0.7.0_1
+libqt6keychain.so.1 qtkeychain-qt6-0.14.1_1
 libphonon4qt5.so.4 phonon-qt5-4.8.3_1
 libphonon4qt5experimental.so.4 phonon-qt5-4.8.3_1
 libphonon4qt6.so.4 phonon-4.12.0_1
@@ -3534,6 +3535,7 @@ libwoff2common.so.1.0.2 libwoff2common1.0.2-1.0.2_1
 libwoff2enc.so.1.0.2 libwoff2enc1.0.2-1.0.2_1
 libwoff2dec.so.1.0.2 libwoff2dec1.0.2-1.0.2_1
 libcloudproviders.so.0 libcloudproviders-0.2.5_2
+libkdsingleapplication-qt6.so.1.1 KDSingleApplication-1.1.0_1
 libKF5KDEGames.so.7 libkdegames-18.08.3_1
 libKF5KDEGamesPrivate.so.7 libkdegames-21.04.0_1
 libidn2.so.0 libidn2-2.1.1_1
@@ -4305,3 +4307,4 @@ libunicode_loader.so.0.4 libunicode-0.4.0_1
 force-stage.so.0.1 void-force-stage-0.1_1
 libliftoff.so.0 libliftoff-0.4.1_1
 libscfg.so libscfg-0.1.1_1
+libmsgraph-0.so.1 msgraph-0.2.1_1

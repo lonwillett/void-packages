@@ -1,0 +1,37 @@
+--- a/tools/ipv6calc-create-registry-list-ipv6.pl	2024-02-15 12:55:16.000000000 +0100
++++ b/tools/ipv6calc-create-registry-list-ipv6.pl	2024-05-02 11:59:21.884365854 +0200
+@@ -132,7 +132,7 @@
+ 
+ 
+ ## Read data
+-my (@arin, @apnic, @ripencc, @iana, @lacnic, @afrinic, @reserved, @s6to4, @s6bone);
++my (@arin, @apnic, @ripencc, @iana, @lacnic, @afrinic, @reserved, @s6to4, @s6bone, @srv6sids);
+ 
+ my @cc_array;
+ my @info_array;
+@@ -196,6 +196,7 @@
+ 
+ 		$reg = uc($reg);
+ 		$reg =~ s/RIPE NCC/RIPENCC/g;
++		$reg =~ s/SEGMENT ROUTING \(SRV6\) SIDS/SRV6SIDS/g;
+ 
+ 		#print $$e2{'prefix'} . ":" . $reg . "\n";
+ 
+@@ -217,7 +218,9 @@
+ 			push @s6to4, $ipv6;
+ 		} elsif ($reg eq "6BONE" ) {
+ 			push @s6bone, $ipv6;
++		} elsif ($reg eq "SRV6SIDS" ) {
++			push @srv6sids, $ipv6;
+ 		} else {
+ 			die "Unsupported registry: " . $reg . "\n";
+ 		};
+ 	    };
+@@ -521,6 +524,7 @@
+ &fill_data(\@iana   , "IANA"   , \%data);
+ &fill_data(\@s6to4  , "6TO4"   , \%data);
+ &fill_data(\@s6bone , "6BONE"  , \%data);
++&fill_data(\@srv6sids, "SRV6SIDS", \%data);
+ 
+ &fill_data(\@cc_array, "CC"  , \%data_cc);
+ &fill_data(\@info_array, "INFO"  , \%data_info);

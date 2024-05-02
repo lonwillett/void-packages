@@ -1,18 +1,18 @@
 # Template file for 'ipv6calc'
 pkgname=ipv6calc
-version=4.1.0
+version=4.2.0
 revision=1
 build_style=gnu-configure
 configure_args="--enable-geoip --enable-mmdb --enable-external"
 hostmakedepends="perl"
-makedepends="geoip-devel libmaxminddb-devel db-devel"
+makedepends="geoip-devel libmaxminddb-devel db-devel openssl-devel"
 short_desc="Small utility to manipulate IPv6 addresses"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2.0-only"
 homepage="https://www.deepspace6.net/projects/ipv6calc.html"
 changelog="https://github.com/pbiering/ipv6calc/raw/master/ChangeLog"
 distfiles="https://github.com/pbiering/ipv6calc/archive/${version}.tar.gz"
-checksum=9c42edd9998f13465d275a3124cfdf72c93fd793d38f6d732124ac3f4b84e36e
+checksum=767dbd3d21d04e21aa9764275e2aae726f04daf66bca21fc65f0a652bdc8b50e
 
 # tries to execute ldconfig to find the libdb version, breaking musl/cross
 # builds and only uses the result for static linking anyways.

@@ -1,0 +1,10 @@
+--- a/tools/Makefile.in	2024-02-15 12:55:16.000000000 +0100
++++ b/tools/Makefile.in	2024-05-02 12:07:30.959557940 +0200
+@@ -6,6 +6,7 @@
+ #  Makefile for various tools
+ #
+ 
++prefix          = @prefix@
+ datadir         = @datadir@
+ 
+ all:

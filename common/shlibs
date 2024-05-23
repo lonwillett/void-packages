@@ -948,8 +948,6 @@ liblilv-0.so.0 liblilv-0.14.4_1
 libsuil-0.so.0 suil-0.6.4_1
 libmcpp.so.0 libmcpp-2.7.2_1
 libjitterentropy.so.3 jitterentropy-3.0.0_1
-libkdecorations2.so.5 kdecoration-5.8.4_1
-libkdecorations2private.so.10 kdecoration-5.26.90_1
 libkdecorations2.so.6 kf6-kdecoration-6.0.0_1
 libkdecorations2private.so.11 kf6-kdecoration-6.0.0_1
 libGlacier2.so.37 libIce-3.7.5_2
@@ -1116,10 +1114,10 @@ liblab_gamut.so.1 graphviz-libs-2.40.1_1
 libmowgli-2.so.0 libmowgli-2.1.3_8
 libgts-0.7.so.5 gts-0.7.6_1
 libguess.so.1 libguess-1.1_1
-libaudcore.so.5 audacious-3.9_1
-libaudgui.so.5 audacious-3.9_1
-libaudtag.so.3 audacious-3.8_1
-libaudqt.so.2 audacious-3.10.1_2
+libaudcore.so.5 audacious-base-4.3.1_1
+libaudgui.so.5 audacious-base-4.3.1_1
+libaudtag.so.3 audacious-base-4.3.1_1
+libaudqt.so.2 audacious-base-4.3.1_1
 libgstreamer-1.0.so.0 gstreamer1-1.0.0_1
 libgstbase-1.0.so.0 gstreamer1-1.0.0_1
 libgstcontroller-1.0.so.0 gstreamer1-1.0.0_1
@@ -4440,3 +4438,4 @@ libcamera.so.0.2 libcamera-0.2.0_1
 libcamera-base.so.0.2 libcamera-0.2.0_1
 libKPim6MimeTreeParserCore.so.6 mimetreeparser-24.02.0_1
 libKPim6MimeTreeParserWidgets.so.6 mimetreeparser-24.02.0_1
+/usr/lib/lua/5.1/lpeg.so lua51-lpeg-1.1.0_2

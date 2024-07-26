@@ -400,6 +400,8 @@ libpostproc.so.57 libpostproc6-6.0_1
 libavcodec.so.60 libavcodec6-6.0_1
 libavutil.so.58 libavutil6-6.0_1
 libavfilter.so.9 libavfilter6-6.0_1
+libdispatch.so libdispatch-5.10.1_1
+libBlocksRuntime.so libdispatch-5.10.1_1
 libavdevice.so.58 libavdevice-4.0_1
 libavformat.so.58 libavformat-4.0_1
 libswscale.so.5 libswscale-4.0_1
@@ -1385,8 +1387,8 @@ libkdexoauth2.so.3 libkgapi-24.02.0_1
 libqoauth.so.2 qoauth-qt5-2.0.0_1
 libIrrlicht.so.1.8 irrlicht-1.8_1
 libsnappy.so.1 snappy-1.1.0_1
-libbenchmark.so.0 benchmark-1.8.4_1
-libbenchmark_main.so.0 benchmark-1.8.4_1
+libbenchmark.so.1 benchmark-1.8.5_1
+libbenchmark_main.so.1 benchmark-1.8.5_1
 libbemenu.so.0 bemenu-0.6.5_1
 libKTorrent6.so.6 libktorrent-24.02.0_1
 libvncserver.so.1 libvncserver-0.9.13_2
@@ -1709,7 +1711,7 @@ libBulletSoftBody.so.3.17 bullet-3.17_1
 libBullet3Common.so.3.17 bullet-3.17_1
 libinotifytools.so.0 libinotify-tools-3.14_2
 libfswatch.so.13 libfswatch-1.17.1_1
-libopensc.so.8 libopensc-0.22.0_1
+libopensc.so.11 libopensc-0.25.1_1
 libSDL2_ttf-2.0.so.0 SDL2_ttf-2.0.12_1
 librtlsdr.so.0 librtlsdr-0.5.3_1
 libSDL2_mixer-2.0.so.0 SDL2_mixer-2.0.0_1
@@ -1961,7 +1963,7 @@ libQt6Xdg.so.4 libqtxdg-4.0.0_1
 libQt6XdgIconLoader.so.4 libqtxdg-4.0.0_1
 libqwt-qt5.so.6.2 qwt-6.2.0_2
 libqwt-qt6.so.6.2 qwt-qt6-6.2.0_2
-libKF6BreezeIcons.so.6 breeze-icons-6.3.0_1
+libKF6BreezeIcons.so.6 libbreeze-icons-6.3.0_2
 libKF6Archive.so.6 kf6-karchive-6.0.0_1
 libKF6Attica.so.6 kf6-attica-6.0.0_1
 libKF6AuthCore.so.6 kf6-kauth-6.0.0_1
@@ -4263,10 +4265,10 @@ libec.so.10 eclib-20220621_1
 libsymmetrica.so.2 symmetrica-3.0.1_1
 libLfunction.so.1 lcalc-2.0.4_1
 liblrcalc.so.2 lrcalc-2.1_1
-libwayland-client++.so.0 libwaylandpp-0.2.8_1
-libwayland-cursor++.so.0 libwaylandpp-0.2.8_1
-libwayland-egl++.so.0 libwaylandpp-0.2.8_1
-libwayland-client-extra++.so.0 libwaylandpp-0.2.8_1
+libwayland-client++.so.1 libwaylandpp-1.0.0_1
+libwayland-cursor++.so.1 libwaylandpp-1.0.0_1
+libwayland-egl++.so.1 libwaylandpp-1.0.0_1
+libwayland-client-extra++.so.1 libwaylandpp-1.0.0_1
 libspdlog.so.1.11 libspdlog-1.11.0_1
 libmd.so.0 libmd-1.0.3_1
 libldacBT_abr.so.2 ldacBT-2.0.2.3_1

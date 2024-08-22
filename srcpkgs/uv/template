@@ -1,6 +1,6 @@
 # Template file for 'uv'
 pkgname=uv
-version=0.2.30
+version=0.3.1
 revision=1
 build_style=python3-pep517
 build_helper="rust qemu"
@@ -12,7 +12,7 @@ license="Apache-2.0, MIT"
 homepage="https://github.com/astral-sh/uv"
 changelog="https://github.com/astral-sh/uv/raw/main/CHANGELOG.md"
 distfiles="https://github.com/astral-sh/uv/releases/download/${version}/source.tar.gz"
-checksum=1961bf9f481364dfd34c2fa1922152d0901f230de444b168f2d7e29c5b48de5d
+checksum=5dce72d45cbbc0b661325e5f585440b977e095b6a29601059f509065f86ff9ae
 # many tests require old python versions
 make_check=no
 

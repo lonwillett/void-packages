@@ -1954,6 +1954,8 @@ libQt5Bodymovin.so.5 qt5-lottie-5.15.2_3
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
 libx265.so.209 x265-3.6_1
+libQt5Xdg.so.3 libqt5xdg-3.2.0_1
+libQt5XdgIconLoader.so.3 libqt5xdg-3.2.0_1
 libQt6Xdg.so.4 libqtxdg-4.0.0_1
 libQt6XdgIconLoader.so.4 libqtxdg-4.0.0_1
 libqwt-qt5.so.6.2 qwt-6.2.0_2
@@ -2058,6 +2060,7 @@ libpolkit-qt5-core-1.so.1 polkit-qt5-0.112.0_1
 libpolkit-qt6-core-1.so.1 polkit-qt6-0.200.0_1
 libpolkit-qt6-gui-1.so.1 polkit-qt6-0.200.0_1
 libpolkit-qt6-agent-1.so.1 polkit-qt6-0.200.0_1
+libfm-qt.so.14 libfm-qt5-1.4.0_1
 libfm-qt6.so.14 libfm-qt-2.0.2_1
 libqtermwidget5.so.1 qtermwidget-1.0.0_1
 libqtermwidget6.so.2 qtermwidget-qt6-2.0.0_1
@@ -4570,8 +4573,8 @@ libliftoff.so.0 libliftoff-0.4.1_1
 libscfg.so libscfg-0.1.1_1
 libmsgraph-0.so.1 msgraph-0.2.1_1
 libgtk-session-lock.so.0 gtk-session-lock-0.2.0_1
-libcamera.so.0.2 libcamera-0.2.0_1
-libcamera-base.so.0.2 libcamera-0.2.0_1
+libcamera.so.0.3 libcamera-0.3.2_1
+libcamera-base.so.0.3 libcamera-0.3.2_1
 libKPim6MimeTreeParserCore.so.6 mimetreeparser-24.02.0_1
 libKPim6MimeTreeParserWidgets.so.6 mimetreeparser-24.02.0_1
 /usr/lib/lua/5.1/lpeg.so lua51-lpeg-1.1.0_2

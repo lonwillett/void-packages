@@ -1,0 +1,11 @@
+--- a/src/framework/engine.h	2023-10-20 12:24:02.000000000 +0200
++++ b/src/framework/engine.h	2024-10-27 16:15:10.669296211 +0100
+@@ -15,6 +15,8 @@
+ 
+ #ifdef _WIN32
+ #include <winsock2.h>
++#else
++#include <sys/select.h>
+ #endif
+ 
+ class Socket;

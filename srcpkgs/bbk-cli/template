@@ -1,9 +1,8 @@
 # Template file for 'bbk-cli'
 pkgname=bbk-cli
-version=1.1
-revision=2
-_gitrev=3180567c5830c82c991a8059692d8fc3725df7cd
-wrksrc=bbkcli-${version}
+version=1.2
+revision=1
+#yyy_gitrev=6c2f1841c1016e26991f0db9586fa0e669441c49
 build_style=gnu-makefile
 make_build_target="cli"
 make_build_args="GNUTLS=1 -C src/cli"
@@ -12,12 +11,15 @@ short_desc="Bredbandskollen's command line tool"
 maintainer="Lon Willett <xgit@lonw.net>"
 license="GPL-2.0-or-later"
 homepage="http://www.bredbandskollen.se/om/mer-om-bbk/bredbandskollen-cli/"
-distfiles="https://github.com/dotse/bbk/archive/${_gitrev}.tar.gz>bbk-${version}.tar.gz"
-checksum=0158403c6c822e6843aa25543ac977934e34398ddfbc6509dcc12747937d97ee
+distfiles="https://github.com/dotse/bbk/archive/refs/tags/BBK_CLI_${version}.tar.gz>bbk-${version}.tar.gz"
+#yyydistfiles="https://github.com/dotse/bbk/archive/${_gitrev}.tar.gz>bbk-${_gitrev}.tar.gz"
+checksum=dff38d1226844642891afcd869bfce2b9d0414c9507bacf156fb5849ab2ae8c5
+#yyychecksum=96a150c767daa6fe6afd3ed81e1800806e33dd9e98ab9c1bf6ac6ecfc72d77a0
 
-post_extract() {
-	mv ${XBPS_BUILDDIR}/bbk-${_gitrev} ${XBPS_BUILDDIR}/bbkcli-${version}
-}
+#post_extract() {
+#	#yyymv ${XBPS_BUILDDIR}/bbk-BBK_CLI_${version} ${XBPS_BUILDDIR}/${wrksrc}
+#	#yyymv ${XBPS_BUILDDIR}/bbk-${_gitrev} ${XBPS_BUILDDIR}/${wrksrc}
+#}
 
 do_install() {
 	     vbin src/cli/cli bbk_cli

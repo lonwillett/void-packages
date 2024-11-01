@@ -1454,7 +1454,7 @@ libgfrpc.so.0 libglusterfs-8.3_2
 libgfxdr.so.0 libglusterfs-8.3_2
 libgfapi.so.0 libglusterfs-8.3_2
 libglusterd.so.0 libglusterfs-8.3_2
-libsnapper.so.6 libsnapper-0.10.2_1
+libsnapper.so.7 libsnapper-0.11.2_1
 libtsm.so.4 libtsm-4.0.2_1
 libxine.so.2 libxine-1.2.4_1
 libjbig2dec.so.0 libjbig2dec-0.11_1
@@ -3580,9 +3580,9 @@ libbelr.so.1 belr-0.1.3_1
 libbelcard.so.1 belcard-1.0.2_1
 libsoci_core.so.4.0 soci-4.0.3_1
 libshaderc_shared.so.1 shaderc-2018.0_1
-libglslang.so.11 glslang-11.11.0_1
-libHLSL.so glslang-11.11.0_1
-libSPIRV.so glslang-11.11.0_1
+libglslang.so.15 glslang-15.0.0_1
+libglslang-default-resource-limits.so.15 glslang-15.0.0_1
+libSPIRV.so glslang-15.0.0_1
 libSPIRV-Tools-shared.so SPIRV-Tools-2022.3_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1
 libmysqlpp.so.3 mysql++-3.2.5_1

@@ -1,0 +1,3 @@
+if [ "${ACTION}" = "post" ] && ! [ -d /var/service/speakersafetyd ]; then
+	ln -s /etc/sv/speakersafetyd /var/service
+fi

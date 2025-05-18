@@ -1652,9 +1652,9 @@ libosmoctrl.so.0 libosmocore-0.7.0_1
 libgtkglext-x11-1.0.so.0 gtkglext-1.2.0_4
 libgdkglext-x11-1.0.so.0 gtkglext-1.2.0_4
 libXaw3d.so.8 libXaw3d-1.6.2_1
-libupsclient.so.6 libnetwork-ups-tools-2.8.0_1
+libupsclient.so.7 libnetwork-ups-tools-2.8.3_1
 libnutclient.so.2 libnetwork-ups-tools-2.8.0_1
-libnutscan.so.2 libnetwork-ups-tools-2.8.0_1
+libnutscan.so.3 libnetwork-ups-tools-2.8.3_1
 libsphinxad.so.0 sphinxbase-0.8_1
 libsphinxbase.so.1 sphinxbase-0.8_1
 libpocketsphinx.so.1 libpocketsphinx-0.8_3
@@ -3970,6 +3970,7 @@ libigdgmm.so.12 intel-gmmlib-22.1.3_1
 libigfxcmrt.so.7 intel-media-driver-21.3.5_1
 libigraph.so.3 igraph-0.10.2_1
 libgtk-layer-shell.so.0 gtk-layer-shell-0.1.0_1
+libgtk4-layer-shell.so.0 gtk4-layer-shell-1.1.0_1
 librdkafka.so.1 librdkafka-1.4.4_3
 librdkafka++.so.1 librdkafka-1.4.4_3
 libraft.so.0 raft-0.18.2_1
@@ -4587,9 +4588,9 @@ libsfdo-desktop-file.so.0 libsfdo-0.1.3_1
 libsfdo-icon.so.0 libsfdo-0.1.3_1
 libKMahjongg6.so.6 libkmahjongg-24.08.2_1
 libflashrom.so.1 flashrom-1.4.0_1
-libpyside6.so.6.7 libpyside6-6.7.2_1
-libpyside6qml.so.6.7 libpyside6-6.7.2_1
-libshiboken6.so.6.7 libshiboken6-6.7.2_1
+libpyside6.so.6.8 libpyside6-6.8.3_1
+libpyside6qml.so.6.8 libpyside6-6.8.3_1
+libshiboken6.so.6.8 libshiboken6-6.8.3_1
 libopencore-amrnb.so.0 opencore-amr-0.1.6_1
 libopencore-amrwb.so.0 opencore-amr-0.1.6_1
 libilbc.so.3 libilbc-3.0.4_1
@@ -4600,3 +4601,4 @@ libcharset.so.1 libiconv-1.18_1
 libomemo-c.so.0 libomemo-c-0.5.1_1
 libclapper-gtk-0.0.so.0 clapper-libs-0.8.0_1
 libclapper-0.0.so.0 clapper-libs-0.8.0_1
+libopenxr_loader.so.1 openxr-1.1.47_1

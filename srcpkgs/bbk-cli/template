@@ -1,6 +1,6 @@
 # Template file for 'bbk-cli'
 pkgname=bbk-cli
-version=1.2
+version=1.2.2
 revision=1
 #yyy_gitrev=6c2f1841c1016e26991f0db9586fa0e669441c49
 build_style=gnu-makefile
@@ -13,7 +13,7 @@ license="GPL-2.0-or-later"
 homepage="http://www.bredbandskollen.se/om/mer-om-bbk/bredbandskollen-cli/"
 distfiles="https://github.com/dotse/bbk/archive/refs/tags/BBK_CLI_${version}.tar.gz>bbk-${version}.tar.gz"
 #yyydistfiles="https://github.com/dotse/bbk/archive/${_gitrev}.tar.gz>bbk-${_gitrev}.tar.gz"
-checksum=dff38d1226844642891afcd869bfce2b9d0414c9507bacf156fb5849ab2ae8c5
+checksum=53fb3a50622d1661e38c96ba61fa906d21050f9e508380b605920bde1f955e6b
 #yyychecksum=96a150c767daa6fe6afd3ed81e1800806e33dd9e98ab9c1bf6ac6ecfc72d77a0
 
 #post_extract() {

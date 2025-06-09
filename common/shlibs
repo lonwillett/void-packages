@@ -1706,7 +1706,7 @@ libBulletSoftBody.so.3.25 bullet-3.25_1
 libBullet3Common.so.3.25 bullet-3.25_1
 libinotifytools.so.0 libinotify-tools-3.14_2
 libfswatch.so.13 libfswatch-1.17.1_1
-libopensc.so.11 libopensc-0.25.1_1
+libopensc.so.12 libopensc-0.26.0_1
 libSDL2_ttf-2.0.so.0 SDL2_ttf-2.0.12_1
 librtlsdr.so.0 librtlsdr-0.5.3_1
 libSDL2_mixer-2.0.so.0 SDL2_mixer-2.0.0_1
@@ -4616,3 +4616,4 @@ libngtcp2_crypto_ossl.so.0 ngtcp2-1.13.0_1
 libprom.so prometheus-client-c-0.1.3_1
 libqlementine.so.1 qlementine-1.2.2_1
 libkwin.so.6 kwin-6.3.3.1_1
+libdatovka.so.8 libdatovka-0.7.0_1

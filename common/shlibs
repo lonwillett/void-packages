@@ -1116,9 +1116,9 @@ libSDL_sound-1.0.so.1 SDL_sound-1.0.3_1
 libgtksourceview-2.0.so.0 gtksourceview2-2.10.5_1
 libxdot.so.4 graphviz-libs-2.28.0_6
 libgvpr.so.2 graphviz-libs-2.28.0_6
-libcgraph.so.6 graphviz-libs-2.28.0_6
-libgvc.so.6 graphviz-libs-2.28.0_6
-libcdt.so.5 graphviz-libs-2.28.0_6
+libcgraph.so.7 graphviz-libs-13.0.0_1
+libgvc.so.7 graphviz-libs-13.0.0_1
+libcdt.so.6 graphviz-libs-13.0.0_1
 libpathplan.so.4 graphviz-libs-2.28.0_6
 liblab_gamut.so.1 graphviz-libs-2.40.1_1
 libmowgli-2.so.0 libmowgli-2.1.3_8
@@ -4592,7 +4592,7 @@ libopenrazer.so.0 libopenrazer-0.2.0_1
 libstaroffice-0.0.so.0 libstaroffice-0.0.7_1
 libbox2d.so.2 box2d-2.4.1_1
 libhwy.so.1 highway-1.2.0_1
-libscenefx-0.2.so scenefx-0.2.1_1
+libscenefx-0.3.so scenefx-0.3_1
 libnng.so.1 nng-1.5.2_1
 libsentry.so sentry-native-0.7.7_1
 libjose.so.0 libjose-14_1

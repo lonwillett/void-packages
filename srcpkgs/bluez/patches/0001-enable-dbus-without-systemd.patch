@@ -1,6 +1,6 @@
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -43,14 +43,14 @@ conf_DATA = src/main.conf
+@@ -47,6 +47,9 @@
  conf_DATA += profiles/input/input.conf
  conf_DATA += profiles/network/network.conf
  state_DATA =
@@ -10,8 +10,10 @@
  endif
  
  if SYSTEMD
- systemdsystemunitdir = $(SYSTEMD_SYSTEMUNITDIR)
- systemdsystemunit_DATA = src/bluetooth.service
+@@ -55,9 +58,6 @@
+ 
+ systemduserunitdir = $(SYSTEMD_USERUNITDIR)
+ systemduserunit_DATA =
 -
 -dbussystembusdir = $(DBUS_SYSTEMBUSDIR)
 -dbussystembus_DATA = src/org.bluez.service

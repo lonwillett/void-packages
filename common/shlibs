@@ -2586,7 +2586,6 @@ libdoublefann.so.2 fann-2.2.0_1
 libxerces-c-3.2.so libxerces-c-3.2.0_1
 libunibreak.so.5 libunibreak-5.1_1
 libiperf.so.0 iperf3-3.1.1_1
-libKF5UnitConversion.so.5 kunitconversion-5.26.0_1
 libfdk-aac.so.2 fdk-aac-2.0.0_1
 libyubikey.so.0 libyubikey-1.13_1
 libykpers-1.so.1 libykpers-1.17.2_1
@@ -2841,10 +2840,8 @@ libsass.so.1 libsass-3.5.0_1
 libjbig.so.0 jbigkit-libs-2.1_2
 libjbig85.so.0 jbigkit-libs-2.1_2
 libskk.so.0 libskk-1.0.2_1
-libKF5WaylandServer.so.5 kwayland-5.26.0_1
 libKF5WaylandClient.so.5 kwayland-5.26.0_1
 libKWaylandClient.so.6 kf6-kwayland-6.0.0_1
-libKF5IdleTime.so.5 kidletime-5.26.0_1
 libKF5Archive.so.5 karchive-5.26.0_1
 libKF5Codecs.so.5 kcodecs-5.26.0_1
 libKF5ConfigCore.so.5 kconfig-5.26.0_1
@@ -2857,7 +2854,6 @@ libKF5Service.so.5 kservice-5.26.0_1
 libKF5GlobalAccel.so.5 kglobalaccel-5.26.0_1
 libKF5GlobalAccelPrivate.so.5 kglobalaccel-5.26.0_1
 libKF5Package.so.5 kpackage-5.26.0_1
-libKF5Emoticons.so.5 kemoticons-5.26.0_1
 libKF5IconThemes.so.5 kiconthemes-5.26.0_1
 libKF5JobWidgets.so.5 kjobwidgets-5.26.0_1
 libKF5Notifications.so.5 knotifications-5.26.0_1
@@ -2880,19 +2876,14 @@ libKF5Style.so.5 frameworkintegration-5.26.0_1
 libKF5NewStuff.so.5 knewstuff-5.26.0_1
 libKF5NewStuffCore.so.5 knewstuff-5.36.0_1
 libKF5NewStuffWidgets.so.5 knewstuff-5.95.0_1
-libKF5NotifyConfig.so.5 knotifyconfig-5.26.0_1
 libKF5Parts.so.5 kparts-5.26.0_1
 libKF5Activities.so.5 kactivities5-5.26.0_1
 libKF5TextEditor.so.5 ktexteditor-5.26.0_1
 libKF5Plasma.so.5 plasma-framework-5.26.0_1
 libKF5PlasmaQuick.so.5 plasma-framework-5.26.0_1
-libKF5ActivitiesStats.so.1 kactivities5-stats-5.26.0_1
 libKF5Runner.so.5 krunner-5.26.0_1
 libKF5JS.so.5 kjs-5.26.0_1
 libKF5JSApi.so.5 kjs-5.36.0_1
-libKF5KHtml.so.5 khtml-5.26.0_1
-libKF5KrossCore.so.5 kross-5.26.0_1
-libKF5KrossUi.so.5 kross-5.36.0_1
 libKGlobalAccelD.so.0 kglobalacceld-6.0.0_1
 liblmdb.so.0 lmdb-0.9.18_2
 libisns.so.0 libisns-0.101_2
@@ -3188,7 +3179,6 @@ libr_reg.so.5.9.8 radare2-5.9.8_1
 libr_main.so.5.9.8 radare2-5.9.8_1
 libykpiv.so.2 libykpiv-2.3.0_1
 libykcs11.so.2 libykcs11-2.3.0_1
-libKF5KExiv2.so.15.0.0 libkexiv25-17.04.3_1
 libKExiv2Qt6.so.0 libkexiv2-24.02.0_1
 libqmobipocket.so.2 libqmobipocket-17.04.3_1
 libQMobipocket6.so.3 libqmobipocket6-25.08.0_1
@@ -3215,7 +3205,6 @@ libembb_mtapi_network_c.so embb-1.0.0_3
 libembb_base_cpp.so embb-1.0.0_3
 libembb_base_c.so embb-1.0.0_3
 libhpdf-2.3.0.so Haru-2.3.0_3
-libKF5Contacts.so.5 kcontacts-5.63.0_1
 libKPim6TextEdit.so.6 kpimtextedit-24.02.0_1
 libKPim6AkonadiXml.so.6 kf6-akonadi-24.02.0_1
 libKPim6AkonadiAgentBase.so.6 kf6-akonadi-24.02.0_1

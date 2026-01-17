@@ -1279,7 +1279,7 @@ librumpdev_audio.so.0 netbsd-rumpkernel-20140526_3
 librumpclient.so.0 netbsd-rumpkernel-20140526_3
 libdotconf.so.0 dotconf-1.3_1
 libspeechd.so.2 speech-dispatcher-0.8_1
-libre2.so.11 re2-2024.06.01_1
+libre2.so.11 re2-2025.11.05_1
 libminizip.so.1 minizip-1.2.7_1
 libminizip-ng.so.4 minizip-ng-4.0.10_1
 libsrtp2.so.1 libsrtp-2.1.0_1
@@ -1646,7 +1646,7 @@ libSDL2_mixer-2.0.so.0 SDL2_mixer-2.0.0_1
 libSDL2_net-2.0.so.0 SDL2_net-2.0.0_1
 libnxml.so.0 libnxml-0.18.3_1
 libmrss.so.0 libmrss-0.19.2_1
-libuv.so.1 libuv-1.0.0_1
+libuv.so.1 libuv-1.51.0_1
 libXm.so.4 motif-2.3.8_1
 libMrm.so.4 motif-2.3.8_1
 libUil.so.4 motif-2.3.8_1
@@ -3759,9 +3759,12 @@ libnitrokey.so.3 libnitrokey-3.4.1_1
 libceres.so.3 ceres-solver-2.1.0_1
 libgraphene-1.0.so.0 graphene-1.8.2_1
 libflite.so.1 flite-2.1_1
-libflite_cmu_us_kal.so.1 flite-2.1_1
-libflite_usenglish.so.1 flite-2.1_1
-libflite_cmulex.so.1 flite-2.1_1
+libflite_cmu_us_awb.so.1 flite-2.2_1
+libflite_cmu_us_kal.so.1 flite-2.2_1
+libflite_cmu_us_rms.so.1 flite-2.2_1
+libflite_cmu_us_slt.so.1 flite-2.2_1
+libflite_usenglish.so.1 flite-2.2_1
+libflite_cmulex.so.1 flite-2.2_1
 libflite_cmu_us_kal16.so.1 flite-2.2_1
 libgtk-4.so.1 gtk4-4.12.0_1
 libmodule.so.5 libmodule-5.0.0_1

@@ -1,8 +1,8 @@
-diff --git a/base/device.py b/base/device.py
-index 2fdb29c..ca0d97e 100644
+Fix error caused by removed URLopener
+
 --- a/base/device.py
 +++ b/base/device.py
-@@ -2526,9 +2526,9 @@ Content-length: %d\r
+@@ -2525,9 +2525,9 @@
                  data = None
  
              log.debug("Opening: %s" % url2)
@@ -14,7 +14,7 @@ index 2fdb29c..ca0d97e 100644
                  
              except Error:
                  log.error("Status read failed: %s" % url2)
-@@ -2548,7 +2548,7 @@ Content-length: %d\r
+@@ -2547,7 +2547,7 @@
          try:
              url2 = "%s&loc=%s" % (self.device_uri.replace('hpfax:', 'hp:'), url)
              data = self
@@ -23,7 +23,7 @@ index 2fdb29c..ca0d97e 100644
              try:
                  if footer:
                      return opener.open_hp(url2, data, footer)
-@@ -2563,7 +2563,7 @@ Content-length: %d\r
+@@ -2562,7 +2562,7 @@
          try:
              url2 = "%s&loc=%s" % (self.device_uri.replace('hpfax:', 'hp:'), url)
              data = self
@@ -32,7 +32,7 @@ index 2fdb29c..ca0d97e 100644
              try:
                  if footer:
                      return opener.open_hp(url2, data, footer)
-@@ -2580,7 +2580,7 @@ Content-length: %d\r
+@@ -2579,7 +2579,7 @@
              url="/cdm/supply/v1/suppliesPublic"
              url2 = "%s&loc=%s" % (self.device_uri.replace('hpfax:', 'hp:'), url)
              data = self
@@ -41,7 +41,7 @@ index 2fdb29c..ca0d97e 100644
              try:
                  if footer:
                      return opener.open_hp(url2, data, footer)
-@@ -2688,7 +2688,7 @@ Content-length: %d\r
+@@ -2687,7 +2687,7 @@
  
  
  # URLs: hp:/usb/HP_LaserJet_3050?serial=00XXXXXXXXXX&loc=/hp/device/info_device_status.xml
@@ -50,7 +50,7 @@ index 2fdb29c..ca0d97e 100644
      def open_hp(self, url, dev):
          log.debug("open_hp(%s)" % url)
  
-@@ -2718,7 +2718,7 @@ class LocalOpener(urllib_request.URLopener):
+@@ -2717,7 +2717,7 @@
              return response#.fp
  
  # URLs: hp:/usb/HP_OfficeJet_7500?serial=00XXXXXXXXXX&loc=/hp/device/info_device_status.xml
@@ -59,7 +59,7 @@ index 2fdb29c..ca0d97e 100644
      def open_hp(self, url, dev, foot=""):
          log.debug("open_hp(%s)" % url)
  
-@@ -2744,7 +2744,7 @@ class LocalOpenerEWS_LEDM(urllib_request.URLopener):
+@@ -2743,7 +2743,7 @@
  
  
  # URLs: hp:/usb/HP_OfficeJet_7500?serial=00XXXXXXXXXX&loc=/hp/device/info_device_status.xml
@@ -68,7 +68,7 @@ index 2fdb29c..ca0d97e 100644
      def open_hp(self, url, dev, foot=""):
          log.debug("open_hp(%s)" % url)
  
-@@ -2771,7 +2771,7 @@ class LocalOpener_LEDM(urllib_request.URLopener):
+@@ -2770,7 +2770,7 @@
  
  
  # URLs: hp:/usb/HP_OfficeJet_7500?serial=00XXXXXXXXXX&loc=/hp/device/info_device_status.xml

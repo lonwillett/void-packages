@@ -1,6 +1,6 @@
 # Template file for 'bluez'
 pkgname=bluez
-version=5.83
+version=5.86
 revision=1
 build_style=gnu-configure
 configure_args="--with-udevdir=/usr/lib/udev --disable-systemd
@@ -16,7 +16,7 @@ license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://www.bluez.org/"
 changelog="https://git.kernel.org/pub/scm/bluetooth/bluez.git/plain/ChangeLog"
 distfiles="${KERNEL_SITE}/bluetooth/bluez-${version}.tar.xz"
-checksum=108522d909d220581399bfec93daab62035539ceef3dda3e79970785c63bd24c
+checksum=99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d
 conf_files="/etc/bluetooth/main.conf"
 system_groups="bluetooth"
 

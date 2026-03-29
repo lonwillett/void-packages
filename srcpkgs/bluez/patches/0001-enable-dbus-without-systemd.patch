@@ -10,10 +10,8 @@
  endif
  
  if SYSTEMD
-@@ -55,9 +58,6 @@
- 
- systemduserunitdir = $(SYSTEMD_USERUNITDIR)
- systemduserunit_DATA =
+ systemdsystemunitdir = $(SYSTEMD_SYSTEMUNITDIR)
+ systemdsystemunit_DATA = src/bluetooth.service
 -
 -dbussystembusdir = $(DBUS_SYSTEMBUSDIR)
 -dbussystembus_DATA = src/org.bluez.service

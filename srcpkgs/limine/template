@@ -1,6 +1,6 @@
 # Template file for 'limine'
 pkgname=limine
-version=11.3.1
+version=12.0.2
 revision=1
 build_style=gnu-configure
 configure_args="--enable-all"
@@ -10,9 +10,9 @@ short_desc="Advanced, portable, multiprotocol bootloader"
 maintainer="Mintsuki <mintsuki@protonmail.com>"
 license="BSD-2-Clause"
 homepage="https://limine-bootloader.org/"
-changelog="https://github.com/Limine-Bootloader/Limine/raw/branch/trunk/ChangeLog"
+changelog="https://raw.githubusercontent.com/Limine-Bootloader/Limine/refs/heads/trunk/ChangeLog"
 distfiles="https://github.com/Limine-Bootloader/Limine/releases/download/v${version}/limine-${version}.tar.gz"
-checksum=eefb2ddf7472027eaad2d24d2ef9ab12281514cf9ec546a3e3a759df2d8654e7
+checksum=6c71c1a90ad02d8d09fbc4647d2f6ab324469387f0db5c6c6f49c1d875642b08
 
 post_install() {
 	vlicense COPYING

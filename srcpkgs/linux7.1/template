@@ -1,7 +1,7 @@
 # Template file for 'linux7.1'
 pkgname=linux7.1
 version=7.1.1
-revision=1
+revision=6
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-2.0-only"

@@ -1,7 +1,7 @@
 # Template file for 'zoom'
 pkgname=zoom
 version=7.1.5.4332
-revision=1
+revision=2
 archs="x86_64"
 create_wrksrc=yes
 short_desc="Video Conferencing and Web Conferencing Service"
@@ -11,6 +11,7 @@ homepage="https://zoom.us/"
 distfiles="https://cdn.zoom.us/prod/${version}/zoom_x86_64.rpm"
 checksum=92f82ac8f83c675bddfe5ea4a563c773b1d6bc95519c27f432c5557fec630b28
 repository=nonfree
+skiprdeps="/opt/zoom/Qt/qml/Qt/labs/lottieqt/liblottieqtplugin.so"
 allow_unknown_shlibs=yes
 noshlibprovides=yes
 restricted=yes

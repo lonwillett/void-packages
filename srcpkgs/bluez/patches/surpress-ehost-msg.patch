@@ -1,0 +1,12 @@
+--- a/src/profile.c	2026-02-08 22:26:40.000000000 +0100
++++ b/src/profile.c	2026-10-22 09:16:47.366524986 +0200
+@@ -1676,7 +1676,8 @@
+ 	conn->resolving = false;
+ 
+ 	if (err < 0) {
+-		error("Unable to get %s SDP record: %s", ext->name,
++		if (err != -EHOSTDOWN)
++			error("Unable to get %s SDP record: %s", ext->name,
+ 							strerror(-err));
+ 		goto failed;
+ 	}

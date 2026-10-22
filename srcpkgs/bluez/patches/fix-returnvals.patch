@@ -1,0 +1,40 @@
+--- a/src/shared/ad.c	2026-02-08 22:26:40.000000000 +0100
++++ b/src/shared/ad.c	2026-10-22 09:41:35.832322536 +0200
+@@ -1248,7 +1248,7 @@
+ 					const struct bt_ad_data *data)
+ {
+ 	if (!ad)
+-		return false;
++		return NULL;
+ 
+ 	return queue_find(ad->data, data_match, data);
+ }
+--- a/tools/mesh/mesh-db.c	2024-07-09 00:07:41.000000000 +0200
++++ b/tools/mesh/mesh-db.c	2026-10-22 09:50:03.231170859 +0200
+@@ -804,7 +804,7 @@
+ 
+ 	jnode = get_node_by_unicast(cfg->jcfg, unicast);
+ 	if (!jnode)
+-		return false;
++		return NULL;
+ 
+ 	if (!json_object_object_get_ex(jnode, "elements", &jarray))
+ 		return NULL;
+@@ -841,7 +841,7 @@
+ 
+ 	jelement = get_element(unicast, ele_addr);
+ 	if (!jelement)
+-		return false;
++		return NULL;
+ 
+ 	if (!json_object_object_get_ex(jelement, "models", &jarray))
+ 		return NULL;
+@@ -2523,7 +2523,7 @@
+ 	json_object *export = NULL, *jarray;
+ 
+ 	if (!cfg || !cfg->jcfg)
+-		return false;
++		return NULL;
+ 
+ 	if (json_object_deep_copy(cfg->jcfg, &export, NULL) != 0)
+ 		return NULL;
